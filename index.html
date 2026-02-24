@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conference Intelligence Hub</title>
+<script src="data.js"></script>
+<style>
+:root {
+  --bg: #f7f9fc;
+  --surface: #ffffff;
+  --surface2: #f0f3f8;
+  --border: #e8ecf2;
+  --text: #1a2233;
+  --text2: #6b7b94;
+  --accent: #3b6cf5;
+  --accent-light: #edf2ff;
+  --p1: #e03e3e;
+  --p2: #d4920a;
+  --p3: #9ca3af;
+  --green: #16a34a;
+  --purple: #7c3aed;
+  --radius: 12px;
+  --shadow: 0 1px 3px rgba(0,0,0,.04);
+  --shadow-md: 0 2px 8px rgba(0,0,0,.06);
+  --shadow-lg: 0 4px 16px rgba(0,0,0,.08);
+  --transition: .25s cubic-bezier(.4,0,.2,1);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Segoe UI', sans-serif; background:var(--bg); color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; }
+a { color:var(--accent); text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+::-webkit-scrollbar { width:6px; height:6px; }
+::-webkit-scrollbar-track { background:transparent; }
+::-webkit-scrollbar-thumb { background:#d0d5dd; border-radius:3px; }
+
+/* Landing */
+#landing { padding:80px 48px 60px; max-width:1200px; margin:0 auto; }
+#landing h1 { font-size:2.2rem; font-weight:700; color:var(--text); letter-spacing:-.02em; }
+#landing .subtitle { color:var(--text2); font-size:1rem; margin-top:6px; margin-bottom:56px; font-weight:400; }
+.conf-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:20px; }
+.conf-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:32px; cursor:pointer; transition:all var(--transition); position:relative; box-shadow:var(--shadow); overflow:hidden; }
+.conf-card::before { content:''; position:absolute; top:0; left:-100%; width:100%; height:100%; background:linear-gradient(90deg,transparent,rgba(255,255,255,.6),transparent); transition:left .6s ease; pointer-events:none; }
+.conf-card:hover::before { left:100%; }
+.conf-card:hover { transform:translateY(-2px); box-shadow:var(--shadow-lg); border-color:#d0d5dd; }
+.conf-card h3 { font-size:1.2rem; font-weight:600; color:var(--text); margin-bottom:4px; }
+.conf-card .meta { color:var(--text2); font-size:.88rem; margin-bottom:20px; }
+.tags { display:flex; gap:6px; flex-wrap:wrap; }
+.tag { background:var(--accent-light); border:none; border-radius:20px; padding:4px 12px; font-size:.75rem; color:var(--accent); font-weight:500; }
+.conf-card .stat { position:absolute; top:24px; right:24px; color:var(--text2); font-size:.82rem; font-weight:500; }
+
+/* Detail */
+#detail { display:none; max-width:1400px; margin:0 auto; padding:32px 48px 80px; }
+.back-btn { display:inline-flex; align-items:center; gap:6px; color:var(--text2); font-size:.88rem; cursor:pointer; padding:8px 0; margin-bottom:24px; border:none; background:none; transition:color .15s; }
+.back-btn:hover { color:var(--accent); }
+
+/* Animated gradient header */
+.detail-header { background:linear-gradient(135deg,#3b6cf5,#5b8af7,#4b78f6,#3b6cf5); background-size:300% 300%; animation:gradientShift 8s ease infinite; border-radius:var(--radius); padding:40px 44px; margin-bottom:32px; color:#fff; }
+@keyframes gradientShift { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+.detail-header h2 { font-size:1.8rem; font-weight:700; color:#fff; letter-spacing:-.01em; }
+.detail-header .info { color:rgba(255,255,255,.75); margin-top:10px; display:flex; gap:28px; flex-wrap:wrap; font-size:.9rem; font-weight:400; }
+
+/* Stats */
+.stats-bar { display:flex; align-items:center; gap:0; margin-bottom:32px; padding:20px 0; border-bottom:1px solid var(--border); }
+.stat-item { flex:1; text-align:center; position:relative; }
+.stat-item:not(:last-child)::after { content:''; position:absolute; right:0; top:50%; transform:translateY(-50%); width:1px; height:32px; background:var(--border); }
+.stat-item .num { font-size:1.6rem; font-weight:700; color:var(--text); }
+.stat-item .label { color:var(--text2); font-size:.75rem; margin-top:2px; font-weight:400; letter-spacing:.01em; }
+
+/* Controls */
+.controls { display:flex; gap:10px; margin-bottom:28px; flex-wrap:wrap; align-items:center; }
+
+/* Search with icon and clear */
+.search-wrap { flex:1; min-width:240px; position:relative; }
+.search-wrap svg { position:absolute; left:14px; top:50%; transform:translateY(-50%); pointer-events:none; color:var(--text2); }
+.search-box { width:100%; padding:10px 36px 10px 40px; background:var(--surface); border:1px solid var(--border); border-radius:24px; color:var(--text); font-size:.9rem; outline:none; transition:all var(--transition); }
+.search-box::placeholder { color:#a0aec0; }
+.search-box:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(59,108,245,.12); }
+.search-clear { position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:none; color:var(--text2); cursor:pointer; font-size:1rem; width:22px; height:22px; border-radius:50%; display:none; align-items:center; justify-content:center; transition:all .15s; }
+.search-clear:hover { background:var(--surface2); color:var(--text); }
+.search-box:not(:placeholder-shown) ~ .search-clear { display:flex; }
+
+/* Filter buttons with animated underline */
+.filter-btn { padding:7px 16px; border-radius:24px; border:1px solid var(--border); background:var(--surface); color:var(--text2); cursor:pointer; font-size:.82rem; transition:all var(--transition); font-weight:500; position:relative; }
+.filter-btn:hover { border-color:#c0c8d4; color:var(--text); }
+.filter-btn.active { background:var(--accent); color:#fff; border-color:var(--accent); box-shadow:0 2px 8px rgba(59,108,245,.25); }
+.filter-sep { width:1px; height:24px; background:var(--border); margin:0 4px; }
+.sort-select { padding:7px 14px; border-radius:24px; border:1px solid var(--border); background:var(--surface); color:var(--text); font-size:.82rem; outline:none; cursor:pointer; transition:all var(--transition); }
+.sort-select:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(59,108,245,.12); }
+
+/* Select All checkbox */
+.select-all-wrap { display:flex; align-items:center; gap:6px; cursor:pointer; font-size:.82rem; color:var(--text2); font-weight:500; user-select:none; padding:0 4px; }
+.select-all-wrap input[type="checkbox"] { appearance:none; -webkit-appearance:none; width:16px; height:16px; border:1.5px solid var(--border); border-radius:4px; cursor:pointer; transition:all .15s; position:relative; flex-shrink:0; }
+.select-all-wrap input[type="checkbox"]:checked { background:var(--accent); border-color:var(--accent); }
+.select-all-wrap input[type="checkbox"]:checked::after { content:''; position:absolute; left:4.5px; top:1.5px; width:5px; height:9px; border:solid #fff; border-width:0 2px 2px 0; transform:rotate(45deg); }
+
+/* View toggle with smooth transition */
+.view-toggle { display:flex; gap:0; margin-left:auto; }
+.view-toggle button { padding:7px 14px; border:1px solid var(--border); background:var(--surface); color:var(--text2); cursor:pointer; font-size:.82rem; transition:all var(--transition); }
+.view-toggle button:first-child { border-radius:24px 0 0 24px; }
+.view-toggle button:last-child { border-radius:0 24px 24px 0; border-left:none; }
+.view-toggle button.active { background:var(--accent); color:#fff; border-color:var(--accent); }
+
+/* Speaker Cards with entrance animation */
+.speakers-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(420px,1fr)); gap:16px; transition:opacity .3s ease; }
+.speakers-grid.switching { opacity:0; }
+
+/* Card with hover animations, progress bar, checkbox */
+.speaker-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:28px 28px 8px; transition:all var(--transition); box-shadow:var(--shadow); border-left:3px solid transparent; position:relative; overflow:hidden; opacity:0; animation:cardEnter .3s ease forwards; }
+.speaker-card:hover { box-shadow:var(--shadow-lg); transform:scale(1.01); border-left-color:var(--accent); }
+.speaker-card.selected { border-color:var(--accent); background:rgba(59,108,245,.02); box-shadow:0 0 0 1px var(--accent), var(--shadow-md); }
+.speaker-card.selected:hover { box-shadow:0 0 0 1px var(--accent), var(--shadow-lg); }
+
+@keyframes cardEnter { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+
+/* Card checkbox */
+.card-checkbox { position:absolute; top:14px; left:14px; appearance:none; -webkit-appearance:none; width:18px; height:18px; border:1.5px solid var(--border); border-radius:4px; cursor:pointer; transition:all .15s; background:var(--surface); z-index:2; }
+.card-checkbox:hover { border-color:var(--accent); }
+.card-checkbox:checked { background:var(--accent); border-color:var(--accent); }
+.card-checkbox:checked::after { content:''; position:absolute; left:5px; top:2px; width:5px; height:9px; border:solid #fff; border-width:0 2px 2px 0; transform:rotate(45deg); }
+
+/* Progress bar at bottom of card */
+.outreach-progress { position:absolute; bottom:0; left:0; width:100%; height:3px; background:var(--border); }
+.outreach-progress-fill { height:100%; border-radius:0 2px 2px 0; transition:width .4s ease, background .3s ease; }
+
+.speaker-top { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px; padding-left:24px; }
+.speaker-name { font-size:1rem; font-weight:600; color:var(--text); }
+.speaker-title { color:var(--text2); font-size:.85rem; margin-top:2px; }
+.speaker-org { color:var(--accent); font-size:.85rem; margin-top:2px; font-weight:500; }
+
+/* Priority badge with tooltip */
+.priority-badge { display:inline-flex; align-items:center; gap:6px; font-size:.8rem; color:var(--text2); font-weight:500; white-space:nowrap; position:relative; }
+.priority-dot { width:6px; height:6px; border-radius:50%; display:inline-block; flex-shrink:0; position:relative; cursor:default; }
+.priority-dot.p1 { background:var(--p1); }
+.priority-dot.p2 { background:var(--p2); }
+.priority-dot.p3 { background:var(--p3); }
+
+/* CSS tooltips on priority dots */
+.priority-dot[data-tooltip]::after { content:attr(data-tooltip); position:absolute; bottom:calc(100% + 8px); left:50%; transform:translateX(-50%) scale(.9); background:var(--text); color:#fff; font-size:.72rem; font-weight:500; padding:5px 10px; border-radius:6px; white-space:nowrap; pointer-events:none; opacity:0; transition:all .2s ease; z-index:10; }
+.priority-dot[data-tooltip]::before { content:''; position:absolute; bottom:calc(100% + 4px); left:50%; transform:translateX(-50%) scale(.9); border:4px solid transparent; border-top-color:var(--text); pointer-events:none; opacity:0; transition:all .2s ease; z-index:10; }
+.priority-dot[data-tooltip]:hover::after, .priority-dot[data-tooltip]:hover::before { opacity:1; transform:translateX(-50%) scale(1); }
+
+.onc-signal { font-size:.82rem; margin-top:12px; color:var(--text2); }
+.sessions-list { margin-top:16px; }
+.sessions-list h4 { font-size:.75rem; text-transform:uppercase; letter-spacing:.5px; color:var(--text2); margin-bottom:8px; font-weight:500; }
+.session-item { display:flex; align-items:center; gap:8px; padding:8px 0; font-size:.85rem; color:var(--text); border-bottom:1px solid var(--border); }
+.session-item:last-child { border-bottom:none; }
+.session-item .dot { width:5px; height:5px; border-radius:50%; background:var(--accent); flex-shrink:0; }
+.links { display:flex; gap:10px; margin-top:16px; }
+.links a { font-size:.82rem; padding:5px 14px; border-radius:20px; background:var(--accent-light); color:var(--accent); font-weight:500; transition:all .15s; }
+.links a:hover { background:var(--accent); color:#fff; text-decoration:none; }
+
+/* About — smooth expand/collapse */
+.about-toggle { margin-top:12px; font-size:.82rem; color:var(--accent); cursor:pointer; border:none; background:none; font-weight:500; transition:color .15s; }
+.about-toggle:hover { color:var(--text); }
+.about-content { font-size:.85rem; color:var(--text2); line-height:1.7; padding:0 16px; background:var(--surface2); border-radius:8px; max-height:0; overflow:hidden; transition:max-height .3s ease, padding .3s ease, margin .3s ease, opacity .3s ease; opacity:0; margin-top:0; }
+.about-content.open { max-height:220px; overflow-y:auto; padding:16px; margin-top:8px; opacity:1; }
+
+/* Outreach */
+.outreach-stage-wrap { margin-top:14px; display:flex; align-items:center; gap:8px; }
+.outreach-stage-wrap label { font-size:.75rem; color:var(--text2); text-transform:uppercase; letter-spacing:.5px; font-weight:500; }
+.outreach-stage { padding:6px 12px; border-radius:20px; border:1px solid var(--border); font-size:.8rem; font-weight:500; cursor:pointer; outline:none; appearance:none; -webkit-appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%236b7b94'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 10px center; padding-right:26px; transition:all var(--transition); background-color:var(--surface); }
+.outreach-stage:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(59,108,245,.12); }
+
+/* Engagement tags with pop animation */
+.engagement-tags { display:flex; gap:6px; flex-wrap:wrap; margin-top:10px; }
+.eng-tag { padding:3px 10px; border-radius:20px; font-size:.75rem; font-weight:500; cursor:pointer; border:1px solid transparent; transition:all .2s ease; user-select:none; }
+.eng-tag.off { background:var(--surface2); color:var(--text2); border-color:var(--border); opacity:.45; }
+.eng-tag.off:hover { opacity:.7; }
+.eng-tag.replied { background:#ecfdf5; color:var(--green); border-color:rgba(22,163,74,.2); animation:tagPop .25s ease; }
+.eng-tag.opened { background:var(--accent-light); color:var(--accent); border-color:rgba(59,108,245,.2); animation:tagPop .25s ease; }
+.eng-tag.clicked { background:#f3f0ff; color:var(--purple); border-color:rgba(124,58,237,.2); animation:tagPop .25s ease; }
+@keyframes tagPop { 0%{transform:scale(.9)} 60%{transform:scale(1.05)} 100%{transform:scale(1)} }
+
+/* Outreach log — smooth expand */
+.outreach-log-toggle { margin-top:12px; font-size:.82rem; color:var(--accent); cursor:pointer; border:none; background:none; display:flex; align-items:center; gap:4px; font-weight:500; transition:color .15s; }
+.outreach-log-toggle:hover { color:var(--text); }
+.outreach-log { margin-top:0; padding:0 16px; background:var(--surface2); border-radius:8px; max-height:0; overflow:hidden; transition:max-height .3s ease, padding .3s ease, margin .3s ease, opacity .3s ease; opacity:0; }
+.outreach-log.open { max-height:500px; padding:16px; margin-top:10px; opacity:1; overflow-y:auto; }
+.log-entry { margin-bottom:14px; }
+.log-entry:last-child { margin-bottom:0; }
+.log-entry-label { font-size:.75rem; font-weight:600; color:var(--accent); margin-bottom:4px; }
+.log-entry-row { display:flex; gap:8px; align-items:flex-start; }
+.log-entry textarea { flex:1; background:var(--surface); border:1px solid var(--border); border-radius:8px; color:var(--text); padding:8px 10px; font-size:.82rem; font-family:inherit; resize:vertical; min-height:48px; outline:none; transition:border-color .15s; }
+.log-entry textarea:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(59,108,245,.12); }
+.log-entry input[type="datetime-local"] { background:var(--surface); border:1px solid var(--border); border-radius:8px; color:var(--text); padding:6px 8px; font-size:.78rem; font-family:inherit; outline:none; width:180px; }
+.log-entry input[type="datetime-local"]:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(59,108,245,.12); }
+
+/* Table with smooth switching */
+.speakers-table { display:none; width:100%; border-collapse:separate; border-spacing:0; background:var(--surface); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); opacity:0; transition:opacity .3s ease; }
+.speakers-table.visible { opacity:1; }
+.speakers-table th { text-align:left; padding:14px 20px; font-size:.75rem; text-transform:uppercase; letter-spacing:.5px; color:var(--text2); font-weight:500; border-bottom:1px solid var(--border); background:var(--surface); position:sticky; top:0; cursor:pointer; }
+.speakers-table th:hover { color:var(--accent); }
+.speakers-table td { padding:14px 20px; border-bottom:1px solid var(--border); font-size:.88rem; vertical-align:top; }
+.speakers-table tr:nth-child(even) td { background:var(--surface2); }
+.speakers-table tr:hover td { background:var(--accent-light); }
+
+@keyframes fadeIn { from{opacity:0;transform:translateY(-4px)} to{opacity:1;transform:translateY(0)} }
+
+/* Bulk Action Bar */
+.bulk-bar { position:fixed; bottom:-80px; left:50%; transform:translateX(-50%); background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:12px 24px; display:flex; align-items:center; gap:16px; box-shadow:0 -4px 24px rgba(0,0,0,.1); z-index:999; transition:bottom .3s cubic-bezier(.4,0,.2,1); white-space:nowrap; }
+.bulk-bar.visible { bottom:28px; }
+.bulk-bar .bulk-count { font-size:.88rem; font-weight:600; color:var(--accent); min-width:80px; }
+.bulk-bar .bulk-sep { width:1px; height:28px; background:var(--border); }
+.bulk-bar label { font-size:.75rem; color:var(--text2); text-transform:uppercase; letter-spacing:.4px; font-weight:500; }
+.bulk-bar select { padding:6px 10px; border-radius:8px; border:1px solid var(--border); font-size:.82rem; background:var(--surface); color:var(--text); outline:none; cursor:pointer; }
+.bulk-bar select:focus { border-color:var(--accent); }
+.bulk-bar .bulk-eng-btn { padding:5px 12px; border-radius:16px; border:1px solid var(--border); background:var(--surface); color:var(--text2); font-size:.78rem; font-weight:500; cursor:pointer; transition:all .15s; }
+.bulk-bar .bulk-eng-btn:hover { border-color:var(--accent); color:var(--accent); }
+.bulk-bar .bulk-eng-btn.active { background:var(--accent-light); color:var(--accent); border-color:rgba(59,108,245,.3); }
+.bulk-bar .bulk-clear { padding:6px 14px; border-radius:8px; border:1px solid var(--border); background:var(--surface); color:var(--text2); font-size:.82rem; cursor:pointer; transition:all .15s; font-weight:500; }
+.bulk-bar .bulk-clear:hover { background:var(--surface2); color:var(--text); }
+
+/* Apollo/Settings */
+.apollo-btn { padding:7px 16px; border-radius:24px; border:1px solid var(--border); background:var(--surface); color:var(--text2); cursor:pointer; font-size:.82rem; transition:all .15s; font-weight:500; }
+.apollo-btn:hover { background:var(--accent); color:#fff; border-color:var(--accent); }
+.modal-overlay { display:none; position:fixed; inset:0; background:rgba(26,34,51,.3); backdrop-filter:blur(4px); z-index:1000; justify-content:center; align-items:center; }
+.modal-overlay.open { display:flex; }
+.modal { background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:36px; width:560px; max-width:90vw; max-height:85vh; overflow-y:auto; position:relative; animation:fadeIn .2s; box-shadow:var(--shadow-lg); }
+.modal h3 { font-size:1.2rem; margin-bottom:24px; color:var(--text); font-weight:600; }
+.modal-close { position:absolute; top:16px; right:16px; background:none; border:none; color:var(--text2); font-size:1.1rem; cursor:pointer; width:32px; height:32px; border-radius:8px; display:flex; align-items:center; justify-content:center; transition:all .15s; }
+.modal-close:hover { color:var(--text); background:var(--surface2); }
+.modal label { display:block; font-size:.78rem; color:var(--text2); margin-bottom:6px; text-transform:uppercase; letter-spacing:.5px; font-weight:500; }
+.modal input[type="text"], .modal input[type="file"] { width:100%; padding:10px 14px; background:var(--surface); border:1px solid var(--border); border-radius:8px; color:var(--text); font-size:.88rem; margin-bottom:16px; outline:none; transition:border-color .15s; }
+.modal input[type="text"]:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(59,108,245,.12); }
+.modal .btn-row { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px; }
+.modal .btn-primary { padding:10px 20px; border-radius:8px; border:none; background:var(--accent); color:#fff; font-size:.88rem; font-weight:600; cursor:pointer; transition:background .15s; }
+.modal .btn-primary:hover { background:#2b5ad4; }
+.modal .btn-secondary { padding:10px 20px; border-radius:8px; border:1px solid var(--border); background:var(--surface); color:var(--text); font-size:.88rem; cursor:pointer; transition:all .15s; }
+.modal .btn-secondary:hover { background:var(--surface2); }
+.modal .status-line { font-size:.85rem; color:var(--text2); margin-bottom:12px; padding:10px 14px; background:var(--surface2); border-radius:8px; }
+.modal .note { font-size:.82rem; color:var(--text2); background:var(--accent-light); border-radius:8px; padding:14px; margin-bottom:16px; line-height:1.7; border-left:3px solid var(--accent); }
+.modal hr { border:none; border-top:1px solid var(--border); margin:24px 0; }
+.sync-indicator { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px; }
+.sync-indicator.idle { background:var(--text2); }
+.sync-indicator.syncing { background:var(--p2); animation:pulse 1s infinite; }
+.sync-indicator.done { background:var(--green); }
+.sync-indicator.error { background:var(--p1); }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+@media(max-width:600px) {
+  #landing, #detail { padding:24px 16px; }
+  .speakers-grid { grid-template-columns:1fr; }
+  .conf-grid { grid-template-columns:1fr; }
+  .controls { flex-direction:column; }
+  .view-toggle { margin-left:0; }
+  .stats-bar { flex-wrap:wrap; }
+  .stat-item { min-width:33%; }
+  .bulk-bar { left:8px; right:8px; transform:none; flex-wrap:wrap; gap:10px; }
+}
+</style>
+</head>
+<body>
+
+<div id="landing">
+  <h1>Conference Intelligence Hub</h1>
+  <p class="subtitle">Track speakers, priorities, and oncology signals across healthcare conferences</p>
+  <div class="conf-grid" id="confGrid"></div>
+</div>
+
+<div id="detail">
+  <button class="back-btn" onclick="showLanding()">&#8592; Back to Conferences</button>
+  <div class="detail-header">
+    <h2>HIMSS 2026</h2>
+    <div class="info">
+      <span>March 9 &ndash; 13, 2026</span>
+      <span>Las Vegas, NV &mdash; The Venetian</span>
+      <span><a href="https://www.himssconference.com" target="_blank" style="color:rgba(255,255,255,.85)">himssconference.com</a></span>
+    </div>
+  </div>
+  <div class="stats-bar" id="statsBar"></div>
+  <div class="controls" id="controlsBar">
+    <div class="search-wrap">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input class="search-box" id="searchBox" placeholder="Search speakers by name, org, title..." oninput="filterSpeakers()">
+      <button class="search-clear" onclick="document.getElementById('searchBox').value='';filterSpeakers()">&#10005;</button>
+    </div>
+    <label class="select-all-wrap"><input type="checkbox" id="selectAllCb" onchange="toggleSelectAll(this.checked)"> All</label>
+    <button class="filter-btn active" data-filter="all" onclick="setFilter('all',this)">All</button>
+    <button class="filter-btn" data-filter="P1" onclick="setFilter('P1',this)"><span class="priority-dot p1" style="width:6px;height:6px;border-radius:50%;display:inline-block;vertical-align:middle;margin-right:4px"></span> P1</button>
+    <button class="filter-btn" data-filter="P2" onclick="setFilter('P2',this)"><span class="priority-dot p2" style="width:6px;height:6px;border-radius:50%;display:inline-block;vertical-align:middle;margin-right:4px"></span> P2</button>
+    <button class="filter-btn" data-filter="P3" onclick="setFilter('P3',this)"><span class="priority-dot p3" style="width:6px;height:6px;border-radius:50%;display:inline-block;vertical-align:middle;margin-right:4px"></span> P3</button>
+    <button class="filter-btn" data-filter="onc" onclick="setFilter('onc',this)">Oncology</button>
+    <div class="filter-sep"></div>
+    <button class="filter-btn" data-filter="not_contacted" onclick="setFilter('not_contacted',this)">Not Contacted</button>
+    <button class="filter-btn" data-filter="in_progress" onclick="setFilter('in_progress',this)">In Progress</button>
+    <button class="filter-btn" data-filter="replied" onclick="setFilter('replied',this)">Replied</button>
+    <button class="filter-btn" data-filter="meeting_booked" onclick="setFilter('meeting_booked',this)">Meeting Booked</button>
+    <select class="sort-select" id="sortSelect" onchange="filterSpeakers()">
+      <option value="score">Sort: Priority Score</option>
+      <option value="name">Sort: Name</option>
+      <option value="org">Sort: Organization</option>
+    </select>
+    <button class="apollo-btn" onclick="openApolloModal()">Apollo</button>
+    <button class="apollo-btn" onclick="openSettingsModal()">Settings</button>
+    <div class="view-toggle">
+      <button class="active" onclick="setView('cards',this)">Cards</button>
+      <button onclick="setView('table',this)">Table</button>
+    </div>
+  </div>
+  <div class="speakers-grid" id="speakersGrid"></div>
+  <table class="speakers-table" id="speakersTable">
+    <thead><tr>
+      <th style="width:30px"><input type="checkbox" id="selectAllTableCb" onchange="toggleSelectAll(this.checked)" style="cursor:pointer"></th>
+      <th onclick="sortTable('name')">Name</th>
+      <th onclick="sortTable('org')">Organization</th>
+      <th onclick="sortTable('priority')">Priority</th>
+      <th onclick="sortTable('score')">Score</th>
+      <th>Oncology</th>
+      <th>Stage</th>
+      <th>Sessions</th>
+      <th>Links</th>
+    </tr></thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+</div>
+
+<!-- Bulk Action Bar -->
+<div class="bulk-bar" id="bulkBar">
+  <span class="bulk-count" id="bulkCount">0 selected</span>
+  <div class="bulk-sep"></div>
+  <div style="display:flex;align-items:center;gap:6px">
+    <label>Stage</label>
+    <select id="bulkStageSelect" onchange="bulkSetStage(this.value)">
+      <option value="">Set stage...</option>
+    </select>
+  </div>
+  <div class="bulk-sep"></div>
+  <button class="bulk-eng-btn" onclick="bulkToggleEngagement('replied')">Replied</button>
+  <button class="bulk-eng-btn" onclick="bulkToggleEngagement('opened')">Opened</button>
+  <button class="bulk-eng-btn" onclick="bulkToggleEngagement('clicked')">Clicked</button>
+  <div class="bulk-sep"></div>
+  <button class="bulk-clear" onclick="clearSelection()">Clear</button>
+</div>
+
+<!-- Settings Modal -->
+<div class="modal-overlay" id="settingsModal" onclick="if(event.target===this)closeSettingsModal()">
+  <div class="modal">
+    <button class="modal-close" onclick="closeSettingsModal()">&#10005;</button>
+    <h3>Settings</h3>
+    <label>Apollo API Key</label>
+    <input type="text" id="apolloKeyInput" placeholder="Enter your Apollo.io API key...">
+    <div class="status-line">
+      <span class="sync-indicator idle" id="syncIndicator"></span>
+      Last sync: <span id="lastSyncTime">Never</span>
+    </div>
+    <div class="btn-row">
+      <button class="btn-primary" onclick="triggerSync()">Sync Now</button>
+    </div>
+    <div class="note">
+      <strong>Browser CORS restriction:</strong> Direct API calls from browser are blocked by Apollo's servers. Use one of these methods instead:<br><br>
+      1. <strong>CSV Import</strong> &mdash; Export from Apollo sequences, use the Apollo panel to import<br>
+      2. <strong>Terminal sync</strong> &mdash; Run <code>node apollo-sync.js</code> in the dashboard folder, then load the JSON
+    </div>
+    <div id="syncResult"></div>
+  </div>
+</div>
+
+<!-- Apollo Panel Modal -->
+<div class="modal-overlay" id="apolloModal" onclick="if(event.target===this)closeApolloModal()">
+  <div class="modal">
+    <button class="modal-close" onclick="closeApolloModal()">&#10005;</button>
+    <h3>Apollo Integration</h3>
+    
+    <label>Import Apollo Sequence CSV</label>
+    <div class="note">Export your Apollo sequence data as CSV. The importer maps email to speaker, and reads Opens, Clicks, and Replies columns to tag engagement.</div>
+    <input type="file" id="apolloCsvFile" accept=".csv" onchange="handleApolloCSV(this)">
+    <div id="csvImportResult" style="margin-bottom:16px"></div>
+    
+    <hr>
+    
+    <label>Load Apollo Engagement JSON</label>
+    <div class="note">Generated by <code>node apollo-sync.js</code>. Auto-loaded on dashboard start if present.</div>
+    <div class="btn-row">
+      <input type="file" id="apolloJsonFile" accept=".json" onchange="handleApolloJSON(this)">
+      <button class="btn-secondary" onclick="fetchApolloJSON()">Reload apollo-engagement.json</button>
+    </div>
+    <div id="jsonImportResult"></div>
+  </div>
+</div>
+
+<script>
+// ============ OUTREACH DATA (localStorage) ============
+const OUTREACH_KEY = 'himss2026_outreach';
+let outreachData = {};
+
+function loadOutreach() {
+  try { outreachData = JSON.parse(localStorage.getItem(OUTREACH_KEY)) || {}; } catch(e) { outreachData = {}; }
+}
+
+function saveOutreach() {
+  localStorage.setItem(OUTREACH_KEY, JSON.stringify(outreachData));
+}
+
+function getOutreach(name) {
+  if (!outreachData[name]) {
+    outreachData[name] = {
+      stage: 'Not Started',
+      engagement: { replied: false, opened: false, clicked: false },
+      log: {
+        first_email: { message: '', timestamp: '' },
+        first_followup: { message: '', timestamp: '' },
+        second_followup: { message: '', timestamp: '' },
+        third_followup: { message: '', timestamp: '' }
+      }
+    };
+  }
+  return outreachData[name];
+}
+
+function setStage(name, stage) {
+  getOutreach(name).stage = stage;
+  saveOutreach();
+  renderStats();
+}
+
+function toggleEngagement(name, tag) {
+  const o = getOutreach(name);
+  o.engagement[tag] = !o.engagement[tag];
+  saveOutreach();
+  renderStats();
+  const card = document.querySelector(`[data-speaker="${CSS.escape(name)}"]`);
+  if (card) {
+    renderEngagementTags(card.querySelector('.engagement-tags'), name);
+    updateProgressBar(card, name);
+  }
+}
+
+function updateLog(name, field, key, value) {
+  getOutreach(name).log[field][key] = value;
+  saveOutreach();
+}
+
+// ============ STAGE COLORS & PROGRESS ============
+const STAGE_STYLES = {
+  'Not Started':       { bg:'#f0f3f8', color:'#6b7b94' },
+  'First Email Sent':  { bg:'#edf2ff', color:'#3b6cf5' },
+  'First Follow-up':   { bg:'#fef9ec', color:'#d4920a' },
+  'Second Follow-up':  { bg:'#fff5eb', color:'#ea580c' },
+  'Third Follow-up':   { bg:'#fef2f2', color:'#e03e3e' },
+  'Meeting Booked':    { bg:'#ecfdf5', color:'#16a34a' },
+  'Not Interested':    { bg:'#f0f3f8', color:'#9ca3af' }
+};
+const STAGES = Object.keys(STAGE_STYLES);
+
+const STAGE_PROGRESS = {
+  'Not Started':       { pct:0,   barColor:'#d0d5dd' },
+  'First Email Sent':  { pct:25,  barColor:'var(--accent)' },
+  'First Follow-up':   { pct:50,  barColor:'var(--accent)' },
+  'Second Follow-up':  { pct:75,  barColor:'var(--accent)' },
+  'Third Follow-up':   { pct:90,  barColor:'var(--accent)' },
+  'Meeting Booked':    { pct:100, barColor:'var(--green)' },
+  'Not Interested':    { pct:100, barColor:'#9ca3af' }
+};
+
+// ============ SELECTION STATE ============
+let selectedSpeakers = new Set();
+
+function toggleCardSelection(name, checkbox) {
+  if (checkbox.checked) {
+    selectedSpeakers.add(name);
+  } else {
+    selectedSpeakers.delete(name);
+  }
+  updateCardSelectionVisual(name);
+  updateBulkBar();
+  syncSelectAllCheckbox();
+}
+
+function updateCardSelectionVisual(name) {
+  const card = document.querySelector(`.speaker-card[data-speaker="${CSS.escape(name)}"]`);
+  if (card) {
+    card.classList.toggle('selected', selectedSpeakers.has(name));
+    const cb = card.querySelector('.card-checkbox');
+    if (cb) cb.checked = selectedSpeakers.has(name);
+  }
+}
+
+function toggleSelectAll(checked) {
+  const list = getFiltered();
+  if (checked) {
+    list.forEach(s => selectedSpeakers.add(s.name));
+  } else {
+    list.forEach(s => selectedSpeakers.delete(s.name));
+  }
+  list.forEach(s => updateCardSelectionVisual(s.name));
+  // sync table checkboxes
+  document.querySelectorAll('.table-row-cb').forEach(cb => cb.checked = checked);
+  updateBulkBar();
+  syncSelectAllCheckbox();
+}
+
+function syncSelectAllCheckbox() {
+  const list = getFiltered();
+  const allSelected = list.length > 0 && list.every(s => selectedSpeakers.has(s.name));
+  document.getElementById('selectAllCb').checked = allSelected;
+  const tableCb = document.getElementById('selectAllTableCb');
+  if (tableCb) tableCb.checked = allSelected;
+}
+
+function clearSelection() {
+  selectedSpeakers.clear();
+  document.querySelectorAll('.speaker-card.selected').forEach(c => c.classList.remove('selected'));
+  document.querySelectorAll('.card-checkbox:checked').forEach(cb => cb.checked = false);
+  document.querySelectorAll('.table-row-cb:checked').forEach(cb => cb.checked = false);
+  updateBulkBar();
+  syncSelectAllCheckbox();
+}
+
+function updateBulkBar() {
+  const bar = document.getElementById('bulkBar');
+  const count = selectedSpeakers.size;
+  document.getElementById('bulkCount').textContent = `${count} selected`;
+  bar.classList.toggle('visible', count > 0);
+}
+
+function bulkSetStage(stage) {
+  if (!stage) return;
+  selectedSpeakers.forEach(name => {
+    setStage(name, stage);
+  });
+  document.getElementById('bulkStageSelect').value = '';
+  saveOutreach();
+  renderStats();
+  filterSpeakers();
+}
+
+function bulkToggleEngagement(tag) {
+  // If majority have it on, turn off; else turn on
+  let onCount = 0;
+  selectedSpeakers.forEach(name => { if (getOutreach(name).engagement[tag]) onCount++; });
+  const newVal = onCount < selectedSpeakers.size / 2;
+  selectedSpeakers.forEach(name => {
+    getOutreach(name).engagement[tag] = newVal;
+  });
+  saveOutreach();
+  renderStats();
+  filterSpeakers();
+}
+
+// ============ STATE ============
+let currentFilter = 'all';
+let currentView = 'cards';
+
+loadOutreach();
+
+// Populate bulk stage select
+(function(){
+  const sel = document.getElementById('bulkStageSelect');
+  STAGES.forEach(s => { const o = document.createElement('option'); o.value = s; o.textContent = s; sel.appendChild(o); });
+})();
+
+// ============ ANIMATED STAT COUNTERS ============
+function animateCounter(el, target, suffix) {
+  suffix = suffix || '';
+  const duration = 600;
+  const start = performance.now();
+  const from = 0;
+  function step(now) {
+    const t = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - t, 3); // ease-out cubic
+    const val = Math.round(from + (target - from) * ease);
+    el.textContent = val + suffix;
+    if (t < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+// ============ COMPUTED STATS ============
+function computeStats() {
+  const total = SPEAKERS.length;
+  const p1 = SPEAKERS.filter(s => s.priority==='P1').length;
+  const p2 = SPEAKERS.filter(s => s.priority==='P2').length;
+  const p3 = SPEAKERS.filter(s => s.priority==='P3').length;
+  const onc = SPEAKERS.filter(s => s.direct_onc || s.org_cancer).length;
+  const directOnc = SPEAKERS.filter(s => s.direct_onc).length;
+  const contacted = SPEAKERS.filter(s => getOutreach(s.name).stage !== 'Not Started').length;
+  const replies = SPEAKERS.filter(s => getOutreach(s.name).engagement.replied).length;
+  const meetings = SPEAKERS.filter(s => getOutreach(s.name).stage === 'Meeting Booked').length;
+  const responseRate = contacted > 0 ? Math.round((replies / contacted) * 100) : 0;
+  return { total, p1, p2, p3, onc, directOnc, contacted, replies, meetings, responseRate };
+}
+
+// ============ PROGRESS BAR ============
+function updateProgressBar(card, name) {
+  const o = getOutreach(name);
+  const p = STAGE_PROGRESS[o.stage] || STAGE_PROGRESS['Not Started'];
+  const fill = card.querySelector('.outreach-progress-fill');
+  if (fill) {
+    fill.style.width = p.pct + '%';
+    fill.style.background = p.barColor;
+  }
+}
+
+function progressBarHTML(name) {
+  const o = getOutreach(name);
+  const p = STAGE_PROGRESS[o.stage] || STAGE_PROGRESS['Not Started'];
+  return `<div class="outreach-progress"><div class="outreach-progress-fill" style="width:${p.pct}%;background:${p.barColor}"></div></div>`;
+}
+
+// ============ PRIORITY TOOLTIP ============
+function priorityTooltip(s) {
+  const labels = { P1:'Must Meet', P2:'Should Meet', P3:'Nice to Meet' };
+  return `${s.priority} — ${labels[s.priority] || ''} (Score: ${s.score})`;
+}
+
+// ============ LANDING ============
+function renderLanding() {
+  const stats = computeStats();
+  document.getElementById('confGrid').innerHTML = `
+    <div class="conf-card" onclick="showDetail()">
+      <div class="stat">${stats.total} speakers</div>
+      <h3>HIMSS 2026</h3>
+      <div class="meta">March 9 &ndash; 13, 2026 &nbsp;&middot;&nbsp; Las Vegas, NV</div>
+      <div class="tags">
+        <span class="tag">Healthcare IT</span>
+        <span class="tag">Revenue Cycle</span>
+        <span class="tag">AI</span>
+        <span class="tag">Digital Health</span>
+        <span class="tag">Oncology Signals</span>
+      </div>
+    </div>
+    <div class="conf-card" style="opacity:.35;pointer-events:none;">
+      <h3>ASCO 2026</h3>
+      <div class="meta">Coming Soon</div>
+      <div class="tags"><span class="tag">Oncology</span><span class="tag">Research</span></div>
+    </div>
+    <div class="conf-card" style="opacity:.35;pointer-events:none;">
+      <h3>HLTH 2026</h3>
+      <div class="meta">Coming Soon</div>
+      <div class="tags"><span class="tag">Health Tech</span><span class="tag">Innovation</span></div>
+    </div>
+  `;
+}
+
+function showDetail() {
+  document.getElementById('landing').style.display = 'none';
+  document.getElementById('detail').style.display = 'block';
+  renderStats(true);
+  filterSpeakers();
+}
+
+function showLanding() {
+  document.getElementById('landing').style.display = 'block';
+  document.getElementById('detail').style.display = 'none';
+  clearSelection();
+}
+
+function renderStats(animate) {
+  const s = computeStats();
+  const items = [
+    { val:s.total, lbl:'Total', suf:'' },
+    { val:s.p1, lbl:'P1 High', suf:'' },
+    { val:s.p2, lbl:'P2 Medium', suf:'' },
+    { val:s.p3, lbl:'P3 Lower', suf:'' },
+    { val:s.onc, lbl:'Oncology', suf:'' },
+    { val:s.directOnc, lbl:'Direct Onc', suf:'' },
+    { val:s.contacted, lbl:'Contacted', suf:'' },
+    { val:s.replies, lbl:'Replies', suf:'' },
+    { val:s.meetings, lbl:'Meetings', suf:'' },
+    { val:s.responseRate, lbl:'Response Rate', suf:'%' }
+  ];
+  document.getElementById('statsBar').innerHTML = items.map((it,i) =>
+    `<div class="stat-item"><div class="num" data-counter="${i}">${animate ? '0'+it.suf : it.val+it.suf}</div><div class="label">${it.lbl}</div></div>`
+  ).join('');
+  if (animate) {
+    items.forEach((it,i) => {
+      const el = document.querySelector(`[data-counter="${i}"]`);
+      if (el) animateCounter(el, it.val, it.suf);
+    });
+  }
+}
+
+// ============ FILTERING ============
+function getFiltered() {
+  const q = document.getElementById('searchBox').value.toLowerCase();
+  const sort = document.getElementById('sortSelect').value;
+  let list = SPEAKERS.filter(s => {
+    if (currentFilter === 'P1' || currentFilter === 'P2' || currentFilter === 'P3') {
+      if (s.priority !== currentFilter) return false;
+    }
+    if (currentFilter === 'onc' && !s.direct_onc && !s.org_cancer) return false;
+    if (currentFilter === 'not_contacted' && getOutreach(s.name).stage !== 'Not Started') return false;
+    if (currentFilter === 'in_progress') {
+      const st = getOutreach(s.name).stage;
+      if (st === 'Not Started' || st === 'Meeting Booked' || st === 'Not Interested') return false;
+      if (getOutreach(s.name).engagement.replied) return false;
+    }
+    if (currentFilter === 'replied' && !getOutreach(s.name).engagement.replied) return false;
+    if (currentFilter === 'meeting_booked' && getOutreach(s.name).stage !== 'Meeting Booked') return false;
+    if (q) {
+      const hay = (s.name + ' ' + s.org + ' ' + s.title).toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+  list.sort((a,b) => {
+    if (sort === 'score') return b.score - a.score;
+    if (sort === 'name') return a.name.localeCompare(b.name);
+    if (sort === 'org') return a.org.localeCompare(b.org);
+    return 0;
+  });
+  return list;
+}
+
+function oncLabel(s) {
+  if (s.direct_onc) return 'Direct oncology';
+  if (s.org_cancer) return s.org_cancer;
+  return 'None';
+}
+
+function priorityHTML(p, s) {
+  const tooltip = s ? priorityTooltip(s) : '';
+  return `<span class="priority-dot ${p.toLowerCase()}" data-tooltip="${tooltip}"></span> ${p}`;
+}
+
+function renderEngagementTags(container, name) {
+  const o = getOutreach(name);
+  const tags = [
+    { key:'replied', label:'Replied', cls:'replied' },
+    { key:'opened', label:'Opened', cls:'opened' },
+    { key:'clicked', label:'Clicked', cls:'clicked' }
+  ];
+  container.innerHTML = tags.map(t =>
+    `<span class="eng-tag ${o.engagement[t.key] ? t.cls : 'off'}" onclick="toggleEngagement('${esc(name).replace(/'/g,"\\'")}','${t.key}')">${t.label}</span>`
+  ).join('') + (!o.engagement.replied && !o.engagement.opened && !o.engagement.clicked
+    ? `<span class="eng-tag off" style="cursor:default">No response</span>` : '');
+}
+
+function stageSelectHTML(name) {
+  const o = getOutreach(name);
+  const st = STAGE_STYLES[o.stage] || STAGE_STYLES['Not Started'];
+  const safeName = esc(name).replace(/'/g,"&#39;");
+  return `<div class="outreach-stage-wrap">
+    <label>Outreach</label>
+    <select class="outreach-stage" style="background-color:${st.bg};color:${st.color}" onchange="handleStageChange('${safeName}',this)">
+      ${STAGES.map(s => `<option value="${s}" ${o.stage===s?'selected':''}>${s}</option>`).join('')}
+    </select>
+  </div>`;
+}
+
+function handleStageChange(name, el) {
+  const decoded = el.closest('[data-speaker]')?.dataset.speaker || name.replace(/&#39;/g,"'");
+  setStage(decoded, el.value);
+  const st = STAGE_STYLES[el.value];
+  el.style.backgroundColor = st.bg;
+  el.style.color = st.color;
+  const card = el.closest('.speaker-card');
+  if (card) updateProgressBar(card, decoded);
+}
+
+function outreachLogHTML(name) {
+  const o = getOutreach(name);
+  const safeName = esc(name).replace(/'/g,"&#39;");
+  const fields = [
+    { key:'first_email', label:'First Email' },
+    { key:'first_followup', label:'First Follow-up' },
+    { key:'second_followup', label:'Second Follow-up' },
+    { key:'third_followup', label:'Third Follow-up' }
+  ];
+  return `<button class="outreach-log-toggle" onclick="toggleLog(this)">Outreach Log &#9654;</button>
+  <div class="outreach-log">
+    ${fields.map(f => `<div class="log-entry">
+      <div class="log-entry-label">${f.label}</div>
+      <div class="log-entry-row">
+        <textarea placeholder="Message content..." onblur="updateLogField(this,'${safeName}','${f.key}','message')">${esc(o.log[f.key]?.message||'')}</textarea>
+        <input type="datetime-local" value="${o.log[f.key]?.timestamp||''}" onchange="updateLogField(this,'${safeName}','${f.key}','timestamp')">
+      </div>
+    </div>`).join('')}
+  </div>`;
+}
+
+function updateLogField(el, name, field, key) {
+  const decoded = el.closest('[data-speaker]')?.dataset.speaker || name.replace(/&#39;/g,"'");
+  const value = el.tagName === 'TEXTAREA' ? el.value : el.value;
+  updateLog(decoded, field, key, value);
+}
+
+function toggleLog(btn) {
+  const log = btn.nextElementSibling;
+  log.classList.toggle('open');
+  btn.innerHTML = log.classList.contains('open') ? 'Outreach Log &#9660;' : 'Outreach Log &#9654;';
+}
+
+function filterSpeakers() {
+  const list = getFiltered();
+  const grid = document.getElementById('speakersGrid');
+  grid.innerHTML = list.map((s,i) => `
+    <div class="speaker-card${selectedSpeakers.has(s.name) ? ' selected' : ''}" data-speaker="${esc(s.name)}" style="animation-delay:${i*0.03}s">
+      <input type="checkbox" class="card-checkbox" ${selectedSpeakers.has(s.name)?'checked':''} onchange="toggleCardSelection('${esc(s.name).replace(/'/g,"\\'")}',this)" onclick="event.stopPropagation()">
+      <div class="speaker-top">
+        <div>
+          <div class="speaker-name">${esc(s.name)}</div>
+          <div class="speaker-title">${esc(s.title)}</div>
+          <div class="speaker-org">${esc(s.org)}</div>
+        </div>
+        <span class="priority-badge">${priorityHTML(s.priority, s)} &middot; ${s.score}</span>
+      </div>
+      ${stageSelectHTML(s.name)}
+      <div class="engagement-tags" data-name="${esc(s.name)}"></div>
+      <div class="onc-signal">${oncLabel(s)}</div>
+      ${s.sessions.length ? `<div class="sessions-list"><h4>Sessions</h4>${s.sessions.map(ss=>`<div class="session-item"><span class="dot"></span>${esc(ss)}</div>`).join('')}</div>` : ''}
+      <div class="links">
+        ${s.profileUrl ? `<a href="${s.profileUrl}" target="_blank">HIMSS Profile</a>` : ''}
+        ${s.linkedIn ? `<a href="${s.linkedIn}" target="_blank">LinkedIn</a>` : ''}
+      </div>
+      ${s.aboutMe ? `<button class="about-toggle" onclick="toggleAbout(this)">About &#9654;</button><div class="about-content">${esc(s.aboutMe)}</div>` : ''}
+      ${outreachLogHTML(s.name)}
+      ${progressBarHTML(s.name)}
+    </div>
+  `).join('');
+
+  list.forEach(s => {
+    const container = grid.querySelector(`[data-speaker="${CSS.escape(s.name)}"] .engagement-tags`);
+    if (container) renderEngagementTags(container, s.name);
+  });
+
+  document.getElementById('tableBody').innerHTML = list.map(s => {
+    const o = getOutreach(s.name);
+    const st = STAGE_STYLES[o.stage];
+    return `<tr>
+      <td><input type="checkbox" class="table-row-cb" ${selectedSpeakers.has(s.name)?'checked':''} onchange="toggleCardSelection('${esc(s.name).replace(/'/g,"\\'")}',this)"></td>
+      <td><strong>${esc(s.name)}</strong><br><small style="color:var(--text2)">${esc(s.title)}</small></td>
+      <td>${esc(s.org)}</td>
+      <td><span class="priority-badge">${priorityHTML(s.priority, s)}</span></td>
+      <td>${s.score}</td>
+      <td style="font-size:.85rem;color:var(--text2)">${oncLabel(s)}</td>
+      <td><span style="padding:4px 10px;border-radius:12px;font-size:.78rem;font-weight:500;background:${st.bg};color:${st.color}">${o.stage}</span></td>
+      <td style="font-size:.82rem">${s.sessions.join('<br>')}</td>
+      <td>${s.profileUrl?`<a href="${s.profileUrl}" target="_blank">Profile</a>`:''}</td>
+    </tr>`;
+  }).join('');
+
+  syncSelectAllCheckbox();
+  updateBulkBar();
+}
+
+function esc(t) { const d=document.createElement('div'); d.textContent=t||''; return d.innerHTML; }
+
+function toggleAbout(btn) {
+  const c = btn.nextElementSibling;
+  c.classList.toggle('open');
+  btn.innerHTML = c.classList.contains('open') ? 'About &#9660;' : 'About &#9654;';
+}
+
+function setFilter(f, btn) {
+  currentFilter = f;
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  filterSpeakers();
+}
+
+function setView(v, btn) {
+  currentView = v;
+  document.querySelectorAll('.view-toggle button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const grid = document.getElementById('speakersGrid');
+  const table = document.getElementById('speakersTable');
+  if (v === 'cards') {
+    table.style.display = 'none';
+    table.classList.remove('visible');
+    grid.style.display = 'grid';
+  } else {
+    grid.style.display = 'none';
+    table.style.display = 'table';
+    requestAnimationFrame(() => table.classList.add('visible'));
+  }
+}
+
+function sortTable(col) {
+  document.getElementById('sortSelect').value = col==='priority'?'score':col;
+  filterSpeakers();
+}
+
+// ============ KEYBOARD SHORTCUTS ============
+document.addEventListener('keydown', function(e) {
+  // Cmd/Ctrl+A to select all visible
+  if ((e.metaKey || e.ctrlKey) && e.key === 'a' && document.getElementById('detail').style.display === 'block') {
+    const active = document.activeElement;
+    if (active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA' || active.tagName === 'SELECT')) return;
+    e.preventDefault();
+    const allSelected = getFiltered().every(s => selectedSpeakers.has(s.name));
+    toggleSelectAll(!allSelected);
+  }
+});
+
+// ============ APOLLO INTEGRATION ============
+const APOLLO_KEY_STORAGE = 'apollo_api_key';
+const APOLLO_DEFAULT_KEY = 'OReaShdFYhCNDkc-dgR3bA';
+const APOLLO_SYNC_TS_KEY = 'apollo_last_sync';
+
+function openSettingsModal() {
+  document.getElementById('settingsModal').classList.add('open');
+  const saved = localStorage.getItem(APOLLO_KEY_STORAGE) || APOLLO_DEFAULT_KEY;
+  document.getElementById('apolloKeyInput').value = saved;
+  const ts = localStorage.getItem(APOLLO_SYNC_TS_KEY);
+  document.getElementById('lastSyncTime').textContent = ts ? new Date(parseInt(ts)).toLocaleString() : 'Never';
+}
+function closeSettingsModal() { document.getElementById('settingsModal').classList.remove('open'); }
+function openApolloModal() { document.getElementById('apolloModal').classList.add('open'); }
+function closeApolloModal() { document.getElementById('apolloModal').classList.remove('open'); }
+
+function triggerSync() {
+  const key = document.getElementById('apolloKeyInput').value.trim();
+  if (key) localStorage.setItem(APOLLO_KEY_STORAGE, key);
+  const ind = document.getElementById('syncIndicator');
+  const res = document.getElementById('syncResult');
+  ind.className = 'sync-indicator syncing';
+  res.innerHTML = '<div class="status-line">Attempting sync...</div>';
+
+  fetch('https://api.apollo.io/v1/people/match', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'x-api-key': key },
+    body: JSON.stringify({ email: 'test@example.com' })
+  }).then(r => {
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return r.json();
+  }).then(d => {
+    ind.className = 'sync-indicator done';
+    localStorage.setItem(APOLLO_SYNC_TS_KEY, Date.now().toString());
+    document.getElementById('lastSyncTime').textContent = new Date().toLocaleString();
+    res.innerHTML = '<div class="status-line" style="border-left:3px solid var(--green)">Sync succeeded</div>';
+  }).catch(e => {
+    ind.className = 'sync-indicator error';
+    res.innerHTML = `<div class="status-line" style="border-left:3px solid var(--p1)">${e.message || 'CORS blocked'}. Use CSV import or run <code>node apollo-sync.js</code> from terminal instead.</div>`;
+  });
+}
+
+// CSV Import
+function handleApolloCSV(input) {
+  const file = input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const lines = e.target.result.split('\n');
+    if (lines.length < 2) { showCsvResult('Empty CSV'); return; }
+    const headers = parseCSVLine(lines[0]).map(h => h.toLowerCase().trim());
+    const emailIdx = headers.findIndex(h => h.includes('email'));
+    const opensIdx = headers.findIndex(h => h.includes('open'));
+    const clicksIdx = headers.findIndex(h => h.includes('click'));
+    const repliesIdx = headers.findIndex(h => h.includes('repl'));
+    const stepIdx = headers.findIndex(h => h.includes('step') || h.includes('sequence'));
+
+    if (emailIdx === -1) { showCsvResult('No email column found in CSV'); return; }
+
+    const emailMap = {};
+    SPEAKERS.forEach(s => {
+      const fn = (s.firstName||'').toLowerCase();
+      const ln = (s.lastName||'').toLowerCase();
+      if (fn && ln) {
+        emailMap[fn + '.' + ln] = s.name;
+        emailMap[fn + ln] = s.name;
+        emailMap[fn[0] + ln] = s.name;
+      }
+      emailMap[s.name.toLowerCase()] = s.name;
+    });
+
+    let matched = 0, unmatched = 0;
+    for (let i = 1; i < lines.length; i++) {
+      if (!lines[i].trim()) continue;
+      const cols = parseCSVLine(lines[i]);
+      const email = (cols[emailIdx] || '').toLowerCase().trim();
+      if (!email) continue;
+      const emailPrefix = email.split('@')[0];
+
+      let speakerName = null;
+      if (emailMap[emailPrefix]) speakerName = emailMap[emailPrefix];
+      if (!speakerName) {
+        for (const s of SPEAKERS) {
+          const fn = (s.firstName||'').toLowerCase();
+          const ln = (s.lastName||'').toLowerCase();
+          if (fn && ln && emailPrefix.includes(fn) && emailPrefix.includes(ln)) {
+            speakerName = s.name; break;
+          }
+        }
+      }
+      if (!speakerName) {
+        const nameIdx = headers.findIndex(h => h === 'name' || h === 'contact name' || h === 'first name');
+        const lastIdx = headers.findIndex(h => h === 'last name');
+        if (nameIdx !== -1) {
+          let csvName = (cols[nameIdx]||'').trim();
+          if (lastIdx !== -1) csvName += ' ' + (cols[lastIdx]||'').trim();
+          csvName = csvName.trim();
+          const match = SPEAKERS.find(s => s.name.toLowerCase() === csvName.toLowerCase());
+          if (match) speakerName = match.name;
+        }
+      }
+
+      if (!speakerName) { unmatched++; continue; }
+
+      matched++;
+      const o = getOutreach(speakerName);
+      if (opensIdx !== -1 && parseInt(cols[opensIdx]) > 0) o.engagement.opened = true;
+      if (clicksIdx !== -1 && parseInt(cols[clicksIdx]) > 0) o.engagement.clicked = true;
+      if (repliesIdx !== -1 && parseInt(cols[repliesIdx]) > 0) o.engagement.replied = true;
+
+      if (stepIdx !== -1) {
+        const step = parseInt(cols[stepIdx]) || 0;
+        if (o.engagement.replied) { /* keep current or set */ }
+        else if (step >= 4) o.stage = 'Third Follow-up';
+        else if (step === 3) o.stage = 'Second Follow-up';
+        else if (step === 2) o.stage = 'First Follow-up';
+        else if (step >= 1) o.stage = 'First Email Sent';
+      }
+    }
+    saveOutreach();
+    renderStats();
+    filterSpeakers();
+    showCsvResult(`Imported: ${matched} matched, ${unmatched} unmatched`);
+  };
+  reader.readAsText(file);
+}
+
+function parseCSVLine(line) {
+  const result = [];
+  let current = '', inQuotes = false;
+  for (let i = 0; i < line.length; i++) {
+    const c = line[i];
+    if (c === '"') { inQuotes = !inQuotes; }
+    else if (c === ',' && !inQuotes) { result.push(current); current = ''; }
+    else { current += c; }
+  }
+  result.push(current);
+  return result;
+}
+
+function showCsvResult(msg) {
+  document.getElementById('csvImportResult').innerHTML = `<div class="status-line">${msg}</div>`;
+}
+
+// JSON Import
+function handleApolloJSON(input) {
+  const file = input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const data = JSON.parse(e.target.result);
+      applyApolloData(data);
+      document.getElementById('jsonImportResult').innerHTML = '<div class="status-line" style="border-left:3px solid var(--green)">Apollo data loaded</div>';
+    } catch(e) {
+      document.getElementById('jsonImportResult').innerHTML = '<div class="status-line" style="border-left:3px solid var(--p1)">Invalid JSON</div>';
+    }
+  };
+  reader.readAsText(file);
+}
+
+function fetchApolloJSON() {
+  fetch('apollo-engagement.json').then(r => {
+    if (!r.ok) throw new Error('Not found');
+    return r.json();
+  }).then(data => {
+    applyApolloData(data);
+    const el = document.getElementById('jsonImportResult');
+    if (el) el.innerHTML = '<div class="status-line" style="border-left:3px solid var(--green)">Auto-loaded apollo-engagement.json</div>';
+  }).catch(() => {});
+}
+
+function applyApolloData(data) {
+  const arr = Array.isArray(data) ? data : (data.contacts || data.results || []);
+  let count = 0;
+  arr.forEach(item => {
+    let speaker = null;
+    if (item.name) speaker = SPEAKERS.find(s => s.name.toLowerCase() === item.name.toLowerCase());
+    if (!speaker && item.email) {
+      const prefix = item.email.split('@')[0].toLowerCase();
+      speaker = SPEAKERS.find(s => {
+        const fn = (s.firstName||'').toLowerCase();
+        const ln = (s.lastName||'').toLowerCase();
+        return fn && ln && prefix.includes(fn) && prefix.includes(ln);
+      });
+    }
+    if (!speaker) return;
+    count++;
+    const o = getOutreach(speaker.name);
+    if (item.opened) o.engagement.opened = true;
+    if (item.clicked) o.engagement.clicked = true;
+    if (item.replied) o.engagement.replied = true;
+    if (item.stage && STAGES.includes(item.stage)) o.stage = item.stage;
+  });
+  saveOutreach();
+  renderStats();
+  filterSpeakers();
+  console.log(`Apollo: applied data for ${count} speakers`);
+}
+
+// Init
+renderLanding();
+fetchApolloJSON();
+</script>
+</body>
+</html>

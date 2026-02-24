@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Conference Intelligence Hub</title>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
 <script src="data.js"></script>
 <style>
 :root {
@@ -252,6 +253,19 @@ a:hover { text-decoration:underline; }
 </style>
 </head>
 <body>
+
+<!-- Auth Gate -->
+<div id="auth-gate" style="display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--bg);flex-direction:column;gap:24px;">
+  <div style="text-align:center;max-width:400px;padding:48px;background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow-lg);border:1px solid var(--border);">
+    <h1 style="font-size:1.5rem;font-weight:700;margin-bottom:8px;">Conference Intelligence Hub</h1>
+    <p style="color:var(--text2);font-size:.9rem;margin-bottom:32px;">Sign in with your <strong>@risalabs.ai</strong> account to continue</p>
+    <div id="g-signin-btn" style="display:inline-block;"></div>
+    <p id="auth-error" style="color:var(--p1);font-size:.85rem;margin-top:16px;display:none;"></p>
+  </div>
+</div>
+
+<!-- App (hidden until auth) -->
+<div id="app-root" style="display:none;">
 
 <div id="landing">
   <h1>Conference Intelligence Hub</h1>
@@ -1085,9 +1099,56 @@ function applyApolloData(data) {
   console.log(`Apollo: applied data for ${count} speakers`);
 }
 
-// Init
-renderLanding();
-fetchApolloJSON();
+// Init — wait for auth
+function initApp() {
+  renderLanding();
+  fetchApolloJSON();
+}
 </script>
+
+</div><!-- /app-root -->
+
+<script>
+const ALLOWED_DOMAIN = 'risalabs.ai';
+const CLIENT_ID = '335890630044-89ihek07ho28t94sg4ab7bf5u9c3gu69.apps.googleusercontent.com';
+
+function decodeJwt(token) {
+  const base64 = token.split('.')[1].replace(/-/g,'+').replace(/_/g,'/');
+  return JSON.parse(atob(base64));
+}
+
+function handleCredentialResponse(response) {
+  const user = decodeJwt(response.credential);
+  const email = user.email || '';
+  const domain = email.split('@')[1];
+  
+  if (domain === ALLOWED_DOMAIN) {
+    document.getElementById('auth-gate').style.display = 'none';
+    document.getElementById('app-root').style.display = 'block';
+    sessionStorage.setItem('cih_user', email);
+    initApp();
+  } else {
+    const err = document.getElementById('auth-error');
+    err.textContent = 'Access denied. Only @risalabs.ai accounts are allowed.';
+    err.style.display = 'block';
+    google.accounts.id.disableAutoSelect();
+  }
+}
+
+// Check if already authed this session
+window.addEventListener('load', function() {
+  google.accounts.id.initialize({
+    client_id: CLIENT_ID,
+    callback: handleCredentialResponse,
+    auto_select: true,
+    hosted_domain: ALLOWED_DOMAIN
+  });
+  google.accounts.id.renderButton(
+    document.getElementById('g-signin-btn'),
+    { theme: 'outline', size: 'large', text: 'signin_with', shape: 'pill' }
+  );
+});
+</script>
+
 </body>
 </html>

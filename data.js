@@ -8,8 +8,8 @@ const CONFERENCES = [
     dateEnd: '2026-03-13',
     location: 'Las Vegas, NV — The Venetian',
     website: 'https://www.himssconference.com',
-    agenda: 'https://www.himssconference.com/sessions',
-    exhibitorProspectus: 'https://www.himssconference.com/exhibit/become-exhibitor',
+    agenda: 'https://www.himssconference.com/agenda-at-a-glance/',
+    exhibitorProspectus: 'https://www.himssconference.com/himss26-prospectus/',
     tags: ['Healthcare IT', 'Revenue Cycle', 'AI', 'Digital Health', 'Oncology Signals'],
     gtmTag: 'must_attend',       // must_attend | must_sponsor | outreach_only | skip
     outreach: {
@@ -28,7 +28,7 @@ const CONFERENCES = [
     location: 'Orlando, FL',
     website: 'https://www.nccn.org/education-and-research/annual-conference',
     agenda: 'https://web.cvent.com/event/c545cc3d-2270-4e92-a667-dd145f0862ff/websitePage:d21d34a5-02d8-435f-b04e-a20ead3092fc',
-    exhibitorProspectus: 'https://www.nccn.org/education-and-research/annual-conference/sponsorship-exhibit',
+    exhibitorProspectus: 'https://www.nccn.org/education-and-research/annual-conference',
     tags: ['Oncology', 'Clinical Guidelines', 'Cancer Research', 'Policy'],
     gtmTag: 'outreach_only',
     outreach: {
@@ -47,7 +47,7 @@ const CONFERENCES = [
     location: 'Chicago, IL — McCormick Place',
     website: 'https://www.asco.org/annual-meeting',
     agenda: 'https://meetings.asco.org/am/schedule-at-a-glance',
-    exhibitorProspectus: 'https://www.asco.org/annual-meeting/exhibitors',
+    exhibitorProspectus: 'https://www.asco.org/annual-meeting',
     tags: ['Oncology', 'Research', 'Clinical Trials'],
     gtmTag: '',
     outreach: {

@@ -407,7 +407,10 @@ a:hover { text-decoration:underline; }
   <h1>Conference Intelligence Hub</h1>
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
     <p class="subtitle" style="margin:0;">RISA Labs GTM Conference Tracker — March to June 2026</p>
-    <button onclick="showGlobalTasks()" style="padding:8px 16px;background:var(--accent);color:white;border:none;border-radius:8px;font-size:.85rem;font-weight:500;cursor:pointer;">📋 All Tasks</button>
+    <div style="display:flex;gap:8px;">
+      <button onclick="showGlobalTasks()" style="padding:8px 16px;background:var(--accent);color:white;border:none;border-radius:8px;font-size:.85rem;font-weight:500;cursor:pointer;">📋 All Tasks</button>
+      <button onclick="showSettings()" style="padding:8px 12px;background:var(--surface);border:1px solid var(--border);border-radius:8px;font-size:.85rem;cursor:pointer;" title="Settings">⚙️</button>
+    </div>
   </div>
   
   <!-- Executive Summary Bar -->
@@ -892,6 +895,47 @@ function priorityTooltip(s) {
 }
 
 // ============ TASK MANAGEMENT ============
+// ============ TEAM ROSTER ============
+const TEAM = [
+  { name: 'Deepika', email: 'deepika@risalabs.ai' },
+  { name: 'Abhi', email: 'abhid@risalabs.ai' },
+  { name: 'Naru', email: 'naru@risalabs.ai' },
+  { name: 'Sparsh', email: 'sparsh@risalabs.ai' },
+  { name: 'Amirpreet', email: 'amirpreet@risalabs.ai' }
+];
+
+function getTeamMemberByName(name) { return TEAM.find(m => m.name === name); }
+function getTeamMemberByEmail(email) { return TEAM.find(m => m.email === email); }
+
+// Google Apps Script webhook URL for email notifications
+const NOTIFY_KEY = 'cih_notify_url';
+let notifyUrl = localStorage.getItem(NOTIFY_KEY) || '';
+
+function setNotifyUrl(url) {
+  notifyUrl = url;
+  localStorage.setItem(NOTIFY_KEY, url);
+}
+
+async function sendTaskNotification(assigneeEmail, assigneeName, taskTitle, confName, priority, dueDate, assignedBy) {
+  if (!notifyUrl) return;
+  try {
+    await fetch(notifyUrl, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        to: assigneeEmail,
+        assignee: assigneeName,
+        task: taskTitle,
+        conference: confName,
+        priority: priority,
+        dueDate: dueDate || 'No due date',
+        assignedBy: assignedBy || 'RISA GTM Hub'
+      })
+    });
+  } catch(e) { console.warn('Notification failed:', e); }
+}
+
 const TASKS_KEY = 'cih_tasks';
 let allTasks = [];
 function loadTasks() { try { allTasks = JSON.parse(localStorage.getItem(TASKS_KEY)) || []; } catch(e) { allTasks = []; } }
@@ -900,7 +944,7 @@ loadTasks();
 
 let taskIdCounter = allTasks.length ? Math.max(...allTasks.map(t=>t.id||0)) + 1 : 1;
 
-function addTask(confId, title, assignee, priority, dueDate, category) {
+function addTask(confId, title, assignee, priority, dueDate, category, skipNotify) {
   allTasks.push({
     id: taskIdCounter++,
     confId: confId || '',
@@ -915,15 +959,35 @@ function addTask(confId, title, assignee, priority, dueDate, category) {
     notes: ''
   });
   saveTasks();
+
+  // Send email notification
+  if (assignee && !skipNotify) {
+    const member = getTeamMemberByName(assignee);
+    if (member) {
+      const conf = CONFERENCES.find(c => c.id === confId);
+      const assignedBy = localStorage.getItem('cih_user') || 'RISA GTM Hub';
+      sendTaskNotification(member.email, member.name, title, conf?.name || 'General', priority, dueDate, assignedBy);
+    }
+  }
 }
 
 function updateTask(id, field, value) {
   const t = allTasks.find(t => t.id === id);
   if (!t) return;
+  const oldAssignee = t.assignee;
   t[field] = value;
   if (field === 'status' && value === 'completed') t.completedAt = new Date().toISOString();
   if (field === 'status' && value !== 'completed') t.completedAt = '';
   saveTasks();
+
+  // Notify on reassignment
+  if (field === 'assignee' && value && value !== oldAssignee) {
+    const member = getTeamMemberByName(value);
+    if (member) {
+      const conf = CONFERENCES.find(c => c.id === t.confId);
+      sendTaskNotification(member.email, member.name, t.title, conf?.name || 'General', t.priority, t.dueDate, localStorage.getItem('cih_user') || 'RISA GTM Hub');
+    }
+  }
 }
 
 function deleteTask(id) {
@@ -1069,7 +1133,7 @@ function renderTaskBoard(confId, containerId) {
   // Add task form
   html += `<div class="add-task-row">
     <input type="text" id="newTask-${confId}" placeholder="Add a task..." onkeydown="if(event.key==='Enter')addTaskFromForm('${confId}','${containerId}')">
-    <select id="newTaskAssignee-${confId}"><option value="">Assignee</option>${getKnownTeamMembers().map(m=>`<option value="${esc(m)}">${esc(m)}</option>`).join('')}<option value="_new">+ New person</option></select>
+    <select id="newTaskAssignee-${confId}"><option value="">Assignee</option>${TEAM.map(m=>`<option value="${esc(m.name)}">${esc(m.name)} (${m.email})</option>`).join('')}${getKnownTeamMembers().filter(n=>!TEAM.find(m=>m.name===n)).map(m=>`<option value="${esc(m)}">${esc(m)}</option>`).join('')}<option value="_new">+ New person</option></select>
     <select id="newTaskPriority-${confId}"><option value="high">🔴 High</option><option value="medium" selected>🟡 Medium</option><option value="low">⚪ Low</option></select>
     <select id="newTaskCategory-${confId}">${Object.entries(TASK_CATEGORIES).map(([k,v])=>`<option value="${k}">${v.label}</option>`).join('')}</select>
     <input type="date" id="newTaskDue-${confId}" style="width:140px;">
@@ -1116,7 +1180,8 @@ function addTaskFromForm(confId, containerId) {
 }
 
 function getKnownTeamMembers() {
-  const members = new Set();
+  // Always include TEAM roster + any extras from tasks/assignments
+  const members = new Set(TEAM.map(m => m.name));
   allTasks.forEach(t => { if (t.assignee) members.add(t.assignee); });
   Object.values(teamData).forEach(arr => arr.forEach(m => members.add(m)));
   return [...members].sort();
@@ -1244,7 +1309,7 @@ function renderGlobalTasks() {
         <select id="globalNewConf"><option value="">Conference (optional)</option>${CONFERENCES.filter(c=>getConfData(c.id).gtmTag!=='skip').map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select>
       </div>
       <div class="add-task-row" style="margin-top:8px;">
-        <select id="globalNewAssignee"><option value="">Assignee</option>${getKnownTeamMembers().map(m=>`<option value="${esc(m)}">${esc(m)}</option>`).join('')}<option value="_new">+ New person</option></select>
+        <select id="globalNewAssignee"><option value="">Assignee</option>${TEAM.map(m=>`<option value="${esc(m.name)}">${esc(m.name)} (${m.email})</option>`).join('')}<option value="_new">+ New person</option></select>
         <select id="globalNewPriority"><option value="high">🔴 High</option><option value="medium" selected>🟡 Medium</option><option value="low">⚪ Low</option></select>
         <select id="globalNewCategory">${Object.entries(TASK_CATEGORIES).map(([k,v])=>`<option value="${k}">${v.label}</option>`).join('')}</select>
         <input type="date" id="globalNewDue" style="width:140px;">
@@ -1275,6 +1340,46 @@ function addGlobalTask() {
   addTask(confId, title, assignee, priority, dueDate, category);
   document.getElementById('globalNewTask').value = '';
   renderGlobalTasks();
+}
+
+// ============ SETTINGS ============
+function showSettings() {
+  const existing = document.getElementById('settingsModal');
+  if (existing) { existing.remove(); return; }
+  
+  const modal = document.createElement('div');
+  modal.id = 'settingsModal';
+  modal.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:1000;display:flex;align-items:center;justify-content:center;';
+  modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
+  
+  modal.innerHTML = `<div style="background:var(--surface);border-radius:16px;padding:32px;max-width:560px;width:90%;box-shadow:var(--shadow-lg);">
+    <h2 style="margin-bottom:20px;">⚙️ Settings</h2>
+    
+    <div style="margin-bottom:20px;">
+      <h3 style="font-size:.9rem;margin-bottom:8px;">👥 Team Roster</h3>
+      <div style="font-size:.85rem;color:var(--text2);">
+        ${TEAM.map(m => `<div style="padding:6px 0;border-bottom:1px solid var(--border);">👤 <strong>${m.name}</strong> — ${m.email}</div>`).join('')}
+      </div>
+    </div>
+    
+    <div style="margin-bottom:20px;">
+      <h3 style="font-size:.9rem;margin-bottom:8px;">📧 Email Notifications</h3>
+      <p style="font-size:.82rem;color:var(--text2);margin-bottom:8px;">Paste your Google Apps Script webhook URL to enable email notifications when tasks are assigned.</p>
+      <input type="url" id="settingsNotifyUrl" value="${notifyUrl}" placeholder="https://script.google.com/macros/s/..." style="width:100%;padding:8px 12px;border:1px solid var(--border);border-radius:8px;font-size:.85rem;">
+      <button onclick="setNotifyUrl(document.getElementById('settingsNotifyUrl').value);this.textContent='✅ Saved!';setTimeout(()=>this.textContent='Save',1500)" style="margin-top:8px;padding:6px 16px;background:var(--accent);color:white;border:none;border-radius:8px;font-size:.82rem;cursor:pointer;">Save</button>
+      <p style="font-size:.75rem;color:var(--text2);margin-top:8px;">Status: ${notifyUrl ? '✅ Connected' : '❌ Not configured — notifications disabled'}</p>
+    </div>
+    
+    <div style="margin-bottom:20px;">
+      <h3 style="font-size:.9rem;margin-bottom:8px;">🔑 Signed in as</h3>
+      <p style="font-size:.85rem;">${localStorage.getItem('cih_user') || 'Unknown'}</p>
+      <button onclick="logout()" style="margin-top:4px;padding:4px 12px;border:1px solid var(--border);border-radius:6px;font-size:.78rem;cursor:pointer;background:var(--surface);">Sign Out</button>
+    </div>
+    
+    <button onclick="this.closest('#settingsModal').remove()" style="padding:8px 20px;background:var(--surface2);border:none;border-radius:8px;font-size:.85rem;cursor:pointer;">Close</button>
+  </div>`;
+  
+  document.body.appendChild(modal);
 }
 
 // ============ COLLAPSIBLE SECTIONS ============

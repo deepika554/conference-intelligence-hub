@@ -617,11 +617,11 @@ function getConfData(id) {
       exhibitorProspectus: base?.exhibitorProspectus || ''
     };
   }
-  // Merge defaults from CONFERENCES if fields are empty
+  // Always use data.js defaults for agenda & prospectus unless user explicitly overrode
   const base = CONFERENCES.find(c => c.id === id);
   if (base) {
-    if (!confData[id].agenda && base.agenda) confData[id].agenda = base.agenda;
-    if (!confData[id].exhibitorProspectus && base.exhibitorProspectus) confData[id].exhibitorProspectus = base.exhibitorProspectus;
+    if (base.agenda && !confData[id]._agendaOverride) confData[id].agenda = base.agenda;
+    if (base.exhibitorProspectus && !confData[id]._prospectusOverride) confData[id].exhibitorProspectus = base.exhibitorProspectus;
   }
   return confData[id];
 }
@@ -637,7 +637,10 @@ function setConfOutreach(id, field, value) {
 }
 
 function setConfField(id, field, value) {
-  getConfData(id)[field] = value;
+  const cd = getConfData(id);
+  cd[field] = value;
+  if (field === 'agenda') cd._agendaOverride = !!value;
+  if (field === 'exhibitorProspectus') cd._prospectusOverride = !!value;
   saveConfData();
 }
 

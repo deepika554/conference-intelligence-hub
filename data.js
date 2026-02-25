@@ -1,61 +1,3282 @@
 // ============ CONFERENCES ============
 const CONFERENCES = [
   {
-    id: 'himss-2026',
-    name: 'HIMSS 2026',
-    dates: 'March 9–13, 2026',
-    dateStart: '2026-03-09',
-    dateEnd: '2026-03-13',
-    location: 'Las Vegas, NV — The Venetian',
-    website: 'https://www.himssconference.com',
-    agenda: 'https://www.himssconference.com/agenda-at-a-glance/',
-    exhibitorProspectus: 'https://www.himssconference.com/himss26-prospectus/',
-    tags: ['Healthcare IT', 'Revenue Cycle', 'AI', 'Digital Health', 'Oncology Signals'],
-    gtmTag: 'must_attend',       // must_attend | must_sponsor | outreach_only | skip
-    outreach: {
-      status: 'in_progress',     // not_started | in_progress | completed | paused
-      startDate: '2026-02-25',
-      endDate: ''
+    "id": "j-p-morgan-healthcare-conference",
+    "name": "J.P. Morgan Healthcare Conference",
+    "dates": "Jan 12",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "San Francisco, CA",
+    "website": "https://www.jpmorgan.com/healthcare",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "National Health",
+      "Investment",
+      "Exec Heavy"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Large",
+    "icpTier": "Tier 1, Tier 2",
+    "icps": "CEOs, CFOs | Chief Strategy Officers, Investment Officers, VPs Corporate Development |",
+    "attendeeProfile": "5,000+ C-suite, investors, PE/VC",
+    "whyRelevant": "Strategic insights, health system partnerships",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
     },
-    speakerCount: null  // auto-computed
+    "speakerCount": 0
   },
   {
-    id: 'nccn-2026',
-    name: 'NCCN 2026 Annual Conference',
-    dates: 'March 27–29, 2026',
-    dateStart: '2026-03-27',
-    dateEnd: '2026-03-29',
-    location: 'Orlando, FL',
-    website: 'https://www.nccn.org/education-and-research/annual-conference',
-    agenda: 'https://web.cvent.com/event/c545cc3d-2270-4e92-a667-dd145f0862ff/websitePage:d21d34a5-02d8-435f-b04e-a20ead3092fc',
-    exhibitorProspectus: 'https://www.nccn.org/education-and-research/annual-conference',
-    tags: ['Oncology', 'Clinical Guidelines', 'Cancer Research', 'Policy'],
-    gtmTag: 'outreach_only',
-    outreach: {
-      status: 'not_started',
-      startDate: '',
-      endDate: ''
+    "id": "rise-ai-in-health-care-summit",
+    "name": "RISE AI in Health Care Summit",
+    "dates": "Jan 21",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Orlando, FL",
+    "website": "https://ai.risehealth.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Health Tech/AI",
+      "Payer/Provider",
+      "Exec Heavy"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Medium",
+    "icpTier": "Tier 2",
+    "icps": "| Directors AI/Data Science, VP Quality, Chief AI Officers, VP Innovation |",
+    "attendeeProfile": "AI leaders, regulatory, governance",
+    "whyRelevant": "AI implementation for health systems",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
     },
-    speakerCount: 0
+    "speakerCount": 0
   },
   {
-    id: 'asco-2026',
-    name: 'ASCO 2026 Annual Meeting',
-    dates: 'May 29 – June 2, 2026',
-    dateStart: '2026-05-29',
-    dateEnd: '2026-06-02',
-    location: 'Chicago, IL — McCormick Place',
-    website: 'https://www.asco.org/annual-meeting',
-    agenda: 'https://meetings.asco.org/am/schedule-at-a-glance',
-    exhibitorProspectus: 'https://www.asco.org/annual-meeting',
-    tags: ['Oncology', 'Research', 'Clinical Trials'],
-    gtmTag: '',
-    outreach: {
-      status: 'not_started',
-      startDate: '',
-      endDate: ''
+    "id": "hawaii-annual-cancer-conference",
+    "name": "Hawaii Annual Cancer Conference",
+    "dates": "Jan 24",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Honolulu, HI",
+    "website": "https://registration.gotoper.com/hawaii-cancer-conference-26/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Regional Oncology",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Small",
+    "icpTier": "Tier 1, Tier 3",
+    "icps": "Cancer Center Directors, Oncology Chiefs | | Medical Directors, Physicians",
+    "attendeeProfile": "Regional oncology providers",
+    "whyRelevant": "Regional cancer center leadership",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
     },
-    speakerCount: 0
+    "speakerCount": 0
+  },
+  {
+    "id": "nrg-oncology-winter-meeting",
+    "name": "NRG Oncology Winter Meeting",
+    "dates": "Jan 22",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "San Francisco, CA",
+    "website": "https://www.nrgoncology.org/meetings/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Oncology Clinical/Research",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Medium",
+    "icpTier": "Tier 3",
+    "icps": "| | Principal Investigators, Research Directors, Clinical Trial Coordinators",
+    "attendeeProfile": "Clinical trial investigators, 500+ attendees",
+    "whyRelevant": "Clinical research network insights",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "xccelerate-2026",
+    "name": "Xccelerate 2026",
+    "dates": "Jan 25",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "San Francisco, CA",
+    "website": "https://innovaccer.com/xccelerate",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Health Tech",
+      "Data Analytics",
+      "Exec Heavy"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Medium",
+    "icpTier": "Tier 1, Tier 2",
+    "icps": "Chief Pharmacy Officers | CIOs, Chief Strategy Officers, VPs Operations |",
+    "attendeeProfile": "800+ health system IT & ops leaders",
+    "whyRelevant": "Data platform buyers, pharmacy tech",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "ace-annual-meeting",
+    "name": "ACE Annual Meeting",
+    "dates": "Jan 25",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Palm Springs, CA",
+    "website": "https://www.cancerexecutivesmeeting.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Oncology Service Line",
+      "Exec Heavy"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Small",
+    "icpTier": "Tier 1",
+    "icps": "VP System Cancer Service Line, Executive Directors Oncology, Cancer Program Administrators | |",
+    "attendeeProfile": "200+ cancer service line executives",
+    "whyRelevant": "Cancer program decision-makers",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "disruptive-technology-clinical-trials",
+    "name": "Disruptive Technology Clinical Trials",
+    "dates": "Jan 27",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.disruptyhealth.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Clinical Trials Tech",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 3",
+    "icps": "| | Clinical Operations Directors, Trial Site Managers",
+    "attendeeProfile": "European clinical trial professionals",
+    "whyRelevant": "Global clinical trial innovation",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "miami-precision-oncology-symposium",
+    "name": "Miami Precision Oncology Symposium",
+    "dates": "Jan 30",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Miami, FL",
+    "website": "https://cmeonline.baptisthealth.net/precision-oncology-symposium",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Regional Oncology",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 1, Tier 3",
+    "icps": "Chief Scientific Officers, Chiefs Medical Oncology | | Division Heads",
+    "attendeeProfile": "Precision medicine leaders",
+    "whyRelevant": "Baptist Health network access",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "liquid-biopsy-precision-oncology-summit",
+    "name": "Liquid Biopsy Precision Oncology Summit",
+    "dates": "Feb 3",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.hansonwade.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Oncology Clinical/Research",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 3",
+    "icps": "| | Lab Directors, Pathology Chiefs, Precision Medicine Directors",
+    "attendeeProfile": "Liquid biopsy specialists",
+    "whyRelevant": "Diagnostic innovation",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "scope-summit",
+    "name": "SCOPE Summit",
+    "dates": "Feb 2",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Orlando, FL",
+    "website": "https://www.scopesummit.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "CRO",
+      "Life Sciences",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Large",
+    "icpTier": "Tier 3",
+    "icps": "| | VPs Clinical Development Ops, Clinical Operations Directors",
+    "attendeeProfile": "4,500+ clinical operations executives",
+    "whyRelevant": "Pharma/CRO partnerships",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "healthleaders-exchange",
+    "name": "HealthLeaders Exchange",
+    "dates": "Feb 4",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Sarasota, FL",
+    "website": "https://exchanges.healthleadersmedia.com/revenue-cycle/",
+    "agenda": "",
+    "exhibitorProspectus": "https://risaml.slack.com/files/U0A38PKD20G/F0ABW1HM1PF/cr_9069_2026_healthleaders_media_kit_01.06.25.pwilson.pdf",
+    "tags": [
+      "Revenue Cycle",
+      "Exec Heavy"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Small",
+    "icpTier": "Tier 1",
+    "icps": "Chief Revenue Cycle Officers, VP Revenue Cycle, CFOs | |",
+    "attendeeProfile": "Elite RCM executive forum, ~75",
+    "whyRelevant": "Peer-to-peer RCM strategy",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "radiation-oncology-acro",
+    "name": "Radiation Oncology ACRO",
+    "dates": "Feb 4",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Jacksonville, FL",
+    "website": "https://acro.org/events/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Regional Oncology",
+      "Exec Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 1, Tier 2",
+    "icps": "Radiation Oncology Administrators, Department Directors | Practice Managers |",
+    "attendeeProfile": "Radiation oncology leaders",
+    "whyRelevant": "Specialty oncology segment",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "nccn-breast-cancer-congress",
+    "name": "NCCN Breast Cancer Congress",
+    "dates": "Feb 6",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Chicago, IL",
+    "website": "https://www.nccn.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Oncology Clinical",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 3",
+    "icps": "| | Breast Oncology Physicians, Nurse Navigators",
+    "attendeeProfile": "Single-day breast cancer focus",
+    "whyRelevant": "NCCN guideline discussions",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "cencora-specialty-practice-exchange",
+    "name": "Cencora Specialty Practice Exchange",
+    "dates": "Feb 6",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Frisco, TX",
+    "website": "https://www.cencora.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "GPO-Led Multi-Specialty",
+      "Exec Heavy"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Medium",
+    "icpTier": "Tier 1",
+    "icps": "Practice Administrators, Pharmacy Directors, Practice Managers | |",
+    "attendeeProfile": "150 specialty practice professionals",
+    "whyRelevant": "GPO purchasing decisions",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "aha-rural-health-care-leadership",
+    "name": "AHA Rural Health Care Leadership",
+    "dates": "Feb 8",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "San Antonio, TX",
+    "website": "https://ruralconference.aha.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "National Health Rural",
+      "Exec Heavy"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Large",
+    "icpTier": "Tier 1, Tier 2",
+    "icps": "Rural Hospital CEOs, CFOs, Chief Nursing Officers | COOs |",
+    "attendeeProfile": "1,000+ rural health leaders",
+    "whyRelevant": "Rural RCM & operations",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "oct-west-coast",
+    "name": "OCT West Coast",
+    "dates": "Feb 11-Feb 12",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.octconference.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Clinical Trials Ops",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 3",
+    "icps": "| | Site Managers, Clinical Trial Directors",
+    "attendeeProfile": "300+ clinical trial sites",
+    "whyRelevant": "West coast trial sites",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "multidisciplinary-head-neck-symposium",
+    "name": "Multidisciplinary Head & Neck Symposium",
+    "dates": "Feb 19",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Palm Springs, CA",
+    "website": "https://www.astro.org/meetings/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Oncology Clinical",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 3",
+    "icps": "| | Head & Neck Surgeons, Radiation Oncologists",
+    "attendeeProfile": "Niche oncology specialty, 300+",
+    "whyRelevant": "H&N cancer programs",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "vive",
+    "name": "ViVE",
+    "dates": "Feb 22 (4 days)",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Los Angeles, CA",
+    "website": "https://hlth.com/events/vive/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "National Health Tech/IT Digital",
+      "Exec Heavy"
+    ],
+    "gtmTag": "must_sponsor",
+    "size": "Large",
+    "icpTier": "Tier 2",
+    "icps": "| CIOs, Chief Digital Officers, CMOs, VP Innovation, CTOs |",
+    "attendeeProfile": "9,000+ digital health buyers",
+    "whyRelevant": "Premier digital health marketplace",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "rpm-conference",
+    "name": "RPM Conference",
+    "dates": "Feb 23",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Nashville, TN",
+    "website": "https://www.wcforum.com/conferences/rpm",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Health Tech RPM",
+      "Exec Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 2",
+    "icps": "| Directors Patient Flow, Care Coordination Directors, VP Telehealth |",
+    "attendeeProfile": "RPM implementation leaders, 200+",
+    "whyRelevant": "Virtual care optimization",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "agbt-general-meeting",
+    "name": "AGBT General Meeting",
+    "dates": "Feb 23",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.agbt.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Life Sciences Research",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Medium",
+    "icpTier": "Tier 3",
+    "icps": "| | Genomics Directors, Bioinformatics Chiefs, Research Scientists",
+    "attendeeProfile": "Genomics researchers, 800+",
+    "whyRelevant": "Genomics research insights",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "aci-healthcare-ai-summit",
+    "name": "ACI Healthcare AI Summit",
+    "dates": "Feb 26 (2 days)",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "New York, NY",
+    "website": "https://www.americanconference.com/healthcare-ai/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Health Tech/AI",
+      "Exec Heavy"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Medium",
+    "icpTier": "Tier 2",
+    "icps": "| Chief AI Officers, System Chairs AI Departments, VP AI Strategy |",
+    "attendeeProfile": "AI & HealthTech decision-makers",
+    "whyRelevant": "Health system AI strategy",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "asco-gu26",
+    "name": "ASCO GU26",
+    "dates": "Feb 26 (2 days)",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "San Francisco, CA",
+    "website": "https://www.asco.org/gu/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Oncology Clinical",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Large",
+    "icpTier": "Tier 3",
+    "icps": "| | GU Oncologists, Urologists, Medical Directors GU Cancer",
+    "attendeeProfile": "3,000+ GU cancer specialists",
+    "whyRelevant": "Major ASCO subspecialty",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "mgma-financial-conference",
+    "name": "MGMA Financial Conference",
+    "dates": "Mar 1",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Phoenix, AZ",
+    "website": "https://www.mgma.com/conferences/financial-conference/",
+    "agenda": "",
+    "exhibitorProspectus": "https://www.mgma.com/getkaiasset/7607de04-92ce-4b1e-b52b-c4343f1c5ff2/2026%20Spring%20Prospectus.pdf?_gl=1*h5czlz*_gcl_au*MTI3MDk3NjcwNi4xNzY4NDkzNzg5LjExNjY3MTEzMjcuMTc3MDY0Mjk1My4xNzcwNjQyOTUy*_ga*MzgzMDczMjY1LjE3Njg0OTM3OTY.*_ga_DT1SR7HF62*czE3NzA2NDI5MzMkbzUkZzEkdDE3NzA2NDI5NzEkajIyJGwwJGgw",
+    "tags": [
+      "Revenue Cycle Finance",
+      "Exec Heavy",
+      "RCM"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Large",
+    "icpTier": "Tier 1",
+    "icps": "Practice CFOs, VP Revenue Cycle, Controllers, Financial Directors | |",
+    "attendeeProfile": "1,000+ practice finance leaders",
+    "whyRelevant": "Practice-level RCM strategy",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "sso-surgical-oncology",
+    "name": "SSO (Surgical Oncology)",
+    "dates": "Mar 5",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Phoenix, AZ",
+    "website": "https://sso2026.eventscribe.net/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Oncology Clinical",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Medium",
+    "icpTier": "Tier 1, Tier 3",
+    "icps": "Directors Surgical Oncology, Cancer Surgery Chiefs | | Surgical Oncologists",
+    "attendeeProfile": "600+ surgical cancer leaders",
+    "whyRelevant": "Surgical oncology programs",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "hbma-innovation-conference",
+    "name": "HBMA Innovation Conference",
+    "dates": "Mar 9",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Boston, MA",
+    "website": "https://www.hbma.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Revenue Cycle Innovation",
+      "Exec Heavy"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Medium",
+    "icpTier": "Tier 1",
+    "icps": "RCM Company CEOs, VP Operations, Technology Directors | |",
+    "attendeeProfile": "RCM innovation focus, 300+",
+    "whyRelevant": "RCM technology trends",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "himss-global-conference",
+    "name": "HIMSS Global Conference",
+    "dates": "Mar 9 (4 days)",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Las Vegas, NV",
+    "website": "https://www.himssconference.com/",
+    "agenda": "",
+    "exhibitorProspectus": "https://online.fliphtml5.com/djuin/mwyb/#p=14",
+    "tags": [
+      "National Health Tech/IT",
+      "Exec Heavy",
+      "Health System"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Large",
+    "icpTier": "Tier 2",
+    "icps": "| CIOs, CMIOs, VPs Health IT, IT Directors, CTOs |",
+    "attendeeProfile": "30,000+ health IT professionals",
+    "whyRelevant": "Largest health IT event",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": null
+  },
+  {
+    "id": "medidata-next-nyc",
+    "name": "Medidata NEXT NYC",
+    "dates": "Mar 10",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "New York, NY",
+    "website": "https://www.medidata.com/en/events/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Clinical Trials Tech",
+      "Exec Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Medium",
+    "icpTier": "Tier 3",
+    "icps": "| | Clinical Data Directors, EDC Managers, VP Clinical Systems",
+    "attendeeProfile": "Clinical trial technology, 500+",
+    "whyRelevant": "EDC platform users",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "acdm-clinical-data-management",
+    "name": "ACDM (Clinical Data Management)",
+    "dates": "Mar 15",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Berlin, Germany",
+    "website": "https://acdmconference.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Clinical Trials Data",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 3",
+    "icps": "| | Clinical Data Managers, Data Operations Directors",
+    "attendeeProfile": "Clinical data professionals, 500+",
+    "whyRelevant": "Data management for trials",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "cclg-annual-conference",
+    "name": "CCLG Annual Conference",
+    "dates": "Mar 16",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Manchester, UK",
+    "website": "https://www.cclg.org.uk/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Cancer Research",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 2, Tier 3",
+    "icps": "| Cancer Research Administrators | Clinical Trials Coordinators",
+    "attendeeProfile": "UK pediatric cancer, 700+",
+    "whyRelevant": "Research operations",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "nvidia-gtc",
+    "name": "NVIDIA GTC",
+    "dates": "Mar 16 (4 days)",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "San Jose, CA",
+    "website": "https://www.nvidia.com/gtc/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Health Tech/AI",
+      "Exec Heavy"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Large",
+    "icpTier": "Tier 2",
+    "icps": "| Chief AI Officers, ML Engineers, Innovation Directors, VP Technology |",
+    "attendeeProfile": "20,000+ AI innovators",
+    "whyRelevant": "AI infrastructure & platforms",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "patient-access-programs-pap",
+    "name": "Patient Access Programs (PAP)",
+    "dates": "Mar 17 (3 days)",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Philadelphia, PA",
+    "website": "https://informaconnect.com/pap/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Patient Access",
+      "Exec Heavy"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Medium",
+    "icpTier": "Tier 2",
+    "icps": "| Directors Patient Assistance, Patient Access Directors, Reimbursement Directors |",
+    "attendeeProfile": "800+ PAP leaders",
+    "whyRelevant": "Patient affordability programs",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "hfma-revenue-cycle-conference",
+    "name": "HFMA Revenue Cycle Conference",
+    "dates": "Mar 18 (3 days)",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Dallas, TX",
+    "website": "https://www.hfma.org/revenue-cycle-conference/",
+    "agenda": "",
+    "exhibitorProspectus": "https://risaml.slack.com/files/U0A38PKD20G/F0AE8CBAN9F/hfma_2026_annual_conference_prospectus.pdf",
+    "tags": [
+      "Revenue Cycle Focus",
+      "Exec Heavy",
+      "RCM"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Large",
+    "icpTier": "Tier 1",
+    "icps": "Chief Revenue Cycle Officers, VP Revenue Cycle, Division Chairs RCM, CFOs | |",
+    "attendeeProfile": "1,500+ RCM executives",
+    "whyRelevant": "Premier RCM event",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "hfma-metro-ny-institute",
+    "name": "HFMA Metro NY Institute",
+    "dates": "Mar 18 (3 days)",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "New York, NY",
+    "website": "https://web.cvent.com/event/d055b5aa-54fb-4569-9c2b-3c927931e425/summary",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Regional Revenue Cycle",
+      "Exec Heavy",
+      "RCM"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Medium",
+    "icpTier": "Tier 1",
+    "icps": "Regional Chief Revenue Officers, SVPs Revenue Cycle, Controllers | |",
+    "attendeeProfile": "NY metro RCM leaders, 300+",
+    "whyRelevant": "Regional RCM focus",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "ahip-medicare-medicaid-duals-commercial-markets-forum",
+    "name": "AHIP Medicare, Medicaid, Duals & Commercial Markets Forum",
+    "dates": "Mar 23",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Washington, DC",
+    "website": "https://www.ahip.org/conferences/mmdc26/",
+    "agenda": "",
+    "exhibitorProspectus": "https://drive.google.com/file/d/1Gs6OYNm6SPqzJmPUhA3w_ydz9piItltx/view?usp=drive_link",
+    "tags": [
+      "Payer Focus",
+      "Exec Heavy"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Large",
+    "icpTier": "Tier 2",
+    "icps": "Health Plan Executives, Directors Medicaid Policy, CFOs Payer | |",
+    "attendeeProfile": "1,000+ health plan leadership",
+    "whyRelevant": "Medicare/Medicaid strategy",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "rise-national",
+    "name": "RISE National",
+    "dates": "Mar 23 (2 days)",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Orlando, FL",
+    "website": "https://national.risehealth.org/",
+    "agenda": "",
+    "exhibitorProspectus": "https://risaml.slack.com/files/U0A38PKD20G/F0ADSEFF1J9/2026_rise_national_sponsorship_prospectus__1_.pdf",
+    "tags": [
+      "Payer/Provider VBC",
+      "Exec Heavy"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Medium",
+    "icpTier": "Tier 2",
+    "icps": "| VP Risk Adjustment, Directors Data Integrity, VBC Program Leaders |",
+    "attendeeProfile": "600+ risk adjustment & VBC",
+    "whyRelevant": "Value-based care strategy",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "hopa-annual-conference",
+    "name": "HOPA Annual Conference",
+    "dates": "Mar 25",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "New Orleans, LA",
+    "website": "https://www.hoparx.org/",
+    "agenda": "",
+    "exhibitorProspectus": "https://drive.google.com/file/d/1uaAMeVJR2DsM1-fx24z3TDWRcc9b29FI/view?usp=drive_link",
+    "tags": [
+      "Pharmacy Oncology",
+      "Clinician Heavy",
+      "Pharmacy"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Medium",
+    "icpTier": "Tier 1, Tier 3",
+    "icps": "Oncology Pharmacists, Directors Pharmacy, Pharmacy Managers | | Clinical Coordinators",
+    "attendeeProfile": "1,200+ oncology pharmacists",
+    "whyRelevant": "Oncology pharmacy focus",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "nccn-annual-conference",
+    "name": "NCCN Annual Conference",
+    "dates": "Mar 27",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Orlando, FL",
+    "website": "https://www.nccn.org/education-research/educational-events-and-programs/annual-conference",
+    "agenda": "",
+    "exhibitorProspectus": "https://www.nccn.org/docs/default-source/education-research/ac2026-exhibitor-prospectus.pdf",
+    "tags": [
+      "Oncology Focus",
+      "Exec Heavy",
+      "Oncology"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Large",
+    "icpTier": "Tier 1",
+    "icps": "Cancer Center VPs Operations, Chief Nursing Officers Oncology, Service Line VPs, CFOs | |",
+    "attendeeProfile": "2,000+ NCCN oncology leaders",
+    "whyRelevant": "NCCN member institutions",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "apha-annual",
+    "name": "APhA Annual",
+    "dates": "Mar 27",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Los Angeles, CA",
+    "website": "https://aphameeting.pharmacist.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Pharmacy Focus",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Large",
+    "icpTier": "Tier 1",
+    "icps": "Pharmacy Executives, VP Pharmacy Relations, Chief Pharmacy Officers | |",
+    "attendeeProfile": "5,000+ pharmacists",
+    "whyRelevant": "Pharmacy leadership & policy",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "nextgen-omics-spatial-data-us",
+    "name": "NextGen Omics Spatial & Data US",
+    "dates": "Mar 31",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.hansonwade.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Life Sciences Research",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 3",
+    "icps": "| | Genomics Lab Directors, Spatial Biology Directors",
+    "attendeeProfile": "Omics research specialists, 200+",
+    "whyRelevant": "Next-gen sequencing",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "pmwc-precision-medicine",
+    "name": "PMWC (Precision Medicine)",
+    "dates": "Apr 4",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Santa Clara, CA",
+    "website": "https://pmwcintl.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Life Sciences Research",
+      "Exec Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Medium",
+    "icpTier": "Tier 2, Tier 3",
+    "icps": "| Directors Precision Medicine, Cancer Genomics Directors | Lab Directors",
+    "attendeeProfile": "800+ precision medicine leaders",
+    "whyRelevant": "Personalized medicine",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "acca-cancer-center-administrators-forum",
+    "name": "ACCA Cancer Center Administrators Forum",
+    "dates": "Apr 11",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Madison, WI",
+    "website": "https://www.cancercenteradministrators.org/",
+    "agenda": "",
+    "exhibitorProspectus": "https://www.cancercenteradministrators.org/sponsorship-opportunities",
+    "tags": [
+      "Oncology Ops",
+      "Exec Heavy",
+      "Oncology"
+    ],
+    "gtmTag": "must_sponsor",
+    "size": "Medium",
+    "icpTier": "Tier 1, Tier 2",
+    "icps": "Cancer Center Administrators, Operations Directors Cancer Programs | COOs |",
+    "attendeeProfile": "300+ cancer admin leaders",
+    "whyRelevant": "Cancer program operations",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "wcg-magi-clinical-research",
+    "name": "WCG MAGI Clinical Research",
+    "dates": "Apr 12",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Chicago, IL",
+    "website": "https://www.wcgclinical.com/magi/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Clinical Trials Ops",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Medium",
+    "icpTier": "Tier 3",
+    "icps": "| | Site Coordinators, Clinical Research Managers",
+    "attendeeProfile": "700+ research site personnel",
+    "whyRelevant": "Site-level operations",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "cmo-360-summit",
+    "name": "CMO 360 Summit",
+    "dates": "Apr 13",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Boston, MA",
+    "website": "https://cmosummit360.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Executive Health",
+      "Exec Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 2, Tier 3",
+    "icps": "| Chief Medical Officers, VP Medical Affairs | Medical Directors",
+    "attendeeProfile": "CMO executive forum, 150+",
+    "whyRelevant": "Medical leadership strategy",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "becker-s-healthcare-annual",
+    "name": "Becker's Healthcare Annual",
+    "dates": "Apr 13",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Chicago, IL",
+    "website": "https://conferences.beckershospitalreview.com/april-annual-meeting-2026",
+    "agenda": "",
+    "exhibitorProspectus": "https://www.beckershospitalreview.com/wp-content/uploads/sites/9/2026/02/AnnualMeetingProspectus2026.pdf",
+    "tags": [
+      "National Health",
+      "Exec Heavy",
+      "Health System"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Large",
+    "icpTier": "Tier 1, Tier 2",
+    "icps": "Hospital CEOs, CFOs, Chief Strategy Officers | COOs |",
+    "attendeeProfile": "2,000+ C-suite executives",
+    "whyRelevant": "Health system leadership",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "becker-s-spring-payer-issues-roundtable",
+    "name": "Becker's Spring Payer Issues Roundtable",
+    "dates": "Apr 13",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Chicago, IL",
+    "website": "https://conferences.beckershospitalreview.com/payer-roundtable-spring-2026",
+    "agenda": "",
+    "exhibitorProspectus": "https://www.beckershospitalreview.com/wp-content/uploads/sites/9/2026/02/SpringPayerIssuesRoundtableProspectus2026.pdf",
+    "tags": [
+      "Payer Focus",
+      "Exec Heavy",
+      "Payer"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Small",
+    "icpTier": "Tier 1",
+    "icps": "Health Plan CEOs, Payer Medical Directors, CFOs Payers | Chief Strategy Officers Payers, VPs Contracting |",
+    "attendeeProfile": "300+ payer and health system leaders",
+    "whyRelevant": "Payer-provider collaboration strategies",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "becker-s-oncology-executive-summit",
+    "name": "Becker's Oncology Executive Summit",
+    "dates": "Apr 13",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Chicago, IL",
+    "website": "https://conferences.beckershospitalreview.com/oncologysummit",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Oncology Leadership",
+      "Exec Heavy",
+      "Oncology"
+    ],
+    "gtmTag": "must_sponsor",
+    "size": "Medium",
+    "icpTier": "Tier 1, Tier 2",
+    "icps": "Cancer Center Directors, Oncology Service Line VPs, Hospital Oncology Chiefs | Cancer Program Administrators, Oncology COOs | Medical Directors Oncology",
+    "attendeeProfile": "500+ oncology executives",
+    "whyRelevant": "Cancer service line leadership",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "becker-s-spring-chief-pharmacy-officer-summit",
+    "name": "Becker's Spring Chief Pharmacy Officer Summit",
+    "dates": "Apr 15",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Chicago, IL",
+    "website": "https://conferences.beckershospitalreview.com/Spring-CPO-2026",
+    "agenda": "",
+    "exhibitorProspectus": "https://www.beckershospitalreview.com/wp-content/uploads/sites/9/2026/02/SpringChiefPharmacyOfficerSummitProspectus2026.pdf",
+    "tags": [
+      "Pharmacy Leadership",
+      "Exec Heavy",
+      "Pharmacy"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Medium",
+    "icpTier": "Tier 1",
+    "icps": "Chief Pharmacy Officers, System VPs Pharmacy, Pharmacy Directors | Associate Pharmacy Directors, Specialty Pharmacy Leaders |",
+    "attendeeProfile": "600+ pharmacy executives, 120+ speakers",
+    "whyRelevant": "Health system pharmacy strategy",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "amga-annual-conference",
+    "name": "AMGA Annual Conference",
+    "dates": "Apr 15",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Las Vegas, NV",
+    "website": "https://www.amga.org/2026-annual-conference",
+    "agenda": "",
+    "exhibitorProspectus": "https://www.amga.org/getmedia/f5c2be6b-24c2-4b7c-8fd2-29648c979d59/amga_ac26-exhibitorsponsor-prospectus_v9_web.pdf",
+    "tags": [
+      "Physician Groups",
+      "Exec Heavy",
+      "Health System"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Large",
+    "icpTier": "Tier 1, Tier 2",
+    "icps": "Medical Group CEOs, CFOs | COOs, VPs Population Health |",
+    "attendeeProfile": "1,500+ physician group leadership",
+    "whyRelevant": "Group practice management",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "aacr-annual-meeting",
+    "name": "AACR Annual Meeting",
+    "dates": "Apr 17",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "San Diego, CA",
+    "website": "https://www.aacr.org/meeting/",
+    "agenda": "",
+    "exhibitorProspectus": "https://www.aacr.org/wp-content/uploads/2025/08/2502039G_26AM_ExhProsp_7-1.pdf",
+    "tags": [
+      "Oncology Research",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Large",
+    "icpTier": "Tier 3",
+    "icps": "| | Principal Investigators, Translational Research Directors",
+    "attendeeProfile": "22,000+ cancer researchers",
+    "whyRelevant": "Premier cancer research",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "coa-community-oncology-conference",
+    "name": "COA Community Oncology Conference",
+    "dates": "Apr 28",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Orlando, FL",
+    "website": "https://coaconference.com/speakers/",
+    "agenda": "",
+    "exhibitorProspectus": "https://coaconference.com/wp-content/uploads/2025/11/2026-COC-Prospectus-1.pdf",
+    "tags": [
+      "Oncology GPO Partner",
+      "Exec Heavy",
+      "Oncology"
+    ],
+    "gtmTag": "must_sponsor",
+    "size": "Medium",
+    "icpTier": "Tier 1",
+    "icps": "Community Oncology Practice Owners, Administrators, Practice Managers | |",
+    "attendeeProfile": "500+ community oncology leaders",
+    "whyRelevant": "Independent practice advocacy",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "naaco-spring-conference",
+    "name": "NAACO Spring Conference",
+    "dates": "Apr 22",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Baltimore, MD",
+    "website": "https://www.naacos.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "ACO Focus",
+      "Exec Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Medium",
+    "icpTier": "Tier 2",
+    "icps": "| ACO Directors, VPs Value-Based Care, Population Health Directors |",
+    "attendeeProfile": "400+ ACO leadership",
+    "whyRelevant": "Accountable care strategies",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "acrp-annual-conference",
+    "name": "ACRP Annual Conference",
+    "dates": "Apr 24",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Orlando, FL",
+    "website": "https://acrpnet.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Clinical Research",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Medium",
+    "icpTier": "Tier 3",
+    "icps": "| | Clinical Research Coordinators, Research Compliance Officers",
+    "attendeeProfile": "1,000+ clinical research pros",
+    "whyRelevant": "Research best practices",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "hfma-leadership-summit",
+    "name": "HFMA Leadership Summit",
+    "dates": "Apr 26",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Austin, TX",
+    "website": "https://www.hfma.org/",
+    "agenda": "",
+    "exhibitorProspectus": "https://www.hfma.org/wp-content/uploads/2025/12/HFMA_Leadership_Summit_2026_Prospectus.pdf",
+    "tags": [
+      "Finance Leadership",
+      "Exec Heavy",
+      "RCM"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Large",
+    "icpTier": "Tier 1",
+    "icps": "CFOs, SVPs Finance, VP Financial Planning, Controllers | |",
+    "attendeeProfile": "1,200+ finance leaders",
+    "whyRelevant": "Healthcare finance strategy",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "asembia-axs26-summit",
+    "name": "Asembia AXS26 Summit",
+    "dates": "Apr 26 (5 days)",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Las Vegas, NV",
+    "website": "https://asembia.com/events/axs26-summit/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "GPO-Led Specialty Pharmacy",
+      "Exec Heavy",
+      "Pharma"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Large",
+    "icpTier": "Tier 1",
+    "icps": "Specialty Pharmacy Directors, Pharma Access VPs, Managed Care Pharmacy Directors | |",
+    "attendeeProfile": "4,000+ specialty pharmacy",
+    "whyRelevant": "Premier specialty pharma GPO",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "digital-healthcare-innovation-summit",
+    "name": "Digital Healthcare Innovation Summit",
+    "dates": "Apr 27",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.innovation.healthleadersmedia.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Health Tech",
+      "Exec Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 2",
+    "icps": "| Chief Innovation Officers, Digital Health VPs, Innovation Directors |",
+    "attendeeProfile": "250+ digital health innovators",
+    "whyRelevant": "Innovation strategies",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "epic-xgm",
+    "name": "Epic XGM",
+    "dates": "Apr 27",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Various",
+    "website": "https://www.epic.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Health IT Platform",
+      "Exec Heavy",
+      "Health System"
+    ],
+    "gtmTag": "must_sponsor",
+    "size": "Large",
+    "icpTier": "Tier 2",
+    "icps": "| Epic Implementation Directors, CIOs, IT Project Managers |",
+    "attendeeProfile": "Epic health system users, 5,000+",
+    "whyRelevant": "Epic EHR expert meetings",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "coot-west",
+    "name": "COOT West",
+    "dates": "Apr 28",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.coot.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Clinical Trials Oncology",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 3",
+    "icps": "| | Oncology Clinical Research Managers, Trial Site Coordinators",
+    "attendeeProfile": "200+ oncology trial operations",
+    "whyRelevant": "West coast oncology trials",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "naham-annual-conference",
+    "name": "NAHAM Annual Conference",
+    "dates": "Apr 28",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Chicago, IL",
+    "website": "https://www.naham.org/",
+    "agenda": "",
+    "exhibitorProspectus": "https://www.naham.org/page/NAHAMSponsorshipOpportunities",
+    "tags": [
+      "Patient Access",
+      "Exec Heavy",
+      "Health System"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Large",
+    "icpTier": "Tier 2",
+    "icps": "| Directors Patient Access, Patient Access Managers, Admitting Directors |",
+    "attendeeProfile": "1,000+ patient access pros",
+    "whyRelevant": "Patient access operations",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "aspho-conference",
+    "name": "ASPHO Conference",
+    "dates": "Apr 29",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.aspho.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Pediatric Hematology/Oncology",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Medium",
+    "icpTier": "Tier 3",
+    "icps": "| | Pediatric Hematologists, Pediatric Oncologists",
+    "attendeeProfile": "600+ pediatric cancer specialists",
+    "whyRelevant": "Pediatric hem/onc",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "population-association-annual",
+    "name": "Population Association Annual",
+    "dates": "May 1",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.populationassociation.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Population Health",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 2, Tier 3",
+    "icps": "| Population Health Directors | Epidemiologists",
+    "attendeeProfile": "300+ population health researchers",
+    "whyRelevant": "Population health science",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "ci4cc-cancer-center-summit",
+    "name": "Ci4CC Cancer Center Summit",
+    "dates": "May 7",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "San Diego, CA",
+    "website": "https://www.ci4cc.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Oncology Ops",
+      "Exec Heavy",
+      "Oncology"
+    ],
+    "gtmTag": "must_sponsor",
+    "size": "Medium",
+    "icpTier": "Tier 1",
+    "icps": "Cancer Center CEOs, COOs Cancer Programs, Cancer Program Directors, VP Cancer Services | |",
+    "attendeeProfile": "400+ cancer center leadership",
+    "whyRelevant": "Cancer center operations",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "thma-oncology-forum",
+    "name": "THMA Oncology Forum",
+    "dates": "May 6 (3 days)",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "",
+    "website": "https://hmacademy.com/ind-convening/oncology-forum",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [],
+    "gtmTag": "must_attend",
+    "size": "",
+    "icpTier": "",
+    "icps": "",
+    "attendeeProfile": "",
+    "whyRelevant": "",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "biopharma-clinical-trials-nexus",
+    "name": "BioPharma Clinical Trials Nexus",
+    "dates": "May 7",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.terrapinn.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Clinical Trials Pharma",
+      "Exec Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 3",
+    "icps": "| | VPs Clinical Development, Clinical Ops Leaders",
+    "attendeeProfile": "200+ pharma clinical ops",
+    "whyRelevant": "Trial efficiency strategies",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "fierce-biotech-week",
+    "name": "Fierce Biotech Week",
+    "dates": "May 12",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.fiercebiotech.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Life Sciences",
+      "Exec Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Medium",
+    "icpTier": "Tier 2, Tier 3",
+    "icps": "| Biotech CEOs, Chief Scientific Officers | Business Development VPs",
+    "attendeeProfile": "500+ biotech leadership",
+    "whyRelevant": "Biotech industry trends",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "ons-congress-oncology-nursing-society",
+    "name": "ONS Congress (Oncology Nursing Society)",
+    "dates": "May 13",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "San Antonio, TX",
+    "website": "https://www.ons.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Oncology Nursing",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Large",
+    "icpTier": "Tier 3",
+    "icps": "| | Oncology Nurses, Nurse Practitioners",
+    "attendeeProfile": "6,000+ oncology nurses",
+    "whyRelevant": "Premier oncology nursing",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "life-sciences-pricing-contracting",
+    "name": "Life Sciences Pricing & Contracting",
+    "dates": "May 18",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://informaconnect.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Pharma Contracting",
+      "Exec Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 1, Tier 3",
+    "icps": "Directors Pricing, Contracting Managers Pharma | | Market Access Directors",
+    "attendeeProfile": "300+ pharma pricing leaders",
+    "whyRelevant": "Pharmaceutical contracting",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "bio-it-world-conference",
+    "name": "Bio-IT World Conference",
+    "dates": "May 19",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.bio-itworldexpo.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Health Tech Data",
+      "Exec Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Medium",
+    "icpTier": "Tier 2, Tier 3",
+    "icps": "| Bioinformatics Directors, Computational Biology Chiefs | Data Science Leaders",
+    "attendeeProfile": "600+ bio-IT professionals",
+    "whyRelevant": "Life sciences informatics",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "himss-europe",
+    "name": "HIMSS Europe",
+    "dates": "May 19",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Copenhagen, Denmark",
+    "website": "https://www.himss.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Health Tech/IT Global",
+      "Exec Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Large",
+    "icpTier": "Tier 2",
+    "icps": "| European CIOs, Health IT Directors |",
+    "attendeeProfile": "5,000+ European health IT",
+    "whyRelevant": "Global health IT",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "reuters-digital-health",
+    "name": "Reuters Digital Health",
+    "dates": "May 20",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.reutersevents.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Health Tech Digital",
+      "Exec Heavy",
+      "Health System"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Medium",
+    "icpTier": "Tier 2",
+    "icps": "| Chief Digital Officers, VP Digital Strategy, Innovation Directors |",
+    "attendeeProfile": "400+ digital health strategy",
+    "whyRelevant": "Digital transformation",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "asco-annual-meeting",
+    "name": "ASCO Annual Meeting",
+    "dates": "May 29",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Chicago, IL",
+    "website": "https://www.asco.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Oncology Clinical",
+      "Clinician Heavy",
+      "Oncology"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Large",
+    "icpTier": "Tier 1, Tier 3",
+    "icps": "Medical Directors Cancer | | Oncologists, Fellows, Clinical Researchers",
+    "attendeeProfile": "45,000+ oncology professionals",
+    "whyRelevant": "World's largest oncology",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "academyhealth-annual-research",
+    "name": "AcademyHealth Annual Research",
+    "dates": "May 30",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.academyhealth.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Health Services Research",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Medium",
+    "icpTier": "Tier 2, Tier 3",
+    "icps": "| Quality Directors | Health Services Researchers, Policy Analysts",
+    "attendeeProfile": "2,000+ health services research",
+    "whyRelevant": "Research & policy insights",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "bio-international",
+    "name": "BIO International",
+    "dates": "Jun 1",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.bio.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Life Sciences",
+      "Exec Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Large",
+    "icpTier": "Tier 2, Tier 3",
+    "icps": "| Biotech CEOs, Business Development VPs, CSOs | Investment Partners",
+    "attendeeProfile": "20,000+ biotech professionals",
+    "whyRelevant": "Biotech partnering event",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "hfma-annual-conference",
+    "name": "HFMA Annual Conference",
+    "dates": "Jun 7",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "National Harbor, MD",
+    "website": "https://www.hfma.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Finance Focus",
+      "Exec Heavy",
+      "RCM"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Large",
+    "icpTier": "Tier 1",
+    "icps": "CFOs, Controllers, VPs Finance, Revenue Cycle Directors, Treasurers | |",
+    "attendeeProfile": "5,000+ healthcare finance",
+    "whyRelevant": "Largest healthcare finance",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "digital-health-summit-world-bi",
+    "name": "Digital Health Summit (World BI)",
+    "dates": "Jun 8",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://worldbi.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Health Tech Digital",
+      "Exec Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 2",
+    "icps": "| VP Digital Health, Innovation Directors |",
+    "attendeeProfile": "300+ digital health innovators",
+    "whyRelevant": "Digital health strategy",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "hbma-executive-retreat",
+    "name": "HBMA Executive Retreat",
+    "dates": "Jun 8",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.hbma.org/",
+    "agenda": "",
+    "exhibitorProspectus": "https://www.hbma.org/uploads/content_files/files/2026_Executive_Retreat_Prospectus%284%29.pdf",
+    "tags": [
+      "Revenue Cycle Executive",
+      "Exec Heavy",
+      "RCM"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Small",
+    "icpTier": "Tier 1",
+    "icps": "Chief Revenue Officers, RCM Company CEOs, SVPs Revenue Cycle | |",
+    "attendeeProfile": "50+ executive-level RCM",
+    "whyRelevant": "C-suite RCM strategy",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "ahip-annual-conference",
+    "name": "AHIP Annual Conference",
+    "dates": "Jun 9",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.ahip.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Payer Focus",
+      "Exec Heavy"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Large",
+    "icpTier": "Tier 1",
+    "icps": "Health Plan CEOs, Chief Strategy Officers Payers, CFOs | |",
+    "attendeeProfile": "2,000+ health plan executives",
+    "whyRelevant": "Health insurance strategy",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "dia-global-annual-meeting",
+    "name": "DIA Global Annual Meeting",
+    "dates": "Jun 14",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Philadelphia, PA",
+    "website": "https://www.diaglobal.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Life Sciences",
+      "Exec Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Large",
+    "icpTier": "Tier 3",
+    "icps": "| | Clinical Development VPs, Regulatory Affairs Directors",
+    "attendeeProfile": "10,000+ drug info professionals",
+    "whyRelevant": "Regulatory & development",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "international-conf-oncology-nursing",
+    "name": "International Conf Oncology Nursing",
+    "dates": "Jun 15",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://isncc.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Oncology Nursing",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 3",
+    "icps": "| | Oncology Nurse Managers, Nurse Educators",
+    "attendeeProfile": "400+ oncology nurses",
+    "whyRelevant": "Oncology nursing practice",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "cencora-health-systems-summit",
+    "name": "Cencora Health Systems Summit",
+    "dates": "Oct 14, 2025 (2 days)",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.cencora.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "GPO-Led Health Systems",
+      "Exec Heavy",
+      "Health System"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Small",
+    "icpTier": "Tier 1",
+    "icps": "Health System Pharmacy Directors, Chief Pharmacy Officers, VPs Pharmacy | |",
+    "attendeeProfile": "20 elite health system leaders",
+    "whyRelevant": "Elite GPO pharmacy forum",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "cencora-oncology-exchange-spring",
+    "name": "Cencora Oncology Exchange Spring",
+    "dates": "TBA",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Las Vegas, NV",
+    "website": "https://www.cencora.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "GPO-Led Oncology",
+      "Exec Heavy",
+      "Oncology"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Medium",
+    "icpTier": "Tier 1",
+    "icps": "Community Oncology Administrators, Oncology Pharmacy Directors, Practice Managers | |",
+    "attendeeProfile": "150 oncology professionals",
+    "whyRelevant": "GPO oncology practices",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "aaci-annual-clinical-research-innovation",
+    "name": "AACI Annual Clinical Research Innovation",
+    "dates": "Jun 23",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.aaci-cancer.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Cancer Research",
+      "Exec Heavy"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Medium",
+    "icpTier": "Tier 2, Tier 3",
+    "icps": "| Cancer Center Research Administrators, Clinical Research Directors |",
+    "attendeeProfile": "500+ academic cancer research",
+    "whyRelevant": "Research innovation",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "cardinal-health-rbc",
+    "name": "Cardinal Health RBC",
+    "dates": "Jul 22",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Orlando, FL",
+    "website": "https://www.rbc.cardinalhealth.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "GPO-Led Pharmacy",
+      "Exec Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Large",
+    "icpTier": "Tier 1, Tier 2",
+    "icps": "Independent Pharmacy Owners, Pharmacy Directors | COOs |",
+    "attendeeProfile": "3,000+ independent pharmacists",
+    "whyRelevant": "Independent pharmacy GPO",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "acs-quality-safety-cancer-conf",
+    "name": "ACS Quality Safety & Cancer Conf",
+    "dates": "Jul 31",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Orlando, FL",
+    "website": "https://www.facs.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Oncology Ops Quality",
+      "Exec Heavy"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Large",
+    "icpTier": "Tier 1",
+    "icps": "Cancer Program Administrators, Quality Directors Cancer, CoC Liaisons, VPs Operations | |",
+    "attendeeProfile": "2,000+ cancer quality pros",
+    "whyRelevant": "Cancer program quality",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "ai4-conference",
+    "name": "AI4 Conference",
+    "dates": "Aug 4",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.ai4.io/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Health Tech/AI",
+      "Exec Heavy"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Medium",
+    "icpTier": "Tier 2",
+    "icps": "| Chief Data Officers, AI Implementation Directors, CTOs |",
+    "attendeeProfile": "500+ AI professionals",
+    "whyRelevant": "AI applications",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "aha-leadership-summit",
+    "name": "AHA Leadership Summit",
+    "dates": "Jul 12-14",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Denver, CO",
+    "website": "https://www.aha.org/",
+    "agenda": "",
+    "exhibitorProspectus": "https://sponsors.aha.org/rs/710-ZLL-651/images/2026SummitSponsorshipProspectus.pdf?version=0",
+    "tags": [
+      "National Health Policy",
+      "Exec Heavy"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Large",
+    "icpTier": "Tier 2",
+    "icps": "| Hospital CEOs, Presidents, Board Chairs |",
+    "attendeeProfile": "1,000+ C-suite, policy focus",
+    "whyRelevant": "Healthcare advocacy",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "annual-hematology-oncology-nps-pas",
+    "name": "Annual Hematology & Oncology NPs & PAs",
+    "dates": "Aug 12",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.hoahcc.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Oncology Clinical",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 3",
+    "icps": "| | Oncology Nurse Practitioners, Physician Assistants",
+    "attendeeProfile": "300+ advanced practice providers",
+    "whyRelevant": "APP oncology education",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "epic-ugm",
+    "name": "Epic UGM",
+    "dates": "Aug 17",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Various",
+    "website": "https://www.epic.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Health IT Platform",
+      "Exec Heavy",
+      "Health System"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Large",
+    "icpTier": "Tier 2",
+    "icps": "| Epic Analysts, Application Coordinators, Epic Directors |",
+    "attendeeProfile": "10,000+ Epic users",
+    "whyRelevant": "Epic EHR users meeting",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "carolinas-cancer-conference",
+    "name": "Carolinas Cancer Conference",
+    "dates": "Aug 22",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.carolinascancerconference.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Regional Oncology",
+      "Clinician Heavy",
+      "Oncology"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Small",
+    "icpTier": "Tier 3",
+    "icps": "| | Regional Oncologists, Cancer Program Coordinators",
+    "attendeeProfile": "250+ regional cancer",
+    "whyRelevant": "Carolinas oncology community",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "becker-s-annual-hit-digital-health-rcm",
+    "name": "Becker's Annual HIT + Digital Health + RCM",
+    "dates": "Sep 14",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Chicago, IL",
+    "website": "https://conferences.beckershospitalreview.com/",
+    "agenda": "",
+    "exhibitorProspectus": "https://www.beckershospitalreview.com/wp-content/uploads/sites/9/2026/02/HITRCMProspectus2026.pdf",
+    "tags": [
+      "Health Tech/IT RCM",
+      "Exec Heavy",
+      "Health System"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Large",
+    "icpTier": "Tier 1, Tier 2",
+    "icps": "CIOs, Chief Revenue Officers, CFOs | VP Digital Health |",
+    "attendeeProfile": "2,000+ IT & RCM leaders",
+    "whyRelevant": "Combined IT, digital, RCM",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "scdm-annual-conference",
+    "name": "SCDM Annual Conference",
+    "dates": "Sep 14",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Raleigh, NC",
+    "website": "https://scdm.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Clinical Data Management",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Medium",
+    "icpTier": "Tier 3",
+    "icps": "| | Clinical Data Managers, Data Quality Directors",
+    "attendeeProfile": "400+ clinical data pros",
+    "whyRelevant": "Clinical trial data mgmt",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "nccn-annual-congress-hematologic-malignancies",
+    "name": "NCCN Annual Congress Hematologic Malignancies",
+    "dates": "Sep 18",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.nccn.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Oncology Hematology",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Medium",
+    "icpTier": "Tier 1, Tier 3",
+    "icps": "Hem/Onc Directors | | Hematologists, Blood Cancer Specialists",
+    "attendeeProfile": "800+ hematology specialists",
+    "whyRelevant": "Blood cancer focus",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "annual-clinical-trial-supply-west",
+    "name": "Annual Clinical Trial Supply West",
+    "dates": "Sep 22",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.wbresearch.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Clinical Trials Supply",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 3",
+    "icps": "| | Clinical Supply Managers, IRT Directors",
+    "attendeeProfile": "200+ clinical supply chain",
+    "whyRelevant": "Trial supply logistics",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "hbma-annual-rcm-conference",
+    "name": "HBMA Annual RCM Conference",
+    "dates": "Sep 22",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.hbma.org/",
+    "agenda": "",
+    "exhibitorProspectus": "https://www.hbma.org/uploads/content_files/files/2026_Revenue_Cycle_Prospectus%281%29.pdf",
+    "tags": [
+      "Revenue Cycle Focus",
+      "Exec Heavy",
+      "RCM"
+    ],
+    "gtmTag": "must_sponsor",
+    "size": "Medium",
+    "icpTier": "Tier 1",
+    "icps": "RCM Directors, Billing Company Executives, VP Revenue Cycle, Controllers | |",
+    "attendeeProfile": "500+ RCM professionals",
+    "whyRelevant": "RCM best practices",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "socra-annual-conference",
+    "name": "SOCRA Annual Conference",
+    "dates": "Sep 25",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.socra.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Clinical Research",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Medium",
+    "icpTier": "Tier 3",
+    "icps": "| | Clinical Research Associates, Site Managers",
+    "attendeeProfile": "600+ clinical research assoc",
+    "whyRelevant": "Research site operations",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "astro-annual-meeting",
+    "name": "ASTRO Annual Meeting",
+    "dates": "Sep 26",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Boston, MA",
+    "website": "https://www.astro.org/",
+    "agenda": "",
+    "exhibitorProspectus": "https://www.astro.org/meetings-and-education/micro-sites/2026/am-exhibitors/sponsors/industry-expert-theaters",
+    "tags": [
+      "Oncology Radiation",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Large",
+    "icpTier": "Tier 1, Tier 3",
+    "icps": "Radiation Oncology Department Heads | | Radiation Oncologists, Medical Physicists",
+    "attendeeProfile": "10,000+ radiation oncology",
+    "whyRelevant": "Premier radiation oncology",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "summit-novel-therapeutics-oncology",
+    "name": "Summit Novel Therapeutics Oncology",
+    "dates": "Sep 26",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.cancerresearch.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Oncology Research",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 2, Tier 3",
+    "icps": "| Precision Medicine Directors | Translational Oncologists",
+    "attendeeProfile": "200+ novel therapies focus",
+    "whyRelevant": "Precision oncology",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "sio-international",
+    "name": "SIO International",
+    "dates": "Sep 29",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://integrativeonc.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Oncology Supportive Care",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 2, Tier 3",
+    "icps": "| Integrative Oncology Directors | Supportive Care Physicians",
+    "attendeeProfile": "300+ integrative oncology",
+    "whyRelevant": "Supportive cancer care",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "cencora-oncology-exchange-fall",
+    "name": "Cencora Oncology Exchange Fall",
+    "dates": "Nov 7, 2025 (2 days)",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Orlando, FL",
+    "website": "https://www.cencora.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "GPO-Led Oncology",
+      "Exec Heavy",
+      "Oncology"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Medium",
+    "icpTier": "Tier 1",
+    "icps": "Community Oncology Practice Managers, Oncology Pharmacists, Administrators | |",
+    "attendeeProfile": "150 oncology professionals",
+    "whyRelevant": "GPO oncology members",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "ashg-annual-meeting",
+    "name": "ASHG Annual Meeting",
+    "dates": "Oct 9",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.ashg.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Genetics Research",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Large",
+    "icpTier": "Tier 3",
+    "icps": "| | Medical Geneticists, Genomics Directors",
+    "attendeeProfile": "8,000+ genetics professionals",
+    "whyRelevant": "Human genetics research",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "naaco-fall-conference",
+    "name": "NAACO Fall Conference",
+    "dates": "Oct 14",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Washington, DC",
+    "website": "https://www.naacos.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "ACO Focus",
+      "Exec Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Medium",
+    "icpTier": "Tier 2",
+    "icps": "| ACO CEOs, Directors Population Health |",
+    "attendeeProfile": "500+ ACO leadership",
+    "whyRelevant": "Value-based care policy",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "jadpro-live",
+    "name": "JADPRO Live",
+    "dates": "Oct 15",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.jadpro.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Oncology Advanced Practice",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 3",
+    "icps": "| | Oncology APPs, Nurse Practitioners",
+    "attendeeProfile": "600+ oncology APPs",
+    "whyRelevant": "Advanced practice oncology",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "reuters-total-health",
+    "name": "Reuters Total Health",
+    "dates": "Oct 22",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.reutersevents.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "National Health Strategy",
+      "Exec Heavy"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Medium",
+    "icpTier": "Tier 1, Tier 2",
+    "icps": "Hospital System CEOs, CFOs | Chief Strategy Officers, COOs |",
+    "attendeeProfile": "600+ C-suite health systems",
+    "whyRelevant": "Healthcare transformation",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "world-clinical-biomarkers-diagnostics",
+    "name": "World Clinical Biomarkers & Diagnostics",
+    "dates": "Oct 26",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.gtcbio.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Diagnostics Focus",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 3",
+    "icps": "| | Laboratory Directors, Pathology Chiefs",
+    "attendeeProfile": "300+ diagnostic professionals",
+    "whyRelevant": "Companion diagnostics",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "becker-s-annual-business-operations-of-ascs",
+    "name": "Becker's Annual Business & Operations of ASCs",
+    "dates": "Oct 29",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Chicago, IL",
+    "website": "https://conferences.beckershospitalreview.com/Annual_ASC_Meeting_2026",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "ASC Focus",
+      "Exec Heavy"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Large",
+    "icpTier": "Tier 1, Tier 2",
+    "icps": "ASC Owners, ASC CEOs, Surgery Center Administrators | ASC COOs, ASC Business Managers |",
+    "attendeeProfile": "1,500+ ASC executives and owners",
+    "whyRelevant": "Ambulatory surgery center operations",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "accc-national-oncology-conference",
+    "name": "ACCC National Oncology Conference",
+    "dates": "Oct 21 (3 days)",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Boston, MA",
+    "website": "https://www.accc-cancer.org/home/attend/national-oncology-conference",
+    "agenda": "",
+    "exhibitorProspectus": "https://cdn.sanity.io/files/0vv8moc6/accc-cancer/e418092c0f50ed7c6d35a7ef4cd23fd0dc18cea3.pdf",
+    "tags": [
+      "Oncology Focus",
+      "Exec Heavy",
+      "Oncology"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Large",
+    "icpTier": "Tier 1",
+    "icps": "Cancer Program Directors, Oncology Administrators, Quality Directors, VPs Cancer Services | |",
+    "attendeeProfile": "1,500+ cancer program pros",
+    "whyRelevant": "Cancer program management",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "becker-s-ceo-cfo-roundtable",
+    "name": "Becker's CEO + CFO Roundtable",
+    "dates": "Nov 2",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Chicago, IL",
+    "website": "https://conferences.beckershospitalreview.com/ceocfo-2026",
+    "agenda": "",
+    "exhibitorProspectus": "https://www.beckershospitalreview.com/wp-content/uploads/sites/9/2026/02/CEOCFOProspectus2026.pdf",
+    "tags": [
+      "C-Suite Executive",
+      "Exec Heavy",
+      "RCM"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Large",
+    "icpTier": "Tier 1",
+    "icps": "Hospital System CEOs, CFOs, Presidents | Board Members, Chief Strategy Officers |",
+    "attendeeProfile": "1,200+ C-suite executives (CEO/CFO focus)",
+    "whyRelevant": "Elite C-suite strategy and networking",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "becker-s-fall-payer-issues-roundtable",
+    "name": "Becker's Fall Payer Issues Roundtable",
+    "dates": "Nov 2",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Chicago, IL",
+    "website": "https://conferences.beckershospitalreview.com/FallPayer-2026",
+    "agenda": "",
+    "exhibitorProspectus": "https://www.beckershospitalreview.com/wp-content/uploads/sites/9/2026/02/FallPayerIssuesRoundtableProspectus2026.pdf",
+    "tags": [
+      "Payer Focus",
+      "Exec Heavy",
+      "Payer"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Small",
+    "icpTier": "Tier 1",
+    "icps": "Payer CEOs, Health Plan Medical Directors, VPs Network Management | Contracting Directors, Population Health VPs Payers |",
+    "attendeeProfile": "300+ payer executives",
+    "whyRelevant": "Payer strategy and contracting",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "mckesson-accelerate",
+    "name": "McKesson Accelerate",
+    "dates": "Nov 16",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Las Vegas, NV",
+    "website": "https://www.mckessonaccelerate.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "GPO Partner Oncology",
+      "Exec Heavy",
+      "Oncology"
+    ],
+    "gtmTag": "must_sponsor",
+    "size": "Large",
+    "icpTier": "Tier 1",
+    "icps": "US Oncology Practice Owners, Practice Administrators, Medical Directors, Pharmacy Directors | |",
+    "attendeeProfile": "1,500+ US Oncology practices",
+    "whyRelevant": "Major oncology GPO event",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "sitc-annual-meeting",
+    "name": "SITC Annual Meeting",
+    "dates": "Nov 4",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Phoenix, AZ",
+    "website": "https://www.sitcancer.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Oncology Immunotherapy",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Large",
+    "icpTier": "Tier 3",
+    "icps": "| | Immuno-Oncology Physicians, Translational Researchers",
+    "attendeeProfile": "4,000+ immunotherapy experts",
+    "whyRelevant": "Cancer immunotherapy",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "becker-s-fall-chief-pharmacy-officer-summit",
+    "name": "Becker's Fall Chief Pharmacy Officer Summit",
+    "dates": "Nov 4",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Chicago, IL",
+    "website": "https://conferences.beckershospitalreview.com/FallCPO-2026",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Pharmacy Leadership",
+      "Exec Heavy",
+      "Pharmacy"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Medium",
+    "icpTier": "Tier 1",
+    "icps": "Chief Pharmacy Officers, VPs Pharmacy Services, System Pharmacy Directors | Specialty Pharmacy Directors, Pharmacy Operations VPs |",
+    "attendeeProfile": "500+ pharmacy executives",
+    "whyRelevant": "Pharmacy innovation and leadership",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "cencora-vision-exchange",
+    "name": "Cencora Vision Exchange",
+    "dates": "Nov 6",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Orlando, FL",
+    "website": "https://www.cencora.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "GPO-Led Vision",
+      "Exec Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Small",
+    "icpTier": "Tier 1, Tier 2",
+    "icps": "Ophthalmology Practice Administrators | Practice Managers |",
+    "attendeeProfile": "150 vision professionals",
+    "whyRelevant": "Ophthalmology practices GPO",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "amia-annual-symposium",
+    "name": "AMIA Annual Symposium",
+    "dates": "Nov 7",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://www.amia.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Health Informatics",
+      "Exec Heavy",
+      "Health System"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Large",
+    "icpTier": "Tier 2, Tier 3",
+    "icps": "| Chief Medical Information Officers, Informatics Directors | Clinical Informaticists",
+    "attendeeProfile": "2,000+ informatics pros",
+    "whyRelevant": "Medical informatics",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "international-neuro-oncology-sno",
+    "name": "International Neuro Oncology (SNO)",
+    "dates": "Nov 12",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Philadelphia, PA",
+    "website": "https://www.soc-neuro-onc.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Oncology Neuro",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "skip",
+    "size": "Medium",
+    "icpTier": "Tier 3",
+    "icps": "| | Neuro-Oncologists, Neurosurgeons",
+    "attendeeProfile": "1,000+ neuro-oncology",
+    "whyRelevant": "Brain tumor focus",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "oneoncology-annual-conference",
+    "name": "OneOncology Annual Conference",
+    "dates": "Nov 13-Nov 15",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Nashville, TN",
+    "website": "https://www.oneoncology.com/events/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Oncology GPO Partner",
+      "Exec Heavy",
+      "Oncology"
+    ],
+    "gtmTag": "must_sponsor",
+    "size": "Medium",
+    "icpTier": "Tier 1",
+    "icps": "Practice Administrators, Oncology Directors | |",
+    "attendeeProfile": "OneOncology network practices",
+    "whyRelevant": "Oncology practice network",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "hlth-usa",
+    "name": "HLTH USA",
+    "dates": "Nov 15",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Las Vegas, NV",
+    "website": "https://hlth.com/events/usa/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Health Tech",
+      "Exec Heavy",
+      "Health System"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Large",
+    "icpTier": "Tier 2",
+    "icps": "| Chief Digital Officers, Innovation Directors, Investment VPs |",
+    "attendeeProfile": "5,000+ digital health & innovation",
+    "whyRelevant": "Health innovation marketplace",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "sabcs",
+    "name": "SABCS",
+    "dates": "Nov 26",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "San Antonio, TX",
+    "website": "https://www.sabcs.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Oncology Breast",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Large",
+    "icpTier": "Tier 1, Tier 3",
+    "icps": "Medical Oncologists Breast | | Breast Cancer Specialists, Surgical Oncologists",
+    "attendeeProfile": "5,000+ breast cancer experts",
+    "whyRelevant": "Premier breast cancer event",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "ngpx-patient-experience",
+    "name": "NGPX Patient Experience",
+    "dates": "Dec 2",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Palm Desert, CA",
+    "website": "https://patientexperience.wbresearch.com/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Patient Experience",
+      "Exec Heavy"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Medium",
+    "icpTier": "Tier 2",
+    "icps": "| Chief Experience Officers, VP Patient Experience |",
+    "attendeeProfile": "400+ PX professionals",
+    "whyRelevant": "Patient experience strategy",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "ash-annual-meeting",
+    "name": "ASH Annual Meeting",
+    "dates": "Dec 12",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "New Orleans, LA",
+    "website": "https://www.hematology.org/meetings/annual-meeting",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Hematology Focus",
+      "Clinician Heavy"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Large",
+    "icpTier": "Tier 1, Tier 3",
+    "icps": "Hematology/Oncology Directors | | Hematologists, Fellows, Blood Cancer Researchers",
+    "attendeeProfile": "25,000+ hematology pros",
+    "whyRelevant": "Premier hematology event",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "ncoa-spring-conference-2026",
+    "name": "NCOA Spring Conference 2026",
+    "dates": "TBA",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Charlotte, NC",
+    "website": "https://www.accc-cancer.org/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Regional Oncology",
+      "Exec Heavy"
+    ],
+    "gtmTag": "must_attend",
+    "size": "Small",
+    "icpTier": "Tier 1",
+    "icps": "Regional Cancer Program Directors, Oncology Administrators, Pharmacy Directors | |",
+    "attendeeProfile": "NC oncology community, 200+",
+    "whyRelevant": "Regional cancer leadership",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
+  },
+  {
+    "id": "aimed",
+    "name": "AIMed",
+    "dates": "TBA",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "TBD",
+    "website": "https://ai-med.io/",
+    "agenda": "",
+    "exhibitorProspectus": "",
+    "tags": [
+      "Health Tech/AI",
+      "Exec Heavy"
+    ],
+    "gtmTag": "outreach_only",
+    "size": "Medium",
+    "icpTier": "Tier 2",
+    "icps": "| Chief Medical Information Officers, AI Strategy Directors, VP Digital Health |",
+    "attendeeProfile": "Healthcare AI conference, 400+",
+    "whyRelevant": "AI in medicine applications",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0
   }
 ];
 
@@ -64,7 +3285,7 @@ const GTM_TAGS = {
   'must_attend':    { label: 'Must Attend',    bg: '#ecfdf5', color: '#16a34a', icon: '🎯' },
   'must_sponsor':   { label: 'Must Sponsor',   bg: '#edf2ff', color: '#3b6cf5', icon: '💎' },
   'outreach_only':  { label: 'Outreach Only',  bg: '#fef9ec', color: '#d4920a', icon: '📧' },
-  'skip':           { label: 'Skip',           bg: '#f0f3f8', color: '#9ca3af', icon: '⏭️' }
+  'skip':           { label: 'Skip / Monitor', bg: '#f0f3f8', color: '#9ca3af', icon: '⏭\uFE0F' }
 };
 
 const OUTREACH_STATUSES = {

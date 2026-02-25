@@ -306,6 +306,15 @@ a:hover { text-decoration:underline; }
 <div id="landing">
   <h1>Conference Intelligence Hub</h1>
   <p class="subtitle">Track speakers, priorities, and oncology signals across healthcare conferences</p>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;align-items:center;">
+    <input type="text" id="confSearch" placeholder="Search conferences..." oninput="renderLanding()" style="padding:8px 14px;border:1px solid var(--border);border-radius:8px;font-size:.88rem;width:240px;">
+    <button class="filter-btn active" data-conf-filter="all" onclick="setConfFilter('all',this)">All</button>
+    <button class="filter-btn" data-conf-filter="must_attend" onclick="setConfFilter('must_attend',this)">🎯 Must Attend</button>
+    <button class="filter-btn" data-conf-filter="must_sponsor" onclick="setConfFilter('must_sponsor',this)">💎 Must Sponsor</button>
+    <button class="filter-btn" data-conf-filter="outreach_only" onclick="setConfFilter('outreach_only',this)">📧 Outreach Only</button>
+    <button class="filter-btn" data-conf-filter="skip" onclick="setConfFilter('skip',this)">⏭️ Skip</button>
+    <span id="confCount" style="font-size:.82rem;color:var(--text2);margin-left:8px;"></span>
+  </div>
   <div class="conf-grid" id="confGrid"></div>
 </div>
 
@@ -714,19 +723,42 @@ function priorityTooltip(s) {
 }
 
 // ============ LANDING ============
+let confFilter = 'all';
+
+function setConfFilter(f, btn) {
+  confFilter = f;
+  document.querySelectorAll('[data-conf-filter]').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderLanding();
+}
+
 function renderLanding() {
   const stats = computeStats();
-  document.getElementById('confGrid').innerHTML = CONFERENCES.map(conf => {
+  const q = (document.getElementById('confSearch')?.value || '').toLowerCase();
+  
+  let filtered = CONFERENCES.filter(conf => {
+    const cd = getConfData(conf.id);
+    if (confFilter !== 'all' && cd.gtmTag !== confFilter) return false;
+    if (q) {
+      const hay = (conf.name + ' ' + conf.location + ' ' + conf.tags.join(' ')).toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+
+  document.getElementById('confCount').textContent = `${filtered.length} of ${CONFERENCES.length} conferences`;
+
+  document.getElementById('confGrid').innerHTML = filtered.map(conf => {
     const cd = getConfData(conf.id);
     const gtm = GTM_TAGS[cd.gtmTag];
     const os = OUTREACH_STATUSES[cd.outreach?.status || 'not_started'];
-    const speakerCount = conf.id === 'himss-2026' ? stats.total : (conf.speakerCount || 0);
-    const hasData = speakerCount > 0;
+    const isHimss = conf.id === 'himss-global-conference';
+    const speakerCount = isHimss ? stats.total : (conf.speakerCount || 0);
 
-    return `<div class="conf-card${hasData ? '' : ''}" onclick="showConfOverview('${conf.id}')" style="${hasData ? '' : ''}">
-      ${speakerCount > 0 ? `<div class="stat">${speakerCount} speakers</div>` : ''}
+    return `<div class="conf-card" onclick="showConfOverview('${conf.id}')">
+      ${speakerCount > 0 ? `<div class="stat">${speakerCount} speakers</div>` : (conf.size ? `<div class="stat" style="color:var(--text2)">${conf.size}</div>` : '')}
       <h3>${conf.name}</h3>
-      <div class="meta">${conf.dates} &nbsp;&middot;&nbsp; ${conf.location}</div>
+      <div class="meta">${conf.dates} &nbsp;&middot;&nbsp; ${conf.location || 'TBD'}</div>
       ${gtm ? `<div class="gtm-badge" style="background:${gtm.bg};color:${gtm.color};margin-top:12px;">${gtm.icon} ${gtm.label}</div>` : ''}
       ${cd.outreach?.status && cd.outreach.status !== 'not_started' ? `<div class="outreach-status-badge" style="background:${os.bg};color:${os.color}">Outreach: ${os.label}</div>` : ''}
       <div class="tags" style="margin-top:12px;">
@@ -742,8 +774,9 @@ function showConfOverview(confId) {
   const conf = CONFERENCES.find(c => c.id === confId);
   if (!conf) return;
   const cd = getConfData(confId);
-  const stats = confId === 'himss-2026' ? computeStats() : null;
-  const hasSpeakers = confId === 'himss-2026';
+  const isHimss = confId === 'himss-global-conference';
+  const stats = isHimss ? computeStats() : null;
+  const hasSpeakers = isHimss;
 
   document.getElementById('landing').style.display = 'none';
   document.getElementById('detail').style.display = 'none';
@@ -782,6 +815,13 @@ function showConfOverview(confId) {
           </div>
         </div>
       </div>
+
+      ${conf.size || conf.attendeeProfile || conf.icpTier || conf.whyRelevant ? `
+      <div class="conf-details-grid" style="margin-bottom:20px;">
+        ${conf.size ? `<div class="conf-detail-card"><h3>📊 Size</h3><div class="detail-value">${conf.size}${conf.attendeeProfile ? ' — ' + esc(conf.attendeeProfile) : ''}</div></div>` : ''}
+        ${conf.icpTier ? `<div class="conf-detail-card"><h3>🎯 ICP Tier</h3><div class="detail-value">${esc(conf.icpTier)}</div>${conf.icps ? '<div style="margin-top:8px;font-size:.82rem;color:var(--text2)">' + esc(conf.icps) + '</div>' : ''}</div>` : ''}
+        ${conf.whyRelevant ? `<div class="conf-detail-card"><h3>💡 Why Relevant</h3><div class="detail-value">${esc(conf.whyRelevant)}</div></div>` : ''}
+      </div>` : ''}
 
       <div class="conf-detail-card" style="margin-bottom:20px;">
         <h3>🎯 RISA Labs GTM Decision</h3>

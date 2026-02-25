@@ -36,6 +36,49 @@ a:hover { text-decoration:underline; }
 ::-webkit-scrollbar-track { background:transparent; }
 ::-webkit-scrollbar-thumb { background:#d0d5dd; border-radius:3px; }
 
+/* Executive Summary */
+.exec-stat { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:16px; text-align:center; }
+.exec-stat .num { font-size:1.4rem; font-weight:700; }
+.exec-stat .label { font-size:.75rem; color:var(--text2); margin-top:2px; }
+
+/* Urgency Alerts */
+.urgency-alert { padding:12px 16px; border-radius:10px; font-size:.85rem; display:flex; align-items:center; gap:8px; margin-bottom:8px; cursor:pointer; transition:all .2s; }
+.urgency-alert:hover { transform:translateX(4px); }
+.urgency-alert.urgent { background:#fef2f2; border-left:3px solid var(--p1); color:#991b1b; }
+.urgency-alert.soon { background:#fef9ec; border-left:3px solid var(--p2); color:#92400e; }
+.urgency-alert.upcoming { background:#edf2ff; border-left:3px solid var(--accent); color:#1e40af; }
+
+/* Timeline */
+.timeline-row { display:flex; align-items:center; gap:4px; margin-bottom:4px; }
+.timeline-label { font-size:.7rem; min-width:160px; max-width:160px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:var(--text); font-weight:500; cursor:pointer; }
+.timeline-label:hover { color:var(--accent); }
+.timeline-bar { height:18px; border-radius:4px; position:relative; cursor:pointer; min-width:2px; display:flex; align-items:center; padding:0 4px; overflow:hidden; }
+.timeline-bar span { font-size:.6rem; color:white; font-weight:600; white-space:nowrap; }
+.timeline-header { display:flex; margin-bottom:8px; padding-left:164px; }
+.timeline-header span { font-size:.7rem; color:var(--text2); font-weight:500; }
+
+/* Conflict Badge */
+.conflict-alert { padding:10px 16px; border-radius:8px; background:#fff5eb; border:1px solid #fed7aa; font-size:.82rem; margin-bottom:6px; display:flex; align-items:center; gap:6px; }
+
+/* Team Assignment */
+.team-tags { display:flex; gap:4px; flex-wrap:wrap; margin-top:8px; }
+.team-tag { padding:2px 8px; border-radius:12px; font-size:.7rem; font-weight:500; background:var(--accent-light); color:var(--accent); cursor:pointer; }
+.team-tag.add { background:var(--surface2); color:var(--text2); border:1px dashed var(--border); }
+
+/* Budget */
+.budget-badge { font-size:.72rem; padding:2px 8px; border-radius:8px; background:#ecfdf5; color:var(--green); font-weight:600; }
+
+/* Countdown */
+.countdown { font-size:.72rem; padding:3px 8px; border-radius:8px; font-weight:600; }
+.countdown.urgent { background:#fef2f2; color:var(--p1); }
+.countdown.soon { background:#fef9ec; color:var(--p2); }
+.countdown.upcoming { background:var(--accent-light); color:var(--accent); }
+.countdown.past { background:var(--surface2); color:var(--text2); }
+
+/* Notes */
+.conf-notes { margin-top:12px; }
+.conf-notes textarea { width:100%; min-height:60px; padding:8px; border:1px solid var(--border); border-radius:8px; font-size:.82rem; font-family:inherit; resize:vertical; }
+
 /* GTM Badge on landing cards */
 .gtm-badge { display:inline-flex; align-items:center; gap:4px; padding:4px 10px; border-radius:20px; font-size:.75rem; font-weight:600; }
 .outreach-status-badge { display:inline-flex; align-items:center; gap:4px; padding:3px 8px; border-radius:12px; font-size:.72rem; font-weight:500; margin-top:8px; }
@@ -285,6 +328,9 @@ a:hover { text-decoration:underline; }
   .stats-bar { flex-wrap:wrap; }
   .stat-item { min-width:33%; }
   .bulk-bar { left:8px; right:8px; transform:none; flex-wrap:wrap; gap:10px; }
+  #execSummary { grid-template-columns:repeat(3,1fr) !important; }
+  .conf-details-grid { grid-template-columns:1fr !important; }
+  .timeline-label { min-width:100px !important; max-width:100px !important; font-size:.6rem !important; }
 }
 </style>
 </head>
@@ -305,16 +351,56 @@ a:hover { text-decoration:underline; }
 
 <div id="landing">
   <h1>Conference Intelligence Hub</h1>
-  <p class="subtitle">Track speakers, priorities, and oncology signals across healthcare conferences</p>
-  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;align-items:center;">
-    <input type="text" id="confSearch" placeholder="Search conferences..." oninput="renderLanding()" style="padding:8px 14px;border:1px solid var(--border);border-radius:8px;font-size:.88rem;width:240px;">
+  <p class="subtitle">RISA Labs GTM Conference Tracker — March to June 2026</p>
+  
+  <!-- Executive Summary Bar -->
+  <div id="execSummary" style="display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:24px;"></div>
+
+  <!-- Upcoming / Urgency Alerts -->
+  <div id="urgencyAlerts" style="margin-bottom:20px;"></div>
+
+  <!-- Filters Row -->
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center;">
+    <input type="text" id="confSearch" placeholder="Search conferences..." oninput="renderLanding()" style="padding:8px 14px;border:1px solid var(--border);border-radius:8px;font-size:.88rem;width:220px;">
     <button class="filter-btn active" data-conf-filter="all" onclick="setConfFilter('all',this)">All</button>
     <button class="filter-btn" data-conf-filter="must_attend" onclick="setConfFilter('must_attend',this)">🎯 Must Attend</button>
     <button class="filter-btn" data-conf-filter="must_sponsor" onclick="setConfFilter('must_sponsor',this)">💎 Must Sponsor</button>
     <button class="filter-btn" data-conf-filter="outreach_only" onclick="setConfFilter('outreach_only',this)">📧 Outreach Only</button>
     <button class="filter-btn" data-conf-filter="skip" onclick="setConfFilter('skip',this)">⏭️ Skip</button>
-    <span id="confCount" style="font-size:.82rem;color:var(--text2);margin-left:8px;"></span>
   </div>
+  <!-- Date & Sort Filters -->
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;align-items:center;">
+    <select id="confMonthFilter" onchange="renderLanding()" style="padding:7px 12px;border:1px solid var(--border);border-radius:8px;font-size:.85rem;">
+      <option value="all">All Months</option>
+      <option value="Mar">March</option>
+      <option value="Apr">April</option>
+      <option value="May">May</option>
+      <option value="Jun">June</option>
+    </select>
+    <select id="confSizeFilter" onchange="renderLanding()" style="padding:7px 12px;border:1px solid var(--border);border-radius:8px;font-size:.85rem;">
+      <option value="all">All Sizes</option>
+      <option value="Large">Large</option>
+      <option value="Medium">Medium</option>
+      <option value="Small">Small</option>
+    </select>
+    <select id="confSort" onchange="renderLanding()" style="padding:7px 12px;border:1px solid var(--border);border-radius:8px;font-size:.85rem;">
+      <option value="date">Sort: Date ↑</option>
+      <option value="icp">Sort: ICP Overlap</option>
+      <option value="name">Sort: Name</option>
+      <option value="size">Sort: Size</option>
+    </select>
+    <label style="display:flex;align-items:center;gap:4px;font-size:.82rem;color:var(--text2);cursor:pointer;margin-left:8px;">
+      <input type="checkbox" id="confHideSkip" onchange="renderLanding()" checked> Hide skipped
+    </label>
+    <span id="confCount" style="font-size:.82rem;color:var(--text2);margin-left:auto;"></span>
+  </div>
+
+  <!-- Timeline View -->
+  <div id="confTimeline" style="margin-bottom:24px;overflow-x:auto;"></div>
+
+  <!-- Scheduling Conflicts -->
+  <div id="confConflicts" style="margin-bottom:20px;"></div>
+
   <div class="conf-grid" id="confGrid"></div>
 </div>
 
@@ -722,6 +808,78 @@ function priorityTooltip(s) {
   return `${s.priority} — ${labels[s.priority] || ''} (Score: ${s.score})`;
 }
 
+// ============ HELPERS ============
+const TODAY = new Date('2026-02-25'); // current date
+
+function parseConfDate(dateStr) {
+  // Parse "March 9–13, 2026" or "May 29 – June 2, 2026"
+  if (!dateStr) return null;
+  const months = {January:0,February:1,March:2,April:3,May:4,June:5,July:6,August:7,September:8,October:9,November:10,December:11};
+  const m = dateStr.match(/^(\w+)\s+(\d+)/);
+  if (!m) return null;
+  const mon = months[m[1]];
+  if (mon === undefined) return null;
+  return new Date(2026, mon, parseInt(m[2]));
+}
+
+function daysUntil(dateStr) {
+  const d = parseConfDate(dateStr);
+  if (!d) return 999;
+  return Math.ceil((d - TODAY) / (1000*60*60*24));
+}
+
+function countdownText(days) {
+  if (days < 0) return { text: 'Past', cls: 'past' };
+  if (days <= 7) return { text: `${days}d away!`, cls: 'urgent' };
+  if (days <= 30) return { text: `${days}d away`, cls: 'soon' };
+  return { text: `${days}d away`, cls: 'upcoming' };
+}
+
+function getConfMonth(dateStr) {
+  if (!dateStr) return '';
+  const m = dateStr.match(/^(\w{3})/);
+  return m ? m[1] : '';
+}
+
+// ============ TEAM ASSIGNMENTS (localStorage) ============
+const TEAM_KEY = 'cih_teams';
+let teamData = {};
+function loadTeamData() { try { teamData = JSON.parse(localStorage.getItem(TEAM_KEY)) || {}; } catch(e) { teamData = {}; } }
+function saveTeamData() { localStorage.setItem(TEAM_KEY, JSON.stringify(teamData)); }
+function getTeam(confId) { return teamData[confId] || []; }
+function addTeamMember(confId, name) {
+  if (!teamData[confId]) teamData[confId] = [];
+  if (!teamData[confId].includes(name)) teamData[confId].push(name);
+  saveTeamData();
+}
+function removeTeamMember(confId, name) {
+  if (teamData[confId]) teamData[confId] = teamData[confId].filter(n => n !== name);
+  saveTeamData();
+}
+loadTeamData();
+
+// ============ NOTES (localStorage) ============
+const NOTES_KEY = 'cih_notes';
+let notesData = {};
+function loadNotes() { try { notesData = JSON.parse(localStorage.getItem(NOTES_KEY)) || {}; } catch(e) { notesData = {}; } }
+function saveNotes() { localStorage.setItem(NOTES_KEY, JSON.stringify(notesData)); }
+function getNote(confId) { return notesData[confId] || ''; }
+function setNote(confId, text) { notesData[confId] = text; saveNotes(); }
+loadNotes();
+
+// ============ BUDGET (localStorage) ============
+const BUDGET_KEY = 'cih_budget';
+let budgetData = {};
+function loadBudget() { try { budgetData = JSON.parse(localStorage.getItem(BUDGET_KEY)) || {}; } catch(e) { budgetData = {}; } }
+function saveBudget() { localStorage.setItem(BUDGET_KEY, JSON.stringify(budgetData)); }
+function getBudget(confId) { return budgetData[confId] || { sponsorship: 0, travel: 0, misc: 0 }; }
+function setBudgetField(confId, field, val) {
+  if (!budgetData[confId]) budgetData[confId] = { sponsorship: 0, travel: 0, misc: 0 };
+  budgetData[confId][field] = parseFloat(val) || 0;
+  saveBudget();
+}
+loadBudget();
+
 // ============ LANDING ============
 let confFilter = 'all';
 
@@ -732,21 +890,161 @@ function setConfFilter(f, btn) {
   renderLanding();
 }
 
-function renderLanding() {
-  const stats = computeStats();
+function getFilteredConfs() {
   const q = (document.getElementById('confSearch')?.value || '').toLowerCase();
-  
-  let filtered = CONFERENCES.filter(conf => {
+  const month = document.getElementById('confMonthFilter')?.value || 'all';
+  const size = document.getElementById('confSizeFilter')?.value || 'all';
+  const hideSkip = document.getElementById('confHideSkip')?.checked;
+  const sort = document.getElementById('confSort')?.value || 'date';
+
+  let list = CONFERENCES.filter(conf => {
     const cd = getConfData(conf.id);
     if (confFilter !== 'all' && cd.gtmTag !== confFilter) return false;
+    if (hideSkip && cd.gtmTag === 'skip') return false;
+    if (month !== 'all' && !conf.dates.startsWith(month === 'Mar' ? 'March' : month === 'Apr' ? 'April' : month === 'May' ? 'May' : 'June')) return false;
+    if (size !== 'all' && conf.size !== size) return false;
     if (q) {
-      const hay = (conf.name + ' ' + conf.location + ' ' + conf.tags.join(' ')).toLowerCase();
+      const hay = (conf.name + ' ' + conf.location + ' ' + conf.tags.join(' ') + ' ' + (conf.gtmRationale||'')).toLowerCase();
       if (!hay.includes(q)) return false;
     }
     return true;
   });
 
-  document.getElementById('confCount').textContent = `${filtered.length} of ${CONFERENCES.length} conferences`;
+  if (sort === 'date') {
+    list.sort((a,b) => daysUntil(a.dates) - daysUntil(b.dates));
+  } else if (sort === 'name') {
+    list.sort((a,b) => a.name.localeCompare(b.name));
+  } else if (sort === 'icp') {
+    const stars = s => (s||'').match(/★/g)?.length || 0;
+    list.sort((a,b) => stars(b.icpOverlap) - stars(a.icpOverlap));
+  } else if (sort === 'size') {
+    const sizeOrder = { Large: 3, Medium: 2, Small: 1 };
+    list.sort((a,b) => (sizeOrder[b.size]||0) - (sizeOrder[a.size]||0));
+  }
+  return list;
+}
+
+function renderExecSummary() {
+  const all = CONFERENCES;
+  const mustAttend = all.filter(c => getConfData(c.id).gtmTag === 'must_attend').length;
+  const mustSponsor = all.filter(c => getConfData(c.id).gtmTag === 'must_sponsor').length;
+  const outreach = all.filter(c => getConfData(c.id).gtmTag === 'outreach_only').length;
+  const skip = all.filter(c => getConfData(c.id).gtmTag === 'skip').length;
+  const next30 = all.filter(c => { const d = daysUntil(c.dates); return d >= 0 && d <= 30 && getConfData(c.id).gtmTag !== 'skip'; }).length;
+  const totalBudget = all.reduce((sum,c) => { const b = getBudget(c.id); return sum + (b.sponsorship||0) + (b.travel||0) + (b.misc||0); }, 0);
+
+  document.getElementById('execSummary').innerHTML = `
+    <div class="exec-stat"><div class="num">${all.length}</div><div class="label">Total Conferences</div></div>
+    <div class="exec-stat"><div class="num" style="color:var(--green)">${mustAttend}</div><div class="label">Must Attend</div></div>
+    <div class="exec-stat"><div class="num" style="color:var(--accent)">${mustSponsor}</div><div class="label">Must Sponsor</div></div>
+    <div class="exec-stat"><div class="num" style="color:var(--p2)">${outreach}</div><div class="label">Outreach Only</div></div>
+    <div class="exec-stat"><div class="num" style="color:var(--p1)">${next30}</div><div class="label">Next 30 Days</div></div>
+    <div class="exec-stat"><div class="num" style="color:var(--purple)">${totalBudget > 0 ? '$' + (totalBudget/1000).toFixed(0) + 'K' : '—'}</div><div class="label">Est. Budget</div></div>
+  `;
+}
+
+function renderUrgencyAlerts() {
+  const alerts = CONFERENCES
+    .filter(c => getConfData(c.id).gtmTag !== 'skip')
+    .map(c => ({ ...c, days: daysUntil(c.dates) }))
+    .filter(c => c.days >= 0 && c.days <= 21)
+    .sort((a,b) => a.days - b.days)
+    .slice(0, 5);
+
+  if (!alerts.length) { document.getElementById('urgencyAlerts').innerHTML = ''; return; }
+
+  document.getElementById('urgencyAlerts').innerHTML = alerts.map(c => {
+    const cd = getConfData(c.id);
+    const gtm = GTM_TAGS[cd.gtmTag] || {};
+    const cls = c.days <= 7 ? 'urgent' : c.days <= 14 ? 'soon' : 'upcoming';
+    return `<div class="urgency-alert ${cls}" onclick="showConfOverview('${c.id}')">
+      <strong>${c.days === 0 ? 'TODAY' : c.days + 'd'}</strong>
+      ${gtm.icon||''} ${c.name} — ${c.location || 'TBD'}
+      ${getTeam(c.id).length ? '<span style="margin-left:auto;font-size:.75rem;">👥 ' + getTeam(c.id).join(', ') + '</span>' : ''}
+    </div>`;
+  }).join('');
+}
+
+function renderTimeline() {
+  const active = CONFERENCES.filter(c => getConfData(c.id).gtmTag !== 'skip');
+  if (!active.length) { document.getElementById('confTimeline').innerHTML = ''; return; }
+
+  // Calculate date range
+  const startDate = new Date(2026, 2, 1); // March 1
+  const endDate = new Date(2026, 5, 30);  // June 30
+  const totalDays = Math.ceil((endDate - startDate) / (1000*60*60*24));
+
+  // Month headers
+  const months = [
+    { name: 'March', start: 0, days: 31 },
+    { name: 'April', start: 31, days: 30 },
+    { name: 'May', start: 61, days: 31 },
+    { name: 'June', start: 92, days: 30 }
+  ];
+
+  const gtmColors = { must_attend: '#16a34a', must_sponsor: '#3b6cf5', outreach_only: '#d4920a' };
+
+  let html = '<div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;overflow-x:auto;">';
+  html += '<div style="font-size:.82rem;font-weight:600;margin-bottom:12px;">📅 Conference Timeline</div>';
+  html += '<div class="timeline-header">' + months.map(m => `<span style="flex:${m.days};text-align:center;">${m.name}</span>`).join('') + '</div>';
+
+  // Today marker position
+  const todayOffset = Math.ceil((TODAY - startDate) / (1000*60*60*24));
+
+  active.sort((a,b) => daysUntil(a.dates) - daysUntil(b.dates)).forEach(c => {
+    const cd = getConfData(c.id);
+    const start = parseConfDate(c.dates);
+    if (!start) return;
+    const offset = Math.max(0, Math.ceil((start - startDate) / (1000*60*60*24)));
+    const dur = c.days || 1;
+    const color = gtmColors[cd.gtmTag] || '#9ca3af';
+    const pctLeft = (offset / totalDays * 100).toFixed(1);
+    const pctWidth = Math.max(0.5, (dur / totalDays * 100)).toFixed(1);
+
+    html += `<div class="timeline-row">
+      <div class="timeline-label" onclick="showConfOverview('${c.id}')" title="${c.name}">${c.name}</div>
+      <div style="flex:1;position:relative;height:18px;background:var(--surface2);border-radius:4px;">
+        <div class="timeline-bar" style="position:absolute;left:${pctLeft}%;width:${pctWidth}%;background:${color};" onclick="showConfOverview('${c.id}')" title="${c.dates} (${c.days||1}d)">
+          <span>${c.days||1}d</span>
+        </div>
+      </div>
+    </div>`;
+  });
+  html += '</div>';
+  document.getElementById('confTimeline').innerHTML = html;
+}
+
+function renderConflicts() {
+  const active = CONFERENCES.filter(c => {
+    const t = getConfData(c.id).gtmTag;
+    return t === 'must_attend' || t === 'must_sponsor';
+  }).map(c => ({ ...c, start: parseConfDate(c.dates), end: (() => { const s = parseConfDate(c.dates); return s ? new Date(s.getTime() + ((c.days||1)-1)*86400000) : null; })() })).filter(c => c.start);
+
+  const conflicts = [];
+  for (let i = 0; i < active.length; i++) {
+    for (let j = i+1; j < active.length; j++) {
+      if (active[i].start <= active[j].end && active[j].start <= active[i].end) {
+        conflicts.push([active[i], active[j]]);
+      }
+    }
+  }
+
+  if (!conflicts.length) { document.getElementById('confConflicts').innerHTML = ''; return; }
+  document.getElementById('confConflicts').innerHTML = conflicts.map(([a,b]) =>
+    `<div class="conflict-alert">⚠️ <strong>Overlap:</strong> ${a.name} (${a.dates}) and ${b.name} (${b.dates}) — need to split the team or choose one</div>`
+  ).join('');
+}
+
+function renderLanding() {
+  const stats = computeStats();
+  const filtered = getFilteredConfs();
+
+  renderExecSummary();
+  renderUrgencyAlerts();
+  renderTimeline();
+  renderConflicts();
+
+  document.getElementById('confCount').textContent = `Showing ${filtered.length} of ${CONFERENCES.length} conferences`;
 
   document.getElementById('confGrid').innerHTML = filtered.map(conf => {
     const cd = getConfData(conf.id);
@@ -754,15 +1052,29 @@ function renderLanding() {
     const os = OUTREACH_STATUSES[cd.outreach?.status || 'not_started'];
     const isHimss = conf.id === 'himss-global-conference';
     const speakerCount = isHimss ? stats.total : (conf.speakerCount || 0);
+    const days = daysUntil(conf.dates);
+    const cd_info = countdownText(days);
+    const team = getTeam(conf.id);
+    const budget = getBudget(conf.id);
+    const totalBudget = (budget.sponsorship||0) + (budget.travel||0) + (budget.misc||0);
+    const stars = (conf.icpOverlap||'').match(/★/g)?.length || 0;
 
     return `<div class="conf-card" onclick="showConfOverview('${conf.id}')">
-      ${speakerCount > 0 ? `<div class="stat">${speakerCount} speakers</div>` : (conf.size ? `<div class="stat" style="color:var(--text2)">${conf.size}</div>` : '')}
+      <div style="display:flex;justify-content:space-between;align-items:start;">
+        ${speakerCount > 0 ? `<div class="stat">${speakerCount} speakers</div>` : (conf.size ? `<div class="stat" style="color:var(--text2)">${conf.size}</div>` : '<div></div>')}
+        <span class="countdown ${cd_info.cls}">${cd_info.text}</span>
+      </div>
       <h3>${conf.name}</h3>
       <div class="meta">${conf.dates}${conf.days ? ' (' + conf.days + 'd)' : ''} &nbsp;&middot;&nbsp; ${conf.location || 'TBD'}</div>
-      ${gtm ? `<div class="gtm-badge" style="background:${gtm.bg};color:${gtm.color};margin-top:12px;">${gtm.icon} ${gtm.label}</div>` : ''}
+      <div style="display:flex;gap:6px;align-items:center;margin-top:10px;flex-wrap:wrap;">
+        ${gtm ? `<div class="gtm-badge" style="background:${gtm.bg};color:${gtm.color};">${gtm.icon} ${gtm.label}</div>` : ''}
+        ${stars > 0 ? `<span style="font-size:.72rem;color:var(--text2);">${'★'.repeat(stars)}${'☆'.repeat(5-stars)}</span>` : ''}
+        ${totalBudget > 0 ? `<span class="budget-badge">$${(totalBudget/1000).toFixed(0)}K</span>` : ''}
+      </div>
       ${cd.outreach?.status && cd.outreach.status !== 'not_started' ? `<div class="outreach-status-badge" style="background:${os.bg};color:${os.color}">Outreach: ${os.label}</div>` : ''}
-      <div class="tags" style="margin-top:12px;">
-        ${conf.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+      ${team.length ? `<div class="team-tags">${team.map(t => `<span class="team-tag">👤 ${t}</span>`).join('')}</div>` : ''}
+      <div class="tags" style="margin-top:10px;">
+        ${conf.tags.slice(0,4).map(t => `<span class="tag">${t}</span>`).join('')}
       </div>
     </div>`;
   }).join('');
@@ -903,11 +1215,56 @@ function showConfOverview(confId) {
         </div>
       </div>` : ''}
 
+      <!-- Team Assignment -->
+      <div class="conf-detail-card" style="margin-bottom:20px;">
+        <h3>👥 Team Assignment</h3>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;" id="teamTags-${confId}">
+          ${getTeam(confId).map(t => `<span class="team-tag" onclick="event.stopPropagation();removeTeamMember('${confId}','${t}');showConfOverview('${confId}')">👤 ${esc(t)} ✕</span>`).join('')}
+          <input type="text" placeholder="+ Add team member" style="padding:4px 8px;border:1px dashed var(--border);border-radius:8px;font-size:.8rem;width:140px;"
+            onkeydown="if(event.key==='Enter'&&this.value.trim()){addTeamMember('${confId}',this.value.trim());showConfOverview('${confId}');}">
+        </div>
+      </div>
+
+      <!-- Budget Tracker -->
+      <div class="conf-detail-card" style="margin-bottom:20px;">
+        <h3>💰 Budget Estimate</h3>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+          <div>
+            <label style="font-size:.78rem;color:var(--text2);">Sponsorship ($)</label>
+            <input type="number" value="${getBudget(confId).sponsorship||''}" placeholder="0"
+              onchange="setBudgetField('${confId}','sponsorship',this.value)"
+              style="width:100%;padding:6px 8px;border:1px solid var(--border);border-radius:6px;font-size:.85rem;">
+          </div>
+          <div>
+            <label style="font-size:.78rem;color:var(--text2);">Travel ($)</label>
+            <input type="number" value="${getBudget(confId).travel||''}" placeholder="0"
+              onchange="setBudgetField('${confId}','travel',this.value)"
+              style="width:100%;padding:6px 8px;border:1px solid var(--border);border-radius:6px;font-size:.85rem;">
+          </div>
+          <div>
+            <label style="font-size:.78rem;color:var(--text2);">Misc ($)</label>
+            <input type="number" value="${getBudget(confId).misc||''}" placeholder="0"
+              onchange="setBudgetField('${confId}','misc',this.value)"
+              style="width:100%;padding:6px 8px;border:1px solid var(--border);border-radius:6px;font-size:.85rem;">
+          </div>
+        </div>
+        ${(() => { const b = getBudget(confId); const t = (b.sponsorship||0)+(b.travel||0)+(b.misc||0); return t > 0 ? '<div style="margin-top:10px;font-size:.9rem;font-weight:600;color:var(--green);">Total: $' + t.toLocaleString() + '</div>' : ''; })()}
+      </div>
+
+      <!-- Notes -->
+      <div class="conf-detail-card" style="margin-bottom:20px;">
+        <h3>📝 Notes & Action Items</h3>
+        <textarea placeholder="Add notes, action items, registration deadlines, key contacts..." 
+          style="width:100%;min-height:80px;padding:10px;border:1px solid var(--border);border-radius:8px;font-size:.85rem;font-family:inherit;resize:vertical;"
+          onblur="setNote('${confId}',this.value)">${esc(getNote(confId))}</textarea>
+      </div>
+
       <div class="conf-actions" style="margin-top:28px;">
         ${hasSpeakers ? `<button class="conf-action-btn primary" onclick="showDetail()">👥 View Speakers & Outreach</button>` : 
           `<button class="conf-action-btn" style="opacity:.5;cursor:default">👥 No speakers added yet</button>`}
         ${conf.website ? `<a href="${conf.website}" target="_blank" class="conf-action-btn">🌐 Conference Website</a>` : ''}
         ${cd.agenda ? `<a href="${cd.agenda}" target="_blank" class="conf-action-btn">📋 View Agenda</a>` : ''}
+        ${cd.exhibitorProspectus ? `<a href="${cd.exhibitorProspectus}" target="_blank" class="conf-action-btn">📄 Sponsorship Prospectus</a>` : ''}
       </div>
     </div>
   `;

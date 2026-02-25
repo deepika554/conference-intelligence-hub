@@ -2273,11 +2273,36 @@ function getPipeline(confId) {
 
 function setPipelineField(confId, field, value) {
   getPipeline(confId);
+  const oldOwner = pipelineData[confId].risaOwner;
   pipelineData[confId][field] = value;
   savePipeline();
   // Sync to backend
   if (backendUrl) {
     backendPost('updatePipeline', { confId, ...pipelineData[confId] }).catch(()=>{});
+  }
+  // Notify new owner
+  if (field === 'risaOwner' && value && value !== oldOwner) {
+    const member = getTeamMemberByName(value);
+    const conf = CONFERENCES.find(c => c.id === confId);
+    const p = pipelineData[confId];
+    if (member && notifyUrl && conf) {
+      const assignedBy = localStorage.getItem('cih_user') || 'RISA GTM Hub';
+      fetch(notifyUrl, {
+        method: 'POST', mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          to: member.email,
+          assignee: member.name,
+          task: 'Sponsorship Owner for ' + conf.name,
+          conference: conf.name,
+          priority: 'high',
+          dueDate: p.deadline || 'No deadline set',
+          assignedBy: assignedBy,
+          stage: (PIPELINE_STAGES.find(s => s.key === p.stage) || {}).label || p.stage,
+          nextAction: p.nextAction || 'Review pipeline and update status'
+        })
+      }).catch(()=>{});
+    }
   }
 }
 

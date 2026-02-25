@@ -2076,15 +2076,14 @@ async function loadConfThreads(confId) {
   const conf = CONFERENCES.find(c => c.id === confId);
   if (!conf) return;
   
-  // Build search query from conference name
-  // Extract meaningful search terms
+  // Build search query — conference name + sponsorship keywords only
   const name = conf.name
-    .replace(/\(.*?\)/g, '') // remove parenthetical
+    .replace(/\(.*?\)/g, '')
     .replace(/Annual|Conference|Global|National|Summit|Forum|Congress/gi, '')
     .trim();
   
   const searchTerms = name.split(/\s+/).filter(w => w.length > 2).join(' ');
-  const query = `(${searchTerms}) newer_than:120d`;
+  const query = `(${searchTerms}) (sponsorship OR sponsor OR booth OR exhibit OR prospectus OR partnership OR registration OR attendee OR demo OR meeting) newer_than:120d`;
   
   // Check cache
   const cacheKey = confId;

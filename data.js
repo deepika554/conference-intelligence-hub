@@ -1,15 +1,15 @@
-// ============ CONFERENCES (March-June 2026) ============
+// ============ CONFERENCES (March–June 2026) ============
 const CONFERENCES = [
   {
     "id": "mgma-financial-conference",
     "name": "MGMA Financial Conference",
-    "dates": "Mar 1",
+    "dates": "March 1\u20133, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Phoenix, AZ",
     "website": "https://www.mgma.com/conferences/financial-conference/",
     "agenda": "",
-    "exhibitorProspectus": "https://www.mgma.com/getkaiasset/7607de04-92ce-4b1e-b52b-c4343f1c5ff2/2026%20Spring%20Prospectus.pdf?_gl=1*h5czlz*_gcl_au*MTI3MDk3NjcwNi4xNzY4NDkzNzg5LjExNjY3MTEzMjcuMTc3MDY0Mjk1My4xNzcwNjQyOTUy*_ga*MzgzMDczMjY1LjE3Njg0OTM3OTY.*_ga_DT1SR7HF62*czE3NzA2NDI5MzMkbzUkZzEkdDE3NzA2NDI5NzEkajIyJGwwJGgw",
+    "exhibitorProspectus": "https://www.mgma.com/getkaiasset/7607de04-92ce-4b1e-b52b-c4343f1c5ff2/2026%20Spring%20Prospectus.pdf",
     "tags": [
       "Revenue Cycle Finance",
       "Exec Heavy",
@@ -26,12 +26,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "sso-surgical-oncology",
     "name": "SSO (Surgical Oncology)",
-    "dates": "Mar 5",
+    "dates": "March 5\u20137, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Phoenix, AZ",
@@ -53,12 +54,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "hbma-innovation-conference",
     "name": "HBMA Innovation Conference",
-    "dates": "Mar 9",
+    "dates": "March 9\u201311, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Boston, MA",
@@ -80,17 +82,18 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "himss-global-conference",
     "name": "HIMSS Global Conference",
-    "dates": "Mar 9 (4 days)",
+    "dates": "March 9\u201313, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Las Vegas, NV",
     "website": "https://www.himssconference.com/",
-    "agenda": "",
+    "agenda": "https://www.himssconference.com/agenda-at-a-glance/",
     "exhibitorProspectus": "https://online.fliphtml5.com/djuin/mwyb/#p=14",
     "tags": [
       "National Health Tech/IT",
@@ -108,12 +111,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": null
+    "speakerCount": null,
+    "days": 5
   },
   {
     "id": "medidata-next-nyc",
     "name": "Medidata NEXT NYC",
-    "dates": "Mar 10",
+    "dates": "March 10, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "New York, NY",
@@ -135,12 +139,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 1
   },
   {
     "id": "acdm-clinical-data-management",
     "name": "ACDM (Clinical Data Management)",
-    "dates": "Mar 15",
+    "dates": "March 15\u201317, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Berlin, Germany",
@@ -162,12 +167,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "cclg-annual-conference",
     "name": "CCLG Annual Conference",
-    "dates": "Mar 16",
+    "dates": "March 16\u201318, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Manchester, UK",
@@ -189,12 +195,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "nvidia-gtc",
     "name": "NVIDIA GTC",
-    "dates": "Mar 16 (4 days)",
+    "dates": "March 16\u201320, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "San Jose, CA",
@@ -216,12 +223,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 5
   },
   {
     "id": "patient-access-programs-pap",
     "name": "Patient Access Programs (PAP)",
-    "dates": "Mar 17 (3 days)",
+    "dates": "March 17\u201319, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Philadelphia, PA",
@@ -243,18 +251,19 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "hfma-revenue-cycle-conference",
     "name": "HFMA Revenue Cycle Conference",
-    "dates": "Mar 18 (3 days)",
+    "dates": "March 18\u201320, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Dallas, TX",
     "website": "https://www.hfma.org/revenue-cycle-conference/",
-    "agenda": "",
-    "exhibitorProspectus": "https://risaml.slack.com/files/U0A38PKD20G/F0AE8CBAN9F/hfma_2026_annual_conference_prospectus.pdf",
+    "agenda": "https://www.hfma.org/revenue-cycle-conference/",
+    "exhibitorProspectus": "https://www.hfma.org/revenue-cycle-conference/",
     "tags": [
       "Revenue Cycle Focus",
       "Exec Heavy",
@@ -271,12 +280,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "hfma-metro-ny-institute",
     "name": "HFMA Metro NY Institute",
-    "dates": "Mar 18 (3 days)",
+    "dates": "March 18\u201320, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "New York, NY",
@@ -299,18 +309,19 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "ahip-medicare-medicaid-duals-commercial-markets-forum",
     "name": "AHIP Medicare, Medicaid, Duals & Commercial Markets Forum",
-    "dates": "Mar 23",
+    "dates": "March 23\u201325, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Washington, DC",
     "website": "https://www.ahip.org/conferences/mmdc26/",
     "agenda": "",
-    "exhibitorProspectus": "https://drive.google.com/file/d/1Gs6OYNm6SPqzJmPUhA3w_ydz9piItltx/view?usp=drive_link",
+    "exhibitorProspectus": "https://drive.google.com/file/d/1Gs6OYNm6SPqzJmPUhA3w_ydz9piItltx/view",
     "tags": [
       "Payer Focus",
       "Exec Heavy"
@@ -326,12 +337,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "rise-national",
     "name": "RISE National",
-    "dates": "Mar 23 (2 days)",
+    "dates": "March 23\u201324, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Orlando, FL",
@@ -353,18 +365,19 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 2
   },
   {
     "id": "hopa-annual-conference",
     "name": "HOPA Annual Conference",
-    "dates": "Mar 25",
+    "dates": "March 25\u201328, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "New Orleans, LA",
     "website": "https://www.hoparx.org/",
     "agenda": "",
-    "exhibitorProspectus": "https://drive.google.com/file/d/1uaAMeVJR2DsM1-fx24z3TDWRcc9b29FI/view?usp=drive_link",
+    "exhibitorProspectus": "https://drive.google.com/file/d/1uaAMeVJR2DsM1-fx24z3TDWRcc9b29FI/view",
     "tags": [
       "Pharmacy Oncology",
       "Clinician Heavy",
@@ -381,17 +394,18 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 4
   },
   {
     "id": "nccn-annual-conference",
     "name": "NCCN Annual Conference",
-    "dates": "Mar 27",
+    "dates": "March 27\u201329, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Orlando, FL",
     "website": "https://www.nccn.org/education-research/educational-events-and-programs/annual-conference",
-    "agenda": "",
+    "agenda": "https://web.cvent.com/event/c545cc3d-2270-4e92-a667-dd145f0862ff/websitePage:d21d34a5-02d8-435f-b04e-a20ead3092fc",
     "exhibitorProspectus": "https://www.nccn.org/docs/default-source/education-research/ac2026-exhibitor-prospectus.pdf",
     "tags": [
       "Oncology Focus",
@@ -409,12 +423,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "apha-annual",
     "name": "APhA Annual",
-    "dates": "Mar 27",
+    "dates": "March 27\u201330, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Los Angeles, CA",
@@ -436,12 +451,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 4
   },
   {
     "id": "nextgen-omics-spatial-data-us",
     "name": "NextGen Omics Spatial & Data US",
-    "dates": "Mar 31",
+    "dates": "March 31 \u2013 April 1, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "TBD",
@@ -463,12 +479,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 2
   },
   {
     "id": "pmwc-precision-medicine",
     "name": "PMWC (Precision Medicine)",
-    "dates": "Apr 4",
+    "dates": "April 4\u20136, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Santa Clara, CA",
@@ -490,17 +507,18 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "acca-cancer-center-administrators-forum",
     "name": "ACCA Cancer Center Administrators Forum",
-    "dates": "Apr 11",
+    "dates": "April 11\u201313, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Madison, WI",
     "website": "https://www.cancercenteradministrators.org/",
-    "agenda": "",
+    "agenda": "https://www.cancercenteradministrators.org/madison-26-agenda-1-1",
     "exhibitorProspectus": "https://www.cancercenteradministrators.org/sponsorship-opportunities",
     "tags": [
       "Oncology Ops",
@@ -518,12 +536,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "wcg-magi-clinical-research",
     "name": "WCG MAGI Clinical Research",
-    "dates": "Apr 12",
+    "dates": "April 12\u201314, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Chicago, IL",
@@ -545,12 +564,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "cmo-360-summit",
     "name": "CMO 360 Summit",
-    "dates": "Apr 13",
+    "dates": "April 13\u201314, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Boston, MA",
@@ -572,17 +592,18 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 2
   },
   {
     "id": "becker-s-healthcare-annual",
     "name": "Becker's Healthcare Annual",
-    "dates": "Apr 13",
+    "dates": "April 13\u201316, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Chicago, IL",
     "website": "https://conferences.beckershospitalreview.com/april-annual-meeting-2026",
-    "agenda": "",
+    "agenda": "https://conferences.beckershospitalreview.com/april-annual-meeting-2026/agenda",
     "exhibitorProspectus": "https://www.beckershospitalreview.com/wp-content/uploads/sites/9/2026/02/AnnualMeetingProspectus2026.pdf",
     "tags": [
       "National Health",
@@ -600,12 +621,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 4
   },
   {
     "id": "becker-s-spring-payer-issues-roundtable",
     "name": "Becker's Spring Payer Issues Roundtable",
-    "dates": "Apr 13",
+    "dates": "April 13\u201315, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Chicago, IL",
@@ -628,18 +650,19 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "becker-s-oncology-executive-summit",
     "name": "Becker's Oncology Executive Summit",
-    "dates": "Apr 13",
+    "dates": "April 13\u201315, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Chicago, IL",
     "website": "https://conferences.beckershospitalreview.com/oncologysummit",
-    "agenda": "",
-    "exhibitorProspectus": "",
+    "agenda": "https://conferences.beckershospitalreview.com/oncologysummit/agenda",
+    "exhibitorProspectus": "https://conferences.beckershospitalreview.com/oncologysummit/event-prospectus",
     "tags": [
       "Oncology Leadership",
       "Exec Heavy",
@@ -656,12 +679,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "becker-s-spring-chief-pharmacy-officer-summit",
     "name": "Becker's Spring Chief Pharmacy Officer Summit",
-    "dates": "Apr 15",
+    "dates": "April 15\u201317, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Chicago, IL",
@@ -684,17 +708,18 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "amga-annual-conference",
     "name": "AMGA Annual Conference",
-    "dates": "Apr 15",
+    "dates": "April 15\u201318, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Las Vegas, NV",
     "website": "https://www.amga.org/2026-annual-conference",
-    "agenda": "",
+    "agenda": "https://www.amga.org/2026-annual-conference",
     "exhibitorProspectus": "https://www.amga.org/getmedia/f5c2be6b-24c2-4b7c-8fd2-29648c979d59/amga_ac26-exhibitorsponsor-prospectus_v9_web.pdf",
     "tags": [
       "Physician Groups",
@@ -712,17 +737,18 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 4
   },
   {
     "id": "aacr-annual-meeting",
     "name": "AACR Annual Meeting",
-    "dates": "Apr 17",
+    "dates": "April 17\u201322, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "San Diego, CA",
     "website": "https://www.aacr.org/meeting/",
-    "agenda": "",
+    "agenda": "https://www.aacr.org/meeting/aacr-annual-meeting-2026/",
     "exhibitorProspectus": "https://www.aacr.org/wp-content/uploads/2025/08/2502039G_26AM_ExhProsp_7-1.pdf",
     "tags": [
       "Oncology Research",
@@ -739,40 +765,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
-  },
-  {
-    "id": "coa-community-oncology-conference",
-    "name": "COA Community Oncology Conference",
-    "dates": "Apr 28",
-    "dateStart": "",
-    "dateEnd": "",
-    "location": "Orlando, FL",
-    "website": "https://coaconference.com/speakers/",
-    "agenda": "",
-    "exhibitorProspectus": "https://coaconference.com/wp-content/uploads/2025/11/2026-COC-Prospectus-1.pdf",
-    "tags": [
-      "Oncology GPO Partner",
-      "Exec Heavy",
-      "Oncology"
-    ],
-    "gtmTag": "must_sponsor",
-    "size": "Medium",
-    "icpTier": "Tier 1",
-    "icps": "Community Oncology Practice Owners, Administrators, Practice Managers | |",
-    "attendeeProfile": "500+ community oncology leaders",
-    "whyRelevant": "Independent practice advocacy",
-    "outreach": {
-      "status": "not_started",
-      "startDate": "",
-      "endDate": ""
-    },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 6
   },
   {
     "id": "naaco-spring-conference",
     "name": "NAACO Spring Conference",
-    "dates": "Apr 22",
+    "dates": "April 22\u201323, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Baltimore, MD",
@@ -794,12 +793,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 2
   },
   {
     "id": "acrp-annual-conference",
     "name": "ACRP Annual Conference",
-    "dates": "Apr 24",
+    "dates": "April 24\u201326, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Orlando, FL",
@@ -821,17 +821,18 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "hfma-leadership-summit",
     "name": "HFMA Leadership Summit",
-    "dates": "Apr 26",
+    "dates": "April 26\u201328, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Austin, TX",
     "website": "https://www.hfma.org/",
-    "agenda": "",
+    "agenda": "https://www.hfma.org/leadership-summit/",
     "exhibitorProspectus": "https://www.hfma.org/wp-content/uploads/2025/12/HFMA_Leadership_Summit_2026_Prospectus.pdf",
     "tags": [
       "Finance Leadership",
@@ -849,12 +850,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "asembia-axs26-summit",
     "name": "Asembia AXS26 Summit",
-    "dates": "Apr 26 (5 days)",
+    "dates": "April 26\u201330, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Las Vegas, NV",
@@ -877,12 +879,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 5
   },
   {
     "id": "digital-healthcare-innovation-summit",
     "name": "Digital Healthcare Innovation Summit",
-    "dates": "Apr 27",
+    "dates": "April 27\u201328, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "TBD",
@@ -904,12 +907,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 2
   },
   {
     "id": "epic-xgm",
     "name": "Epic XGM",
-    "dates": "Apr 27",
+    "dates": "April 27\u201330, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Various",
@@ -932,12 +936,42 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 4
+  },
+  {
+    "id": "coa-community-oncology-conference",
+    "name": "COA Community Oncology Conference",
+    "dates": "April 28\u201330, 2026",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "Orlando, FL",
+    "website": "https://coaconference.com/speakers/",
+    "agenda": "https://coaconference.com/agenda/",
+    "exhibitorProspectus": "https://coaconference.com/wp-content/uploads/2025/11/2026-COC-Prospectus-1.pdf",
+    "tags": [
+      "Oncology GPO Partner",
+      "Exec Heavy",
+      "Oncology"
+    ],
+    "gtmTag": "must_sponsor",
+    "size": "Medium",
+    "icpTier": "Tier 1",
+    "icps": "Community Oncology Practice Owners, Administrators, Practice Managers | |",
+    "attendeeProfile": "500+ community oncology leaders",
+    "whyRelevant": "Independent practice advocacy",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "coot-west",
     "name": "COOT West",
-    "dates": "Apr 28",
+    "dates": "April 28\u201329, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "TBD",
@@ -959,12 +993,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 2
   },
   {
     "id": "naham-annual-conference",
     "name": "NAHAM Annual Conference",
-    "dates": "Apr 28",
+    "dates": "April 28\u201330, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Chicago, IL",
@@ -987,12 +1022,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "aspho-conference",
     "name": "ASPHO Conference",
-    "dates": "Apr 29",
+    "dates": "April 29 \u2013 May 1, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "TBD",
@@ -1014,12 +1050,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "population-association-annual",
     "name": "Population Association Annual",
-    "dates": "May 1",
+    "dates": "May 1\u20133, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "TBD",
@@ -1041,18 +1078,44 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
+  },
+  {
+    "id": "thma-oncology-forum",
+    "name": "THMA Oncology Forum",
+    "dates": "May 6\u20138, 2026",
+    "dateStart": "",
+    "dateEnd": "",
+    "location": "",
+    "website": "https://hmacademy.com/ind-convening/oncology-forum",
+    "agenda": "https://hmacademy.com/ind-convening/oncology-forum",
+    "exhibitorProspectus": "",
+    "tags": [],
+    "gtmTag": "must_attend",
+    "size": "",
+    "icpTier": "",
+    "icps": "",
+    "attendeeProfile": "",
+    "whyRelevant": "",
+    "outreach": {
+      "status": "not_started",
+      "startDate": "",
+      "endDate": ""
+    },
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "ci4cc-cancer-center-summit",
     "name": "Ci4CC Cancer Center Summit",
-    "dates": "May 7",
+    "dates": "May 7\u20139, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "San Diego, CA",
     "website": "https://www.ci4cc.org/",
-    "agenda": "",
-    "exhibitorProspectus": "",
+    "agenda": "https://www.ci4cc.org/",
+    "exhibitorProspectus": "https://www.ci4cc.org/sponsors",
     "tags": [
       "Oncology Ops",
       "Exec Heavy",
@@ -1069,36 +1132,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
-  },
-  {
-    "id": "thma-oncology-forum",
-    "name": "THMA Oncology Forum",
-    "dates": "May 6 (3 days)",
-    "dateStart": "",
-    "dateEnd": "",
-    "location": "",
-    "website": "https://hmacademy.com/ind-convening/oncology-forum",
-    "agenda": "",
-    "exhibitorProspectus": "",
-    "tags": [],
-    "gtmTag": "must_attend",
-    "size": "",
-    "icpTier": "",
-    "icps": "",
-    "attendeeProfile": "",
-    "whyRelevant": "",
-    "outreach": {
-      "status": "not_started",
-      "startDate": "",
-      "endDate": ""
-    },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "biopharma-clinical-trials-nexus",
     "name": "BioPharma Clinical Trials Nexus",
-    "dates": "May 7",
+    "dates": "May 7\u20138, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "TBD",
@@ -1120,12 +1160,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 2
   },
   {
     "id": "fierce-biotech-week",
     "name": "Fierce Biotech Week",
-    "dates": "May 12",
+    "dates": "May 12\u201314, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "TBD",
@@ -1147,12 +1188,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "ons-congress-oncology-nursing-society",
     "name": "ONS Congress (Oncology Nursing Society)",
-    "dates": "May 13",
+    "dates": "May 13\u201315, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "San Antonio, TX",
@@ -1174,12 +1216,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "life-sciences-pricing-contracting",
     "name": "Life Sciences Pricing & Contracting",
-    "dates": "May 18",
+    "dates": "May 18\u201319, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "TBD",
@@ -1201,12 +1244,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 2
   },
   {
     "id": "bio-it-world-conference",
     "name": "Bio-IT World Conference",
-    "dates": "May 19",
+    "dates": "May 19\u201321, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "TBD",
@@ -1228,12 +1272,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "himss-europe",
     "name": "HIMSS Europe",
-    "dates": "May 19",
+    "dates": "May 19\u201321, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Copenhagen, Denmark",
@@ -1255,12 +1300,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "reuters-digital-health",
     "name": "Reuters Digital Health",
-    "dates": "May 20",
+    "dates": "May 20\u201321, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "TBD",
@@ -1283,17 +1329,18 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 2
   },
   {
     "id": "asco-annual-meeting",
     "name": "ASCO Annual Meeting",
-    "dates": "May 29",
+    "dates": "May 29 \u2013 June 2, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Chicago, IL",
     "website": "https://www.asco.org/",
-    "agenda": "",
+    "agenda": "https://meetings.asco.org/am/schedule-at-a-glance",
     "exhibitorProspectus": "",
     "tags": [
       "Oncology Clinical",
@@ -1311,12 +1358,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 5
   },
   {
     "id": "academyhealth-annual-research",
     "name": "AcademyHealth Annual Research",
-    "dates": "May 30",
+    "dates": "May 30 \u2013 June 1, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "TBD",
@@ -1338,12 +1386,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "bio-international",
     "name": "BIO International",
-    "dates": "Jun 1",
+    "dates": "June 1\u20134, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "TBD",
@@ -1365,18 +1414,19 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 4
   },
   {
     "id": "hfma-annual-conference",
     "name": "HFMA Annual Conference",
-    "dates": "Jun 7",
+    "dates": "June 7\u201310, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "National Harbor, MD",
     "website": "https://www.hfma.org/",
-    "agenda": "",
-    "exhibitorProspectus": "",
+    "agenda": "https://www.hfma.org/annual-conference/",
+    "exhibitorProspectus": "https://www.hfma.org/annual-conference/",
     "tags": [
       "Finance Focus",
       "Exec Heavy",
@@ -1393,12 +1443,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 4
   },
   {
     "id": "digital-health-summit-world-bi",
     "name": "Digital Health Summit (World BI)",
-    "dates": "Jun 8",
+    "dates": "June 8\u20139, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "TBD",
@@ -1420,12 +1471,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 2
   },
   {
     "id": "hbma-executive-retreat",
     "name": "HBMA Executive Retreat",
-    "dates": "Jun 8",
+    "dates": "June 8\u201310, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "TBD",
@@ -1448,12 +1500,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "ahip-annual-conference",
     "name": "AHIP Annual Conference",
-    "dates": "Jun 9",
+    "dates": "June 9\u201311, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "TBD",
@@ -1475,12 +1528,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "dia-global-annual-meeting",
     "name": "DIA Global Annual Meeting",
-    "dates": "Jun 14",
+    "dates": "June 14\u201318, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "Philadelphia, PA",
@@ -1502,12 +1556,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 5
   },
   {
     "id": "international-conf-oncology-nursing",
     "name": "International Conf Oncology Nursing",
-    "dates": "Jun 15",
+    "dates": "June 15\u201317, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "TBD",
@@ -1529,12 +1584,13 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   },
   {
     "id": "aaci-annual-clinical-research-innovation",
     "name": "AACI Annual Clinical Research Innovation",
-    "dates": "Jun 23",
+    "dates": "June 23\u201325, 2026",
     "dateStart": "",
     "dateEnd": "",
     "location": "TBD",
@@ -1556,7 +1612,8 @@ const CONFERENCES = [
       "startDate": "",
       "endDate": ""
     },
-    "speakerCount": 0
+    "speakerCount": 0,
+    "days": 3
   }
 ];
 

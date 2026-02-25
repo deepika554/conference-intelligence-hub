@@ -758,7 +758,7 @@ function renderLanding() {
     return `<div class="conf-card" onclick="showConfOverview('${conf.id}')">
       ${speakerCount > 0 ? `<div class="stat">${speakerCount} speakers</div>` : (conf.size ? `<div class="stat" style="color:var(--text2)">${conf.size}</div>` : '')}
       <h3>${conf.name}</h3>
-      <div class="meta">${conf.dates} &nbsp;&middot;&nbsp; ${conf.location || 'TBD'}</div>
+      <div class="meta">${conf.dates}${conf.days ? ' (' + conf.days + 'd)' : ''} &nbsp;&middot;&nbsp; ${conf.location || 'TBD'}</div>
       ${gtm ? `<div class="gtm-badge" style="background:${gtm.bg};color:${gtm.color};margin-top:12px;">${gtm.icon} ${gtm.label}</div>` : ''}
       ${cd.outreach?.status && cd.outreach.status !== 'not_started' ? `<div class="outreach-status-badge" style="background:${os.bg};color:${os.color}">Outreach: ${os.label}</div>` : ''}
       <div class="tags" style="margin-top:12px;">
@@ -786,9 +786,9 @@ function showConfOverview(confId) {
     <div class="conf-hero">
       <h1>${conf.name}</h1>
       <div class="conf-meta">
-        <span>📅 ${conf.dates}</span>
-        <span>📍 ${conf.location}</span>
-        <span><a href="${conf.website}" target="_blank">🌐 ${conf.website.replace('https://','')}</a></span>
+        <span>📅 ${conf.dates}${conf.days ? ' (' + conf.days + ' day' + (conf.days > 1 ? 's' : '') + ')' : ''}</span>
+        <span>📍 ${conf.location || 'TBD'}</span>
+        <span><a href="${conf.website}" target="_blank">🌐 ${conf.website.replace('https://','').replace('http://','')}</a></span>
       </div>
 
       <div class="conf-details-grid">

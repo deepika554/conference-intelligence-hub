@@ -834,7 +834,26 @@ function showConfOverview(confId) {
             </div>
           `).join('')}
         </div>
+        ${conf.gtmRationale ? `<div style="margin-top:16px;padding:16px;background:var(--bg);border-radius:8px;border-left:3px solid ${(GTM_TAGS[cd.gtmTag||conf.gtmTag]||{}).color||'var(--border)'};font-size:.88rem;line-height:1.6;color:var(--text);">
+          <strong>Why:</strong> ${esc(conf.gtmRationale)}
+        </div>` : ''}
       </div>
+
+      ${conf.speakerProfile || conf.competitorPresence || conf.icpOverlap ? `
+      <div class="conf-details-grid" style="margin-bottom:20px;">
+        ${conf.speakerProfile ? `<div class="conf-detail-card">
+          <h3>👤 Speaker / Attendee Profile</h3>
+          <div class="detail-value" style="font-size:.88rem;">${esc(conf.speakerProfile)}</div>
+        </div>` : ''}
+        ${conf.icpOverlap ? `<div class="conf-detail-card">
+          <h3>🎯 ICP Overlap</h3>
+          <div class="detail-value" style="font-size:.88rem;">${esc(conf.icpOverlap)}</div>
+        </div>` : ''}
+        ${conf.competitorPresence ? `<div class="conf-detail-card" style="grid-column:1/-1;">
+          <h3>🏢 Competitor / Startup Presence</h3>
+          <div class="detail-value" style="font-size:.88rem;">${esc(conf.competitorPresence)}</div>
+        </div>` : ''}
+      </div>` : ''}
 
       <div class="conf-detail-card">
         <h3>📧 Outreach Status</h3>

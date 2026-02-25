@@ -27,7 +27,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "1,000+ practice finance leaders. Relevant for RCM but focused on medical group/practice finances broadly \u2014 not oncology-specific. Outreach to oncology practice CFOs who attend, but not worth a booth.",
+    "speakerProfile": "Executive-heavy: Practice CFOs, VP Revenue Cycle, Controllers",
+    "competitorPresence": "Practice management vendors",
+    "icpOverlap": "\u2605\u2605\u2606\u2606\u2606 Low \u2014 broad practice finance, minimal oncology overlap."
   },
   {
     "id": "sso-surgical-oncology",
@@ -83,7 +87,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "300+ RCM professionals focused on innovation and technology. Smaller, more intimate than HFMA. Good for demonstrating RISA's AI capabilities to RCM technology buyers. Not oncology-specific but the innovation/tech focus aligns with RISA's AI OS positioning.",
+    "speakerProfile": "Executive-heavy: RCM Company CEOs, VP Operations, Technology Directors",
+    "competitorPresence": "RCM tech vendors \u2014 smaller field than HFMA",
+    "icpOverlap": "\u2605\u2605\u2605\u2606\u2606 Moderate \u2014 RCM tech buyers, but not oncology-specific. Good for thought leadership."
   },
   {
     "id": "himss-global-conference",
@@ -112,7 +120,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": null,
-    "days": 5
+    "days": 5,
+    "gtmRationale": "30,000+ health IT professionals. While not oncology-specific, HIMSS is where CIOs, CMIOs, and VPs of Health IT evaluate enterprise solutions. RISA needs to be visible in the health IT ecosystem \u2014 EHR integration, interoperability, and AI are all hot topics. The downside: massive event, hard to stand out, expensive to sponsor. Better to attend, network, and do targeted outreach than sponsor. Oncology buyers attend but are a small fraction.",
+    "speakerProfile": "Executive-heavy: CIOs, CMIOs, VP Health IT, but NOT primarily oncology-focused",
+    "competitorPresence": "AKASA (RCM AI), Abridge (clinical AI), Ambience Healthcare \u2014 full RCM/AI vendor ecosystem is here",
+    "icpOverlap": "\u2605\u2605\u2605\u2606\u2606 Moderate \u2014 health IT buyers are adjacent but not oncology-specific. Big tent, diluted ICP."
   },
   {
     "id": "medidata-next-nyc",
@@ -140,7 +152,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 1
+    "days": 1,
+    "gtmRationale": "Clinical trials technology. RISA doesn't operate in the clinical trials space. Zero ICP overlap.",
+    "speakerProfile": "Technical: Clinical data directors, EDC managers",
+    "competitorPresence": "CRO/clinical trials tech",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None"
   },
   {
     "id": "acdm-clinical-data-management",
@@ -196,7 +212,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "UK pediatric cancer research. Wrong geography, wrong audience.",
+    "speakerProfile": "Clinician-heavy or off-target",
+    "competitorPresence": "N/A for RISA",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None"
   },
   {
     "id": "nvidia-gtc",
@@ -224,7 +244,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 5
+    "days": 5,
+    "gtmRationale": "20,000+ AI innovators. Not a healthcare buyer event \u2014 this is an AI technology/infrastructure conference. Good for partnerships, ML engineering insights, and brand positioning in the AI ecosystem. Not a place to find oncology RCM buyers.",
+    "speakerProfile": "Tech-heavy: AI engineers, CTOs, research scientists",
+    "competitorPresence": "AI infrastructure companies, not healthcare buyers",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 Very low for sales. Good for tech partnerships and AI brand positioning."
   },
   {
     "id": "patient-access-programs-pap",
@@ -281,7 +305,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "1,500+ RCM executives \u2014 Chief Revenue Cycle Officers, VPs Revenue Cycle, CFOs. This is THE revenue cycle event. However, it's not oncology-specific \u2014 attendees span all specialties. RISA's oncology-specific positioning may not resonate as strongly here vs. generic RCM solutions. Worth attending to network with RCM leaders who also manage oncology service lines, but sponsoring may not be ROI-positive given the non-oncology audience.",
+    "speakerProfile": "100% Executive: CROs, VP Revenue Cycle, CFOs, Division Chairs RCM",
+    "competitorPresence": "Heavy: Waystar, R1, Optum, AKASA, and every RCM vendor. Crowded space.",
+    "icpOverlap": "\u2605\u2605\u2605\u2606\u2606 Moderate \u2014 RCM leaders yes, but not oncology-specific. Hard to differentiate from generic RCM AI vendors."
   },
   {
     "id": "hfma-metro-ny-institute",
@@ -310,7 +338,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "300+ NY metro RCM leaders. Regional focus limits the audience. Only worth outreach if RISA has specific NY metro cancer center targets. Otherwise deprioritize.",
+    "speakerProfile": "Executive-heavy: Regional CROs, SVPs Revenue Cycle",
+    "competitorPresence": "Regional RCM vendors",
+    "icpOverlap": "\u2605\u2605\u2606\u2606\u2606 Low \u2014 regional, not oncology-specific."
   },
   {
     "id": "ahip-medicare-medicaid-duals-commercial-markets-forum",
@@ -338,7 +370,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "1,000+ health plan leadership. Payer-focused \u2014 RISA sells to providers, not payers. Skip.",
+    "speakerProfile": "Executive: Health plan executives, payer medical directors",
+    "competitorPresence": "Payer technology vendors",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None \u2014 payer side, not provider."
   },
   {
     "id": "rise-national",
@@ -366,7 +402,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 2
+    "days": 2,
+    "gtmRationale": "600+ risk adjustment and VBC leaders. Payer/provider value-based care focus. Not oncology, not RCM in the traditional sense. Skip.",
+    "speakerProfile": "Executive-heavy but payer-focused",
+    "competitorPresence": "Risk adjustment vendors",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None \u2014 payer/VBC focus, not oncology RCM."
   },
   {
     "id": "hopa-annual-conference",
@@ -395,7 +435,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 4
+    "days": 4,
+    "gtmRationale": "1,200+ oncology pharmacists. Oncology-relevant but CLINICIAN-heavy (pharmacists, not admins). RISA's drug prior auth capabilities are relevant to oncology pharmacy directors \u2014 outreach to Pharmacy Directors and 340B managers makes sense, but the audience isn't buying RCM software.",
+    "speakerProfile": "90% Clinician: Oncology pharmacists, clinical coordinators",
+    "competitorPresence": "Pharma companies, specialty pharmacy vendors",
+    "icpOverlap": "\u2605\u2605\u2606\u2606\u2606 Low for RCM/ops but oncology pharmacy directors may influence prior auth buying decisions."
   },
   {
     "id": "nccn-annual-conference",
@@ -424,7 +468,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "2,000+ NCCN oncology leaders \u2014 cancer center VPs, CNOs, service line VPs, CFOs. NCCN Annual is the gold standard for oncology policy and practice. NCCN exhibitor prospectus available. Sessions cover clinical guidelines + operations. While clinician-heavy in content, the attendee base includes the operational leaders at NCCN member institutions (the largest cancer centers in the US). These are RISA's enterprise buyers.",
+    "speakerProfile": "Mix: 60% clinician (guideline discussions), 40% executive (operations, policy, admin)",
+    "competitorPresence": "Major pharma sponsors. Less RCM/AI vendor competition \u2014 opportunity to differentiate.",
+    "icpOverlap": "\u2605\u2605\u2605\u2605\u2606 Strong \u2014 NCCN member cancer centers are RISA's target accounts. The operational leaders here make buying decisions."
   },
   {
     "id": "apha-annual",
@@ -452,7 +500,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 4
+    "days": 4,
+    "gtmRationale": "General pharmacy. Not oncology, not RCM.",
+    "speakerProfile": "Clinician-heavy or off-target",
+    "competitorPresence": "N/A for RISA",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None"
   },
   {
     "id": "nextgen-omics-spatial-data-us",
@@ -480,7 +532,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 2
+    "days": 2,
+    "gtmRationale": "Genomics/omics research. Pure life science research, no ops/RCM buyers.",
+    "speakerProfile": "Clinician-heavy or off-target",
+    "competitorPresence": "N/A for RISA",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None"
   },
   {
     "id": "pmwc-precision-medicine",
@@ -537,7 +593,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "300+ cancer center administrators from NCI-designated centers. ACCA CCAF is the only conference exclusively for cancer center admins \u2014 the exact people who approve RISA's implementation. Sponsorship starts at $10K (WiFi) up to $20K (reception). Sessions cover CCSG, IT strategy, information management, workforce \u2014 all areas where RISA's AI OS adds value. Intimate format means high-quality conversations, not lost in a 30K-person expo hall.",
+    "speakerProfile": "100% Executive: Associate Directors of Administration, Research Administrators, Information Management Directors at NCI cancer centers",
+    "competitorPresence": "Smaller event \u2014 less competition from big vendors, easier to stand out",
+    "icpOverlap": "\u2605\u2605\u2605\u2605\u2605 Perfect \u2014 these ARE the cancer center buyers. Most focused ICP event in the calendar."
   },
   {
     "id": "wcg-magi-clinical-research",
@@ -565,7 +625,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "Clinical trials operations. Not RISA's market.",
+    "speakerProfile": "Clinician-heavy or off-target",
+    "competitorPresence": "N/A for RISA",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None"
   },
   {
     "id": "cmo-360-summit",
@@ -593,7 +657,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 2
+    "days": 2,
+    "gtmRationale": "CMO forum. Too broad, not oncology-specific, small event.",
+    "speakerProfile": "Clinician-heavy or off-target",
+    "competitorPresence": "N/A for RISA",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None"
   },
   {
     "id": "becker-s-healthcare-annual",
@@ -622,7 +690,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 4
+    "days": 4,
+    "gtmRationale": "2,000+ C-suite hospital executives. Sponsors include AKASA (RCM AI), Abridge, Ambience Healthcare, Andor Health \u2014 AI in healthcare is a major theme. The audience is CEO/CFO level but spans all service lines. Good for brand awareness at the health system leadership level. Becker's Oncology Summit is the more targeted play \u2014 this event provides broader C-suite exposure.",
+    "speakerProfile": "Executive-heavy: Hospital CEOs, CFOs, Chief Strategy Officers, COOs",
+    "competitorPresence": "AKASA, Abridge, Ambience Healthcare, Access Telecare \u2014 AI health vendors well represented",
+    "icpOverlap": "\u2605\u2605\u2605\u2606\u2606 Moderate \u2014 C-suite decision-makers but not oncology-specific. Good for brand, not for closing deals."
   },
   {
     "id": "becker-s-spring-payer-issues-roundtable",
@@ -651,7 +723,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "300+ payer executives. Payer-focused roundtable \u2014 RISA is a provider-side solution. Skip.",
+    "speakerProfile": "Executive: Payer CEOs, Medical Directors",
+    "competitorPresence": "Payer vendors",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None \u2014 payer side."
   },
   {
     "id": "becker-s-oncology-executive-summit",
@@ -680,7 +756,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "RISA is ALREADY sponsoring this event. 500+ oncology executives \u2014 cancer center directors, oncology service line VPs, hospital oncology chiefs. Confirmed sponsors include AstraZeneca, Natera, LeanTaaS, OncoLens, and RISA Labs. This is THE oncology executive event \u2014 100% exec-heavy, directly targeting RISA's core ICP. Competitors like LeanTaaS (infusion center AI) and OncoLens are here. RISA must maintain and maximize this sponsorship.",
+    "speakerProfile": "Executive-heavy: Cancer Center Directors, Oncology Service Line VPs, Hospital Oncology Chiefs",
+    "competitorPresence": "LeanTaaS, OncoLens, AstraZeneca, Natera, BeOne Medicines \u2014 RISA is already a sponsor",
+    "icpOverlap": "\u2605\u2605\u2605\u2605\u2605 Perfect \u2014 oncology admin decision-makers who buy RCM/ops solutions"
   },
   {
     "id": "becker-s-spring-chief-pharmacy-officer-summit",
@@ -709,7 +789,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "600+ pharmacy executives. Chief Pharmacy Officers oversee specialty pharmacy including oncology drugs \u2014 they influence prior auth decisions for high-cost cancer medications. Not core RISA ICP but adjacent. Outreach to CPOs with oncology formulary responsibility.",
+    "speakerProfile": "Executive-heavy: Chief Pharmacy Officers, VP Pharmacy",
+    "competitorPresence": "Specialty pharmacy and pharma vendors",
+    "icpOverlap": "\u2605\u2605\u2606\u2606\u2606 Adjacent \u2014 pharmacy leaders influence oncology drug prior auth decisions."
   },
   {
     "id": "amga-annual-conference",
@@ -738,7 +822,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 4
+    "days": 4,
+    "gtmRationale": "1,500+ physician group leadership. Medical groups with oncology service lines may be targets, but the event is not oncology-specific. AMGA members include large medical groups (some with oncology). Outreach to oncology-specific attendees only.",
+    "speakerProfile": "Executive-heavy: Medical Group CEOs, CFOs, COOs",
+    "competitorPresence": "Healthcare ops and technology vendors",
+    "icpOverlap": "\u2605\u2605\u2606\u2606\u2606 Low \u2014 physician group focus, some oncology overlap in larger groups."
   },
   {
     "id": "aacr-annual-meeting",
@@ -766,7 +854,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 6
+    "days": 6,
+    "gtmRationale": "22,000+ cancer researchers. Purely research/clinical \u2014 zero admin/ops buyers. However, AACR is a prestige oncology brand. Reaching out to cancer center leaders who attend for research updates could be valuable. Not worth attending or sponsoring for RISA's current product.",
+    "speakerProfile": "99% Clinician/Researcher: Principal investigators, translational researchers",
+    "competitorPresence": "Pharma R&D, diagnostic companies \u2014 no RCM vendors",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 Very low \u2014 pure research event. Outreach only to known contacts attending."
   },
   {
     "id": "naaco-spring-conference",
@@ -794,7 +886,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 2
+    "days": 2,
+    "gtmRationale": "ACO/value-based care focus. Not oncology RCM.",
+    "speakerProfile": "Clinician-heavy or off-target",
+    "competitorPresence": "N/A for RISA",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None"
   },
   {
     "id": "acrp-annual-conference",
@@ -822,7 +918,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "Clinical research compliance. Not relevant.",
+    "speakerProfile": "Clinician-heavy or off-target",
+    "competitorPresence": "N/A for RISA",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None"
   },
   {
     "id": "hfma-leadership-summit",
@@ -851,7 +951,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "1,200+ healthcare finance leaders. More strategic/C-suite focused than the RCM Conference. Good for connecting with CFOs and SVPs who oversee oncology service line finances. Not oncology-specific but the decision-making level is right. Prospectus PDF available and confirmed working.",
+    "speakerProfile": "Executive-heavy: CFOs, SVPs Finance, VP Financial Planning",
+    "competitorPresence": "Healthcare finance vendors, less AI-specific competition than HIMSS",
+    "icpOverlap": "\u2605\u2605\u2605\u2606\u2606 Moderate \u2014 finance leaders who approve budgets for RISA but not oncology-focused."
   },
   {
     "id": "asembia-axs26-summit",
@@ -880,7 +984,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 5
+    "days": 5,
+    "gtmRationale": "4,000+ specialty pharmacy attendees. GPO-led event focused on drug distribution, not oncology operations or RCM. Skip.",
+    "speakerProfile": "Executive: Specialty pharmacy directors, pharma access VPs",
+    "competitorPresence": "Specialty pharmacy and pharma companies",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None \u2014 drug distribution, not oncology ops."
   },
   {
     "id": "digital-healthcare-innovation-summit",
@@ -908,7 +1016,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 2
+    "days": 2,
+    "gtmRationale": "Broad digital health innovation. Too generic, small event.",
+    "speakerProfile": "Clinician-heavy or off-target",
+    "competitorPresence": "N/A for RISA",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None"
   },
   {
     "id": "epic-xgm",
@@ -937,7 +1049,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 4
+    "days": 4,
+    "gtmRationale": "5,000+ Epic health system users. Epic integration is critical for RISA \u2014 building relationships with Epic implementation teams at cancer centers is strategically important. But this is a technical/IT event, not a buying event. Outreach to Epic Directors at oncology institutions.",
+    "speakerProfile": "Technical: Epic analysts, application coordinators, IT directors",
+    "competitorPresence": "Epic ecosystem vendors",
+    "icpOverlap": "\u2605\u2605\u2606\u2606\u2606 Low for direct sales, high for integration partnerships."
   },
   {
     "id": "coa-community-oncology-conference",
@@ -966,7 +1082,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "2,000+ attendees from community oncology practices \u2014 physicians, practice managers, nurses, payers. Community oncology is a massive market for RISA (independent practices, US Oncology Network, OneOncology). COA's Practice Management & Operations track directly addresses RCM pain points. Speakers include practice owners and administrators who are RISA's direct buyers. This is where community oncology buying decisions happen.",
+    "speakerProfile": "Mixed exec/clinician but heavy on practice owners, administrators, and operational leaders",
+    "competitorPresence": "Major pharma + operations vendors. Key event for community oncology tech buying.",
+    "icpOverlap": "\u2605\u2605\u2605\u2605\u2606 Strong \u2014 community oncology practice managers and administrators are core RISA ICP"
   },
   {
     "id": "coot-west",
@@ -994,7 +1114,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 2
+    "days": 2,
+    "gtmRationale": "Clinical trials oncology operations. Not RCM/admin.",
+    "speakerProfile": "Clinician-heavy or off-target",
+    "competitorPresence": "N/A for RISA",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None"
   },
   {
     "id": "naham-annual-conference",
@@ -1023,7 +1147,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "1,000+ patient access professionals. Patient access is adjacent to RISA's prior auth capabilities. Directors of Patient Access influence prior auth workflow decisions. Worth outreach to oncology-specific patient access leaders.",
+    "speakerProfile": "Mid-level exec: Directors Patient Access, Admitting Directors",
+    "competitorPresence": "Patient access technology vendors",
+    "icpOverlap": "\u2605\u2605\u2606\u2606\u2606 Adjacent \u2014 patient access touches prior auth but isn't the primary buyer."
   },
   {
     "id": "aspho-conference",
@@ -1051,7 +1179,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "Pediatric hematology/oncology. Niche clinician event.",
+    "speakerProfile": "Clinician-heavy or off-target",
+    "competitorPresence": "N/A for RISA",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None"
   },
   {
     "id": "population-association-annual",
@@ -1079,7 +1211,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "Population health research. Academic, not operational.",
+    "speakerProfile": "Clinician-heavy or off-target",
+    "competitorPresence": "N/A for RISA",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None"
   },
   {
     "id": "thma-oncology-forum",
@@ -1104,7 +1240,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "Oncology-specific forum focused on industry convening. Limited public info on attendee size but the oncology focus makes it relevant. Worth attending to assess for future sponsorship. THMA forums are typically executive-heavy and discussion-based.",
+    "speakerProfile": "Executive-heavy: Oncology industry leaders",
+    "competitorPresence": "Limited info \u2014 worth scouting",
+    "icpOverlap": "\u2605\u2605\u2605\u2605\u2606 Strong \u2014 oncology executive forum. Attend to evaluate, potentially sponsor next year."
   },
   {
     "id": "ci4cc-cancer-center-summit",
@@ -1133,7 +1273,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "400+ cancer center CEOs, COOs, and directors from Academic Medical Centers and hospital systems. Ci4CC offers FREE exhibitor space for qualified startups plus free webinar series presentation. This is an easy win \u2014 low cost, high ICP density. The audience is cancer center leadership focused on operations, technology, and innovation. Perfect for RISA to showcase AI OS capabilities to decision-makers.",
+    "speakerProfile": "Executive-heavy: Cancer Center CEOs, COOs, Directors, VPs Cancer Services, Health System CIOs",
+    "competitorPresence": "Curated sponsor list \u2014 startups get favorable positioning. Tech Download webinar series = additional exposure.",
+    "icpOverlap": "\u2605\u2605\u2605\u2605\u2605 Perfect \u2014 cancer center operational leadership. FREE booth for startups makes this a no-brainer."
   },
   {
     "id": "biopharma-clinical-trials-nexus",
@@ -1161,7 +1305,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 2
+    "days": 2,
+    "gtmRationale": "Pharma clinical ops. Not provider-side.",
+    "speakerProfile": "Clinician-heavy or off-target",
+    "competitorPresence": "N/A for RISA",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None"
   },
   {
     "id": "fierce-biotech-week",
@@ -1189,7 +1337,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "Biotech industry. Drug development, not healthcare ops.",
+    "speakerProfile": "Clinician-heavy or off-target",
+    "competitorPresence": "N/A for RISA",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None"
   },
   {
     "id": "ons-congress-oncology-nursing-society",
@@ -1245,7 +1397,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 2
+    "days": 2,
+    "gtmRationale": "Pharma pricing. Drug manufacturers, not providers.",
+    "speakerProfile": "Clinician-heavy or off-target",
+    "competitorPresence": "N/A for RISA",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None"
   },
   {
     "id": "bio-it-world-conference",
@@ -1273,7 +1429,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "Life sciences informatics. Research computing, not clinical ops.",
+    "speakerProfile": "Clinician-heavy or off-target",
+    "competitorPresence": "N/A for RISA",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None"
   },
   {
     "id": "himss-europe",
@@ -1301,7 +1461,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "European health IT. RISA is US-focused.",
+    "speakerProfile": "Clinician-heavy or off-target",
+    "competitorPresence": "N/A for RISA",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None"
   },
   {
     "id": "reuters-digital-health",
@@ -1330,7 +1494,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 2
+    "days": 2,
+    "gtmRationale": "400+ digital health strategists. Good for brand visibility in digital health space but not oncology-specific. Outreach to health system digital leaders who oversee oncology AI implementations.",
+    "speakerProfile": "Executive-heavy: Chief Digital Officers, VP Innovation",
+    "competitorPresence": "Digital health startups and health system innovation teams",
+    "icpOverlap": "\u2605\u2605\u2606\u2606\u2606 Low \u2014 digital health broadly, not oncology-specific."
   },
   {
     "id": "asco-annual-meeting",
@@ -1359,7 +1527,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 5
+    "days": 5,
+    "gtmRationale": "45,000+ oncology professionals \u2014 the world's largest oncology event. However, it's heavily clinician-focused (research, clinical trials, treatment protocols). The operational/admin buyers RISA targets are a tiny fraction. Worth attending for brand presence in oncology ecosystem and networking, but not a place to sell RCM software. Sponsoring is very expensive and not ROI-positive for an ops/RCM product.",
+    "speakerProfile": "95% Clinician: Oncologists, researchers, fellows. Very limited admin/ops presence.",
+    "competitorPresence": "Flatiron Health, Tempus, Foundation Medicine \u2014 but these are clinical/data companies, not RCM.",
+    "icpOverlap": "\u2605\u2605\u2606\u2606\u2606 Low for RISA's ops/RCM ICP. Brand presence in oncology, but not a buying event."
   },
   {
     "id": "academyhealth-annual-research",
@@ -1387,7 +1559,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "Health services research. Academic, not operational.",
+    "speakerProfile": "Clinician-heavy or off-target",
+    "competitorPresence": "N/A for RISA",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None"
   },
   {
     "id": "bio-international",
@@ -1415,7 +1591,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 4
+    "days": 4,
+    "gtmRationale": "Biotech partnering. Drug development, not healthcare ops.",
+    "speakerProfile": "Clinician-heavy or off-target",
+    "competitorPresence": "N/A for RISA",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None"
   },
   {
     "id": "hfma-annual-conference",
@@ -1444,7 +1624,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 4
+    "days": 4,
+    "gtmRationale": "5,000+ healthcare finance professionals. Largest healthcare finance event. Same dynamic as HFMA RCC \u2014 large, not oncology-specific. Good for RCM network building but diluted ICP. One HFMA event per year is probably sufficient; prioritize the Revenue Cycle Conference if choosing.",
+    "speakerProfile": "Executive-heavy: CFOs, Controllers, Revenue Cycle Directors",
+    "competitorPresence": "Full RCM vendor ecosystem",
+    "icpOverlap": "\u2605\u2605\u2605\u2606\u2606 Moderate \u2014 consider attending just one HFMA event annually to avoid dilution."
   },
   {
     "id": "digital-health-summit-world-bi",
@@ -1501,7 +1685,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "Only 50+ C-suite RCM executives. Ultra-intimate, high-level networking. The small size means every conversation counts. Prospectus confirmed available. However, not oncology-specific \u2014 these are RCM company executives across all specialties.",
+    "speakerProfile": "100% C-Suite: Chief Revenue Officers, RCM Company CEOs, SVPs Revenue Cycle",
+    "competitorPresence": "Limited sponsors = less noise",
+    "icpOverlap": "\u2605\u2605\u2605\u2606\u2606 Moderate \u2014 high-level RCM relationships but not oncology-targeted."
   },
   {
     "id": "ahip-annual-conference",
@@ -1529,7 +1717,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "2,000+ health plan executives. Same as AHIP MMDC \u2014 payer-focused, not provider. Skip.",
+    "speakerProfile": "Executive: Health plan CEOs, payer strategy",
+    "competitorPresence": "Payer vendors",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None"
   },
   {
     "id": "dia-global-annual-meeting",
@@ -1557,7 +1749,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 5
+    "days": 5,
+    "gtmRationale": "Drug regulatory affairs. Not provider-side.",
+    "speakerProfile": "Clinician-heavy or off-target",
+    "competitorPresence": "N/A for RISA",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None"
   },
   {
     "id": "international-conf-oncology-nursing",
@@ -1585,7 +1781,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "International oncology nursing. Clinician-only, no admin buyers.",
+    "speakerProfile": "Clinician-heavy or off-target",
+    "competitorPresence": "N/A for RISA",
+    "icpOverlap": "\u2605\u2606\u2606\u2606\u2606 None"
   },
   {
     "id": "aaci-annual-clinical-research-innovation",
@@ -1613,7 +1813,11 @@ const CONFERENCES = [
       "endDate": ""
     },
     "speakerCount": 0,
-    "days": 3
+    "days": 3,
+    "gtmRationale": "500+ academic cancer research administrators. Research administration is adjacent \u2014 some overlap with cancer center operational leadership. Outreach to research directors at target cancer centers.",
+    "speakerProfile": "Mix: Research administrators, clinical research directors",
+    "competitorPresence": "Research management and informatics vendors",
+    "icpOverlap": "\u2605\u2605\u2606\u2606\u2606 Low \u2014 research focus, not operations/RCM."
   }
 ];
 

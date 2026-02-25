@@ -1,3 +1,79 @@
+// ============ CONFERENCES ============
+const CONFERENCES = [
+  {
+    id: 'himss-2026',
+    name: 'HIMSS 2026',
+    dates: 'March 9–13, 2026',
+    dateStart: '2026-03-09',
+    dateEnd: '2026-03-13',
+    location: 'Las Vegas, NV — The Venetian',
+    website: 'https://www.himssconference.com',
+    agenda: 'https://www.himssconference.com/session-catalog',
+    exhibitorProspectus: '',
+    tags: ['Healthcare IT', 'Revenue Cycle', 'AI', 'Digital Health', 'Oncology Signals'],
+    gtmTag: 'must_attend',       // must_attend | must_sponsor | outreach_only | skip
+    outreach: {
+      status: 'in_progress',     // not_started | in_progress | completed | paused
+      startDate: '2026-02-25',
+      endDate: ''
+    },
+    speakerCount: null  // auto-computed
+  },
+  {
+    id: 'nccn-2026',
+    name: 'NCCN 2026 Annual Conference',
+    dates: 'March 27–29, 2026',
+    dateStart: '2026-03-27',
+    dateEnd: '2026-03-29',
+    location: 'Orlando, FL',
+    website: 'https://www.nccn.org/conferences',
+    agenda: 'https://web.cvent.com/event/c545cc3d-2270-4e92-a667-dd145f0862ff/websitePage:d21d34a5-02d8-435f-b04e-a20ead3092fc',
+    exhibitorProspectus: '',
+    tags: ['Oncology', 'Clinical Guidelines', 'Cancer Research', 'Policy'],
+    gtmTag: 'outreach_only',
+    outreach: {
+      status: 'not_started',
+      startDate: '',
+      endDate: ''
+    },
+    speakerCount: 0
+  },
+  {
+    id: 'asco-2026',
+    name: 'ASCO 2026',
+    dates: 'May 29 – June 2, 2026',
+    dateStart: '2026-05-29',
+    dateEnd: '2026-06-02',
+    location: 'Chicago, IL — McCormick Place',
+    website: 'https://meetings.asco.org',
+    agenda: '',
+    exhibitorProspectus: '',
+    tags: ['Oncology', 'Research', 'Clinical Trials'],
+    gtmTag: '',
+    outreach: {
+      status: 'not_started',
+      startDate: '',
+      endDate: ''
+    },
+    speakerCount: 0
+  }
+];
+
+// GTM tag display config
+const GTM_TAGS = {
+  'must_attend':    { label: 'Must Attend',    bg: '#ecfdf5', color: '#16a34a', icon: '🎯' },
+  'must_sponsor':   { label: 'Must Sponsor',   bg: '#edf2ff', color: '#3b6cf5', icon: '💎' },
+  'outreach_only':  { label: 'Outreach Only',  bg: '#fef9ec', color: '#d4920a', icon: '📧' },
+  'skip':           { label: 'Skip',           bg: '#f0f3f8', color: '#9ca3af', icon: '⏭️' }
+};
+
+const OUTREACH_STATUSES = {
+  'not_started': { label: 'Not Started', bg: '#f0f3f8', color: '#6b7b94' },
+  'in_progress': { label: 'In Progress', bg: '#edf2ff', color: '#3b6cf5' },
+  'completed':   { label: 'Completed',   bg: '#ecfdf5', color: '#16a34a' },
+  'paused':      { label: 'Paused',      bg: '#fef9ec', color: '#d4920a' }
+};
+
 const SPEAKERS = [
   {
     "firstName": "Noel",

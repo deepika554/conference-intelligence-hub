@@ -36,6 +36,42 @@ a:hover { text-decoration:underline; }
 ::-webkit-scrollbar-track { background:transparent; }
 ::-webkit-scrollbar-thumb { background:#d0d5dd; border-radius:3px; }
 
+/* GTM Badge on landing cards */
+.gtm-badge { display:inline-flex; align-items:center; gap:4px; padding:4px 10px; border-radius:20px; font-size:.75rem; font-weight:600; }
+.outreach-status-badge { display:inline-flex; align-items:center; gap:4px; padding:3px 8px; border-radius:12px; font-size:.72rem; font-weight:500; margin-top:8px; }
+.conf-card .conf-dates-small { font-size:.8rem; color:var(--text2); margin-top:2px; }
+
+/* Conference Overview */
+#conf-overview { max-width:1000px; margin:0 auto; padding:40px 32px; }
+.conf-hero { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:40px; box-shadow:var(--shadow-md); margin-bottom:24px; }
+.conf-hero h1 { font-size:1.8rem; font-weight:700; margin-bottom:4px; }
+.conf-hero .conf-meta { color:var(--text2); font-size:.95rem; margin-bottom:24px; }
+.conf-hero .conf-meta span { margin-right:16px; }
+.conf-hero .conf-meta a { color:var(--accent); }
+
+.conf-details-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:28px; }
+.conf-detail-card { background:var(--surface2); border-radius:10px; padding:20px; }
+.conf-detail-card h3 { font-size:.85rem; font-weight:600; color:var(--text2); text-transform:uppercase; letter-spacing:.04em; margin-bottom:12px; }
+.conf-detail-card .detail-value { font-size:1rem; color:var(--text); font-weight:500; }
+.conf-detail-card .detail-value a { color:var(--accent); }
+.conf-detail-card .detail-value.empty { color:var(--text2); font-style:italic; font-weight:400; }
+
+.conf-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:20px; }
+.conf-action-btn { padding:10px 20px; border-radius:10px; border:1px solid var(--border); background:var(--surface); font-size:.9rem; font-weight:500; cursor:pointer; transition:all var(--transition); display:flex; align-items:center; gap:8px; }
+.conf-action-btn:hover { border-color:var(--accent); color:var(--accent); box-shadow:var(--shadow); }
+.conf-action-btn.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+.conf-action-btn.primary:hover { background:#2d5ae0; }
+
+.gtm-selector { display:flex; gap:8px; flex-wrap:wrap; }
+.gtm-option { padding:8px 16px; border-radius:20px; border:2px solid var(--border); background:var(--surface); font-size:.85rem; font-weight:500; cursor:pointer; transition:all .2s; display:flex; align-items:center; gap:6px; }
+.gtm-option:hover { border-color:var(--accent); }
+.gtm-option.active { border-width:2px; }
+
+.outreach-tracker { display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+.outreach-tracker select { padding:6px 12px; border-radius:8px; border:1px solid var(--border); font-size:.85rem; background:var(--surface); }
+.outreach-tracker input[type="date"] { padding:6px 12px; border-radius:8px; border:1px solid var(--border); font-size:.85rem; background:var(--surface); }
+.outreach-tracker label { font-size:.82rem; color:var(--text2); font-weight:500; }
+
 /* Landing */
 #landing { padding:80px 48px 60px; max-width:1200px; margin:0 auto; }
 #landing h1 { font-size:2.2rem; font-weight:700; color:var(--text); letter-spacing:-.02em; }
@@ -273,9 +309,15 @@ a:hover { text-decoration:underline; }
   <div class="conf-grid" id="confGrid"></div>
 </div>
 
-<div id="detail">
+<!-- Conference Overview Page -->
+<div id="conf-overview" style="display:none;">
   <button class="back-btn" onclick="showLanding()">&#8592; Back to Conferences</button>
-  <div class="detail-header">
+  <div id="confOverviewContent"></div>
+</div>
+
+<div id="detail">
+  <button class="back-btn" onclick="showConfOverview(currentConfId)">&#8592; Back to Conference</button>
+  <div class="detail-header" id="detailHeader">
     <h2>HIMSS 2026</h2>
     <div class="info">
       <span>March 9 &ndash; 13, 2026</span>
@@ -553,9 +595,52 @@ function bulkToggleEngagement(tag) {
   filterSpeakers();
 }
 
+// ============ CONFERENCE DATA (localStorage) ============
+const CONF_DATA_KEY = 'cih_conferences';
+let confData = {};
+
+function loadConfData() {
+  try { confData = JSON.parse(localStorage.getItem(CONF_DATA_KEY)) || {}; } catch(e) { confData = {}; }
+}
+
+function saveConfData() {
+  localStorage.setItem(CONF_DATA_KEY, JSON.stringify(confData));
+}
+
+function getConfData(id) {
+  if (!confData[id]) {
+    const base = CONFERENCES.find(c => c.id === id);
+    confData[id] = {
+      gtmTag: base?.gtmTag || '',
+      outreach: base?.outreach || { status: 'not_started', startDate: '', endDate: '' },
+      agenda: base?.agenda || '',
+      exhibitorProspectus: base?.exhibitorProspectus || ''
+    };
+  }
+  return confData[id];
+}
+
+function setConfGtm(id, tag) {
+  getConfData(id).gtmTag = tag;
+  saveConfData();
+}
+
+function setConfOutreach(id, field, value) {
+  getConfData(id).outreach[field] = value;
+  saveConfData();
+}
+
+function setConfField(id, field, value) {
+  getConfData(id)[field] = value;
+  saveConfData();
+}
+
+loadConfData();
+
 // ============ STATE ============
 let currentFilter = 'all';
 let currentView = 'cards';
+let currentConfId = 'himss-2026';
 
 loadOutreach();
 
@@ -622,34 +707,147 @@ function priorityTooltip(s) {
 // ============ LANDING ============
 function renderLanding() {
   const stats = computeStats();
-  document.getElementById('confGrid').innerHTML = `
-    <div class="conf-card" onclick="showDetail()">
-      <div class="stat">${stats.total} speakers</div>
-      <h3>HIMSS 2026</h3>
-      <div class="meta">March 9 &ndash; 13, 2026 &nbsp;&middot;&nbsp; Las Vegas, NV</div>
-      <div class="tags">
-        <span class="tag">Healthcare IT</span>
-        <span class="tag">Revenue Cycle</span>
-        <span class="tag">AI</span>
-        <span class="tag">Digital Health</span>
-        <span class="tag">Oncology Signals</span>
+  document.getElementById('confGrid').innerHTML = CONFERENCES.map(conf => {
+    const cd = getConfData(conf.id);
+    const gtm = GTM_TAGS[cd.gtmTag];
+    const os = OUTREACH_STATUSES[cd.outreach?.status || 'not_started'];
+    const speakerCount = conf.id === 'himss-2026' ? stats.total : (conf.speakerCount || 0);
+    const hasData = speakerCount > 0;
+
+    return `<div class="conf-card${hasData ? '' : ''}" onclick="showConfOverview('${conf.id}')" style="${hasData ? '' : ''}">
+      ${speakerCount > 0 ? `<div class="stat">${speakerCount} speakers</div>` : ''}
+      <h3>${conf.name}</h3>
+      <div class="meta">${conf.dates} &nbsp;&middot;&nbsp; ${conf.location}</div>
+      ${gtm ? `<div class="gtm-badge" style="background:${gtm.bg};color:${gtm.color};margin-top:12px;">${gtm.icon} ${gtm.label}</div>` : ''}
+      ${cd.outreach?.status && cd.outreach.status !== 'not_started' ? `<div class="outreach-status-badge" style="background:${os.bg};color:${os.color}">Outreach: ${os.label}</div>` : ''}
+      <div class="tags" style="margin-top:12px;">
+        ${conf.tags.map(t => `<span class="tag">${t}</span>`).join('')}
       </div>
-    </div>
-    <div class="conf-card" style="opacity:.35;pointer-events:none;">
-      <h3>ASCO 2026</h3>
-      <div class="meta">Coming Soon</div>
-      <div class="tags"><span class="tag">Oncology</span><span class="tag">Research</span></div>
-    </div>
-    <div class="conf-card" style="opacity:.35;pointer-events:none;">
-      <h3>HLTH 2026</h3>
-      <div class="meta">Coming Soon</div>
-      <div class="tags"><span class="tag">Health Tech</span><span class="tag">Innovation</span></div>
+    </div>`;
+  }).join('');
+}
+
+// ============ CONFERENCE OVERVIEW ============
+function showConfOverview(confId) {
+  currentConfId = confId;
+  const conf = CONFERENCES.find(c => c.id === confId);
+  if (!conf) return;
+  const cd = getConfData(confId);
+  const stats = confId === 'himss-2026' ? computeStats() : null;
+  const hasSpeakers = confId === 'himss-2026';
+
+  document.getElementById('landing').style.display = 'none';
+  document.getElementById('detail').style.display = 'none';
+  document.getElementById('conf-overview').style.display = 'block';
+
+  document.getElementById('confOverviewContent').innerHTML = `
+    <div class="conf-hero">
+      <h1>${conf.name}</h1>
+      <div class="conf-meta">
+        <span>📅 ${conf.dates}</span>
+        <span>📍 ${conf.location}</span>
+        <span><a href="${conf.website}" target="_blank">🌐 ${conf.website.replace('https://','')}</a></span>
+      </div>
+
+      <div class="conf-details-grid">
+        <div class="conf-detail-card">
+          <h3>📋 Agenda</h3>
+          <div class="detail-value ${cd.agenda ? '' : 'empty'}">
+            ${cd.agenda ? `<a href="${cd.agenda}" target="_blank">View Agenda →</a>` : 'Not added yet'}
+          </div>
+          <div style="margin-top:8px;">
+            <input type="url" placeholder="Paste agenda URL..." value="${esc(cd.agenda || '')}" 
+              onchange="setConfField('${confId}','agenda',this.value);showConfOverview('${confId}')"
+              style="width:100%;padding:6px 10px;border:1px solid var(--border);border-radius:6px;font-size:.82rem;">
+          </div>
+        </div>
+        <div class="conf-detail-card">
+          <h3>📄 Exhibitor Prospectus</h3>
+          <div class="detail-value ${cd.exhibitorProspectus ? '' : 'empty'}">
+            ${cd.exhibitorProspectus ? `<a href="${cd.exhibitorProspectus}" target="_blank">View Prospectus →</a>` : 'Not added yet'}
+          </div>
+          <div style="margin-top:8px;">
+            <input type="url" placeholder="Paste prospectus URL..." value="${esc(cd.exhibitorProspectus || '')}" 
+              onchange="setConfField('${confId}','exhibitorProspectus',this.value);showConfOverview('${confId}')"
+              style="width:100%;padding:6px 10px;border:1px solid var(--border);border-radius:6px;font-size:.82rem;">
+          </div>
+        </div>
+      </div>
+
+      <div class="conf-detail-card" style="margin-bottom:20px;">
+        <h3>🎯 RISA Labs GTM Decision</h3>
+        <div class="gtm-selector">
+          ${Object.entries(GTM_TAGS).map(([key, val]) => `
+            <div class="gtm-option ${cd.gtmTag === key ? 'active' : ''}" 
+              style="${cd.gtmTag === key ? `background:${val.bg};border-color:${val.color};color:${val.color}` : ''}"
+              onclick="setConfGtm('${confId}','${key}');showConfOverview('${confId}')">
+              ${val.icon} ${val.label}
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      <div class="conf-detail-card">
+        <h3>📧 Outreach Status</h3>
+        <div class="outreach-tracker">
+          <div>
+            <label>Status</label><br>
+            <select onchange="setConfOutreach('${confId}','status',this.value);showConfOverview('${confId}')">
+              ${Object.entries(OUTREACH_STATUSES).map(([key, val]) => `
+                <option value="${key}" ${cd.outreach?.status === key ? 'selected' : ''}>${val.label}</option>
+              `).join('')}
+            </select>
+          </div>
+          <div>
+            <label>Start Date</label><br>
+            <input type="date" value="${cd.outreach?.startDate || ''}" 
+              onchange="setConfOutreach('${confId}','startDate',this.value)">
+          </div>
+          <div>
+            <label>End Date</label><br>
+            <input type="date" value="${cd.outreach?.endDate || ''}" 
+              onchange="setConfOutreach('${confId}','endDate',this.value)">
+          </div>
+        </div>
+      </div>
+
+      ${stats ? `
+      <div style="margin-top:24px;display:grid;grid-template-columns:repeat(5,1fr);gap:12px;">
+        <div class="conf-detail-card" style="text-align:center;">
+          <div style="font-size:1.5rem;font-weight:700;color:var(--text)">${stats.total}</div>
+          <div style="font-size:.78rem;color:var(--text2)">Speakers</div>
+        </div>
+        <div class="conf-detail-card" style="text-align:center;">
+          <div style="font-size:1.5rem;font-weight:700;color:var(--p1)">${stats.p1}</div>
+          <div style="font-size:.78rem;color:var(--text2)">P1 Priority</div>
+        </div>
+        <div class="conf-detail-card" style="text-align:center;">
+          <div style="font-size:1.5rem;font-weight:700;color:var(--accent)">${stats.contacted}</div>
+          <div style="font-size:.78rem;color:var(--text2)">Contacted</div>
+        </div>
+        <div class="conf-detail-card" style="text-align:center;">
+          <div style="font-size:1.5rem;font-weight:700;color:var(--green)">${stats.meetings}</div>
+          <div style="font-size:.78rem;color:var(--text2)">Meetings</div>
+        </div>
+        <div class="conf-detail-card" style="text-align:center;">
+          <div style="font-size:1.5rem;font-weight:700;color:var(--purple)">${stats.responseRate}%</div>
+          <div style="font-size:.78rem;color:var(--text2)">Response Rate</div>
+        </div>
+      </div>` : ''}
+
+      <div class="conf-actions" style="margin-top:28px;">
+        ${hasSpeakers ? `<button class="conf-action-btn primary" onclick="showDetail()">👥 View Speakers & Outreach</button>` : 
+          `<button class="conf-action-btn" style="opacity:.5;cursor:default">👥 No speakers added yet</button>`}
+        ${conf.website ? `<a href="${conf.website}" target="_blank" class="conf-action-btn">🌐 Conference Website</a>` : ''}
+        ${cd.agenda ? `<a href="${cd.agenda}" target="_blank" class="conf-action-btn">📋 View Agenda</a>` : ''}
+      </div>
     </div>
   `;
 }
 
 function showDetail() {
   document.getElementById('landing').style.display = 'none';
+  document.getElementById('conf-overview').style.display = 'none';
   document.getElementById('detail').style.display = 'block';
   renderStats(true);
   filterSpeakers();
@@ -657,7 +855,9 @@ function showDetail() {
 
 function showLanding() {
   document.getElementById('landing').style.display = 'block';
+  document.getElementById('conf-overview').style.display = 'none';
   document.getElementById('detail').style.display = 'none';
+  renderLanding();
   clearSelection();
 }
 

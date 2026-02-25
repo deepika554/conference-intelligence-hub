@@ -372,6 +372,22 @@ a:hover { text-decoration:underline; }
     <div id="urgencyAlerts" style="margin-bottom:20px;"></div>
   </div>
 
+  <!-- Timeline View -->
+  <div class="collapsible-section">
+    <div class="collapse-header" onclick="toggleSection('timeline')">
+      <span>📅 Conference Timeline</span><span class="collapse-arrow" id="timeline-arrow">▾</span>
+    </div>
+    <div id="confTimeline" style="margin-bottom:24px;overflow-x:auto;"></div>
+  </div>
+
+  <!-- Scheduling Conflicts -->
+  <div class="collapsible-section">
+    <div class="collapse-header" onclick="toggleSection('conflicts')">
+      <span>⚠️ Scheduling Conflicts</span><span class="collapse-arrow" id="conflicts-arrow">▾</span>
+    </div>
+    <div id="confConflicts" style="margin-bottom:20px;"></div>
+  </div>
+
   <!-- Filters Row -->
   <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center;">
     <input type="text" id="confSearch" placeholder="Search conferences..." oninput="renderLanding()" style="padding:8px 14px;border:1px solid var(--border);border-radius:8px;font-size:.88rem;width:220px;">
@@ -406,22 +422,6 @@ a:hover { text-decoration:underline; }
       <input type="checkbox" id="confHideSkip" onchange="renderLanding()" checked> Hide skipped
     </label>
     <span id="confCount" style="font-size:.82rem;color:var(--text2);margin-left:auto;"></span>
-  </div>
-
-  <!-- Timeline View -->
-  <div class="collapsible-section">
-    <div class="collapse-header" onclick="toggleSection('timeline')">
-      <span>📅 Conference Timeline</span><span class="collapse-arrow" id="timeline-arrow">▾</span>
-    </div>
-    <div id="confTimeline" style="margin-bottom:24px;overflow-x:auto;"></div>
-  </div>
-
-  <!-- Scheduling Conflicts -->
-  <div class="collapsible-section">
-    <div class="collapse-header" onclick="toggleSection('conflicts')">
-      <span>⚠️ Scheduling Conflicts</span><span class="collapse-arrow" id="conflicts-arrow">▾</span>
-    </div>
-    <div id="confConflicts" style="margin-bottom:20px;"></div>
   </div>
 
   <div class="conf-grid" id="confGrid"></div>

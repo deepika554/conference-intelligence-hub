@@ -1,5 +1,5 @@
 /**
- * Conference Intelligence Hub — Shared Backend
+ * Conference Intelligence Hub — Shared Backend + Gmail Threads
  * Paste this into: Google Sheet → Extensions → Apps Script
  * Sheet ID: 1sfPRCLX9QSCFAvBHFMT6uzvyDIAEHGj6ywqUzChFlek
  */
@@ -31,6 +31,7 @@ function handleRequest(e) {
     ensureSheets();
     
     switch(action) {
+      // Data CRUD
       case 'getAll':     return jsonResponse({ data: getAllData() });
       case 'getTasks':   return jsonResponse({ data: getRows('Tasks', params.confId) });
       case 'getNotes':   return jsonResponse({ data: getRows('Notes', params.confId) });
@@ -45,7 +46,13 @@ function handleRequest(e) {
       case 'removeTeam': return jsonResponse({ data: deleteRow('Team', body.id) });
       case 'addBudget':  return jsonResponse({ data: addRow('Budget', body, email) });
       case 'deleteBudget': return jsonResponse({ data: deleteRow('Budget', body.id) });
-      default:           return jsonResponse({ status: 'ok', message: 'CIH Backend running.' });
+      
+      // Gmail threads
+      case 'getThreads':       return jsonResponse({ data: searchThreads(params.q || body.q || '', parseInt(params.max) || 10) });
+      case 'getThread':        return jsonResponse({ data: getThreadDetail(params.threadId || body.threadId) });
+      case 'getAllConfThreads': return jsonResponse({ data: getAllConferenceThreads() });
+      
+      default: return jsonResponse({ status: 'ok', message: 'CIH Backend running.' });
     }
   } catch(err) {
     return jsonResponse({ error: err.message });
@@ -56,7 +63,7 @@ function jsonResponse(obj) {
   return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);
 }
 
-// ---- Sheet Setup ----
+// ============ SHEET SETUP ============
 
 const SCHEMAS = {
   Tasks:  ['id','confId','title','assignee','priority','dueDate','category','status','completedAt','createdBy','createdAt','updatedAt'],
@@ -78,7 +85,7 @@ function ensureSheets() {
   }
 }
 
-// ---- CRUD ----
+// ============ DATA CRUD ============
 
 function getAllData() {
   return {
@@ -101,7 +108,7 @@ function getRows(sheetName, confId) {
     const obj = {};
     headers.forEach((h, i) => obj[h] = row[i] || '');
     return obj;
-  }).filter(r => r.id); // skip empty rows
+  }).filter(r => r.id);
   
   if (confId) rows = rows.filter(r => r.confId === confId);
   return rows;
@@ -113,7 +120,6 @@ function addRow(sheetName, body, email) {
   const headers = SCHEMAS[sheetName];
   const now = new Date().toISOString();
   
-  // Generate ID
   const id = body.id || Utilities.getUuid().slice(0, 8);
   
   const row = headers.map(h => {
@@ -174,4 +180,150 @@ function deleteRow(sheetName, id) {
     }
   }
   return { error: 'Not found' };
+}
+
+// ============ GMAIL THREAD SEARCH ============
+
+/**
+ * Search Gmail threads by query string
+ * @param {string} query - Gmail search query
+ * @param {number} maxResults - max threads to return
+ * @returns {Array} thread summaries
+ */
+function searchThreads(query, maxResults) {
+  if (!query) return [];
+  maxResults = Math.min(maxResults || 10, 25);
+  
+  const threads = GmailApp.search(query, 0, maxResults);
+  return threads.map(summarizeThread);
+}
+
+/**
+ * Get full thread detail including all messages
+ */
+function getThreadDetail(threadId) {
+  if (!threadId) return { error: 'No threadId provided' };
+  
+  const thread = GmailApp.getThreadById(threadId);
+  if (!thread) return { error: 'Thread not found' };
+  
+  const messages = thread.getMessages();
+  return {
+    id: thread.getId(),
+    subject: thread.getFirstMessageSubject(),
+    messageCount: messages.length,
+    lastDate: thread.getLastMessageDate().toISOString(),
+    isUnread: thread.isUnread(),
+    labels: thread.getLabels().map(l => l.getName()),
+    messages: messages.map(m => ({
+      id: m.getId(),
+      from: m.getFrom(),
+      to: m.getTo(),
+      cc: m.getCc(),
+      date: m.getDate().toISOString(),
+      subject: m.getSubject(),
+      snippet: m.getPlainBody().substring(0, 500),
+      isUnread: m.isUnread()
+    }))
+  };
+}
+
+/**
+ * Summarize a thread into a compact object
+ */
+function summarizeThread(thread) {
+  const msgs = thread.getMessages();
+  const lastMsg = msgs[msgs.length - 1];
+  const firstMsg = msgs[0];
+  
+  // Extract all unique participants
+  const participants = new Set();
+  msgs.forEach(m => {
+    extractEmails(m.getFrom()).forEach(e => participants.add(e));
+    extractEmails(m.getTo()).forEach(e => participants.add(e));
+  });
+  
+  // Determine if we sent the last message or they did
+  const lastFrom = lastMsg.getFrom().toLowerCase();
+  const wesentLast = lastFrom.includes('risalabs.ai') || lastFrom.includes('risa.inc') || lastFrom.includes('risacare.com');
+  
+  return {
+    id: thread.getId(),
+    subject: thread.getFirstMessageSubject(),
+    snippet: lastMsg.getPlainBody().substring(0, 200).replace(/\n/g, ' ').trim(),
+    messageCount: msgs.length,
+    firstDate: firstMsg.getDate().toISOString(),
+    lastDate: thread.getLastMessageDate().toISOString(),
+    isUnread: thread.isUnread(),
+    lastFrom: lastMsg.getFrom(),
+    weSentLast: wesentLast,
+    participants: [...participants].filter(e => !e.includes('risalabs.ai') && !e.includes('risa.inc') && !e.includes('risacare.com')),
+    ourParticipants: [...participants].filter(e => e.includes('risalabs.ai') || e.includes('risa.inc') || e.includes('risacare.com')),
+    labels: thread.getLabels().map(l => l.getName())
+  };
+}
+
+/**
+ * Extract email addresses from a header string
+ */
+function extractEmails(headerStr) {
+  if (!headerStr) return [];
+  const matches = headerStr.match(/[\w.-]+@[\w.-]+\.\w+/g);
+  return matches ? matches.map(e => e.toLowerCase()) : [];
+}
+
+/**
+ * Search Gmail for threads related to all conferences
+ * Uses conference name + sponsorship/booth/exhibit keywords
+ * Returns { confId: [threads] }
+ */
+function getAllConferenceThreads() {
+  // Conference search terms — map common conference names to search queries
+  // This uses a sheet tab "ConferenceSearch" if it exists, otherwise uses defaults
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  let searchTerms = {};
+  
+  const searchSheet = ss.getSheetByName('ConferenceSearch');
+  if (searchSheet && searchSheet.getLastRow() > 1) {
+    const data = searchSheet.getRange(2, 1, searchSheet.getLastRow() - 1, 2).getValues();
+    data.forEach(row => {
+      if (row[0] && row[1]) searchTerms[row[0]] = row[1];
+    });
+  }
+  
+  // If no custom search terms, search broadly
+  if (Object.keys(searchTerms).length === 0) {
+    // Search for common sponsorship-related terms across all conferences
+    const queries = [
+      'subject:(sponsorship OR sponsor OR booth OR exhibit OR prospectus) newer_than:90d',
+      'subject:(conference OR summit OR forum) (sponsorship OR booth OR registration) newer_than:90d'
+    ];
+    
+    let allThreads = [];
+    queries.forEach(q => {
+      const threads = GmailApp.search(q, 0, 50);
+      threads.forEach(t => {
+        if (!allThreads.find(at => at.id === t.getId())) {
+          allThreads.push(summarizeThread(t));
+        }
+      });
+    });
+    
+    return { _all: allThreads };
+  }
+  
+  // Search per conference
+  const results = {};
+  for (const [confId, query] of Object.entries(searchTerms)) {
+    try {
+      const threads = GmailApp.search(query, 0, 15);
+      if (threads.length > 0) {
+        results[confId] = threads.map(summarizeThread);
+      }
+    } catch(e) {
+      results[confId] = { error: e.message };
+    }
+  }
+  
+  return results;
 }

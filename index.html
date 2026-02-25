@@ -1871,8 +1871,8 @@ function showConfOverview(confId) {
       <h1>${conf.name}</h1>
       <div class="conf-meta">
         <span>${conf.dates}${conf.days ? ' (' + conf.days + ' day' + (conf.days > 1 ? 's' : '') + ')' : ''}</span>
-        <span>📍 ${conf.location || 'TBD'}</span>
-        <span><a href="${conf.website}" target="_blank">🌐 ${conf.website.replace('https://','').replace('http://','')}</a></span>
+        <span>${conf.location || 'TBD'}</span>
+        <span><a href="${conf.website}" target="_blank">${conf.website.replace('https://','').replace('http://','')}</a></span>
       </div>
 
       <div class="conf-details-grid">
@@ -1888,7 +1888,7 @@ function showConfOverview(confId) {
           </div>
         </div>
         <div class="conf-detail-card">
-          <h3>📄 Exhibitor Prospectus</h3>
+          <h3>Exhibitor Prospectus</h3>
           <div class="detail-value ${cd.exhibitorProspectus ? '' : 'empty'}">
             ${cd.exhibitorProspectus ? `<a href="${cd.exhibitorProspectus}" target="_blank">View Prospectus →</a>` : 'Not added yet'}
           </div>
@@ -1934,7 +1934,7 @@ function showConfOverview(confId) {
           <div class="detail-value" style="font-size:.88rem;">${esc(conf.icpOverlap)}</div>
         </div>` : ''}
         ${conf.competitorPresence ? `<div class="conf-detail-card" style="grid-column:1/-1;">
-          <h3>🏢 Competitor / Startup Presence</h3>
+          <h3>Competitor / Startup Presence</h3>
           <div class="detail-value" style="font-size:.88rem;">${esc(conf.competitorPresence)}</div>
         </div>` : ''}
       </div>` : ''}
@@ -1986,6 +1986,17 @@ function showConfOverview(confId) {
           <div style="font-size:.78rem;color:var(--text2)">Response Rate</div>
         </div>
       </div>` : ''}
+
+      <!-- Email Conversations -->
+      <div class="conf-detail-card" style="margin-bottom:20px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+          <h3>Conversations</h3>
+          <button onclick="loadConfThreads('${confId}')" style="padding:4px 12px;border:1px solid var(--border);border-radius:6px;font-size:.75rem;background:var(--surface2);color:var(--text2);cursor:pointer;">Refresh</button>
+        </div>
+        <div id="confThreads-${confId}" style="font-size:.85rem;color:var(--text2);">
+          ${backendUrl ? '<span style="font-size:.8rem;">Loading threads...</span>' : '<span style="font-size:.8rem;">Connect shared backend in Settings to see email threads.</span>'}
+        </div>
+      </div>
 
       <!-- Task Board -->
       <div class="conf-detail-card" style="margin-bottom:20px;">
@@ -2040,13 +2051,178 @@ function showConfOverview(confId) {
       <div class="conf-actions" style="margin-top:28px;">
         ${hasSpeakers ? `<button class="conf-action-btn primary" onclick="showDetail()">View Speakers & Outreach</button>` : 
           `<button class="conf-action-btn" style="opacity:.5;cursor:default">No speakers added yet</button>`}
-        ${conf.website ? `<a href="${conf.website}" target="_blank" class="conf-action-btn">🌐 Conference Website</a>` : ''}
+        ${conf.website ? `<a href="${conf.website}" target="_blank" class="conf-action-btn">Conference Website</a>` : ''}
         ${cd.agenda ? `<a href="${cd.agenda}" target="_blank" class="conf-action-btn">View Agenda</a>` : ''}
-        ${cd.exhibitorProspectus ? `<a href="${cd.exhibitorProspectus}" target="_blank" class="conf-action-btn">📄 Sponsorship Prospectus</a>` : ''}
+        ${cd.exhibitorProspectus ? `<a href="${cd.exhibitorProspectus}" target="_blank" class="conf-action-btn">Sponsorship Prospectus</a>` : ''}
       </div>
     </div>
   `;
   renderTasksAfter();
+  // Load email threads for this conference
+  if (backendUrl) setTimeout(() => loadConfThreads(confId), 100);
+}
+
+// ============ EMAIL THREAD DISPLAY ============
+
+let threadCache = {};
+const THREAD_CACHE_TTL = 5 * 60 * 1000; // 5 min
+
+async function loadConfThreads(confId) {
+  const container = document.getElementById('confThreads-' + confId);
+  if (!container || !backendUrl) return;
+  
+  container.innerHTML = '<span style="font-size:.8rem;color:var(--text3);">Searching emails...</span>';
+  
+  const conf = CONFERENCES.find(c => c.id === confId);
+  if (!conf) return;
+  
+  // Build search query from conference name
+  // Extract meaningful search terms
+  const name = conf.name
+    .replace(/\(.*?\)/g, '') // remove parenthetical
+    .replace(/Annual|Conference|Global|National|Summit|Forum|Congress/gi, '')
+    .trim();
+  
+  const searchTerms = name.split(/\s+/).filter(w => w.length > 2).join(' ');
+  const query = `(${searchTerms}) newer_than:120d`;
+  
+  // Check cache
+  const cacheKey = confId;
+  if (threadCache[cacheKey] && (Date.now() - threadCache[cacheKey].ts < THREAD_CACHE_TTL)) {
+    renderThreads(container, threadCache[cacheKey].data, confId);
+    return;
+  }
+  
+  try {
+    const data = await backendGet('getThreads', null);
+    // We need to pass query as param — use custom fetch
+    const email = localStorage.getItem('cih_user') || '';
+    const url = backendUrl + '?action=getThreads&email=' + encodeURIComponent(email) + '&q=' + encodeURIComponent(query) + '&max=15';
+    const r = await fetch(url);
+    const j = await r.json();
+    
+    if (j.data) {
+      threadCache[cacheKey] = { data: j.data, ts: Date.now() };
+      renderThreads(container, j.data, confId);
+    } else {
+      container.innerHTML = '<span style="font-size:.8rem;color:var(--text3);">No threads found.</span>';
+    }
+  } catch(e) {
+    container.innerHTML = '<span style="font-size:.8rem;color:var(--text3);">Could not load threads.</span>';
+  }
+}
+
+function renderThreads(container, threads, confId) {
+  if (!threads || threads.length === 0) {
+    container.innerHTML = '<span style="font-size:.8rem;color:var(--text3);">No email threads found for this conference.</span>';
+    return;
+  }
+  
+  let html = '';
+  threads.forEach(t => {
+    const date = new Date(t.lastDate);
+    const ago = getTimeAgo(date);
+    const unread = t.isUnread ? 'font-weight:600;' : '';
+    const waitingOnUs = t.weSentLast === false;
+    const waitingOnThem = t.weSentLast === true;
+    
+    // Status indicator
+    let statusDot = '';
+    let statusText = '';
+    if (t.isUnread) {
+      statusDot = 'background:#5b8af7;';
+      statusText = 'Unread';
+    } else if (waitingOnUs) {
+      statusDot = 'background:#f87171;';
+      statusText = 'Needs reply';
+    } else if (waitingOnThem) {
+      statusDot = 'background:#34d399;';
+      statusText = 'Waiting on them';
+    }
+    
+    const externalParticipants = (t.participants || []).slice(0, 3).join(', ');
+    
+    html += `<div onclick="toggleThreadDetail('${t.id}')" style="padding:12px;border:1px solid var(--border);border-radius:10px;margin-bottom:8px;cursor:pointer;transition:all .15s;background:var(--surface);" onmouseover="this.style.borderColor='var(--border-hover)'" onmouseout="this.style.borderColor='var(--border)'">
+      <div style="display:flex;align-items:flex-start;gap:10px;">
+        <div style="width:8px;height:8px;border-radius:50%;margin-top:6px;flex-shrink:0;${statusDot}"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;">
+            <div style="font-size:.85rem;${unread}overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--text);">${esc(t.subject)}</div>
+            <div style="font-size:.72rem;color:var(--text3);white-space:nowrap;">${ago}</div>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;margin-top:4px;flex-wrap:wrap;">
+            ${statusText ? `<span style="font-size:.7rem;padding:2px 8px;border-radius:10px;background:${statusDot.replace('background:','').replace(';','')}20;color:${statusDot.replace('background:','').replace(';','')}">${statusText}</span>` : ''}
+            <span style="font-size:.72rem;color:var(--text2);">${t.messageCount} message${t.messageCount !== 1 ? 's' : ''}</span>
+            ${externalParticipants ? `<span style="font-size:.72rem;color:var(--text3);">${esc(externalParticipants)}</span>` : ''}
+          </div>
+          <div style="font-size:.78rem;color:var(--text3);margin-top:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${esc(t.snippet || '')}</div>
+        </div>
+      </div>
+      <div id="threadDetail-${t.id}" style="display:none;margin-top:12px;padding-top:12px;border-top:1px solid var(--border);"></div>
+    </div>`;
+  });
+  
+  container.innerHTML = html;
+}
+
+function getTimeAgo(date) {
+  const now = new Date();
+  const diffMs = now - date;
+  const diffMins = Math.floor(diffMs / 60000);
+  const diffHrs = Math.floor(diffMs / 3600000);
+  const diffDays = Math.floor(diffMs / 86400000);
+  
+  if (diffMins < 60) return diffMins + 'm ago';
+  if (diffHrs < 24) return diffHrs + 'h ago';
+  if (diffDays < 7) return diffDays + 'd ago';
+  if (diffDays < 30) return Math.floor(diffDays / 7) + 'w ago';
+  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+}
+
+async function toggleThreadDetail(threadId) {
+  const el = document.getElementById('threadDetail-' + threadId);
+  if (!el) return;
+  
+  if (el.style.display !== 'none') {
+    el.style.display = 'none';
+    return;
+  }
+  
+  el.style.display = 'block';
+  el.innerHTML = '<span style="font-size:.78rem;color:var(--text3);">Loading messages...</span>';
+  
+  try {
+    const email = localStorage.getItem('cih_user') || '';
+    const url = backendUrl + '?action=getThread&email=' + encodeURIComponent(email) + '&threadId=' + encodeURIComponent(threadId);
+    const r = await fetch(url);
+    const j = await r.json();
+    
+    if (j.data && j.data.messages) {
+      let html = '';
+      j.data.messages.forEach(m => {
+        const fromName = m.from.replace(/<.*>/, '').trim() || m.from;
+        const isUs = m.from.toLowerCase().includes('risalabs.ai') || m.from.toLowerCase().includes('risa.inc') || m.from.toLowerCase().includes('risacare.com');
+        const date = new Date(m.date);
+        const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) + ' ' + date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+        
+        html += `<div style="padding:10px;margin-bottom:6px;border-radius:8px;background:${isUs ? 'rgba(91,138,247,.06)' : 'var(--surface2)'};">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;">
+            <span style="font-size:.78rem;font-weight:600;color:${isUs ? 'var(--accent)' : 'var(--text)'};">${esc(fromName)}</span>
+            <span style="font-size:.68rem;color:var(--text3);">${dateStr}</span>
+          </div>
+          <div style="font-size:.8rem;color:var(--text2);line-height:1.5;white-space:pre-wrap;">${esc(m.snippet)}</div>
+        </div>`;
+      });
+      
+      // Link to Gmail
+      html += `<a href="https://mail.google.com/mail/u/0/#inbox/${threadId}" target="_blank" style="display:inline-block;margin-top:8px;font-size:.75rem;color:var(--accent);text-decoration:none;">Open in Gmail →</a>`;
+      el.innerHTML = html;
+    } else {
+      el.innerHTML = '<span style="font-size:.78rem;color:var(--text3);">Could not load messages.</span>';
+    }
+  } catch(e) {
+    el.innerHTML = '<span style="font-size:.78rem;color:var(--text3);">Failed to load thread.</span>';
+  }
 }
 
 function showDetail() {

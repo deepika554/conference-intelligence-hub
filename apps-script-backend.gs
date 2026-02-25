@@ -1,207 +1,177 @@
 /**
- * Conference Intelligence Hub — Google Sheets Backend
- * 
- * Deploy as Web App:
- *   Execute as: Me
- *   Access: Anyone with Google account (or restrict to your org)
+ * Conference Intelligence Hub — Shared Backend
+ * Paste this into: Google Sheet → Extensions → Apps Script
+ * Sheet ID: 1sfPRCLX9QSCFAvBHFMT6uzvyDIAEHGj6ywqUzChFlek
  */
 
-const SHEET_ID = '1sfPRCLX9QSCFAvBHFMT6uzvyDIAEHGj6ywqUzChFlek';
-const ALLOWED_DOMAIN = 'risalabs.ai';
+const SHEET_ID = SpreadsheetApp.getActiveSpreadsheet().getId();
 
-function getOrCreateSheet(name, headers) {
-  const ss = SpreadsheetApp.openById(SHEET_ID);
-  let sheet = ss.getSheetByName(name);
-  if (!sheet) {
-    sheet = ss.insertSheet(name);
-    sheet.appendRow(headers);
-    sheet.getRange(1, 1, 1, headers.length).setFontWeight('bold');
-  }
-  return sheet;
+function doGet(e) {
+  return handleRequest(e);
 }
+
+function doPost(e) {
+  return handleRequest(e);
+}
+
+function handleRequest(e) {
+  try {
+    const params = e.parameter || {};
+    let body = {};
+    try { body = JSON.parse(e.postData?.contents || '{}'); } catch(x) {}
+    
+    const action = params.action || body.action || '';
+    const email = params.email || body.email || '';
+    
+    // Validate risalabs.ai domain
+    if (!email.endsWith('@risalabs.ai') && !email.endsWith('@risa.inc') && !email.endsWith('@risacare.com')) {
+      return jsonResponse({ error: 'Unauthorized domain' });
+    }
+    
+    ensureSheets();
+    
+    switch(action) {
+      case 'getAll':     return jsonResponse({ data: getAllData() });
+      case 'getTasks':   return jsonResponse({ data: getRows('Tasks', params.confId) });
+      case 'getNotes':   return jsonResponse({ data: getRows('Notes', params.confId) });
+      case 'getTeam':    return jsonResponse({ data: getRows('Team') });
+      case 'getBudget':  return jsonResponse({ data: getRows('Budget', params.confId) });
+      case 'addTask':    return jsonResponse({ data: addRow('Tasks', body, email) });
+      case 'updateTask': return jsonResponse({ data: updateRow('Tasks', body) });
+      case 'deleteTask': return jsonResponse({ data: deleteRow('Tasks', body.id) });
+      case 'addNote':    return jsonResponse({ data: addRow('Notes', body, email) });
+      case 'deleteNote': return jsonResponse({ data: deleteRow('Notes', body.id) });
+      case 'addTeam':    return jsonResponse({ data: addRow('Team', body, email) });
+      case 'removeTeam': return jsonResponse({ data: deleteRow('Team', body.id) });
+      case 'addBudget':  return jsonResponse({ data: addRow('Budget', body, email) });
+      case 'deleteBudget': return jsonResponse({ data: deleteRow('Budget', body.id) });
+      default:           return jsonResponse({ status: 'ok', message: 'CIH Backend running.' });
+    }
+  } catch(err) {
+    return jsonResponse({ error: err.message });
+  }
+}
+
+function jsonResponse(obj) {
+  return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);
+}
+
+// ---- Sheet Setup ----
 
 const SCHEMAS = {
-  Tasks: ['id','confId','title','assignee','priority','dueDate','category','status','completedAt','createdBy','createdAt','updatedAt'],
-  Notes: ['id','confId','note','createdBy','createdAt'],
-  Team:  ['name','email','role','color'],
-  Budget: ['confId','type','description','amount','createdBy','createdAt']
+  Tasks:  ['id','confId','title','assignee','priority','dueDate','category','status','completedAt','createdBy','createdAt','updatedAt'],
+  Notes:  ['id','confId','note','createdBy','createdAt'],
+  Team:   ['id','name','email','role','color','addedBy','addedAt'],
+  Budget: ['id','confId','type','description','amount','createdBy','createdAt']
 };
 
-function initSheets() {
-  Object.entries(SCHEMAS).forEach(([name, headers]) => getOrCreateSheet(name, headers));
+function ensureSheets() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  for (const [name, cols] of Object.entries(SCHEMAS)) {
+    let sheet = ss.getSheetByName(name);
+    if (!sheet) {
+      sheet = ss.insertSheet(name);
+      sheet.getRange(1, 1, 1, cols.length).setValues([cols]);
+      sheet.getRange(1, 1, 1, cols.length).setFontWeight('bold');
+      sheet.setFrozenRows(1);
+    }
+  }
 }
 
-function validateEmail(email) {
-  if (!email) return false;
-  return email.endsWith('@' + ALLOWED_DOMAIN);
+// ---- CRUD ----
+
+function getAllData() {
+  return {
+    tasks: getRows('Tasks'),
+    notes: getRows('Notes'),
+    team: getRows('Team'),
+    budget: getRows('Budget')
+  };
 }
 
-function getCallerEmail(e) {
-  // Try session first, fall back to param
-  try {
-    const user = Session.getActiveUser().getEmail();
-    if (user) return user;
-  } catch(_) {}
-  return (e && e.parameter && e.parameter.email) || '';
-}
-
-function jsonResponse(data) {
-  return ContentService.createTextOutput(JSON.stringify(data)).setMimeType(ContentService.MimeType.JSON);
-}
-
-function sheetToArray(sheet) {
-  const data = sheet.getDataRange().getValues();
-  if (data.length <= 1) return [];
-  const headers = data[0];
-  return data.slice(1).map(row => {
+function getRows(sheetName, confId) {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const sheet = ss.getSheetByName(sheetName);
+  if (!sheet || sheet.getLastRow() < 2) return [];
+  
+  const headers = SCHEMAS[sheetName];
+  const data = sheet.getRange(2, 1, sheet.getLastRow() - 1, headers.length).getValues();
+  
+  let rows = data.map(row => {
     const obj = {};
-    headers.forEach((h, i) => obj[h] = row[i]);
+    headers.forEach((h, i) => obj[h] = row[i] || '');
     return obj;
-  });
+  }).filter(r => r.id); // skip empty rows
+  
+  if (confId) rows = rows.filter(r => r.confId === confId);
+  return rows;
 }
 
-function filterByConfId(arr, confId) {
-  if (!confId) return arr;
-  return arr.filter(r => r.confId === confId);
-}
-
-// ========== GET ==========
-function doGet(e) {
-  const email = getCallerEmail(e);
-  if (!validateEmail(email)) return jsonResponse({error: 'Unauthorized', message: 'Requires @' + ALLOWED_DOMAIN + ' email'});
-  
-  const action = (e.parameter && e.parameter.action) || '';
-  const confId = e.parameter && e.parameter.confId;
-  
-  try {
-    switch(action) {
-      case 'getTasks':
-        return jsonResponse({success: true, data: filterByConfId(sheetToArray(getOrCreateSheet('Tasks', SCHEMAS.Tasks)), confId)});
-      case 'getNotes':
-        return jsonResponse({success: true, data: filterByConfId(sheetToArray(getOrCreateSheet('Notes', SCHEMAS.Notes)), confId)});
-      case 'getTeam':
-        return jsonResponse({success: true, data: sheetToArray(getOrCreateSheet('Team', SCHEMAS.Team))});
-      case 'getBudget':
-        return jsonResponse({success: true, data: filterByConfId(sheetToArray(getOrCreateSheet('Budget', SCHEMAS.Budget)), confId)});
-      case 'getAll':
-        return jsonResponse({success: true, data: {
-          tasks: filterByConfId(sheetToArray(getOrCreateSheet('Tasks', SCHEMAS.Tasks)), confId),
-          notes: filterByConfId(sheetToArray(getOrCreateSheet('Notes', SCHEMAS.Notes)), confId),
-          team: sheetToArray(getOrCreateSheet('Team', SCHEMAS.Team)),
-          budget: filterByConfId(sheetToArray(getOrCreateSheet('Budget', SCHEMAS.Budget)), confId)
-        }});
-      default:
-        return jsonResponse({error: 'Unknown action: ' + action});
-    }
-  } catch(err) {
-    return jsonResponse({error: err.message});
-  }
-}
-
-// ========== POST ==========
-function doPost(e) {
-  const email = getCallerEmail(e);
-  if (!validateEmail(email)) return jsonResponse({error: 'Unauthorized', message: 'Requires @' + ALLOWED_DOMAIN + ' email'});
-  
-  let body = {};
-  try { body = JSON.parse(e.postData.contents); } catch(_) {}
-  const action = body.action || '';
-  
-  try {
-    switch(action) {
-      case 'addTask': return addTask(body, email);
-      case 'updateTask': return updateTask(body);
-      case 'deleteTask': return deleteRow('Tasks', 'id', body.id);
-      case 'addNote': return addNote(body, email);
-      case 'deleteNote': return deleteRow('Notes', 'id', body.id);
-      case 'addTeam': return addTeamMember(body);
-      case 'removeTeam': return deleteRow('Team', 'email', body.email);
-      case 'addBudget': return addBudgetItem(body, email);
-      case 'deleteBudget': return deleteBudgetRow(body);
-      default: return jsonResponse({error: 'Unknown action: ' + action});
-    }
-  } catch(err) {
-    return jsonResponse({error: err.message});
-  }
-}
-
-function addTask(body, email) {
-  const sheet = getOrCreateSheet('Tasks', SCHEMAS.Tasks);
+function addRow(sheetName, body, email) {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const sheet = ss.getSheetByName(sheetName);
+  const headers = SCHEMAS[sheetName];
   const now = new Date().toISOString();
-  const id = body.id || Utilities.getUuid();
-  const row = [
-    id, body.confId||'', body.title||'', body.assignee||'',
-    body.priority||'medium', body.dueDate||'', body.category||'general',
-    body.status||'todo', '', email, now, now
-  ];
+  
+  // Generate ID
+  const id = body.id || Utilities.getUuid().slice(0, 8);
+  
+  const row = headers.map(h => {
+    if (h === 'id') return id;
+    if (h === 'createdBy' || h === 'addedBy') return email;
+    if (h === 'createdAt' || h === 'addedAt') return now;
+    if (h === 'updatedAt') return now;
+    return body[h] || '';
+  });
+  
   sheet.appendRow(row);
-  return jsonResponse({success: true, id: id});
+  
+  const obj = {};
+  headers.forEach((h, i) => obj[h] = row[i]);
+  return obj;
 }
 
-function updateTask(body) {
-  const sheet = getOrCreateSheet('Tasks', SCHEMAS.Tasks);
-  const data = sheet.getDataRange().getValues();
-  const headers = data[0];
-  const idCol = headers.indexOf('id');
-  for (let i = 1; i < data.length; i++) {
-    if (data[i][idCol] == body.id) {
-      // Update provided fields
-      Object.keys(body).forEach(key => {
-        if (key === 'action' || key === 'id') return;
-        const col = headers.indexOf(key);
-        if (col >= 0) sheet.getRange(i + 1, col + 1).setValue(body[key]);
+function updateRow(sheetName, body) {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const sheet = ss.getSheetByName(sheetName);
+  const headers = SCHEMAS[sheetName];
+  if (!body.id || sheet.getLastRow() < 2) return { error: 'Not found' };
+  
+  const data = sheet.getRange(2, 1, sheet.getLastRow() - 1, headers.length).getValues();
+  const idIdx = headers.indexOf('id');
+  
+  for (let i = 0; i < data.length; i++) {
+    if (String(data[i][idIdx]) === String(body.id)) {
+      headers.forEach((h, j) => {
+        if (h !== 'id' && h !== 'createdBy' && h !== 'createdAt' && body[h] !== undefined) {
+          data[i][j] = body[h];
+        }
+        if (h === 'updatedAt') data[i][j] = new Date().toISOString();
       });
-      sheet.getRange(i + 1, headers.indexOf('updatedAt') + 1).setValue(new Date().toISOString());
-      return jsonResponse({success: true});
+      sheet.getRange(i + 2, 1, 1, headers.length).setValues([data[i]]);
+      
+      const obj = {};
+      headers.forEach((h, j) => obj[h] = data[i][j]);
+      return obj;
     }
   }
-  return jsonResponse({error: 'Task not found'});
+  return { error: 'Not found' };
 }
 
-function deleteRow(sheetName, keyField, keyValue) {
-  const sheet = getOrCreateSheet(sheetName, SCHEMAS[sheetName]);
-  const data = sheet.getDataRange().getValues();
-  const col = data[0].indexOf(keyField);
-  for (let i = data.length - 1; i >= 1; i--) {
-    if (data[i][col] == keyValue) {
-      sheet.deleteRow(i + 1);
-      return jsonResponse({success: true});
+function deleteRow(sheetName, id) {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const sheet = ss.getSheetByName(sheetName);
+  const headers = SCHEMAS[sheetName];
+  if (!id || sheet.getLastRow() < 2) return { error: 'Not found' };
+  
+  const data = sheet.getRange(2, 1, sheet.getLastRow() - 1, headers.length).getValues();
+  const idIdx = headers.indexOf('id');
+  
+  for (let i = 0; i < data.length; i++) {
+    if (String(data[i][idIdx]) === String(id)) {
+      sheet.deleteRow(i + 2);
+      return { deleted: id };
     }
   }
-  return jsonResponse({error: 'Not found'});
-}
-
-function addNote(body, email) {
-  const sheet = getOrCreateSheet('Notes', SCHEMAS.Notes);
-  const id = body.id || Utilities.getUuid();
-  sheet.appendRow([id, body.confId||'', body.note||'', email, new Date().toISOString()]);
-  return jsonResponse({success: true, id: id});
-}
-
-function addTeamMember(body) {
-  const sheet = getOrCreateSheet('Team', SCHEMAS.Team);
-  // Check if already exists
-  const data = sheetToArray(sheet);
-  if (data.find(r => r.email === body.email)) return jsonResponse({error: 'Team member already exists'});
-  sheet.appendRow([body.name||'', body.email||'', body.role||'', body.color||'']);
-  return jsonResponse({success: true});
-}
-
-function addBudgetItem(body, email) {
-  const sheet = getOrCreateSheet('Budget', SCHEMAS.Budget);
-  sheet.appendRow([body.confId||'', body.type||'misc', body.description||'', body.amount||0, email, new Date().toISOString()]);
-  return jsonResponse({success: true});
-}
-
-function deleteBudgetRow(body) {
-  const sheet = getOrCreateSheet('Budget', SCHEMAS.Budget);
-  const data = sheet.getDataRange().getValues();
-  // Match by confId + type + description
-  for (let i = data.length - 1; i >= 1; i--) {
-    if (data[i][0] == body.confId && data[i][1] == body.type && data[i][2] == body.description) {
-      sheet.deleteRow(i + 1);
-      return jsonResponse({success: true});
-    }
-  }
-  return jsonResponse({error: 'Not found'});
+  return { error: 'Not found' };
 }

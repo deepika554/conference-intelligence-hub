@@ -36,6 +36,14 @@ a:hover { text-decoration:underline; }
 ::-webkit-scrollbar-track { background:transparent; }
 ::-webkit-scrollbar-thumb { background:#d0d5dd; border-radius:3px; }
 
+/* Collapsible Sections */
+.collapsible-section { margin-bottom:4px; }
+.collapse-header { display:flex; justify-content:space-between; align-items:center; padding:8px 12px; background:var(--surface); border:1px solid var(--border); border-radius:8px; cursor:pointer; font-size:.85rem; font-weight:600; color:var(--text); user-select:none; transition:all .2s; margin-bottom:8px; }
+.collapse-header:hover { background:var(--surface2); }
+.collapse-arrow { transition:transform .2s; font-size:.75rem; color:var(--text2); }
+.collapse-arrow.collapsed { transform:rotate(-90deg); }
+.collapsible-section .collapsed-content { display:none; }
+
 /* Executive Summary */
 .exec-stat { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:16px; text-align:center; }
 .exec-stat .num { font-size:1.4rem; font-weight:700; }
@@ -357,7 +365,12 @@ a:hover { text-decoration:underline; }
   <div id="execSummary" style="display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:24px;"></div>
 
   <!-- Upcoming / Urgency Alerts -->
-  <div id="urgencyAlerts" style="margin-bottom:20px;"></div>
+  <div class="collapsible-section">
+    <div class="collapse-header" onclick="toggleSection('urgency')">
+      <span>🚨 Upcoming Alerts</span><span class="collapse-arrow" id="urgency-arrow">▾</span>
+    </div>
+    <div id="urgencyAlerts" style="margin-bottom:20px;"></div>
+  </div>
 
   <!-- Filters Row -->
   <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center;">
@@ -396,10 +409,20 @@ a:hover { text-decoration:underline; }
   </div>
 
   <!-- Timeline View -->
-  <div id="confTimeline" style="margin-bottom:24px;overflow-x:auto;"></div>
+  <div class="collapsible-section">
+    <div class="collapse-header" onclick="toggleSection('timeline')">
+      <span>📅 Conference Timeline</span><span class="collapse-arrow" id="timeline-arrow">▾</span>
+    </div>
+    <div id="confTimeline" style="margin-bottom:24px;overflow-x:auto;"></div>
+  </div>
 
   <!-- Scheduling Conflicts -->
-  <div id="confConflicts" style="margin-bottom:20px;"></div>
+  <div class="collapsible-section">
+    <div class="collapse-header" onclick="toggleSection('conflicts')">
+      <span>⚠️ Scheduling Conflicts</span><span class="collapse-arrow" id="conflicts-arrow">▾</span>
+    </div>
+    <div id="confConflicts" style="margin-bottom:20px;"></div>
+  </div>
 
   <div class="conf-grid" id="confGrid"></div>
 </div>
@@ -808,6 +831,34 @@ function priorityTooltip(s) {
   return `${s.priority} — ${labels[s.priority] || ''} (Score: ${s.score})`;
 }
 
+// ============ COLLAPSIBLE SECTIONS ============
+const COLLAPSE_KEY = 'cih_collapsed';
+let collapsedSections = {};
+try { collapsedSections = JSON.parse(localStorage.getItem(COLLAPSE_KEY)) || {}; } catch(e) { collapsedSections = {}; }
+
+function toggleSection(id) {
+  collapsedSections[id] = !collapsedSections[id];
+  localStorage.setItem(COLLAPSE_KEY, JSON.stringify(collapsedSections));
+  applyCollapse(id);
+}
+
+function applyCollapse(id) {
+  const arrow = document.getElementById(id + '-arrow');
+  const map = { urgency: 'urgencyAlerts', timeline: 'confTimeline', conflicts: 'confConflicts' };
+  const content = document.getElementById(map[id]);
+  if (collapsedSections[id]) {
+    if (arrow) arrow.classList.add('collapsed');
+    if (content) content.style.display = 'none';
+  } else {
+    if (arrow) arrow.classList.remove('collapsed');
+    if (content) content.style.display = '';
+  }
+}
+
+function applyAllCollapses() {
+  ['urgency', 'timeline', 'conflicts'].forEach(applyCollapse);
+}
+
 // ============ HELPERS ============
 const TODAY = new Date('2026-02-25'); // current date
 
@@ -1043,6 +1094,7 @@ function renderLanding() {
   renderUrgencyAlerts();
   renderTimeline();
   renderConflicts();
+  applyAllCollapses();
 
   document.getElementById('confCount').textContent = `Showing ${filtered.length} of ${CONFERENCES.length} conferences`;
 

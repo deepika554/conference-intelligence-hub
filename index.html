@@ -9,34 +9,39 @@
 <script src="data.js"></script>
 <style>
 :root {
-  --bg: #0a0a0a;
-  --surface: #141418;
-  --surface2: #1a1a1e;
-  --border: #2a2a30;
-  --text: #ffffff;
-  --text2: #6b7b94;
-  --accent: #3b6cf5;
-  --accent-light: rgba(59,108,245,.1);
-  --p1: #ef4444;
-  --p2: #f59e0b;
+  --bg: #0c0c10;
+  --surface: #16161c;
+  --surface2: #1e1e26;
+  --surface3: #252530;
+  --border: #2c2c38;
+  --border-hover: #3e3e4e;
+  --text: #eef0f4;
+  --text2: #8891a4;
+  --text3: #5c6478;
+  --accent: #5b8af7;
+  --accent2: #4070e8;
+  --accent-light: rgba(91,138,247,.1);
+  --accent-glow: rgba(91,138,247,.15);
+  --p1: #f87171;
+  --p2: #fbbf24;
   --p3: #6b7280;
-  --green: #22c55e;
+  --green: #34d399;
   --purple: #a78bfa;
-  --radius: 12px;
-  --shadow: 0 1px 3px rgba(0,0,0,.3);
-  --shadow-md: 0 2px 8px rgba(0,0,0,.4);
-  --shadow-lg: 0 4px 16px rgba(0,0,0,.5);
-  --transition: .25s cubic-bezier(.4,0,.2,1);
+  --radius: 14px;
+  --shadow: 0 1px 2px rgba(0,0,0,.2);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.3);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,.4);
+  --transition: .2s cubic-bezier(.4,0,.2,1);
 }
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Segoe UI', sans-serif; background:var(--bg); color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; }
 a { color:var(--accent); text-decoration:none; }
 a:hover { text-decoration:underline; }
 
-::-webkit-scrollbar { width:5px; height:5px; }
-::-webkit-scrollbar-track { background:#0a0a0a; }
-::-webkit-scrollbar-thumb { background:#2a2a30; border-radius:3px; }
-::-webkit-scrollbar-thumb:hover { background:#3a3a40; }
+::-webkit-scrollbar { width:6px; height:6px; }
+::-webkit-scrollbar-track { background:var(--bg); }
+::-webkit-scrollbar-thumb { background:var(--border); border-radius:3px; }
+::-webkit-scrollbar-thumb:hover { background:var(--border-hover); }
 
 /* Task Management */
 .task-board { margin-top:12px; }
@@ -88,16 +93,17 @@ input::placeholder, textarea::placeholder { color:var(--text2); }
 
 /* Collapsible Sections */
 .collapsible-section { margin-bottom:4px; }
-.collapse-header { display:flex; justify-content:space-between; align-items:center; padding:8px 12px; background:var(--surface); border:1px solid var(--border); border-radius:8px; cursor:pointer; font-size:.85rem; font-weight:600; color:var(--text); user-select:none; transition:all .2s; margin-bottom:8px; }
-.collapse-header:hover { background:var(--surface2); }
+.collapse-header { display:flex; justify-content:space-between; align-items:center; padding:10px 14px; background:var(--surface); border:1px solid var(--border); border-radius:10px; cursor:pointer; font-size:.85rem; font-weight:600; color:var(--text); user-select:none; transition:all .2s; margin-bottom:8px; }
+.collapse-header:hover { background:var(--surface2); border-color:var(--border-hover); }
 .collapse-arrow { transition:transform .2s; font-size:.75rem; color:var(--text2); }
 .collapse-arrow.collapsed { transform:rotate(-90deg); }
 .collapsible-section .collapsed-content { display:none; }
 
 /* Executive Summary */
-.exec-stat { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:16px; text-align:center; }
-.exec-stat .num { font-size:1.4rem; font-weight:700; }
-.exec-stat .label { font-size:.75rem; color:var(--text2); margin-top:2px; }
+.exec-stat { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:18px; text-align:center; transition:all .2s; }
+.exec-stat:hover { border-color:var(--border-hover); background:var(--surface2); }
+.exec-stat .num { font-size:1.4rem; font-weight:700; color:var(--text); }
+.exec-stat .label { font-size:.75rem; color:var(--text2); margin-top:4px; }
 
 /* Urgency Alerts */
 .urgency-alert { padding:12px 16px; border-radius:10px; font-size:.85rem; display:flex; align-items:center; gap:8px; margin-bottom:8px; cursor:pointer; transition:all .2s; }
@@ -124,7 +130,7 @@ input::placeholder, textarea::placeholder { color:var(--text2); }
 .team-tag.add { background:var(--surface2); color:var(--text2); border:1px dashed var(--border); }
 
 /* Budget */
-.budget-badge { font-size:.72rem; padding:2px 8px; border-radius:8px; background:#ecfdf5; color:var(--green); font-weight:600; }
+.budget-badge { font-size:.72rem; padding:2px 8px; border-radius:8px; background:rgba(52,211,153,.1); color:var(--green); font-weight:600; }
 
 /* Countdown */
 .countdown { font-size:.72rem; padding:3px 8px; border-radius:8px; font-weight:600; }
@@ -179,9 +185,9 @@ input::placeholder, textarea::placeholder { color:var(--text2); }
 #landing .subtitle { color:var(--text2); font-size:1rem; margin-top:6px; margin-bottom:56px; font-weight:400; }
 .conf-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:20px; }
 .conf-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:32px; cursor:pointer; transition:all var(--transition); position:relative; box-shadow:var(--shadow); overflow:hidden; }
-.conf-card::before { content:''; position:absolute; top:0; left:-100%; width:100%; height:100%; background:linear-gradient(90deg,transparent,rgba(255,255,255,.04),transparent); transition:left .6s ease; pointer-events:none; }
-.conf-card:hover::before { left:100%; }
-.conf-card:hover { transform:translateY(-2px); box-shadow:var(--shadow-lg); border-color:#444; }
+.conf-card::before { content:''; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,var(--accent-glow),transparent); opacity:0; transition:opacity .3s; }
+.conf-card:hover::before { opacity:1; }
+.conf-card:hover { transform:translateY(-2px); box-shadow:var(--shadow-lg); border-color:var(--border-hover); }
 .conf-card h3 { font-size:1.2rem; font-weight:600; color:var(--text); margin-bottom:4px; }
 .conf-card .meta { color:var(--text2); font-size:.88rem; margin-bottom:20px; }
 .tags { display:flex; gap:6px; flex-wrap:wrap; }
@@ -194,7 +200,7 @@ input::placeholder, textarea::placeholder { color:var(--text2); }
 .back-btn:hover { color:var(--accent); }
 
 /* Animated gradient header */
-.detail-header { background:linear-gradient(135deg,#3b6cf5,#5b8af7,#4b78f6,#3b6cf5); background-size:300% 300%; animation:gradientShift 8s ease infinite; border-radius:var(--radius); padding:40px 44px; margin-bottom:32px; color:#fff; }
+.detail-header { background:linear-gradient(135deg,#1a2744,#253a6a,#1e3060,#1a2744); background-size:300% 300%; animation:gradientShift 8s ease infinite; border-radius:var(--radius); padding:40px 44px; margin-bottom:32px; color:#fff; border:1px solid rgba(91,138,247,.15); }
 @keyframes gradientShift { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
 .detail-header h2 { font-size:1.8rem; font-weight:700; color:#fff; letter-spacing:-.01em; }
 .detail-header .info { color:rgba(255,255,255,.75); margin-top:10px; display:flex; gap:28px; flex-wrap:wrap; font-size:.9rem; font-weight:400; }
@@ -213,7 +219,7 @@ input::placeholder, textarea::placeholder { color:var(--text2); }
 .search-wrap { flex:1; min-width:240px; position:relative; }
 .search-wrap svg { position:absolute; left:14px; top:50%; transform:translateY(-50%); pointer-events:none; color:var(--text2); }
 .search-box { width:100%; padding:10px 36px 10px 40px; background:var(--surface); border:1px solid var(--border); border-radius:24px; color:var(--text); font-size:.9rem; outline:none; transition:all var(--transition); }
-.search-box::placeholder { color:#a0aec0; }
+.search-box::placeholder { color:var(--text3); }
 .search-box:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(59,108,245,.12); }
 .search-clear { position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:none; color:var(--text2); cursor:pointer; font-size:1rem; width:22px; height:22px; border-radius:50%; display:none; align-items:center; justify-content:center; transition:all .15s; }
 .search-clear:hover { background:var(--surface2); color:var(--text); }
@@ -247,7 +253,7 @@ input::placeholder, textarea::placeholder { color:var(--text2); }
 /* Card with hover animations, progress bar, checkbox */
 .speaker-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:28px 28px 8px; transition:all var(--transition); box-shadow:var(--shadow); border-left:3px solid transparent; position:relative; overflow:hidden; opacity:0; animation:cardEnter .3s ease forwards; }
 .speaker-card:hover { box-shadow:var(--shadow-lg); transform:scale(1.01); border-left-color:var(--accent); }
-.speaker-card.selected { border-color:var(--accent); background:rgba(59,108,245,.02); box-shadow:0 0 0 1px var(--accent), var(--shadow-md); }
+.speaker-card.selected { border-color:var(--accent); background:rgba(91,138,247,.04); box-shadow:0 0 0 1px var(--accent), var(--shadow-md); }
 .speaker-card.selected:hover { box-shadow:0 0 0 1px var(--accent), var(--shadow-lg); }
 
 @keyframes cardEnter { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
@@ -414,7 +420,7 @@ input::placeholder, textarea::placeholder { color:var(--text2); }
     <h1>Conference Intelligence Hub</h1>
   </div>
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
-    <p class="subtitle" style="margin:0;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;color:var(--text2);">RISA Labs GTM Conference Tracker — March to June 2026</p>
+    <p class="subtitle" style="margin:0;">RISA Labs GTM Conference Tracker — March to June 2026</p>
     <div style="display:flex;gap:8px;">
       <button onclick="showGlobalTasks()" style="padding:8px 16px;background:var(--accent);color:white;border:none;border-radius:8px;font-size:.85rem;font-weight:500;cursor:pointer;">📋 All Tasks</button>
       <button onclick="showSettings()" style="padding:8px 12px;background:var(--surface);border:1px solid var(--border);border-radius:8px;font-size:.85rem;cursor:pointer;" title="Settings">⚙️</button>
@@ -679,13 +685,13 @@ function updateLog(name, field, key, value) {
 
 // ============ STAGE COLORS & PROGRESS ============
 const STAGE_STYLES = {
-  'Not Started':       { bg:'#f0f3f8', color:'#6b7b94' },
-  'First Email Sent':  { bg:'#edf2ff', color:'#3b6cf5' },
-  'First Follow-up':   { bg:'#fef9ec', color:'#d4920a' },
-  'Second Follow-up':  { bg:'#fff5eb', color:'#ea580c' },
-  'Third Follow-up':   { bg:'#fef2f2', color:'#e03e3e' },
-  'Meeting Booked':    { bg:'#ecfdf5', color:'#16a34a' },
-  'Not Interested':    { bg:'#f0f3f8', color:'#9ca3af' }
+  'Not Started':       { bg:'rgba(140,145,164,.1)', color:'#8891a4' },
+  'First Email Sent':  { bg:'rgba(91,138,247,.12)', color:'#5b8af7' },
+  'First Follow-up':   { bg:'rgba(251,191,36,.1)', color:'#fbbf24' },
+  'Second Follow-up':  { bg:'rgba(251,146,60,.1)', color:'#fb923c' },
+  'Third Follow-up':   { bg:'rgba(248,113,113,.1)', color:'#f87171' },
+  'Meeting Booked':    { bg:'rgba(52,211,153,.1)', color:'#34d399' },
+  'Not Interested':    { bg:'rgba(107,114,128,.1)', color:'#6b7280' }
 };
 const STAGES = Object.keys(STAGE_STYLES);
 
@@ -1135,10 +1141,10 @@ function getConfTasks(confId) {
 }
 
 const TASK_STATUSES = {
-  'not_started': { label: 'Not Started', bg: '#f0f3f8', color: '#6b7b94' },
-  'in_progress': { label: 'In Progress', bg: '#edf2ff', color: '#3b6cf5' },
-  'completed':   { label: 'Done', bg: '#ecfdf5', color: '#16a34a' },
-  'blocked':     { label: 'Blocked', bg: '#fef2f2', color: '#e03e3e' }
+  'not_started': { label: 'Not Started', bg: 'rgba(140,145,164,.1)', color: '#8891a4' },
+  'in_progress': { label: 'In Progress', bg: 'rgba(91,138,247,.12)', color: '#5b8af7' },
+  'completed':   { label: 'Done', bg: 'rgba(52,211,153,.1)', color: '#34d399' },
+  'blocked':     { label: 'Blocked', bg: 'rgba(248,113,113,.1)', color: '#f87171' }
 };
 
 const TASK_CATEGORIES = {
@@ -1730,7 +1736,7 @@ function renderTimeline() {
     { name: 'June', start: 92, days: 30 }
   ];
 
-  const gtmColors = { must_attend: '#16a34a', must_sponsor: '#3b6cf5', outreach_only: '#d4920a' };
+  const gtmColors = { must_attend: '#34d399', must_sponsor: '#5b8af7', outreach_only: '#fbbf24' };
 
   let html = '<div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;overflow-x:auto;">';
   html += '<div style="font-size:.82rem;font-weight:600;margin-bottom:12px;">📅 Conference Timeline</div>';

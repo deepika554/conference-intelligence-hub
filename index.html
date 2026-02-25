@@ -1534,9 +1534,16 @@ function showSettings() {
       </div>
       <p style="font-size:.75rem;color:var(--text2);margin-top:8px;">Status: ${backendUrl ? 'Connected' : 'Local only'}</p>
     </div>
+
+    <div style="margin-bottom:20px;padding:16px;background:var(--surface2);border-radius:var(--radius);border:1px solid var(--border);">
+      <h3 style="font-size:.9rem;margin-bottom:8px;">Gmail Labels</h3>
+      <p style="font-size:.82rem;color:var(--text2);margin-bottom:8px;">Create CIH/ labels in Gmail for each active conference. Then label your sponsorship threads to see them in the dashboard.</p>
+      <button onclick="createGmailLabels(this)" style="padding:6px 16px;background:var(--accent);color:white;border:none;border-radius:8px;font-size:.82rem;cursor:pointer;">Create All Labels</button>
+      <p id="labelStatus" style="font-size:.75rem;color:var(--text2);margin-top:8px;"></p>
+    </div>
     
     <div style="margin-bottom:20px;">
-      <h3 style="font-size:.9rem;margin-bottom:8px;">🔑 Signed in as</h3>
+      <h3 style="font-size:.9rem;margin-bottom:8px;">Signed in as</h3>
       <p style="font-size:.85rem;">${localStorage.getItem('cih_user') || 'Unknown'}</p>
       <button onclick="logout()" style="margin-top:4px;padding:4px 12px;border:1px solid var(--border);border-radius:6px;font-size:.78rem;cursor:pointer;background:var(--surface);">Sign Out</button>
     </div>
@@ -1993,6 +2000,7 @@ function showConfOverview(confId) {
           <h3>Conversations</h3>
           <button onclick="loadConfThreads('${confId}')" style="padding:4px 12px;border:1px solid var(--border);border-radius:6px;font-size:.75rem;background:var(--surface2);color:var(--text2);cursor:pointer;">Refresh</button>
         </div>
+        <p style="font-size:.72rem;color:var(--text3);margin-bottom:8px;">Label threads in Gmail as <strong style="color:var(--text2);">CIH/${esc(conf.name)}</strong> to see them here.</p>
         <div id="confThreads-${confId}" style="font-size:.85rem;color:var(--text2);">
           ${backendUrl ? '<span style="font-size:.8rem;">Loading threads...</span>' : '<span style="font-size:.8rem;">Connect shared backend in Settings to see email threads.</span>'}
         </div>
@@ -2076,14 +2084,7 @@ async function loadConfThreads(confId) {
   const conf = CONFERENCES.find(c => c.id === confId);
   if (!conf) return;
   
-  // Build search query — conference name + sponsorship keywords only
-  const name = conf.name
-    .replace(/\(.*?\)/g, '')
-    .replace(/Annual|Conference|Global|National|Summit|Forum|Congress/gi, '')
-    .trim();
-  
-  const searchTerms = name.split(/\s+/).filter(w => w.length > 2).join(' ');
-  const query = `(${searchTerms}) (sponsorship OR sponsor OR booth OR exhibit OR prospectus OR partnership OR registration OR attendee OR demo OR meeting) newer_than:120d`;
+  const labelName = 'CIH/' + conf.name;
   
   // Check cache
   const cacheKey = confId;
@@ -2093,18 +2094,16 @@ async function loadConfThreads(confId) {
   }
   
   try {
-    const data = await backendGet('getThreads', null);
-    // We need to pass query as param — use custom fetch
     const email = localStorage.getItem('cih_user') || '';
-    const url = backendUrl + '?action=getThreads&email=' + encodeURIComponent(email) + '&q=' + encodeURIComponent(query) + '&max=15';
+    const url = backendUrl + '?action=getThreadsByLabel&email=' + encodeURIComponent(email) + '&label=' + encodeURIComponent(labelName) + '&max=15';
     const r = await fetch(url);
     const j = await r.json();
     
-    if (j.data) {
+    if (j.data && j.data.length > 0) {
       threadCache[cacheKey] = { data: j.data, ts: Date.now() };
       renderThreads(container, j.data, confId);
     } else {
-      container.innerHTML = '<span style="font-size:.8rem;color:var(--text3);">No threads found.</span>';
+      container.innerHTML = '<span style="font-size:.8rem;color:var(--text3);">No labeled threads yet. Label sponsorship emails in Gmail as <strong>CIH/' + esc(conf.name) + '</strong></span>';
     }
   } catch(e) {
     container.innerHTML = '<span style="font-size:.8rem;color:var(--text3);">Could not load threads.</span>';
@@ -2222,6 +2221,39 @@ async function toggleThreadDetail(threadId) {
   } catch(e) {
     el.innerHTML = '<span style="font-size:.78rem;color:var(--text3);">Failed to load thread.</span>';
   }
+}
+
+async function createGmailLabels(btn) {
+  if (!backendUrl) { alert('Connect shared backend first in Settings.'); return; }
+  btn.textContent = 'Creating...';
+  btn.disabled = true;
+  
+  const activeConfs = CONFERENCES.filter(c => {
+    const cd = CONF_DATA[c.id] || {};
+    return cd.gtmTag === 'must_sponsor' || cd.gtmTag === 'must_attend' || cd.gtmTag === 'outreach_only';
+  }).map(c => c.name);
+  
+  try {
+    const email = localStorage.getItem('cih_user') || '';
+    const r = await fetch(backendUrl + '?email=' + encodeURIComponent(email), {
+      method: 'POST',
+      headers: {'Content-Type': 'text/plain'},
+      body: JSON.stringify({ action: 'createLabels', conferences: activeConfs })
+    });
+    const j = await r.json();
+    
+    if (j.data) {
+      const msg = [];
+      if (j.data.created?.length) msg.push(j.data.created.length + ' labels created');
+      if (j.data.existing?.length) msg.push(j.data.existing.length + ' already existed');
+      document.getElementById('labelStatus').textContent = msg.join(', ') || 'Done';
+    }
+  } catch(e) {
+    document.getElementById('labelStatus').textContent = 'Failed: ' + e.message;
+  }
+  
+  btn.textContent = 'Create All Labels';
+  btn.disabled = false;
 }
 
 function showDetail() {

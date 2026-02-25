@@ -51,6 +51,9 @@ function handleRequest(e) {
       case 'getThreads':       return jsonResponse({ data: searchThreads(params.q || body.q || '', parseInt(params.max) || 10) });
       case 'getThread':        return jsonResponse({ data: getThreadDetail(params.threadId || body.threadId) });
       case 'getAllConfThreads': return jsonResponse({ data: getAllConferenceThreads() });
+      case 'getThreadsByLabel': return jsonResponse({ data: getThreadsByLabel(params.label || body.label, parseInt(params.max) || 15) });
+      case 'createLabels':     return jsonResponse({ data: createConferenceLabels(body.conferences || []) });
+      case 'listLabels':       return jsonResponse({ data: listCIHLabels() });
       
       default: return jsonResponse({ status: 'ok', message: 'CIH Backend running.' });
     }
@@ -326,4 +329,62 @@ function getAllConferenceThreads() {
   }
   
   return results;
+}
+
+// ============ GMAIL LABEL-BASED THREADS ============
+
+/**
+ * Get threads by Gmail label name (e.g. "CIH/NCCN")
+ */
+function getThreadsByLabel(labelName, maxResults) {
+  if (!labelName) return [];
+  maxResults = Math.min(maxResults || 15, 30);
+  
+  const label = GmailApp.getUserLabelByName(labelName);
+  if (!label) return [];
+  
+  const threads = label.getThreads(0, maxResults);
+  return threads.map(summarizeThread);
+}
+
+/**
+ * Create CIH/ labels for a list of conference names
+ * Input: ["HIMSS Global Conference", "NCCN Annual Conference", ...]
+ * Creates: CIH/HIMSS, CIH/NCCN, etc.
+ */
+function createConferenceLabels(conferences) {
+  if (!conferences || !conferences.length) return { error: 'No conferences provided' };
+  
+  const created = [];
+  const existing = [];
+  
+  conferences.forEach(conf => {
+    // Create a short label name from conference name
+    const shortName = conf.name || conf;
+    const labelName = 'CIH/' + shortName;
+    
+    const existingLabel = GmailApp.getUserLabelByName(labelName);
+    if (existingLabel) {
+      existing.push(labelName);
+    } else {
+      GmailApp.createLabel(labelName);
+      created.push(labelName);
+    }
+  });
+  
+  return { created, existing };
+}
+
+/**
+ * List all CIH/ labels in the user's Gmail
+ */
+function listCIHLabels() {
+  const allLabels = GmailApp.getUserLabels();
+  return allLabels
+    .filter(l => l.getName().startsWith('CIH/'))
+    .map(l => ({
+      name: l.getName(),
+      shortName: l.getName().replace('CIH/', ''),
+      threadCount: l.getThreads(0, 1).length > 0 ? 'has threads' : 'empty'
+    }));
 }

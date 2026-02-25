@@ -8,7 +8,7 @@ const CONFERENCES = [
     "dateEnd": "",
     "location": "Phoenix, AZ",
     "website": "https://www.mgma.com/conferences/financial-conference/",
-    "agenda": "",
+    "agenda": "https://www.mgma.com/conferences/financial-conference",
     "exhibitorProspectus": "https://www.mgma.com/getkaiasset/7607de04-92ce-4b1e-b52b-c4343f1c5ff2/2026%20Spring%20Prospectus.pdf",
     "tags": [
       "Revenue Cycle Finance",
@@ -41,7 +41,7 @@ const CONFERENCES = [
     "dateEnd": "",
     "location": "Phoenix, AZ",
     "website": "https://sso2026.eventscribe.net/",
-    "agenda": "",
+    "agenda": "https://sso2026.eventscribe.net/",
     "exhibitorProspectus": "",
     "tags": [
       "Oncology Clinical",
@@ -69,8 +69,8 @@ const CONFERENCES = [
     "dateEnd": "",
     "location": "Boston, MA",
     "website": "https://www.hbma.org/",
-    "agenda": "",
-    "exhibitorProspectus": "",
+    "agenda": "https://www.hbma.org",
+    "exhibitorProspectus": "https://www.hbma.org",
     "tags": [
       "Revenue Cycle Innovation",
       "Exec Heavy"
@@ -226,8 +226,8 @@ const CONFERENCES = [
     "dateEnd": "",
     "location": "San Jose, CA",
     "website": "https://www.nvidia.com/gtc/",
-    "agenda": "",
-    "exhibitorProspectus": "",
+    "agenda": "https://www.nvidia.com/gtc/session-catalog/",
+    "exhibitorProspectus": "https://www.nvidia.com/gtc/exhibits/",
     "tags": [
       "Health Tech/AI",
       "Exec Heavy"
@@ -258,8 +258,8 @@ const CONFERENCES = [
     "dateEnd": "",
     "location": "Philadelphia, PA",
     "website": "https://informaconnect.com/pap/",
-    "agenda": "",
-    "exhibitorProspectus": "",
+    "agenda": "https://informaconnect.com/patient-assistance-access-programs-pap/agenda/",
+    "exhibitorProspectus": "https://informaconnect.com/patient-assistance-access-programs-pap/download-brochure/",
     "tags": [
       "Patient Access",
       "Exec Heavy"
@@ -319,8 +319,8 @@ const CONFERENCES = [
     "dateEnd": "",
     "location": "New York, NY",
     "website": "https://web.cvent.com/event/d055b5aa-54fb-4569-9c2b-3c927931e425/summary",
-    "agenda": "",
-    "exhibitorProspectus": "",
+    "agenda": "https://www.hfma.org/hfma-metro-ny-institute/",
+    "exhibitorProspectus": "https://www.hfma.org/hfma-metro-ny-institute/",
     "tags": [
       "Regional Revenue Cycle",
       "Exec Heavy",
@@ -352,7 +352,7 @@ const CONFERENCES = [
     "dateEnd": "",
     "location": "Washington, DC",
     "website": "https://www.ahip.org/conferences/mmdc26/",
-    "agenda": "",
+    "agenda": "https://www.ahip.org/conferences/mmdc26/",
     "exhibitorProspectus": "https://drive.google.com/file/d/1Gs6OYNm6SPqzJmPUhA3w_ydz9piItltx/view",
     "tags": [
       "Payer Focus",
@@ -384,7 +384,7 @@ const CONFERENCES = [
     "dateEnd": "",
     "location": "Orlando, FL",
     "website": "https://national.risehealth.org/",
-    "agenda": "",
+    "agenda": "https://national.risehealth.org/",
     "exhibitorProspectus": "https://risaml.slack.com/files/U0A38PKD20G/F0ADSEFF1J9/2026_rise_national_sponsorship_prospectus__1_.pdf",
     "tags": [
       "Payer/Provider VBC",
@@ -416,7 +416,7 @@ const CONFERENCES = [
     "dateEnd": "",
     "location": "New Orleans, LA",
     "website": "https://www.hoparx.org/",
-    "agenda": "",
+    "agenda": "https://www.hoparx.org/annual-conference",
     "exhibitorProspectus": "https://drive.google.com/file/d/1uaAMeVJR2DsM1-fx24z3TDWRcc9b29FI/view",
     "tags": [
       "Pharmacy Oncology",
@@ -482,7 +482,7 @@ const CONFERENCES = [
     "dateEnd": "",
     "location": "Los Angeles, CA",
     "website": "https://aphameeting.pharmacist.com/",
-    "agenda": "",
+    "agenda": "https://aphameeting.pharmacist.com/",
     "exhibitorProspectus": "",
     "tags": [
       "Pharmacy Focus",
@@ -704,7 +704,7 @@ const CONFERENCES = [
     "dateEnd": "",
     "location": "Chicago, IL",
     "website": "https://conferences.beckershospitalreview.com/payer-roundtable-spring-2026",
-    "agenda": "",
+    "agenda": "https://conferences.beckershospitalreview.com/payer-roundtable-spring-2026",
     "exhibitorProspectus": "https://www.beckershospitalreview.com/wp-content/uploads/sites/9/2026/02/SpringPayerIssuesRoundtableProspectus2026.pdf",
     "tags": [
       "Payer Focus",
@@ -770,7 +770,7 @@ const CONFERENCES = [
     "dateEnd": "",
     "location": "Chicago, IL",
     "website": "https://conferences.beckershospitalreview.com/Spring-CPO-2026",
-    "agenda": "",
+    "agenda": "https://conferences.beckershospitalreview.com/spring-cpo-2026/agenda",
     "exhibitorProspectus": "https://www.beckershospitalreview.com/wp-content/uploads/sites/9/2026/02/SpringChiefPharmacyOfficerSummitProspectus2026.pdf",
     "tags": [
       "Pharmacy Leadership",
@@ -868,7 +868,7 @@ const CONFERENCES = [
     "dateEnd": "",
     "location": "Baltimore, MD",
     "website": "https://www.naacos.com/",
-    "agenda": "",
+    "agenda": "https://www.naacos.com/",
     "exhibitorProspectus": "",
     "tags": [
       "ACO Focus",
@@ -965,8 +965,8 @@ const CONFERENCES = [
     "dateEnd": "",
     "location": "Las Vegas, NV",
     "website": "https://asembia.com/events/axs26-summit/",
-    "agenda": "",
-    "exhibitorProspectus": "",
+    "agenda": "https://asembia.com/events/axs26-summit/",
+    "exhibitorProspectus": "https://asembia.com/events/axs26-summit/",
     "tags": [
       "GPO-Led Specialty Pharmacy",
       "Exec Heavy",
@@ -1030,8 +1030,8 @@ const CONFERENCES = [
     "dateEnd": "",
     "location": "Various",
     "website": "https://www.epic.com/",
-    "agenda": "",
-    "exhibitorProspectus": "",
+    "agenda": "https://www.epic.com/xgm",
+    "exhibitorProspectus": "https://www.epic.com/xgm",
     "tags": [
       "Health IT Platform",
       "Exec Heavy",
@@ -1128,7 +1128,7 @@ const CONFERENCES = [
     "dateEnd": "",
     "location": "Chicago, IL",
     "website": "https://www.naham.org/",
-    "agenda": "",
+    "agenda": "https://www.naham.org/page/AnnualConference",
     "exhibitorProspectus": "https://www.naham.org/page/NAHAMSponsorshipOpportunities",
     "tags": [
       "Patient Access",
@@ -1226,7 +1226,7 @@ const CONFERENCES = [
     "location": "",
     "website": "https://hmacademy.com/ind-convening/oncology-forum",
     "agenda": "https://hmacademy.com/ind-convening/oncology-forum",
-    "exhibitorProspectus": "",
+    "exhibitorProspectus": "https://hmacademy.com/ind-convening/oncology-forum",
     "tags": [],
     "gtmTag": "must_attend",
     "size": "",
@@ -1475,8 +1475,8 @@ const CONFERENCES = [
     "dateEnd": "",
     "location": "TBD",
     "website": "https://www.reutersevents.com/",
-    "agenda": "",
-    "exhibitorProspectus": "",
+    "agenda": "https://www.reutersevents.com/events/digital-health",
+    "exhibitorProspectus": "https://www.reutersevents.com/events/digital-health",
     "tags": [
       "Health Tech Digital",
       "Exec Heavy",
@@ -1509,7 +1509,7 @@ const CONFERENCES = [
     "location": "Chicago, IL",
     "website": "https://www.asco.org/",
     "agenda": "https://meetings.asco.org/am/schedule-at-a-glance",
-    "exhibitorProspectus": "",
+    "exhibitorProspectus": "https://meetings.asco.org/am/exhibitors",
     "tags": [
       "Oncology Clinical",
       "Clinician Heavy",
@@ -1666,7 +1666,7 @@ const CONFERENCES = [
     "dateEnd": "",
     "location": "TBD",
     "website": "https://www.hbma.org/",
-    "agenda": "",
+    "agenda": "https://www.hbma.org",
     "exhibitorProspectus": "https://www.hbma.org/uploads/content_files/files/2026_Executive_Retreat_Prospectus%284%29.pdf",
     "tags": [
       "Revenue Cycle Executive",
@@ -1699,7 +1699,7 @@ const CONFERENCES = [
     "dateEnd": "",
     "location": "TBD",
     "website": "https://www.ahip.org/",
-    "agenda": "",
+    "agenda": "https://www.ahip.org/",
     "exhibitorProspectus": "",
     "tags": [
       "Payer Focus",
@@ -1795,8 +1795,8 @@ const CONFERENCES = [
     "dateEnd": "",
     "location": "TBD",
     "website": "https://www.aaci-cancer.org/",
-    "agenda": "",
-    "exhibitorProspectus": "",
+    "agenda": "https://www.aaci-cancer.org/",
+    "exhibitorProspectus": "https://www.aaci-cancer.org/",
     "tags": [
       "Cancer Research",
       "Exec Heavy"

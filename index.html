@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Conference Intelligence Hub</title>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600;700&family=Lato:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>html{color-scheme:dark;}</style>
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <script src="data.js"></script>
@@ -30,8 +29,7 @@
   --transition: .25s cubic-bezier(.4,0,.2,1);
 }
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background:var(--bg); color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
-h1, h2, h3, h4, h5, h6 { font-family: 'IBM Plex Serif', Georgia, serif; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Segoe UI', sans-serif; background:var(--bg); color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; }
 a { color:var(--accent); text-decoration:none; }
 a:hover { text-decoration:underline; }
 
@@ -400,7 +398,7 @@ input::placeholder, textarea::placeholder { color:var(--text2); }
 <div id="auth-gate" style="display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--bg);flex-direction:column;gap:24px;">
   <div style="text-align:center;max-width:400px;padding:48px;background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow-lg);border:1px solid var(--border);">
     <img src="https://cdn.prod.website-files.com/693b027583a249ec8b24b0ed/6962da999924a1df06a76ebf_RISA%20trans%20log.png" alt="RISA Labs" style="height:40px;margin-bottom:16px;">
-    <h1 style="font-size:1.3rem;font-weight:700;margin-bottom:8px;font-family:'IBM Plex Serif',Georgia,serif;">Conference Intelligence Hub</h1>
+    <h1 style="font-size:1.5rem;font-weight:700;margin-bottom:8px;">Conference Intelligence Hub</h1>
     <p style="color:var(--text2);font-size:.85rem;margin-bottom:32px;">Sign in with your <strong style="color:var(--text);">@risalabs.ai</strong> account to continue</p>
     <div id="g-signin-btn" style="display:inline-block;"></div>
     <p id="auth-error" style="color:var(--p1);font-size:.85rem;margin-top:16px;display:none;"></p>
@@ -413,7 +411,7 @@ input::placeholder, textarea::placeholder { color:var(--text2); }
 <div id="landing">
   <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px;">
     <img src="https://cdn.prod.website-files.com/693b027583a249ec8b24b0ed/6962da999924a1df06a76ebf_RISA%20trans%20log.png" alt="RISA Labs" style="height:32px;">
-    <h1 style="font-family:'IBM Plex Serif',Georgia,serif;font-size:1.4rem;">Conference Intelligence Hub</h1>
+    <h1>Conference Intelligence Hub</h1>
   </div>
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
     <p class="subtitle" style="margin:0;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;color:var(--text2);">RISA Labs GTM Conference Tracker — March to June 2026</p>

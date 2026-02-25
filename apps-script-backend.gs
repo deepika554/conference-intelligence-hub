@@ -53,6 +53,7 @@ function handleRequest(e) {
       case 'getAllConfThreads': return jsonResponse({ data: getAllConferenceThreads() });
       case 'getThreadsByLabel': return jsonResponse({ data: getThreadsByLabel(params.label || body.label, parseInt(params.max) || 15) });
       case 'createLabels':     return jsonResponse({ data: createConferenceLabels(body.conferences || []) });
+      case 'createLabelsGet':  return jsonResponse({ data: createConferenceLabels((params.conferences || '').split('|||').filter(Boolean)) });
       case 'listLabels':       return jsonResponse({ data: listCIHLabels() });
       
       default: return jsonResponse({ status: 'ok', message: 'CIH Backend running.' });
@@ -358,17 +359,20 @@ function createConferenceLabels(conferences) {
   const created = [];
   const existing = [];
   
+  // Get all existing labels once (much faster)
+  const existingLabels = GmailApp.getUserLabels().map(l => l.getName());
+  
   conferences.forEach(conf => {
-    // Create a short label name from conference name
-    const shortName = conf.name || conf;
+    const shortName = typeof conf === 'string' ? conf : (conf.name || String(conf));
     const labelName = 'CIH/' + shortName;
     
-    const existingLabel = GmailApp.getUserLabelByName(labelName);
-    if (existingLabel) {
+    if (existingLabels.includes(labelName)) {
       existing.push(labelName);
     } else {
-      GmailApp.createLabel(labelName);
-      created.push(labelName);
+      try {
+        GmailApp.createLabel(labelName);
+        created.push(labelName);
+      } catch(e) { /* skip */ }
     }
   });
   

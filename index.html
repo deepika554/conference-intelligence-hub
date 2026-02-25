@@ -2235,11 +2235,10 @@ async function createGmailLabels(btn) {
   
   try {
     const email = localStorage.getItem('cih_user') || '';
-    const r = await fetch(backendUrl + '?email=' + encodeURIComponent(email), {
-      method: 'POST',
-      headers: {'Content-Type': 'text/plain'},
-      body: JSON.stringify({ action: 'createLabels', conferences: activeConfs })
-    });
+    // Use GET with params to avoid POST redirect issues with Apps Script
+    const confsParam = encodeURIComponent(activeConfs.join('|||'));
+    const url = backendUrl + '?action=createLabelsGet&email=' + encodeURIComponent(email) + '&conferences=' + confsParam;
+    const r = await fetch(url);
     const j = await r.json();
     
     if (j.data) {
@@ -2247,6 +2246,8 @@ async function createGmailLabels(btn) {
       if (j.data.created?.length) msg.push(j.data.created.length + ' labels created');
       if (j.data.existing?.length) msg.push(j.data.existing.length + ' already existed');
       document.getElementById('labelStatus').textContent = msg.join(', ') || 'Done';
+    } else if (j.error) {
+      document.getElementById('labelStatus').textContent = 'Error: ' + j.error;
     }
   } catch(e) {
     document.getElementById('labelStatus').textContent = 'Failed: ' + e.message;

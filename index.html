@@ -36,6 +36,52 @@ a:hover { text-decoration:underline; }
 ::-webkit-scrollbar-track { background:transparent; }
 ::-webkit-scrollbar-thumb { background:#d0d5dd; border-radius:3px; }
 
+/* Task Management */
+.task-board { margin-top:12px; }
+.task-item { display:flex; align-items:flex-start; gap:10px; padding:12px; background:var(--surface); border:1px solid var(--border); border-radius:10px; margin-bottom:8px; transition:all .2s; }
+.task-item:hover { box-shadow:var(--shadow-md); }
+.task-item.completed { opacity:.6; }
+.task-item.completed .task-title { text-decoration:line-through; }
+.task-checkbox { width:18px; height:18px; border-radius:50%; border:2px solid var(--border); cursor:pointer; flex-shrink:0; margin-top:2px; display:flex; align-items:center; justify-content:center; transition:all .2s; }
+.task-checkbox:hover { border-color:var(--accent); }
+.task-checkbox.checked { background:var(--green); border-color:var(--green); color:white; font-size:10px; }
+.task-body { flex:1; min-width:0; }
+.task-title { font-size:.88rem; font-weight:500; color:var(--text); }
+.task-meta { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-top:6px; }
+.task-assignee { padding:2px 8px; border-radius:12px; font-size:.7rem; font-weight:500; background:var(--accent-light); color:var(--accent); }
+.task-due { font-size:.72rem; color:var(--text2); }
+.task-due.overdue { color:var(--p1); font-weight:600; }
+.task-due.soon { color:var(--p2); font-weight:500; }
+.task-priority { padding:2px 6px; border-radius:4px; font-size:.65rem; font-weight:700; text-transform:uppercase; letter-spacing:.04em; }
+.task-priority.high { background:#fef2f2; color:var(--p1); }
+.task-priority.medium { background:#fef9ec; color:var(--p2); }
+.task-priority.low { background:var(--surface2); color:var(--text2); }
+.task-status { padding:2px 8px; border-radius:10px; font-size:.68rem; font-weight:600; }
+.task-conf-tag { padding:2px 6px; border-radius:6px; font-size:.65rem; background:var(--surface2); color:var(--text2); cursor:pointer; }
+.task-conf-tag:hover { color:var(--accent); }
+.task-actions { display:flex; gap:4px; opacity:0; transition:opacity .2s; }
+.task-item:hover .task-actions { opacity:1; }
+.task-actions button { background:none; border:none; cursor:pointer; font-size:.8rem; padding:2px 4px; border-radius:4px; color:var(--text2); }
+.task-actions button:hover { background:var(--surface2); color:var(--p1); }
+.add-task-row { display:flex; gap:8px; margin-top:12px; flex-wrap:wrap; }
+.add-task-row input, .add-task-row select { padding:8px 12px; border:1px solid var(--border); border-radius:8px; font-size:.85rem; }
+.add-task-row input[type="text"] { flex:1; min-width:200px; }
+.add-task-btn { padding:8px 16px; background:var(--accent); color:white; border:none; border-radius:8px; font-size:.85rem; font-weight:500; cursor:pointer; }
+.add-task-btn:hover { background:#2d5ae0; }
+.task-filters { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:12px; }
+.task-filter-btn { padding:4px 10px; border-radius:16px; border:1px solid var(--border); background:var(--surface); font-size:.78rem; cursor:pointer; transition:all .2s; }
+.task-filter-btn.active { background:var(--accent); color:white; border-color:var(--accent); }
+.task-stats { display:flex; gap:16px; margin-bottom:16px; }
+.task-stat { font-size:.82rem; color:var(--text2); }
+.task-stat strong { color:var(--text); }
+
+/* Task Templates */
+.template-btn { padding:6px 12px; border:1px dashed var(--border); border-radius:8px; font-size:.78rem; cursor:pointer; color:var(--text2); background:var(--surface); transition:all .2s; }
+.template-btn:hover { border-color:var(--accent); color:var(--accent); }
+
+/* Global Tasks Tab */
+#globalTasks { max-width:1000px; margin:0 auto; padding:40px 32px; }
+
 /* Collapsible Sections */
 .collapsible-section { margin-bottom:4px; }
 .collapse-header { display:flex; justify-content:space-between; align-items:center; padding:8px 12px; background:var(--surface); border:1px solid var(--border); border-radius:8px; cursor:pointer; font-size:.85rem; font-weight:600; color:var(--text); user-select:none; transition:all .2s; margin-bottom:8px; }
@@ -359,7 +405,10 @@ a:hover { text-decoration:underline; }
 
 <div id="landing">
   <h1>Conference Intelligence Hub</h1>
-  <p class="subtitle">RISA Labs GTM Conference Tracker — March to June 2026</p>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+    <p class="subtitle" style="margin:0;">RISA Labs GTM Conference Tracker — March to June 2026</p>
+    <button onclick="showGlobalTasks()" style="padding:8px 16px;background:var(--accent);color:white;border:none;border-radius:8px;font-size:.85rem;font-weight:500;cursor:pointer;">📋 All Tasks</button>
+  </div>
   
   <!-- Executive Summary Bar -->
   <div id="execSummary" style="display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:24px;"></div>
@@ -425,6 +474,17 @@ a:hover { text-decoration:underline; }
   </div>
 
   <div class="conf-grid" id="confGrid"></div>
+</div>
+
+<!-- Global Tasks View -->
+<div id="globalTasks" style="display:none;">
+  <button class="back-btn" onclick="showLanding()">&#8592; Back to Conferences</button>
+  <h1 style="margin-bottom:4px;">📋 Task Board</h1>
+  <p style="color:var(--text2);font-size:.9rem;margin-bottom:24px;">All tasks across conferences — assign, track, and ship.</p>
+  <div id="globalTaskStats" class="task-stats"></div>
+  <div id="globalTaskFilters" class="task-filters"></div>
+  <div id="globalTaskList"></div>
+  <div id="globalAddTask" style="margin-top:20px;"></div>
 </div>
 
 <!-- Conference Overview Page -->
@@ -831,6 +891,392 @@ function priorityTooltip(s) {
   return `${s.priority} — ${labels[s.priority] || ''} (Score: ${s.score})`;
 }
 
+// ============ TASK MANAGEMENT ============
+const TASKS_KEY = 'cih_tasks';
+let allTasks = [];
+function loadTasks() { try { allTasks = JSON.parse(localStorage.getItem(TASKS_KEY)) || []; } catch(e) { allTasks = []; } }
+function saveTasks() { localStorage.setItem(TASKS_KEY, JSON.stringify(allTasks)); }
+loadTasks();
+
+let taskIdCounter = allTasks.length ? Math.max(...allTasks.map(t=>t.id||0)) + 1 : 1;
+
+function addTask(confId, title, assignee, priority, dueDate, category) {
+  allTasks.push({
+    id: taskIdCounter++,
+    confId: confId || '',
+    title: title,
+    assignee: assignee || '',
+    priority: priority || 'medium',
+    dueDate: dueDate || '',
+    category: category || 'general',
+    status: 'not_started',
+    createdAt: new Date().toISOString(),
+    completedAt: '',
+    notes: ''
+  });
+  saveTasks();
+}
+
+function updateTask(id, field, value) {
+  const t = allTasks.find(t => t.id === id);
+  if (!t) return;
+  t[field] = value;
+  if (field === 'status' && value === 'completed') t.completedAt = new Date().toISOString();
+  if (field === 'status' && value !== 'completed') t.completedAt = '';
+  saveTasks();
+}
+
+function deleteTask(id) {
+  allTasks = allTasks.filter(t => t.id !== id);
+  saveTasks();
+}
+
+function getConfTasks(confId) {
+  return allTasks.filter(t => t.confId === confId);
+}
+
+const TASK_STATUSES = {
+  'not_started': { label: 'Not Started', bg: '#f0f3f8', color: '#6b7b94' },
+  'in_progress': { label: 'In Progress', bg: '#edf2ff', color: '#3b6cf5' },
+  'completed':   { label: 'Done', bg: '#ecfdf5', color: '#16a34a' },
+  'blocked':     { label: 'Blocked', bg: '#fef2f2', color: '#e03e3e' }
+};
+
+const TASK_CATEGORIES = {
+  'speaker_research':  { label: '🔍 Speaker Research', color: '#7c3aed' },
+  'outreach':          { label: '📧 Outreach', color: '#3b6cf5' },
+  'sponsorship':       { label: '💎 Sponsorship', color: '#d4920a' },
+  'registration':      { label: '🎟️ Registration', color: '#16a34a' },
+  'travel':            { label: '✈️ Travel & Logistics', color: '#0891b2' },
+  'content':           { label: '📝 Content Prep', color: '#e03e3e' },
+  'booth':             { label: '🏗️ Booth Setup', color: '#ea580c' },
+  'follow_up':         { label: '📬 Follow-up', color: '#7c3aed' },
+  'general':           { label: '📌 General', color: '#6b7b94' }
+};
+
+// Task templates for different conference types
+const TASK_TEMPLATES = {
+  must_sponsor: [
+    { title: 'Review sponsorship prospectus & select package', category: 'sponsorship', priority: 'high' },
+    { title: 'Sign sponsorship contract', category: 'sponsorship', priority: 'high' },
+    { title: 'Submit booth design & materials', category: 'booth', priority: 'medium' },
+    { title: 'Research & prioritize speaker list', category: 'speaker_research', priority: 'high' },
+    { title: 'Draft outreach emails for target speakers', category: 'outreach', priority: 'high' },
+    { title: 'Register team members', category: 'registration', priority: 'medium' },
+    { title: 'Book travel & hotel', category: 'travel', priority: 'medium' },
+    { title: 'Prepare demo & pitch deck', category: 'content', priority: 'high' },
+    { title: 'Set up meeting schedule with prospects', category: 'outreach', priority: 'high' },
+    { title: 'Post-conference follow-up emails', category: 'follow_up', priority: 'high' }
+  ],
+  must_attend: [
+    { title: 'Review agenda & identify key sessions', category: 'speaker_research', priority: 'high' },
+    { title: 'Research & prioritize speaker list', category: 'speaker_research', priority: 'high' },
+    { title: 'Draft outreach emails for target contacts', category: 'outreach', priority: 'high' },
+    { title: 'Register team members', category: 'registration', priority: 'medium' },
+    { title: 'Book travel & hotel', category: 'travel', priority: 'medium' },
+    { title: 'Prepare talking points & collateral', category: 'content', priority: 'medium' },
+    { title: 'Schedule meetings with prospects', category: 'outreach', priority: 'high' },
+    { title: 'Post-conference follow-up & notes', category: 'follow_up', priority: 'high' }
+  ],
+  outreach_only: [
+    { title: 'Research attendee/speaker list', category: 'speaker_research', priority: 'medium' },
+    { title: 'Draft personalized outreach emails', category: 'outreach', priority: 'high' },
+    { title: 'Send outreach batch', category: 'outreach', priority: 'high' },
+    { title: 'Track responses & schedule calls', category: 'follow_up', priority: 'medium' }
+  ]
+};
+
+function applyTaskTemplate(confId, gtmTag) {
+  const templates = TASK_TEMPLATES[gtmTag];
+  if (!templates) return;
+  const existing = getConfTasks(confId).map(t => t.title);
+  let added = 0;
+  templates.forEach(tmpl => {
+    if (!existing.includes(tmpl.title)) {
+      addTask(confId, tmpl.title, '', tmpl.priority, '', tmpl.category);
+      added++;
+    }
+  });
+  return added;
+}
+
+function renderTaskBoard(confId, containerId) {
+  const tasks = getConfTasks(confId);
+  const conf = CONFERENCES.find(c => c.id === confId);
+  const cd = getConfData(confId);
+  const el = document.getElementById(containerId);
+  if (!el) return;
+
+  const statusOrder = ['not_started', 'in_progress', 'blocked', 'completed'];
+  const sorted = [...tasks].sort((a,b) => {
+    const si = statusOrder.indexOf(a.status) - statusOrder.indexOf(b.status);
+    if (si !== 0) return si;
+    const pi = { high: 0, medium: 1, low: 2 };
+    return (pi[a.priority]||1) - (pi[b.priority]||1);
+  });
+
+  const done = tasks.filter(t => t.status === 'completed').length;
+  const total = tasks.length;
+  const pct = total ? Math.round(done/total*100) : 0;
+
+  let html = '';
+  
+  // Progress bar
+  if (total > 0) {
+    html += `<div style="margin-bottom:16px;">
+      <div style="display:flex;justify-content:space-between;font-size:.82rem;margin-bottom:4px;">
+        <span>${done}/${total} tasks done</span><span style="color:var(--text2);">${pct}%</span>
+      </div>
+      <div style="height:6px;background:var(--surface2);border-radius:3px;overflow:hidden;">
+        <div style="height:100%;width:${pct}%;background:var(--green);border-radius:3px;transition:width .3s;"></div>
+      </div>
+    </div>`;
+  }
+
+  // Task list
+  sorted.forEach(t => {
+    const st = TASK_STATUSES[t.status] || TASK_STATUSES.not_started;
+    const cat = TASK_CATEGORIES[t.category] || TASK_CATEGORIES.general;
+    const isComplete = t.status === 'completed';
+    const dueDays = t.dueDate ? Math.ceil((new Date(t.dueDate) - TODAY) / 86400000) : null;
+    const dueClass = dueDays !== null ? (dueDays < 0 ? 'overdue' : dueDays <= 3 ? 'soon' : '') : '';
+
+    html += `<div class="task-item ${isComplete ? 'completed' : ''}">
+      <div class="task-checkbox ${isComplete ? 'checked' : ''}" onclick="event.stopPropagation();toggleTaskStatus('${confId}','${containerId}',${t.id})">
+        ${isComplete ? '✓' : ''}
+      </div>
+      <div class="task-body">
+        <div class="task-title">${esc(t.title)}</div>
+        <div class="task-meta">
+          <span class="task-status" style="background:${st.bg};color:${st.color};">
+            <select onchange="updateTask(${t.id},'status',this.value);renderTaskBoard('${confId}','${containerId}')" style="background:transparent;border:none;color:inherit;font-size:.68rem;font-weight:600;cursor:pointer;appearance:none;padding:0;">
+              ${Object.entries(TASK_STATUSES).map(([k,v]) => `<option value="${k}" ${t.status===k?'selected':''}>${v.label}</option>`).join('')}
+            </select>
+          </span>
+          <span class="task-priority ${t.priority}">${t.priority}</span>
+          <span style="font-size:.68rem;color:${cat.color};">${cat.label}</span>
+          ${t.assignee ? `<span class="task-assignee">👤 ${esc(t.assignee)}</span>` : ''}
+          ${t.dueDate ? `<span class="task-due ${dueClass}">📅 ${t.dueDate}${dueDays!==null && dueDays < 0 ? ' (overdue!)' : dueDays!==null && dueDays <= 3 ? ' (soon)' : ''}</span>` : ''}
+          ${t.completedAt ? `<span style="font-size:.68rem;color:var(--green);">✅ ${new Date(t.completedAt).toLocaleDateString()}</span>` : ''}
+        </div>
+      </div>
+      <div class="task-actions">
+        <button onclick="event.stopPropagation();deleteTask(${t.id});renderTaskBoard('${confId}','${containerId}')" title="Delete">🗑</button>
+      </div>
+    </div>`;
+  });
+
+  // Add task form
+  html += `<div class="add-task-row">
+    <input type="text" id="newTask-${confId}" placeholder="Add a task..." onkeydown="if(event.key==='Enter')addTaskFromForm('${confId}','${containerId}')">
+    <select id="newTaskAssignee-${confId}"><option value="">Assignee</option>${getKnownTeamMembers().map(m=>`<option value="${esc(m)}">${esc(m)}</option>`).join('')}<option value="_new">+ New person</option></select>
+    <select id="newTaskPriority-${confId}"><option value="high">🔴 High</option><option value="medium" selected>🟡 Medium</option><option value="low">⚪ Low</option></select>
+    <select id="newTaskCategory-${confId}">${Object.entries(TASK_CATEGORIES).map(([k,v])=>`<option value="${k}">${v.label}</option>`).join('')}</select>
+    <input type="date" id="newTaskDue-${confId}" style="width:140px;">
+    <button class="add-task-btn" onclick="addTaskFromForm('${confId}','${containerId}')">Add Task</button>
+  </div>`;
+
+  // Template button
+  const gtm = cd.gtmTag;
+  if (TASK_TEMPLATES[gtm] && tasks.length === 0) {
+    html += `<div style="margin-top:16px;text-align:center;">
+      <button class="template-btn" onclick="applyTaskTemplate('${confId}','${gtm}');renderTaskBoard('${confId}','${containerId}')">
+        ✨ Auto-generate ${TASK_TEMPLATES[gtm].length} tasks from ${GTM_TAGS[gtm]?.label || gtm} template
+      </button>
+    </div>`;
+  } else if (TASK_TEMPLATES[gtm] && tasks.length > 0) {
+    html += `<div style="margin-top:8px;"><button class="template-btn" onclick="var n=applyTaskTemplate('${confId}','${gtm}');renderTaskBoard('${confId}','${containerId}');if(n)alert(n+' new tasks added');">+ Add missing template tasks</button></div>`;
+  }
+
+  el.innerHTML = html;
+}
+
+function toggleTaskStatus(confId, containerId, taskId) {
+  const t = allTasks.find(t => t.id === taskId);
+  if (!t) return;
+  t.status = t.status === 'completed' ? 'not_started' : 'completed';
+  t.completedAt = t.status === 'completed' ? new Date().toISOString() : '';
+  saveTasks();
+  renderTaskBoard(confId, containerId);
+}
+
+function addTaskFromForm(confId, containerId) {
+  const title = document.getElementById('newTask-' + confId)?.value?.trim();
+  if (!title) return;
+  let assignee = document.getElementById('newTaskAssignee-' + confId)?.value || '';
+  if (assignee === '_new') {
+    assignee = prompt('Enter team member name:') || '';
+  }
+  const priority = document.getElementById('newTaskPriority-' + confId)?.value || 'medium';
+  const category = document.getElementById('newTaskCategory-' + confId)?.value || 'general';
+  const dueDate = document.getElementById('newTaskDue-' + confId)?.value || '';
+  addTask(confId, title, assignee, priority, dueDate, category);
+  document.getElementById('newTask-' + confId).value = '';
+  renderTaskBoard(confId, containerId);
+}
+
+function getKnownTeamMembers() {
+  const members = new Set();
+  allTasks.forEach(t => { if (t.assignee) members.add(t.assignee); });
+  Object.values(teamData).forEach(arr => arr.forEach(m => members.add(m)));
+  return [...members].sort();
+}
+
+// ============ GLOBAL TASKS VIEW ============
+let globalTaskFilter = 'all';
+let globalTaskAssigneeFilter = 'all';
+let globalTaskConfFilter = 'all';
+
+function showGlobalTasks() {
+  document.getElementById('landing').style.display = 'none';
+  document.getElementById('conf-overview').style.display = 'none';
+  document.getElementById('detail').style.display = 'none';
+  document.getElementById('globalTasks').style.display = 'block';
+  renderGlobalTasks();
+}
+
+function renderGlobalTasks() {
+  // Stats
+  const total = allTasks.length;
+  const done = allTasks.filter(t => t.status === 'completed').length;
+  const inProgress = allTasks.filter(t => t.status === 'in_progress').length;
+  const blocked = allTasks.filter(t => t.status === 'blocked').length;
+  const overdue = allTasks.filter(t => t.dueDate && t.status !== 'completed' && new Date(t.dueDate) < TODAY).length;
+
+  document.getElementById('globalTaskStats').innerHTML = `
+    <span class="task-stat"><strong>${total}</strong> total</span>
+    <span class="task-stat"><strong style="color:var(--green)">${done}</strong> done</span>
+    <span class="task-stat"><strong style="color:var(--accent)">${inProgress}</strong> in progress</span>
+    <span class="task-stat"><strong style="color:var(--p1)">${blocked}</strong> blocked</span>
+    ${overdue ? `<span class="task-stat"><strong style="color:var(--p1)">${overdue}</strong> overdue</span>` : ''}
+  `;
+
+  // Filters
+  const assignees = [...new Set(allTasks.map(t=>t.assignee).filter(Boolean))].sort();
+  const confIds = [...new Set(allTasks.map(t=>t.confId).filter(Boolean))];
+
+  document.getElementById('globalTaskFilters').innerHTML = `
+    <button class="task-filter-btn ${globalTaskFilter==='all'?'active':''}" onclick="globalTaskFilter='all';renderGlobalTasks()">All</button>
+    <button class="task-filter-btn ${globalTaskFilter==='not_started'?'active':''}" onclick="globalTaskFilter='not_started';renderGlobalTasks()">Not Started</button>
+    <button class="task-filter-btn ${globalTaskFilter==='in_progress'?'active':''}" onclick="globalTaskFilter='in_progress';renderGlobalTasks()">In Progress</button>
+    <button class="task-filter-btn ${globalTaskFilter==='blocked'?'active':''}" onclick="globalTaskFilter='blocked';renderGlobalTasks()">Blocked</button>
+    <button class="task-filter-btn ${globalTaskFilter==='completed'?'active':''}" onclick="globalTaskFilter='completed';renderGlobalTasks()">Done</button>
+    <select onchange="globalTaskAssigneeFilter=this.value;renderGlobalTasks()" style="padding:4px 8px;border:1px solid var(--border);border-radius:8px;font-size:.78rem;">
+      <option value="all">All People</option>
+      ${assignees.map(a => `<option value="${esc(a)}" ${globalTaskAssigneeFilter===a?'selected':''}>${esc(a)}</option>`).join('')}
+      <option value="_unassigned">Unassigned</option>
+    </select>
+    <select onchange="globalTaskConfFilter=this.value;renderGlobalTasks()" style="padding:4px 8px;border:1px solid var(--border);border-radius:8px;font-size:.78rem;">
+      <option value="all">All Conferences</option>
+      ${confIds.map(id => { const c = CONFERENCES.find(x=>x.id===id); return c ? `<option value="${id}" ${globalTaskConfFilter===id?'selected':''}>${esc(c.name)}</option>` : ''; }).join('')}
+    </select>
+  `;
+
+  // Filter tasks
+  let filtered = allTasks.filter(t => {
+    if (globalTaskFilter !== 'all' && t.status !== globalTaskFilter) return false;
+    if (globalTaskAssigneeFilter === '_unassigned' && t.assignee) return false;
+    if (globalTaskAssigneeFilter !== 'all' && globalTaskAssigneeFilter !== '_unassigned' && t.assignee !== globalTaskAssigneeFilter) return false;
+    if (globalTaskConfFilter !== 'all' && t.confId !== globalTaskConfFilter) return false;
+    return true;
+  });
+
+  // Sort: blocked first, then by priority, then by due date
+  const statusOrder = { blocked: 0, in_progress: 1, not_started: 2, completed: 3 };
+  const prioOrder = { high: 0, medium: 1, low: 2 };
+  filtered.sort((a,b) => {
+    const s = (statusOrder[a.status]||2) - (statusOrder[b.status]||2);
+    if (s !== 0) return s;
+    const p = (prioOrder[a.priority]||1) - (prioOrder[b.priority]||1);
+    if (p !== 0) return p;
+    if (a.dueDate && b.dueDate) return a.dueDate.localeCompare(b.dueDate);
+    if (a.dueDate) return -1;
+    if (b.dueDate) return 1;
+    return 0;
+  });
+
+  let html = '';
+  filtered.forEach(t => {
+    const st = TASK_STATUSES[t.status] || TASK_STATUSES.not_started;
+    const cat = TASK_CATEGORIES[t.category] || TASK_CATEGORIES.general;
+    const conf = CONFERENCES.find(c => c.id === t.confId);
+    const isComplete = t.status === 'completed';
+    const dueDays = t.dueDate ? Math.ceil((new Date(t.dueDate) - TODAY) / 86400000) : null;
+    const dueClass = dueDays !== null ? (dueDays < 0 ? 'overdue' : dueDays <= 3 ? 'soon' : '') : '';
+
+    html += `<div class="task-item ${isComplete ? 'completed' : ''}">
+      <div class="task-checkbox ${isComplete ? 'checked' : ''}" onclick="toggleGlobalTask(${t.id})">
+        ${isComplete ? '✓' : ''}
+      </div>
+      <div class="task-body">
+        <div class="task-title">${esc(t.title)}</div>
+        <div class="task-meta">
+          ${conf ? `<span class="task-conf-tag" onclick="event.stopPropagation();showConfOverview('${t.confId}')">${esc(conf.name)}</span>` : ''}
+          <span class="task-status" style="background:${st.bg};color:${st.color};">
+            <select onchange="updateTask(${t.id},'status',this.value);renderGlobalTasks()" style="background:transparent;border:none;color:inherit;font-size:.68rem;font-weight:600;cursor:pointer;appearance:none;padding:0;">
+              ${Object.entries(TASK_STATUSES).map(([k,v]) => `<option value="${k}" ${t.status===k?'selected':''}>${v.label}</option>`).join('')}
+            </select>
+          </span>
+          <span class="task-priority ${t.priority}">${t.priority}</span>
+          <span style="font-size:.68rem;color:${cat.color};">${cat.label}</span>
+          ${t.assignee ? `<span class="task-assignee">👤 ${esc(t.assignee)}</span>` : '<span style="font-size:.68rem;color:var(--p2);">unassigned</span>'}
+          ${t.dueDate ? `<span class="task-due ${dueClass}">📅 ${t.dueDate}${dueDays!==null && dueDays < 0 ? ' (overdue!)' : ''}</span>` : ''}
+        </div>
+      </div>
+      <div class="task-actions">
+        <button onclick="event.stopPropagation();deleteTask(${t.id});renderGlobalTasks()" title="Delete">🗑</button>
+      </div>
+    </div>`;
+  });
+
+  if (!filtered.length) {
+    html = '<div style="text-align:center;padding:40px;color:var(--text2);">No tasks yet. Add tasks from conference pages or create one below.</div>';
+  }
+
+  document.getElementById('globalTaskList').innerHTML = html;
+
+  // Add task form
+  document.getElementById('globalAddTask').innerHTML = `
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;">
+      <h3 style="font-size:.9rem;margin-bottom:12px;">➕ Add New Task</h3>
+      <div class="add-task-row">
+        <input type="text" id="globalNewTask" placeholder="Task description...">
+        <select id="globalNewConf"><option value="">Conference (optional)</option>${CONFERENCES.filter(c=>getConfData(c.id).gtmTag!=='skip').map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select>
+      </div>
+      <div class="add-task-row" style="margin-top:8px;">
+        <select id="globalNewAssignee"><option value="">Assignee</option>${getKnownTeamMembers().map(m=>`<option value="${esc(m)}">${esc(m)}</option>`).join('')}<option value="_new">+ New person</option></select>
+        <select id="globalNewPriority"><option value="high">🔴 High</option><option value="medium" selected>🟡 Medium</option><option value="low">⚪ Low</option></select>
+        <select id="globalNewCategory">${Object.entries(TASK_CATEGORIES).map(([k,v])=>`<option value="${k}">${v.label}</option>`).join('')}</select>
+        <input type="date" id="globalNewDue" style="width:140px;">
+        <button class="add-task-btn" onclick="addGlobalTask()">Add Task</button>
+      </div>
+    </div>
+  `;
+}
+
+function toggleGlobalTask(id) {
+  const t = allTasks.find(t => t.id === id);
+  if (!t) return;
+  t.status = t.status === 'completed' ? 'not_started' : 'completed';
+  t.completedAt = t.status === 'completed' ? new Date().toISOString() : '';
+  saveTasks();
+  renderGlobalTasks();
+}
+
+function addGlobalTask() {
+  const title = document.getElementById('globalNewTask')?.value?.trim();
+  if (!title) return;
+  const confId = document.getElementById('globalNewConf')?.value || '';
+  let assignee = document.getElementById('globalNewAssignee')?.value || '';
+  if (assignee === '_new') assignee = prompt('Enter team member name:') || '';
+  const priority = document.getElementById('globalNewPriority')?.value || 'medium';
+  const category = document.getElementById('globalNewCategory')?.value || 'general';
+  const dueDate = document.getElementById('globalNewDue')?.value || '';
+  addTask(confId, title, assignee, priority, dueDate, category);
+  document.getElementById('globalNewTask').value = '';
+  renderGlobalTasks();
+}
+
 // ============ COLLAPSIBLE SECTIONS ============
 const COLLAPSE_KEY = 'cih_collapsed';
 let collapsedSections = {};
@@ -1124,6 +1570,7 @@ function renderLanding() {
         ${totalBudget > 0 ? `<span class="budget-badge">$${(totalBudget/1000).toFixed(0)}K</span>` : ''}
       </div>
       ${cd.outreach?.status && cd.outreach.status !== 'not_started' ? `<div class="outreach-status-badge" style="background:${os.bg};color:${os.color}">Outreach: ${os.label}</div>` : ''}
+      ${(() => { const ct = getConfTasks(conf.id); const done = ct.filter(t=>t.status==='completed').length; return ct.length ? `<div style="font-size:.72rem;color:var(--text2);margin-top:6px;">📋 ${done}/${ct.length} tasks done</div>` : ''; })()}
       ${team.length ? `<div class="team-tags">${team.map(t => `<span class="team-tag">👤 ${t}</span>`).join('')}</div>` : ''}
       <div class="tags" style="margin-top:10px;">
         ${conf.tags.slice(0,4).map(t => `<span class="tag">${t}</span>`).join('')}
@@ -1145,6 +1592,9 @@ function showConfOverview(confId) {
   document.getElementById('landing').style.display = 'none';
   document.getElementById('detail').style.display = 'none';
   document.getElementById('conf-overview').style.display = 'block';
+
+  // Will render task board after innerHTML is set
+  const renderTasksAfter = () => setTimeout(() => renderTaskBoard(confId, 'taskBoard-' + confId), 0);
 
   document.getElementById('confOverviewContent').innerHTML = `
     <div class="conf-hero">
@@ -1267,6 +1717,12 @@ function showConfOverview(confId) {
         </div>
       </div>` : ''}
 
+      <!-- Task Board -->
+      <div class="conf-detail-card" style="margin-bottom:20px;">
+        <h3>📋 Tasks & Action Items</h3>
+        <div id="taskBoard-${confId}" class="task-board"></div>
+      </div>
+
       <!-- Team Assignment -->
       <div class="conf-detail-card" style="margin-bottom:20px;">
         <h3>👥 Team Assignment</h3>
@@ -1320,6 +1776,7 @@ function showConfOverview(confId) {
       </div>
     </div>
   `;
+  renderTasksAfter();
 }
 
 function showDetail() {
@@ -1334,6 +1791,7 @@ function showLanding() {
   document.getElementById('landing').style.display = 'block';
   document.getElementById('conf-overview').style.display = 'none';
   document.getElementById('detail').style.display = 'none';
+  document.getElementById('globalTasks').style.display = 'none';
   renderLanding();
   clearSelection();
 }

@@ -1332,10 +1332,11 @@ function handleCredentialResponse(response) {
   const domain = email.split('@')[1];
   
   if (domain === ALLOWED_DOMAIN) {
-    document.getElementById('auth-gate').style.display = 'none';
-    document.getElementById('app-root').style.display = 'block';
-    sessionStorage.setItem('cih_user', email);
-    initApp();
+    // Store credential + expiry in localStorage so refresh doesn't require re-login
+    localStorage.setItem('cih_user', email);
+    localStorage.setItem('cih_credential', response.credential);
+    localStorage.setItem('cih_auth_ts', Date.now().toString());
+    showApp();
   } else {
     const err = document.getElementById('auth-error');
     err.textContent = 'Access denied. Only @risalabs.ai accounts are allowed.';
@@ -1344,7 +1345,37 @@ function handleCredentialResponse(response) {
   }
 }
 
-// Check if already authed this session
+function showApp() {
+  document.getElementById('auth-gate').style.display = 'none';
+  document.getElementById('app-root').style.display = 'block';
+  initApp();
+}
+
+function isAuthValid() {
+  const credential = localStorage.getItem('cih_credential');
+  const user = localStorage.getItem('cih_user');
+  if (!credential || !user) return false;
+  try {
+    const payload = decodeJwt(credential);
+    // Check token hasn't expired (Google tokens last ~1hr, but we'll be generous: 24hrs)
+    // Also check domain is still correct
+    const domain = (payload.email || '').split('@')[1];
+    if (domain !== ALLOWED_DOMAIN) return false;
+    const authTs = parseInt(localStorage.getItem('cih_auth_ts') || '0');
+    // Allow 24 hour session
+    if (Date.now() - authTs > 24 * 60 * 60 * 1000) return false;
+    return true;
+  } catch(e) { return false; }
+}
+
+function logout() {
+  localStorage.removeItem('cih_user');
+  localStorage.removeItem('cih_credential');
+  localStorage.removeItem('cih_auth_ts');
+  google.accounts.id.disableAutoSelect();
+  location.reload();
+}
+
 window.addEventListener('load', function() {
   google.accounts.id.initialize({
     client_id: CLIENT_ID,
@@ -1352,10 +1383,20 @@ window.addEventListener('load', function() {
     auto_select: true,
     hosted_domain: ALLOWED_DOMAIN
   });
-  google.accounts.id.renderButton(
-    document.getElementById('g-signin-btn'),
-    { theme: 'outline', size: 'large', text: 'signin_with', shape: 'pill' }
-  );
+
+  // If already authenticated, skip sign-in
+  if (isAuthValid()) {
+    showApp();
+  } else {
+    // Clear stale auth
+    localStorage.removeItem('cih_user');
+    localStorage.removeItem('cih_credential');
+    localStorage.removeItem('cih_auth_ts');
+    google.accounts.id.renderButton(
+      document.getElementById('g-signin-btn'),
+      { theme: 'outline', size: 'large', text: 'signin_with', shape: 'pill' }
+    );
+  }
 });
 </script>
 

@@ -73,7 +73,8 @@ const SCHEMAS = {
   Tasks:  ['id','confId','title','assignee','priority','dueDate','category','status','completedAt','createdBy','createdAt','updatedAt'],
   Notes:  ['id','confId','note','createdBy','createdAt'],
   Team:   ['id','name','email','role','color','addedBy','addedAt'],
-  Budget: ['id','confId','type','description','amount','createdBy','createdAt']
+  Budget: ['id','confId','type','description','amount','createdBy','createdAt'],
+  Pipeline: ['confId','stage','contactName','contactEmail','contactTitle','risaOwner','nextAction','nextActionOwner','deadline','packageName','packageCost','notes','updatedBy','updatedAt']
 };
 
 function ensureSheets() {

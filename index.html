@@ -1994,6 +1994,12 @@ function showConfOverview(confId) {
         </div>
       </div>` : ''}
 
+      <!-- Sponsorship Pipeline -->
+      <div class="conf-detail-card" style="margin-bottom:20px;">
+        <h3 style="margin-bottom:16px;">Sponsorship Pipeline</h3>
+        <div id="sponsorshipPipeline-${confId}"></div>
+      </div>
+
       <!-- Email Conversations -->
       <div class="conf-detail-card" style="margin-bottom:20px;">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
@@ -2066,6 +2072,8 @@ function showConfOverview(confId) {
     </div>
   `;
   renderTasksAfter();
+  // Render sponsorship pipeline
+  setTimeout(() => renderPipeline(confId), 0);
   // Load email threads for this conference
   if (backendUrl) setTimeout(() => loadConfThreads(confId), 100);
 }
@@ -2221,6 +2229,149 @@ async function toggleThreadDetail(threadId) {
   } catch(e) {
     el.innerHTML = '<span style="font-size:.78rem;color:var(--text3);">Failed to load thread.</span>';
   }
+}
+
+// ============ SPONSORSHIP PIPELINE ============
+
+const PIPELINE_STAGES = [
+  { key: 'researching',       label: 'Researching',        color: '#8891a4' },
+  { key: 'prospectus_req',    label: 'Prospectus Requested', color: '#5b8af7' },
+  { key: 'prospectus_rcvd',   label: 'Prospectus Received', color: '#38bdf8' },
+  { key: 'package_selected',  label: 'Package Selected',   color: '#a78bfa' },
+  { key: 'proposal_sent',     label: 'Proposal Sent',      color: '#fbbf24' },
+  { key: 'negotiating',       label: 'Negotiating',        color: '#fb923c' },
+  { key: 'contract_sent',     label: 'Contract Sent',      color: '#f87171' },
+  { key: 'contract_signed',   label: 'Contract Signed',    color: '#34d399' },
+  { key: 'payment_done',      label: 'Payment Done',       color: '#22c55e' },
+  { key: 'confirmed',         label: 'Confirmed',          color: '#10b981' }
+];
+
+const PIPELINE_KEY = 'cih_pipeline';
+let pipelineData = {};
+function loadPipeline() { try { pipelineData = JSON.parse(localStorage.getItem(PIPELINE_KEY)) || {}; } catch(e) { pipelineData = {}; } }
+function savePipeline() { localStorage.setItem(PIPELINE_KEY, JSON.stringify(pipelineData)); }
+loadPipeline();
+
+function getPipeline(confId) {
+  if (!pipelineData[confId]) {
+    pipelineData[confId] = {
+      stage: 'researching',
+      contactName: '',
+      contactEmail: '',
+      contactTitle: '',
+      risaOwner: '',
+      nextAction: '',
+      nextActionOwner: 'us',
+      deadline: '',
+      packageName: '',
+      packageCost: '',
+      notes: ''
+    };
+  }
+  return pipelineData[confId];
+}
+
+function setPipelineField(confId, field, value) {
+  getPipeline(confId);
+  pipelineData[confId][field] = value;
+  savePipeline();
+  // Sync to backend
+  if (backendUrl) {
+    backendPost('updatePipeline', { confId, ...pipelineData[confId] }).catch(()=>{});
+  }
+}
+
+function renderPipeline(confId) {
+  const el = document.getElementById('sponsorshipPipeline-' + confId);
+  if (!el) return;
+  const p = getPipeline(confId);
+  const currentIdx = PIPELINE_STAGES.findIndex(s => s.key === p.stage);
+  const current = PIPELINE_STAGES[currentIdx] || PIPELINE_STAGES[0];
+  const detailId = 'pipelineDetail-' + confId;
+
+  let html = '';
+
+  // Stage progress bar
+  html += '<div style="display:flex;gap:2px;margin-bottom:12px;">';
+  PIPELINE_STAGES.forEach((s, i) => {
+    const isActive = i <= currentIdx;
+    html += `<div onclick="setPipelineField('${confId}','stage','${s.key}');renderPipeline('${confId}')" 
+      style="flex:1;height:5px;border-radius:3px;cursor:pointer;transition:all .2s;background:${isActive ? current.color : 'var(--surface2)'};"
+      title="${s.label}"></div>`;
+  });
+  html += '</div>';
+
+  // Summary row — stage + next action + who's blocking
+  html += `<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+    <select onchange="setPipelineField('${confId}','stage',this.value);renderPipeline('${confId}')" 
+      style="padding:4px 8px;border:1px solid var(--border);border-radius:6px;font-size:.78rem;background:${current.color}15;color:${current.color};font-weight:600;border-color:${current.color}30;">
+      ${PIPELINE_STAGES.map(s => `<option value="${s.key}" ${p.stage === s.key ? 'selected' : ''}>${s.label}</option>`).join('')}
+    </select>
+    ${p.nextAction ? `<span style="font-size:.82rem;color:var(--text);">${esc(p.nextAction)}</span>` : '<span style="font-size:.82rem;color:var(--text3);font-style:italic;">No next action set</span>'}
+    ${p.nextActionOwner ? `<span style="font-size:.7rem;padding:2px 8px;border-radius:10px;background:${p.nextActionOwner === 'us' ? 'rgba(248,113,113,.1)' : 'rgba(52,211,153,.1)'};color:${p.nextActionOwner === 'us' ? '#f87171' : '#34d399'};">${p.nextActionOwner === 'us' ? 'On us' : 'On them'}</span>` : ''}
+    ${p.risaOwner ? `<span style="font-size:.7rem;color:var(--text3);">${esc(p.risaOwner)}</span>` : ''}
+    <span onclick="document.getElementById('${detailId}').style.display=document.getElementById('${detailId}').style.display==='none'?'block':'none'" 
+      style="margin-left:auto;font-size:.75rem;color:var(--accent);cursor:pointer;">Edit</span>
+  </div>`;
+
+  // Collapsible detail form
+  html += `<div id="${detailId}" style="display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
+      <div>
+        <label style="font-size:.72rem;color:var(--text3);">Next Action</label>
+        <input type="text" value="${esc(p.nextAction)}" placeholder="What needs to happen next?"
+          onblur="setPipelineField('${confId}','nextAction',this.value);renderPipeline('${confId}')"
+          style="width:100%;padding:5px 8px;border:1px solid var(--border);border-radius:6px;font-size:.82rem;background:var(--surface);color:var(--text);">
+      </div>
+      <div style="display:flex;gap:6px;">
+        <div style="flex:1;">
+          <label style="font-size:.72rem;color:var(--text3);">Ball in</label>
+          <select onchange="setPipelineField('${confId}','nextActionOwner',this.value);renderPipeline('${confId}')"
+            style="width:100%;padding:5px 8px;border:1px solid var(--border);border-radius:6px;font-size:.82rem;background:var(--surface);color:var(--text);">
+            <option value="us" ${p.nextActionOwner === 'us' ? 'selected' : ''}>On us</option>
+            <option value="them" ${p.nextActionOwner === 'them' ? 'selected' : ''}>On them</option>
+          </select>
+        </div>
+        <div style="flex:1;">
+          <label style="font-size:.72rem;color:var(--text3);">Deadline</label>
+          <input type="date" value="${p.deadline || ''}" onchange="setPipelineField('${confId}','deadline',this.value)"
+            style="width:100%;padding:5px 8px;border:1px solid var(--border);border-radius:6px;font-size:.82rem;background:var(--surface);color:var(--text);">
+        </div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
+      <div>
+        <label style="font-size:.72rem;color:var(--text3);">Their Contact</label>
+        <input type="text" value="${esc(p.contactName)}" placeholder="Name"
+          onblur="setPipelineField('${confId}','contactName',this.value)"
+          style="width:100%;padding:5px 8px;border:1px solid var(--border);border-radius:6px;font-size:.82rem;background:var(--surface);color:var(--text);margin-bottom:4px;">
+        <input type="text" value="${esc(p.contactEmail)}" placeholder="Email"
+          onblur="setPipelineField('${confId}','contactEmail',this.value)"
+          style="width:100%;padding:5px 8px;border:1px solid var(--border);border-radius:6px;font-size:.82rem;background:var(--surface);color:var(--text);">
+      </div>
+      <div>
+        <label style="font-size:.72rem;color:var(--text3);">RISA Owner</label>
+        <select onchange="setPipelineField('${confId}','risaOwner',this.value);renderPipeline('${confId}')"
+          style="width:100%;padding:5px 8px;border:1px solid var(--border);border-radius:6px;font-size:.82rem;background:var(--surface);color:var(--text);margin-bottom:4px;">
+          <option value="">Select...</option>
+          ${TEAM.map(m => `<option value="${esc(m.name)}" ${p.risaOwner === m.name ? 'selected' : ''}>${esc(m.name)}</option>`).join('')}
+        </select>
+        <label style="font-size:.72rem;color:var(--text3);">Package / Cost</label>
+        <div style="display:flex;gap:4px;">
+          <input type="text" value="${esc(p.packageName)}" placeholder="Package"
+            onblur="setPipelineField('${confId}','packageName',this.value)"
+            style="flex:1;padding:5px 8px;border:1px solid var(--border);border-radius:6px;font-size:.82rem;background:var(--surface);color:var(--text);">
+          <input type="text" value="${esc(p.packageCost)}" placeholder="$"
+            onblur="setPipelineField('${confId}','packageCost',this.value)"
+            style="width:70px;padding:5px 8px;border:1px solid var(--border);border-radius:6px;font-size:.82rem;background:var(--surface);color:var(--text);">
+        </div>
+      </div>
+    </div>
+    <textarea placeholder="Notes..." onblur="setPipelineField('${confId}','notes',this.value)"
+      style="width:100%;min-height:40px;padding:6px 8px;border:1px solid var(--border);border-radius:6px;font-size:.82rem;font-family:inherit;resize:vertical;background:var(--surface);color:var(--text);">${esc(p.notes)}</textarea>
+  </div>`;
+
+  el.innerHTML = html;
 }
 
 async function createGmailLabels(btn) {

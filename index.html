@@ -2018,41 +2018,7 @@ function showConfOverview(confId) {
         <div id="taskBoard-${confId}" class="task-board"></div>
       </div>
 
-      <!-- Team Assignment -->
-      <div class="conf-detail-card" style="margin-bottom:20px;">
-        <h3>Team</h3>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;" id="teamTags-${confId}">
-          ${getTeam(confId).map(t => `<span class="team-tag" onclick="event.stopPropagation();removeTeamMember('${confId}','${t}');showConfOverview('${confId}')">${esc(t)} ✕</span>`).join('')}
-          <input type="text" placeholder="+ Add team member" style="padding:4px 8px;border:1px dashed var(--border);border-radius:8px;font-size:.8rem;width:140px;"
-            onkeydown="if(event.key==='Enter'&&this.value.trim()){addTeamMember('${confId}',this.value.trim());showConfOverview('${confId}');}">
-        </div>
-      </div>
-
-      <!-- Budget Tracker -->
-      <div class="conf-detail-card" style="margin-bottom:20px;">
-        <h3>Budget</h3>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
-          <div>
-            <label style="font-size:.78rem;color:var(--text2);">Sponsorship ($)</label>
-            <input type="number" value="${getBudget(confId).sponsorship||''}" placeholder="0"
-              onchange="setBudgetField('${confId}','sponsorship',this.value)"
-              style="width:100%;padding:6px 8px;border:1px solid var(--border);border-radius:6px;font-size:.85rem;">
-          </div>
-          <div>
-            <label style="font-size:.78rem;color:var(--text2);">Travel ($)</label>
-            <input type="number" value="${getBudget(confId).travel||''}" placeholder="0"
-              onchange="setBudgetField('${confId}','travel',this.value)"
-              style="width:100%;padding:6px 8px;border:1px solid var(--border);border-radius:6px;font-size:.85rem;">
-          </div>
-          <div>
-            <label style="font-size:.78rem;color:var(--text2);">Misc ($)</label>
-            <input type="number" value="${getBudget(confId).misc||''}" placeholder="0"
-              onchange="setBudgetField('${confId}','misc',this.value)"
-              style="width:100%;padding:6px 8px;border:1px solid var(--border);border-radius:6px;font-size:.85rem;">
-          </div>
-        </div>
-        ${(() => { const b = getBudget(confId); const t = (b.sponsorship||0)+(b.travel||0)+(b.misc||0); return t > 0 ? '<div style="margin-top:10px;font-size:.9rem;font-weight:600;color:var(--green);">Total: $' + t.toLocaleString() + '</div>' : ''; })()}
-      </div>
+      <!-- Team & Budget removed — covered by Sponsorship Pipeline -->
 
       <!-- Notes -->
       <div class="conf-detail-card" style="margin-bottom:20px;">

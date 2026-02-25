@@ -4,37 +4,41 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Conference Intelligence Hub</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600;700&family=Lato:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>html{color-scheme:dark;}</style>
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <script src="data.js"></script>
 <style>
 :root {
-  --bg: #f7f9fc;
-  --surface: #ffffff;
-  --surface2: #f0f3f8;
-  --border: #e8ecf2;
-  --text: #1a2233;
+  --bg: #0a0a0a;
+  --surface: #141418;
+  --surface2: #1a1a1e;
+  --border: #2a2a30;
+  --text: #ffffff;
   --text2: #6b7b94;
   --accent: #3b6cf5;
-  --accent-light: #edf2ff;
-  --p1: #e03e3e;
-  --p2: #d4920a;
-  --p3: #9ca3af;
-  --green: #16a34a;
-  --purple: #7c3aed;
+  --accent-light: rgba(59,108,245,.1);
+  --p1: #ef4444;
+  --p2: #f59e0b;
+  --p3: #6b7280;
+  --green: #22c55e;
+  --purple: #a78bfa;
   --radius: 12px;
-  --shadow: 0 1px 3px rgba(0,0,0,.04);
-  --shadow-md: 0 2px 8px rgba(0,0,0,.06);
-  --shadow-lg: 0 4px 16px rgba(0,0,0,.08);
+  --shadow: 0 1px 3px rgba(0,0,0,.3);
+  --shadow-md: 0 2px 8px rgba(0,0,0,.4);
+  --shadow-lg: 0 4px 16px rgba(0,0,0,.5);
   --transition: .25s cubic-bezier(.4,0,.2,1);
 }
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Segoe UI', sans-serif; background:var(--bg); color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; }
+body { font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background:var(--bg); color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+h1, h2, h3, h4, h5, h6 { font-family: 'IBM Plex Serif', Georgia, serif; }
 a { color:var(--accent); text-decoration:none; }
 a:hover { text-decoration:underline; }
 
-::-webkit-scrollbar { width:6px; height:6px; }
-::-webkit-scrollbar-track { background:transparent; }
-::-webkit-scrollbar-thumb { background:#d0d5dd; border-radius:3px; }
+::-webkit-scrollbar { width:5px; height:5px; }
+::-webkit-scrollbar-track { background:#0a0a0a; }
+::-webkit-scrollbar-thumb { background:#2a2a30; border-radius:3px; }
+::-webkit-scrollbar-thumb:hover { background:#3a3a40; }
 
 /* Task Management */
 .task-board { margin-top:12px; }
@@ -53,8 +57,8 @@ a:hover { text-decoration:underline; }
 .task-due.overdue { color:var(--p1); font-weight:600; }
 .task-due.soon { color:var(--p2); font-weight:500; }
 .task-priority { padding:2px 6px; border-radius:4px; font-size:.65rem; font-weight:700; text-transform:uppercase; letter-spacing:.04em; }
-.task-priority.high { background:#fef2f2; color:var(--p1); }
-.task-priority.medium { background:#fef9ec; color:var(--p2); }
+.task-priority.high { background:rgba(239,68,68,.15); color:#f87171; }
+.task-priority.medium { background:rgba(245,158,11,.15); color:#fbbf24; }
 .task-priority.low { background:var(--surface2); color:var(--text2); }
 .task-status { padding:2px 8px; border-radius:10px; font-size:.68rem; font-weight:600; }
 .task-conf-tag { padding:2px 6px; border-radius:6px; font-size:.65rem; background:var(--surface2); color:var(--text2); cursor:pointer; }
@@ -64,7 +68,9 @@ a:hover { text-decoration:underline; }
 .task-actions button { background:none; border:none; cursor:pointer; font-size:.8rem; padding:2px 4px; border-radius:4px; color:var(--text2); }
 .task-actions button:hover { background:var(--surface2); color:var(--p1); }
 .add-task-row { display:flex; gap:8px; margin-top:12px; flex-wrap:wrap; }
-.add-task-row input, .add-task-row select { padding:8px 12px; border:1px solid var(--border); border-radius:8px; font-size:.85rem; }
+.add-task-row input, .add-task-row select { padding:8px 12px; border:1px solid var(--border); border-radius:8px; font-size:.85rem; background:var(--surface); color:var(--text); }
+input, select, textarea { background:var(--surface); color:var(--text); border:1px solid var(--border); }
+input::placeholder, textarea::placeholder { color:var(--text2); }
 .add-task-row input[type="text"] { flex:1; min-width:200px; }
 .add-task-btn { padding:8px 16px; background:var(--accent); color:white; border:none; border-radius:8px; font-size:.85rem; font-weight:500; cursor:pointer; }
 .add-task-btn:hover { background:#2d5ae0; }
@@ -98,9 +104,9 @@ a:hover { text-decoration:underline; }
 /* Urgency Alerts */
 .urgency-alert { padding:12px 16px; border-radius:10px; font-size:.85rem; display:flex; align-items:center; gap:8px; margin-bottom:8px; cursor:pointer; transition:all .2s; }
 .urgency-alert:hover { transform:translateX(4px); }
-.urgency-alert.urgent { background:#fef2f2; border-left:3px solid var(--p1); color:#991b1b; }
-.urgency-alert.soon { background:#fef9ec; border-left:3px solid var(--p2); color:#92400e; }
-.urgency-alert.upcoming { background:#edf2ff; border-left:3px solid var(--accent); color:#1e40af; }
+.urgency-alert.urgent { background:rgba(239,68,68,.1); border-left:3px solid var(--p1); color:#fca5a5; }
+.urgency-alert.soon { background:rgba(245,158,11,.1); border-left:3px solid var(--p2); color:#fcd34d; }
+.urgency-alert.upcoming { background:rgba(201,168,76,.1); border-left:3px solid var(--accent); color:var(--accent); }
 
 /* Timeline */
 .timeline-row { display:flex; align-items:center; gap:4px; margin-bottom:4px; }
@@ -112,7 +118,7 @@ a:hover { text-decoration:underline; }
 .timeline-header span { font-size:.7rem; color:var(--text2); font-weight:500; }
 
 /* Conflict Badge */
-.conflict-alert { padding:10px 16px; border-radius:8px; background:#fff5eb; border:1px solid #fed7aa; font-size:.82rem; margin-bottom:6px; display:flex; align-items:center; gap:6px; }
+.conflict-alert { padding:10px 16px; border-radius:8px; background:rgba(245,158,11,.1); border:1px solid rgba(245,158,11,.25); font-size:.82rem; margin-bottom:6px; display:flex; align-items:center; gap:6px; color:var(--text); }
 
 /* Team Assignment */
 .team-tags { display:flex; gap:4px; flex-wrap:wrap; margin-top:8px; }
@@ -124,8 +130,8 @@ a:hover { text-decoration:underline; }
 
 /* Countdown */
 .countdown { font-size:.72rem; padding:3px 8px; border-radius:8px; font-weight:600; }
-.countdown.urgent { background:#fef2f2; color:var(--p1); }
-.countdown.soon { background:#fef9ec; color:var(--p2); }
+.countdown.urgent { background:rgba(239,68,68,.15); color:#f87171; }
+.countdown.soon { background:rgba(245,158,11,.15); color:#fbbf24; }
 .countdown.upcoming { background:var(--accent-light); color:var(--accent); }
 .countdown.past { background:var(--surface2); color:var(--text2); }
 
@@ -175,9 +181,9 @@ a:hover { text-decoration:underline; }
 #landing .subtitle { color:var(--text2); font-size:1rem; margin-top:6px; margin-bottom:56px; font-weight:400; }
 .conf-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:20px; }
 .conf-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:32px; cursor:pointer; transition:all var(--transition); position:relative; box-shadow:var(--shadow); overflow:hidden; }
-.conf-card::before { content:''; position:absolute; top:0; left:-100%; width:100%; height:100%; background:linear-gradient(90deg,transparent,rgba(255,255,255,.6),transparent); transition:left .6s ease; pointer-events:none; }
+.conf-card::before { content:''; position:absolute; top:0; left:-100%; width:100%; height:100%; background:linear-gradient(90deg,transparent,rgba(255,255,255,.04),transparent); transition:left .6s ease; pointer-events:none; }
 .conf-card:hover::before { left:100%; }
-.conf-card:hover { transform:translateY(-2px); box-shadow:var(--shadow-lg); border-color:#d0d5dd; }
+.conf-card:hover { transform:translateY(-2px); box-shadow:var(--shadow-lg); border-color:#444; }
 .conf-card h3 { font-size:1.2rem; font-weight:600; color:var(--text); margin-bottom:4px; }
 .conf-card .meta { color:var(--text2); font-size:.88rem; margin-bottom:20px; }
 .tags { display:flex; gap:6px; flex-wrap:wrap; }
@@ -302,9 +308,9 @@ a:hover { text-decoration:underline; }
 .eng-tag { padding:3px 10px; border-radius:20px; font-size:.75rem; font-weight:500; cursor:pointer; border:1px solid transparent; transition:all .2s ease; user-select:none; }
 .eng-tag.off { background:var(--surface2); color:var(--text2); border-color:var(--border); opacity:.45; }
 .eng-tag.off:hover { opacity:.7; }
-.eng-tag.replied { background:#ecfdf5; color:var(--green); border-color:rgba(22,163,74,.2); animation:tagPop .25s ease; }
-.eng-tag.opened { background:var(--accent-light); color:var(--accent); border-color:rgba(59,108,245,.2); animation:tagPop .25s ease; }
-.eng-tag.clicked { background:#f3f0ff; color:var(--purple); border-color:rgba(124,58,237,.2); animation:tagPop .25s ease; }
+.eng-tag.replied { background:rgba(34,197,94,.12); color:var(--green); border-color:rgba(34,197,94,.25); animation:tagPop .25s ease; }
+.eng-tag.opened { background:var(--accent-light); color:var(--accent); border-color:rgba(59,108,245,.25); animation:tagPop .25s ease; }
+.eng-tag.clicked { background:rgba(167,139,250,.12); color:var(--purple); border-color:rgba(167,139,250,.25); animation:tagPop .25s ease; }
 @keyframes tagPop { 0%{transform:scale(.9)} 60%{transform:scale(1.05)} 100%{transform:scale(1)} }
 
 /* Outreach log — smooth expand */
@@ -393,8 +399,9 @@ a:hover { text-decoration:underline; }
 <!-- Auth Gate -->
 <div id="auth-gate" style="display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--bg);flex-direction:column;gap:24px;">
   <div style="text-align:center;max-width:400px;padding:48px;background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow-lg);border:1px solid var(--border);">
-    <h1 style="font-size:1.5rem;font-weight:700;margin-bottom:8px;">Conference Intelligence Hub</h1>
-    <p style="color:var(--text2);font-size:.9rem;margin-bottom:32px;">Sign in with your <strong>@risalabs.ai</strong> account to continue</p>
+    <img src="https://cdn.prod.website-files.com/693b027583a249ec8b24b0ed/6962da999924a1df06a76ebf_RISA%20trans%20log.png" alt="RISA Labs" style="height:40px;margin-bottom:16px;">
+    <h1 style="font-size:1.3rem;font-weight:700;margin-bottom:8px;font-family:'IBM Plex Serif',Georgia,serif;">Conference Intelligence Hub</h1>
+    <p style="color:var(--text2);font-size:.85rem;margin-bottom:32px;">Sign in with your <strong style="color:var(--text);">@risalabs.ai</strong> account to continue</p>
     <div id="g-signin-btn" style="display:inline-block;"></div>
     <p id="auth-error" style="color:var(--p1);font-size:.85rem;margin-top:16px;display:none;"></p>
   </div>
@@ -404,9 +411,12 @@ a:hover { text-decoration:underline; }
 <div id="app-root" style="display:none;">
 
 <div id="landing">
-  <h1>Conference Intelligence Hub</h1>
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px;">
+    <img src="https://cdn.prod.website-files.com/693b027583a249ec8b24b0ed/6962da999924a1df06a76ebf_RISA%20trans%20log.png" alt="RISA Labs" style="height:32px;">
+    <h1 style="font-family:'IBM Plex Serif',Georgia,serif;font-size:1.4rem;">Conference Intelligence Hub</h1>
+  </div>
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
-    <p class="subtitle" style="margin:0;">RISA Labs GTM Conference Tracker — March to June 2026</p>
+    <p class="subtitle" style="margin:0;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;color:var(--text2);">RISA Labs GTM Conference Tracker — March to June 2026</p>
     <div style="display:flex;gap:8px;">
       <button onclick="showGlobalTasks()" style="padding:8px 16px;background:var(--accent);color:white;border:none;border-radius:8px;font-size:.85rem;font-weight:500;cursor:pointer;">📋 All Tasks</button>
       <button onclick="showSettings()" style="padding:8px 12px;background:var(--surface);border:1px solid var(--border);border-radius:8px;font-size:.85rem;cursor:pointer;" title="Settings">⚙️</button>
@@ -911,6 +921,132 @@ function getTeamMemberByEmail(email) { return TEAM.find(m => m.email === email);
 const NOTIFY_KEY = 'cih_notify_url';
 let notifyUrl = localStorage.getItem(NOTIFY_KEY) || '';
 
+// ============ SHARED BACKEND (Google Sheets) ============
+const BACKEND_KEY = 'cih_backend_url';
+let backendUrl = localStorage.getItem(BACKEND_KEY) || '';
+let backendSynced = false;
+
+function setBackendUrl(url) {
+  backendUrl = url.trim().replace(/\/$/, '');
+  localStorage.setItem(BACKEND_KEY, backendUrl);
+  updateSyncIndicator();
+}
+
+function updateSyncIndicator() {
+  let el = document.getElementById('syncIndicator');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'syncIndicator';
+    el.style.cssText = 'position:fixed;bottom:12px;right:12px;padding:4px 10px;border-radius:16px;font-size:.72rem;z-index:999;cursor:pointer;background:var(--surface);border:1px solid var(--border);';
+    el.onclick = () => { if (backendUrl) syncFromBackend(); };
+    document.body.appendChild(el);
+  }
+  if (!backendUrl) {
+    el.textContent = '💾 Local only';
+  } else if (backendSynced) {
+    el.textContent = '☁️ Synced';
+  } else {
+    el.textContent = '☁️ Connecting...';
+  }
+}
+
+async function backendGet(action, confId) {
+  if (!backendUrl) return null;
+  const email = localStorage.getItem('cih_user') || '';
+  let url = backendUrl + '?action=' + action + '&email=' + encodeURIComponent(email);
+  if (confId) url += '&confId=' + encodeURIComponent(confId);
+  try {
+    const r = await fetch(url);
+    const j = await r.json();
+    if (j.error) { console.warn('Backend error:', j.error); return null; }
+    return j.data;
+  } catch(e) { console.warn('Backend unreachable:', e); return null; }
+}
+
+async function backendPost(action, body) {
+  if (!backendUrl) return null;
+  const email = localStorage.getItem('cih_user') || '';
+  try {
+    const r = await fetch(backendUrl + '?email=' + encodeURIComponent(email), {
+      method: 'POST',
+      headers: {'Content-Type': 'text/plain'},
+      body: JSON.stringify({...body, action})
+    });
+    const j = await r.json();
+    if (j.error) console.warn('Backend POST error:', j.error);
+    return j;
+  } catch(e) { console.warn('Backend POST failed:', e); return null; }
+}
+
+async function syncFromBackend() {
+  if (!backendUrl) return;
+  const indicator = document.getElementById('syncIndicator');
+  if (indicator) indicator.textContent = '🔄 Syncing...';
+  
+  const data = await backendGet('getAll');
+  if (!data) {
+    backendSynced = false;
+    updateSyncIndicator();
+    return;
+  }
+  
+  // Sync tasks — replace local with backend data
+  if (data.tasks && data.tasks.length >= 0) {
+    // Map backend status format to local format
+    allTasks = data.tasks.map(t => ({
+      id: t.id,
+      confId: t.confId || '',
+      title: t.title || '',
+      assignee: t.assignee || '',
+      priority: t.priority || 'medium',
+      dueDate: t.dueDate || '',
+      category: t.category || 'general',
+      status: t.status || 'not_started',
+      createdAt: t.createdAt || '',
+      completedAt: t.completedAt || '',
+      createdBy: t.createdBy || '',
+      notes: ''
+    }));
+    taskIdCounter = allTasks.length ? Math.max(...allTasks.map(t => typeof t.id === 'number' ? t.id : 0)) + 1 : 1;
+    saveTasks(); // cache locally
+  }
+  
+  // Sync notes — backend stores individual notes, local stores as {confId: text}
+  if (data.notes) {
+    notesData = {};
+    data.notes.forEach(n => {
+      if (n.confId) notesData[n.confId] = (notesData[n.confId] ? notesData[n.confId] + '\n' : '') + n.note;
+    });
+    saveNotes();
+  }
+  
+  // Sync budget
+  if (data.budget) {
+    budgetData = {};
+    data.budget.forEach(b => {
+      if (!budgetData[b.confId]) budgetData[b.confId] = { sponsorship: 0, travel: 0, misc: 0 };
+      const type = b.type || 'misc';
+      if (budgetData[b.confId][type] !== undefined) {
+        budgetData[b.confId][type] += parseFloat(b.amount) || 0;
+      }
+    });
+    saveBudget();
+  }
+  
+  backendSynced = true;
+  updateSyncIndicator();
+  
+  // Re-render if on landing
+  if (typeof renderLanding === 'function') renderLanding();
+  if (typeof renderGlobalTasks === 'function' && document.getElementById('globalTasks')?.style.display !== 'none') renderGlobalTasks();
+}
+
+// Auto-sync on load
+setTimeout(() => {
+  updateSyncIndicator();
+  if (backendUrl) syncFromBackend();
+}, 500);
+
 function setNotifyUrl(url) {
   notifyUrl = url;
   localStorage.setItem(NOTIFY_KEY, url);
@@ -940,6 +1076,7 @@ const TASKS_KEY = 'cih_tasks';
 let allTasks = [];
 function loadTasks() { try { allTasks = JSON.parse(localStorage.getItem(TASKS_KEY)) || []; } catch(e) { allTasks = []; } }
 function saveTasks() { localStorage.setItem(TASKS_KEY, JSON.stringify(allTasks)); }
+function _syncTaskToBackend(action, task) { if (backendUrl) backendPost(action, task).catch(()=>{}); }
 loadTasks();
 
 let taskIdCounter = allTasks.length ? Math.max(...allTasks.map(t=>t.id||0)) + 1 : 1;
@@ -1368,6 +1505,17 @@ function showSettings() {
       <input type="url" id="settingsNotifyUrl" value="${notifyUrl}" placeholder="https://script.google.com/macros/s/..." style="width:100%;padding:8px 12px;border:1px solid var(--border);border-radius:8px;font-size:.85rem;">
       <button onclick="setNotifyUrl(document.getElementById('settingsNotifyUrl').value);this.textContent='✅ Saved!';setTimeout(()=>this.textContent='Save',1500)" style="margin-top:8px;padding:6px 16px;background:var(--accent);color:white;border:none;border-radius:8px;font-size:.82rem;cursor:pointer;">Save</button>
       <p style="font-size:.75rem;color:var(--text2);margin-top:8px;">Status: ${notifyUrl ? '✅ Connected' : '❌ Not configured — notifications disabled'}</p>
+    </div>
+
+    <div style="margin-bottom:20px;padding:16px;background:var(--surface2);border-radius:var(--radius);border:1px solid var(--border);">
+      <h3 style="font-size:.9rem;margin-bottom:8px;">☁️ Shared Backend (Google Sheets)</h3>
+      <p style="font-size:.82rem;color:var(--text2);margin-bottom:8px;">Connect a Google Sheets backend so tasks, notes, and budget sync across your whole team.</p>
+      <input type="url" id="settingsBackendUrl" value="${backendUrl}" placeholder="https://script.google.com/macros/s/..." style="width:100%;padding:8px 12px;border:1px solid var(--border);border-radius:8px;font-size:.85rem;background:var(--surface);color:var(--text);">
+      <div style="display:flex;gap:8px;margin-top:8px;">
+        <button onclick="setBackendUrl(document.getElementById('settingsBackendUrl').value);this.textContent='✅ Saved!';setTimeout(()=>this.textContent='Save',1500)" style="padding:6px 16px;background:var(--accent);color:white;border:none;border-radius:8px;font-size:.82rem;cursor:pointer;">Save</button>
+        <button onclick="syncFromBackend().then(()=>{this.textContent='✅ Synced!';setTimeout(()=>this.textContent='Sync Now',1500)})" style="padding:6px 16px;background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:8px;font-size:.82rem;cursor:pointer;">Sync Now</button>
+      </div>
+      <p style="font-size:.75rem;color:var(--text2);margin-top:8px;">Status: ${backendUrl ? '☁️ Connected' : '💾 Local only — data stays in this browser'}</p>
     </div>
     
     <div style="margin-bottom:20px;">

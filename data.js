@@ -1823,10 +1823,10 @@ const CONFERENCES = [
 
 // GTM tag display config
 const GTM_TAGS = {
-  'must_attend':    { label: 'Must Attend',    bg: 'rgba(52,211,153,.12)', color: '#34d399', icon: '🎯' },
-  'must_sponsor':   { label: 'Must Sponsor',   bg: 'rgba(91,138,247,.12)', color: '#5b8af7', icon: '💎' },
-  'outreach_only':  { label: 'Outreach Only',  bg: 'rgba(251,191,36,.1)', color: '#fbbf24', icon: '📧' },
-  'skip':           { label: 'Skip / Monitor', bg: 'rgba(107,114,128,.1)', color: '#6b7280', icon: '⏭️' }
+  'must_attend':    { label: 'Must Attend',    bg: 'rgba(52,211,153,.12)', color: '#34d399', icon: '' },
+  'must_sponsor':   { label: 'Must Sponsor',   bg: 'rgba(91,138,247,.12)', color: '#5b8af7', icon: '' },
+  'outreach_only':  { label: 'Outreach Only',  bg: 'rgba(251,191,36,.1)', color: '#fbbf24', icon: '' },
+  'skip':           { label: 'Skip / Monitor', bg: 'rgba(107,114,128,.1)', color: '#6b7280', icon: '' }
 };
 
 const OUTREACH_STATUSES = {

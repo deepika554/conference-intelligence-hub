@@ -422,8 +422,8 @@ input::placeholder, textarea::placeholder { color:var(--text2); }
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
     <p class="subtitle" style="margin:0;">RISA Labs GTM Conference Tracker — March to June 2026</p>
     <div style="display:flex;gap:8px;">
-      <button onclick="showGlobalTasks()" style="padding:8px 16px;background:var(--accent);color:white;border:none;border-radius:8px;font-size:.85rem;font-weight:500;cursor:pointer;">📋 All Tasks</button>
-      <button onclick="showSettings()" style="padding:8px 12px;background:var(--surface);border:1px solid var(--border);border-radius:8px;font-size:.85rem;cursor:pointer;" title="Settings">⚙️</button>
+      <button onclick="showGlobalTasks()" style="padding:8px 16px;background:var(--accent);color:white;border:none;border-radius:8px;font-size:.85rem;font-weight:500;cursor:pointer;">All Tasks</button>
+      <button onclick="showSettings()" style="padding:8px 12px;background:var(--surface);border:1px solid var(--border);border-radius:8px;font-size:.85rem;cursor:pointer;" title="Settings"></button>
     </div>
   </div>
   
@@ -441,7 +441,7 @@ input::placeholder, textarea::placeholder { color:var(--text2); }
   <!-- Timeline View -->
   <div class="collapsible-section">
     <div class="collapse-header" onclick="toggleSection('timeline')">
-      <span>📅 Conference Timeline</span><span class="collapse-arrow" id="timeline-arrow">▾</span>
+      <span>Conference Timeline</span><span class="collapse-arrow" id="timeline-arrow">▾</span>
     </div>
     <div id="confTimeline" style="margin-bottom:24px;overflow-x:auto;"></div>
   </div>
@@ -449,7 +449,7 @@ input::placeholder, textarea::placeholder { color:var(--text2); }
   <!-- Scheduling Conflicts -->
   <div class="collapsible-section">
     <div class="collapse-header" onclick="toggleSection('conflicts')">
-      <span>⚠️ Scheduling Conflicts</span><span class="collapse-arrow" id="conflicts-arrow">▾</span>
+      <span>Scheduling Conflicts</span><span class="collapse-arrow" id="conflicts-arrow">▾</span>
     </div>
     <div id="confConflicts" style="margin-bottom:20px;"></div>
   </div>
@@ -458,10 +458,10 @@ input::placeholder, textarea::placeholder { color:var(--text2); }
   <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center;">
     <input type="text" id="confSearch" placeholder="Search conferences..." oninput="renderLanding()" style="padding:8px 14px;border:1px solid var(--border);border-radius:8px;font-size:.88rem;width:220px;">
     <button class="filter-btn active" data-conf-filter="all" onclick="setConfFilter('all',this)">All</button>
-    <button class="filter-btn" data-conf-filter="must_attend" onclick="setConfFilter('must_attend',this)">🎯 Must Attend</button>
-    <button class="filter-btn" data-conf-filter="must_sponsor" onclick="setConfFilter('must_sponsor',this)">💎 Must Sponsor</button>
-    <button class="filter-btn" data-conf-filter="outreach_only" onclick="setConfFilter('outreach_only',this)">📧 Outreach Only</button>
-    <button class="filter-btn" data-conf-filter="skip" onclick="setConfFilter('skip',this)">⏭️ Skip</button>
+    <button class="filter-btn" data-conf-filter="must_attend" onclick="setConfFilter('must_attend',this)">Must Attend</button>
+    <button class="filter-btn" data-conf-filter="must_sponsor" onclick="setConfFilter('must_sponsor',this)">Must Sponsor</button>
+    <button class="filter-btn" data-conf-filter="outreach_only" onclick="setConfFilter('outreach_only',this)">Outreach Only</button>
+    <button class="filter-btn" data-conf-filter="skip" onclick="setConfFilter('skip',this)">Skip</button>
   </div>
   <!-- Date & Sort Filters -->
   <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;align-items:center;">
@@ -496,7 +496,7 @@ input::placeholder, textarea::placeholder { color:var(--text2); }
 <!-- Global Tasks View -->
 <div id="globalTasks" style="display:none;">
   <button class="back-btn" onclick="showLanding()">&#8592; Back to Conferences</button>
-  <h1 style="margin-bottom:4px;">📋 Task Board</h1>
+  <h1 style="margin-bottom:4px;">Task Board</h1>
   <p style="color:var(--text2);font-size:.9rem;margin-bottom:24px;">All tasks across conferences — assign, track, and ship.</p>
   <div id="globalTaskStats" class="task-stats"></div>
   <div id="globalTaskFilters" class="task-filters"></div>
@@ -946,11 +946,11 @@ function updateSyncIndicator() {
     document.body.appendChild(el);
   }
   if (!backendUrl) {
-    el.textContent = '💾 Local only';
+    el.textContent = 'Local only';
   } else if (backendSynced) {
-    el.textContent = '☁️ Synced';
+    el.textContent = 'Synced';
   } else {
-    el.textContent = '☁️ Connecting...';
+    el.textContent = 'Connecting...';
   }
 }
 
@@ -985,7 +985,7 @@ async function backendPost(action, body) {
 async function syncFromBackend() {
   if (!backendUrl) return;
   const indicator = document.getElementById('syncIndicator');
-  if (indicator) indicator.textContent = '🔄 Syncing...';
+  if (indicator) indicator.textContent = 'Syncing...';
   
   const data = await backendGet('getAll');
   if (!data) {
@@ -1148,46 +1148,57 @@ const TASK_STATUSES = {
 };
 
 const TASK_CATEGORIES = {
-  'speaker_research':  { label: '🔍 Speaker Research', color: '#7c3aed' },
-  'outreach':          { label: '📧 Outreach', color: '#3b6cf5' },
-  'sponsorship':       { label: '💎 Sponsorship', color: '#d4920a' },
-  'registration':      { label: '🎟️ Registration', color: '#16a34a' },
-  'travel':            { label: '✈️ Travel & Logistics', color: '#0891b2' },
-  'content':           { label: '📝 Content Prep', color: '#e03e3e' },
-  'booth':             { label: '🏗️ Booth Setup', color: '#ea580c' },
-  'follow_up':         { label: '📬 Follow-up', color: '#7c3aed' },
-  'general':           { label: '📌 General', color: '#6b7b94' }
+  'speaker_research':  { label: 'Speaker Research', color: '#a78bfa' },
+  'outreach':          { label: 'Outreach', color: '#5b8af7' },
+  'sponsorship':       { label: 'Sponsorship', color: '#fbbf24' },
+  'registration':      { label: 'Registration', color: '#34d399' },
+  'travel':            { label: 'Travel & Logistics', color: '#22d3ee' },
+  'content':           { label: 'Content & Collateral', color: '#f87171' },
+  'booth':             { label: 'Booth & Venue', color: '#fb923c' },
+  'follow_up':         { label: 'Follow-up', color: '#c084fc' },
+  'meeting':           { label: 'Meetings & Demos', color: '#38bdf8' },
+  'competitor_intel':  { label: 'Competitor Intel', color: '#f472b6' },
+  'lead_capture':      { label: 'Lead Capture', color: '#4ade80' },
+  'approvals':         { label: 'Internal Approvals', color: '#fb7185' },
+  'general':           { label: 'General', color: '#8891a4' }
 };
 
 // Task templates for different conference types
 const TASK_TEMPLATES = {
   must_sponsor: [
     { title: 'Review sponsorship prospectus & select package', category: 'sponsorship', priority: 'high' },
+    { title: 'Get internal approval on sponsorship spend', category: 'approvals', priority: 'high' },
     { title: 'Sign sponsorship contract', category: 'sponsorship', priority: 'high' },
     { title: 'Submit booth design & materials', category: 'booth', priority: 'medium' },
     { title: 'Research & prioritize speaker list', category: 'speaker_research', priority: 'high' },
+    { title: 'Identify competitor booths & messaging', category: 'competitor_intel', priority: 'medium' },
     { title: 'Draft outreach emails for target speakers', category: 'outreach', priority: 'high' },
+    { title: 'Schedule pre-conference meetings & demos', category: 'meeting', priority: 'high' },
     { title: 'Register team members', category: 'registration', priority: 'medium' },
     { title: 'Book travel & hotel', category: 'travel', priority: 'medium' },
-    { title: 'Prepare demo & pitch deck', category: 'content', priority: 'high' },
-    { title: 'Set up meeting schedule with prospects', category: 'outreach', priority: 'high' },
-    { title: 'Post-conference follow-up emails', category: 'follow_up', priority: 'high' }
+    { title: 'Prepare demo, pitch deck & one-pager', category: 'content', priority: 'high' },
+    { title: 'Set up lead capture process (scanner, form, etc.)', category: 'lead_capture', priority: 'medium' },
+    { title: 'Post-conference follow-up within 48hrs', category: 'follow_up', priority: 'high' },
+    { title: 'Log leads & update CRM', category: 'lead_capture', priority: 'high' }
   ],
   must_attend: [
     { title: 'Review agenda & identify key sessions', category: 'speaker_research', priority: 'high' },
     { title: 'Research & prioritize speaker list', category: 'speaker_research', priority: 'high' },
+    { title: 'Map competitor presence & sessions', category: 'competitor_intel', priority: 'medium' },
     { title: 'Draft outreach emails for target contacts', category: 'outreach', priority: 'high' },
+    { title: 'Schedule pre-conference meetings', category: 'meeting', priority: 'high' },
     { title: 'Register team members', category: 'registration', priority: 'medium' },
     { title: 'Book travel & hotel', category: 'travel', priority: 'medium' },
     { title: 'Prepare talking points & collateral', category: 'content', priority: 'medium' },
-    { title: 'Schedule meetings with prospects', category: 'outreach', priority: 'high' },
-    { title: 'Post-conference follow-up & notes', category: 'follow_up', priority: 'high' }
+    { title: 'Post-conference follow-up within 48hrs', category: 'follow_up', priority: 'high' },
+    { title: 'Log leads & update CRM', category: 'lead_capture', priority: 'high' }
   ],
   outreach_only: [
     { title: 'Research attendee/speaker list', category: 'speaker_research', priority: 'medium' },
     { title: 'Draft personalized outreach emails', category: 'outreach', priority: 'high' },
     { title: 'Send outreach batch', category: 'outreach', priority: 'high' },
-    { title: 'Track responses & schedule calls', category: 'follow_up', priority: 'medium' }
+    { title: 'Track responses & schedule calls', category: 'follow_up', priority: 'medium' },
+    { title: 'Log interested leads in CRM', category: 'lead_capture', priority: 'medium' }
   ]
 };
 
@@ -1260,9 +1271,9 @@ function renderTaskBoard(confId, containerId) {
           </span>
           <span class="task-priority ${t.priority}">${t.priority}</span>
           <span style="font-size:.68rem;color:${cat.color};">${cat.label}</span>
-          ${t.assignee ? `<span class="task-assignee">👤 ${esc(t.assignee)}</span>` : ''}
-          ${t.dueDate ? `<span class="task-due ${dueClass}">📅 ${t.dueDate}${dueDays!==null && dueDays < 0 ? ' (overdue!)' : dueDays!==null && dueDays <= 3 ? ' (soon)' : ''}</span>` : ''}
-          ${t.completedAt ? `<span style="font-size:.68rem;color:var(--green);">✅ ${new Date(t.completedAt).toLocaleDateString()}</span>` : ''}
+          ${t.assignee ? `<span class="task-assignee">${esc(t.assignee)}</span>` : ''}
+          ${t.dueDate ? `<span class="task-due ${dueClass}">${t.dueDate}${dueDays!==null && dueDays < 0 ? ' (overdue!)' : dueDays!==null && dueDays <= 3 ? ' (soon)' : ''}</span>` : ''}
+          ${t.completedAt ? `<span style="font-size:.68rem;color:var(--green);">${new Date(t.completedAt).toLocaleDateString()}</span>` : ''}
         </div>
       </div>
       <div class="task-actions">
@@ -1286,7 +1297,7 @@ function renderTaskBoard(confId, containerId) {
   if (TASK_TEMPLATES[gtm] && tasks.length === 0) {
     html += `<div style="margin-top:16px;text-align:center;">
       <button class="template-btn" onclick="applyTaskTemplate('${confId}','${gtm}');renderTaskBoard('${confId}','${containerId}')">
-        ✨ Auto-generate ${TASK_TEMPLATES[gtm].length} tasks from ${GTM_TAGS[gtm]?.label || gtm} template
+        Auto-generate ${TASK_TEMPLATES[gtm].length} tasks from ${GTM_TAGS[gtm]?.label || gtm} template
       </button>
     </div>`;
   } else if (TASK_TEMPLATES[gtm] && tasks.length > 0) {
@@ -1425,8 +1436,8 @@ function renderGlobalTasks() {
           </span>
           <span class="task-priority ${t.priority}">${t.priority}</span>
           <span style="font-size:.68rem;color:${cat.color};">${cat.label}</span>
-          ${t.assignee ? `<span class="task-assignee">👤 ${esc(t.assignee)}</span>` : '<span style="font-size:.68rem;color:var(--p2);">unassigned</span>'}
-          ${t.dueDate ? `<span class="task-due ${dueClass}">📅 ${t.dueDate}${dueDays!==null && dueDays < 0 ? ' (overdue!)' : ''}</span>` : ''}
+          ${t.assignee ? `<span class="task-assignee">${esc(t.assignee)}</span>` : '<span style="font-size:.68rem;color:var(--p2);">unassigned</span>'}
+          ${t.dueDate ? `<span class="task-due ${dueClass}">${t.dueDate}${dueDays!==null && dueDays < 0 ? ' (overdue!)' : ''}</span>` : ''}
         </div>
       </div>
       <div class="task-actions">
@@ -1494,32 +1505,32 @@ function showSettings() {
   modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
   
   modal.innerHTML = `<div style="background:var(--surface);border-radius:16px;padding:32px;max-width:560px;width:90%;box-shadow:var(--shadow-lg);">
-    <h2 style="margin-bottom:20px;">⚙️ Settings</h2>
+    <h2 style="margin-bottom:20px;"> Settings</h2>
     
     <div style="margin-bottom:20px;">
-      <h3 style="font-size:.9rem;margin-bottom:8px;">👥 Team Roster</h3>
+      <h3 style="font-size:.9rem;margin-bottom:8px;">Team Roster</h3>
       <div style="font-size:.85rem;color:var(--text2);">
-        ${TEAM.map(m => `<div style="padding:6px 0;border-bottom:1px solid var(--border);">👤 <strong>${m.name}</strong> — ${m.email}</div>`).join('')}
+        ${TEAM.map(m => `<div style="padding:6px 0;border-bottom:1px solid var(--border);"><strong>${m.name}</strong> — ${m.email}</div>`).join('')}
       </div>
     </div>
     
     <div style="margin-bottom:20px;">
-      <h3 style="font-size:.9rem;margin-bottom:8px;">📧 Email Notifications</h3>
+      <h3 style="font-size:.9rem;margin-bottom:8px;">Email Notifications</h3>
       <p style="font-size:.82rem;color:var(--text2);margin-bottom:8px;">Paste your Google Apps Script webhook URL to enable email notifications when tasks are assigned.</p>
       <input type="url" id="settingsNotifyUrl" value="${notifyUrl}" placeholder="https://script.google.com/macros/s/..." style="width:100%;padding:8px 12px;border:1px solid var(--border);border-radius:8px;font-size:.85rem;">
-      <button onclick="setNotifyUrl(document.getElementById('settingsNotifyUrl').value);this.textContent='✅ Saved!';setTimeout(()=>this.textContent='Save',1500)" style="margin-top:8px;padding:6px 16px;background:var(--accent);color:white;border:none;border-radius:8px;font-size:.82rem;cursor:pointer;">Save</button>
-      <p style="font-size:.75rem;color:var(--text2);margin-top:8px;">Status: ${notifyUrl ? '✅ Connected' : '❌ Not configured — notifications disabled'}</p>
+      <button onclick="setNotifyUrl(document.getElementById('settingsNotifyUrl').value);this.textContent='Saved';setTimeout(()=>this.textContent='Save',1500)" style="margin-top:8px;padding:6px 16px;background:var(--accent);color:white;border:none;border-radius:8px;font-size:.82rem;cursor:pointer;">Save</button>
+      <p style="font-size:.75rem;color:var(--text2);margin-top:8px;">Status: ${notifyUrl ? 'Connected' : 'Not configured'}</p>
     </div>
 
     <div style="margin-bottom:20px;padding:16px;background:var(--surface2);border-radius:var(--radius);border:1px solid var(--border);">
-      <h3 style="font-size:.9rem;margin-bottom:8px;">☁️ Shared Backend (Google Sheets)</h3>
+      <h3 style="font-size:.9rem;margin-bottom:8px;">Shared Backend</h3>
       <p style="font-size:.82rem;color:var(--text2);margin-bottom:8px;">Connect a Google Sheets backend so tasks, notes, and budget sync across your whole team.</p>
       <input type="url" id="settingsBackendUrl" value="${backendUrl}" placeholder="https://script.google.com/macros/s/..." style="width:100%;padding:8px 12px;border:1px solid var(--border);border-radius:8px;font-size:.85rem;background:var(--surface);color:var(--text);">
       <div style="display:flex;gap:8px;margin-top:8px;">
-        <button onclick="setBackendUrl(document.getElementById('settingsBackendUrl').value);this.textContent='✅ Saved!';setTimeout(()=>this.textContent='Save',1500)" style="padding:6px 16px;background:var(--accent);color:white;border:none;border-radius:8px;font-size:.82rem;cursor:pointer;">Save</button>
-        <button onclick="syncFromBackend().then(()=>{this.textContent='✅ Synced!';setTimeout(()=>this.textContent='Sync Now',1500)})" style="padding:6px 16px;background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:8px;font-size:.82rem;cursor:pointer;">Sync Now</button>
+        <button onclick="setBackendUrl(document.getElementById('settingsBackendUrl').value);this.textContent='Saved';setTimeout(()=>this.textContent='Save',1500)" style="padding:6px 16px;background:var(--accent);color:white;border:none;border-radius:8px;font-size:.82rem;cursor:pointer;">Save</button>
+        <button onclick="syncFromBackend().then(()=>{this.textContent='Synced';setTimeout(()=>this.textContent='Sync Now',1500)})" style="padding:6px 16px;background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:8px;font-size:.82rem;cursor:pointer;">Sync Now</button>
       </div>
-      <p style="font-size:.75rem;color:var(--text2);margin-top:8px;">Status: ${backendUrl ? '☁️ Connected' : '💾 Local only — data stays in this browser'}</p>
+      <p style="font-size:.75rem;color:var(--text2);margin-top:8px;">Status: ${backendUrl ? 'Connected' : 'Local only'}</p>
     </div>
     
     <div style="margin-bottom:20px;">
@@ -1714,7 +1725,7 @@ function renderUrgencyAlerts() {
     return `<div class="urgency-alert ${cls}" onclick="showConfOverview('${c.id}')">
       <strong>${c.days === 0 ? 'TODAY' : c.days + 'd'}</strong>
       ${gtm.icon||''} ${c.name} — ${c.location || 'TBD'}
-      ${getTeam(c.id).length ? '<span style="margin-left:auto;font-size:.75rem;">👥 ' + getTeam(c.id).join(', ') + '</span>' : ''}
+      ${getTeam(c.id).length ? '<span style="margin-left:auto;font-size:.75rem;">' + getTeam(c.id).join(', ') + '</span>' : ''}
     </div>`;
   }).join('');
 }
@@ -1739,7 +1750,7 @@ function renderTimeline() {
   const gtmColors = { must_attend: '#34d399', must_sponsor: '#5b8af7', outreach_only: '#fbbf24' };
 
   let html = '<div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;overflow-x:auto;">';
-  html += '<div style="font-size:.82rem;font-weight:600;margin-bottom:12px;">📅 Conference Timeline</div>';
+  html += '<div style="font-size:.82rem;font-weight:600;margin-bottom:12px;">Conference Timeline</div>';
   html += '<div class="timeline-header">' + months.map(m => `<span style="flex:${m.days};text-align:center;">${m.name}</span>`).join('') + '</div>';
 
   // Today marker position
@@ -1785,7 +1796,7 @@ function renderConflicts() {
 
   if (!conflicts.length) { document.getElementById('confConflicts').innerHTML = ''; return; }
   document.getElementById('confConflicts').innerHTML = conflicts.map(([a,b]) =>
-    `<div class="conflict-alert">⚠️ <strong>Overlap:</strong> ${a.name} (${a.dates}) and ${b.name} (${b.dates}) — need to split the team or choose one</div>`
+    `<div class="conflict-alert">Overlap: ${a.name} (${a.dates}) and ${b.name} (${b.dates}) — need to split the team or choose one</div>`
   ).join('');
 }
 
@@ -1827,8 +1838,8 @@ function renderLanding() {
         ${totalBudget > 0 ? `<span class="budget-badge">$${(totalBudget/1000).toFixed(0)}K</span>` : ''}
       </div>
       ${cd.outreach?.status && cd.outreach.status !== 'not_started' ? `<div class="outreach-status-badge" style="background:${os.bg};color:${os.color}">Outreach: ${os.label}</div>` : ''}
-      ${(() => { const ct = getConfTasks(conf.id); const done = ct.filter(t=>t.status==='completed').length; return ct.length ? `<div style="font-size:.72rem;color:var(--text2);margin-top:6px;">📋 ${done}/${ct.length} tasks done</div>` : ''; })()}
-      ${team.length ? `<div class="team-tags">${team.map(t => `<span class="team-tag">👤 ${t}</span>`).join('')}</div>` : ''}
+      ${(() => { const ct = getConfTasks(conf.id); const done = ct.filter(t=>t.status==='completed').length; return ct.length ? `<div style="font-size:.72rem;color:var(--text2);margin-top:6px;">${done}/${ct.length} tasks done</div>` : ''; })()}
+      ${team.length ? `<div class="team-tags">${team.map(t => `<span class="team-tag">${t}</span>`).join('')}</div>` : ''}
       <div class="tags" style="margin-top:10px;">
         ${conf.tags.slice(0,4).map(t => `<span class="tag">${t}</span>`).join('')}
       </div>
@@ -1857,14 +1868,14 @@ function showConfOverview(confId) {
     <div class="conf-hero">
       <h1>${conf.name}</h1>
       <div class="conf-meta">
-        <span>📅 ${conf.dates}${conf.days ? ' (' + conf.days + ' day' + (conf.days > 1 ? 's' : '') + ')' : ''}</span>
+        <span>${conf.dates}${conf.days ? ' (' + conf.days + ' day' + (conf.days > 1 ? 's' : '') + ')' : ''}</span>
         <span>📍 ${conf.location || 'TBD'}</span>
         <span><a href="${conf.website}" target="_blank">🌐 ${conf.website.replace('https://','').replace('http://','')}</a></span>
       </div>
 
       <div class="conf-details-grid">
         <div class="conf-detail-card">
-          <h3>📋 Agenda</h3>
+          <h3>Agenda</h3>
           <div class="detail-value ${cd.agenda ? '' : 'empty'}">
             ${cd.agenda ? `<a href="${cd.agenda}" target="_blank">View Agenda →</a>` : 'Not added yet'}
           </div>
@@ -1889,13 +1900,13 @@ function showConfOverview(confId) {
 
       ${conf.size || conf.attendeeProfile || conf.icpTier || conf.whyRelevant ? `
       <div class="conf-details-grid" style="margin-bottom:20px;">
-        ${conf.size ? `<div class="conf-detail-card"><h3>📊 Size</h3><div class="detail-value">${conf.size}${conf.attendeeProfile ? ' — ' + esc(conf.attendeeProfile) : ''}</div></div>` : ''}
-        ${conf.icpTier ? `<div class="conf-detail-card"><h3>🎯 ICP Tier</h3><div class="detail-value">${esc(conf.icpTier)}</div>${conf.icps ? '<div style="margin-top:8px;font-size:.82rem;color:var(--text2)">' + esc(conf.icps) + '</div>' : ''}</div>` : ''}
-        ${conf.whyRelevant ? `<div class="conf-detail-card"><h3>💡 Why Relevant</h3><div class="detail-value">${esc(conf.whyRelevant)}</div></div>` : ''}
+        ${conf.size ? `<div class="conf-detail-card"><h3>Size</h3><div class="detail-value">${conf.size}${conf.attendeeProfile ? ' — ' + esc(conf.attendeeProfile) : ''}</div></div>` : ''}
+        ${conf.icpTier ? `<div class="conf-detail-card"><h3>ICP Tier</h3><div class="detail-value">${esc(conf.icpTier)}</div>${conf.icps ? '<div style="margin-top:8px;font-size:.82rem;color:var(--text2)">' + esc(conf.icps) + '</div>' : ''}</div>` : ''}
+        ${conf.whyRelevant ? `<div class="conf-detail-card"><h3>Why Relevant</h3><div class="detail-value">${esc(conf.whyRelevant)}</div></div>` : ''}
       </div>` : ''}
 
       <div class="conf-detail-card" style="margin-bottom:20px;">
-        <h3>🎯 RISA Labs GTM Decision</h3>
+        <h3>GTM Decision</h3>
         <div class="gtm-selector">
           ${Object.entries(GTM_TAGS).map(([key, val]) => `
             <div class="gtm-option ${cd.gtmTag === key ? 'active' : ''}" 
@@ -1913,11 +1924,11 @@ function showConfOverview(confId) {
       ${conf.speakerProfile || conf.competitorPresence || conf.icpOverlap ? `
       <div class="conf-details-grid" style="margin-bottom:20px;">
         ${conf.speakerProfile ? `<div class="conf-detail-card">
-          <h3>👤 Speaker / Attendee Profile</h3>
+          <h3>Speaker & Attendee Profile</h3>
           <div class="detail-value" style="font-size:.88rem;">${esc(conf.speakerProfile)}</div>
         </div>` : ''}
         ${conf.icpOverlap ? `<div class="conf-detail-card">
-          <h3>🎯 ICP Overlap</h3>
+          <h3>ICP Overlap</h3>
           <div class="detail-value" style="font-size:.88rem;">${esc(conf.icpOverlap)}</div>
         </div>` : ''}
         ${conf.competitorPresence ? `<div class="conf-detail-card" style="grid-column:1/-1;">
@@ -1927,7 +1938,7 @@ function showConfOverview(confId) {
       </div>` : ''}
 
       <div class="conf-detail-card">
-        <h3>📧 Outreach Status</h3>
+        <h3>Outreach Status</h3>
         <div class="outreach-tracker">
           <div>
             <label>Status</label><br>
@@ -1976,15 +1987,15 @@ function showConfOverview(confId) {
 
       <!-- Task Board -->
       <div class="conf-detail-card" style="margin-bottom:20px;">
-        <h3>📋 Tasks & Action Items</h3>
+        <h3>Tasks</h3>
         <div id="taskBoard-${confId}" class="task-board"></div>
       </div>
 
       <!-- Team Assignment -->
       <div class="conf-detail-card" style="margin-bottom:20px;">
-        <h3>👥 Team Assignment</h3>
+        <h3>Team</h3>
         <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;" id="teamTags-${confId}">
-          ${getTeam(confId).map(t => `<span class="team-tag" onclick="event.stopPropagation();removeTeamMember('${confId}','${t}');showConfOverview('${confId}')">👤 ${esc(t)} ✕</span>`).join('')}
+          ${getTeam(confId).map(t => `<span class="team-tag" onclick="event.stopPropagation();removeTeamMember('${confId}','${t}');showConfOverview('${confId}')">${esc(t)} ✕</span>`).join('')}
           <input type="text" placeholder="+ Add team member" style="padding:4px 8px;border:1px dashed var(--border);border-radius:8px;font-size:.8rem;width:140px;"
             onkeydown="if(event.key==='Enter'&&this.value.trim()){addTeamMember('${confId}',this.value.trim());showConfOverview('${confId}');}">
         </div>
@@ -1992,7 +2003,7 @@ function showConfOverview(confId) {
 
       <!-- Budget Tracker -->
       <div class="conf-detail-card" style="margin-bottom:20px;">
-        <h3>💰 Budget Estimate</h3>
+        <h3>Budget</h3>
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
           <div>
             <label style="font-size:.78rem;color:var(--text2);">Sponsorship ($)</label>
@@ -2018,17 +2029,17 @@ function showConfOverview(confId) {
 
       <!-- Notes -->
       <div class="conf-detail-card" style="margin-bottom:20px;">
-        <h3>📝 Notes & Action Items</h3>
+        <h3>Notes</h3>
         <textarea placeholder="Add notes, action items, registration deadlines, key contacts..." 
           style="width:100%;min-height:80px;padding:10px;border:1px solid var(--border);border-radius:8px;font-size:.85rem;font-family:inherit;resize:vertical;"
           onblur="setNote('${confId}',this.value)">${esc(getNote(confId))}</textarea>
       </div>
 
       <div class="conf-actions" style="margin-top:28px;">
-        ${hasSpeakers ? `<button class="conf-action-btn primary" onclick="showDetail()">👥 View Speakers & Outreach</button>` : 
-          `<button class="conf-action-btn" style="opacity:.5;cursor:default">👥 No speakers added yet</button>`}
+        ${hasSpeakers ? `<button class="conf-action-btn primary" onclick="showDetail()">View Speakers & Outreach</button>` : 
+          `<button class="conf-action-btn" style="opacity:.5;cursor:default">No speakers added yet</button>`}
         ${conf.website ? `<a href="${conf.website}" target="_blank" class="conf-action-btn">🌐 Conference Website</a>` : ''}
-        ${cd.agenda ? `<a href="${cd.agenda}" target="_blank" class="conf-action-btn">📋 View Agenda</a>` : ''}
+        ${cd.agenda ? `<a href="${cd.agenda}" target="_blank" class="conf-action-btn">View Agenda</a>` : ''}
         ${cd.exhibitorProspectus ? `<a href="${cd.exhibitorProspectus}" target="_blank" class="conf-action-btn">📄 Sponsorship Prospectus</a>` : ''}
       </div>
     </div>

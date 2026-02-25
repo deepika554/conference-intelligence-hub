@@ -8,8 +8,8 @@ const CONFERENCES = [
     dateEnd: '2026-03-13',
     location: 'Las Vegas, NV — The Venetian',
     website: 'https://www.himssconference.com',
-    agenda: 'https://www.himssconference.com/session-catalog',
-    exhibitorProspectus: '',
+    agenda: 'https://www.himssconference.com/sessions',
+    exhibitorProspectus: 'https://www.himssconference.com/exhibit/become-exhibitor',
     tags: ['Healthcare IT', 'Revenue Cycle', 'AI', 'Digital Health', 'Oncology Signals'],
     gtmTag: 'must_attend',       // must_attend | must_sponsor | outreach_only | skip
     outreach: {
@@ -26,9 +26,9 @@ const CONFERENCES = [
     dateStart: '2026-03-27',
     dateEnd: '2026-03-29',
     location: 'Orlando, FL',
-    website: 'https://www.nccn.org/conferences',
+    website: 'https://www.nccn.org/education-and-research/annual-conference',
     agenda: 'https://web.cvent.com/event/c545cc3d-2270-4e92-a667-dd145f0862ff/websitePage:d21d34a5-02d8-435f-b04e-a20ead3092fc',
-    exhibitorProspectus: '',
+    exhibitorProspectus: 'https://www.nccn.org/education-and-research/annual-conference/sponsorship-exhibit',
     tags: ['Oncology', 'Clinical Guidelines', 'Cancer Research', 'Policy'],
     gtmTag: 'outreach_only',
     outreach: {
@@ -40,14 +40,14 @@ const CONFERENCES = [
   },
   {
     id: 'asco-2026',
-    name: 'ASCO 2026',
+    name: 'ASCO 2026 Annual Meeting',
     dates: 'May 29 – June 2, 2026',
     dateStart: '2026-05-29',
     dateEnd: '2026-06-02',
     location: 'Chicago, IL — McCormick Place',
-    website: 'https://meetings.asco.org',
-    agenda: '',
-    exhibitorProspectus: '',
+    website: 'https://www.asco.org/annual-meeting',
+    agenda: 'https://meetings.asco.org/am/schedule-at-a-glance',
+    exhibitorProspectus: 'https://www.asco.org/annual-meeting/exhibitors',
     tags: ['Oncology', 'Research', 'Clinical Trials'],
     gtmTag: '',
     outreach: {

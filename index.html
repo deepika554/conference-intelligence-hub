@@ -617,6 +617,12 @@ function getConfData(id) {
       exhibitorProspectus: base?.exhibitorProspectus || ''
     };
   }
+  // Merge defaults from CONFERENCES if fields are empty
+  const base = CONFERENCES.find(c => c.id === id);
+  if (base) {
+    if (!confData[id].agenda && base.agenda) confData[id].agenda = base.agenda;
+    if (!confData[id].exhibitorProspectus && base.exhibitorProspectus) confData[id].exhibitorProspectus = base.exhibitorProspectus;
+  }
   return confData[id];
 }
 

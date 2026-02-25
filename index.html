@@ -1141,10 +1141,11 @@ function getConfTasks(confId) {
 }
 
 const TASK_STATUSES = {
-  'not_started': { label: 'Not Started', bg: 'rgba(140,145,164,.1)', color: '#8891a4' },
-  'in_progress': { label: 'In Progress', bg: 'rgba(91,138,247,.12)', color: '#5b8af7' },
-  'completed':   { label: 'Done', bg: 'rgba(52,211,153,.1)', color: '#34d399' },
-  'blocked':     { label: 'Blocked', bg: 'rgba(248,113,113,.1)', color: '#f87171' }
+  'not_started':  { label: 'To Do',       bg: 'rgba(140,145,164,.1)', color: '#8891a4' },
+  'in_progress':  { label: 'In Progress', bg: 'rgba(91,138,247,.12)', color: '#5b8af7' },
+  'in_review':    { label: 'In Review',   bg: 'rgba(251,191,36,.1)',  color: '#fbbf24' },
+  'blocked':      { label: 'Blocked',     bg: 'rgba(248,113,113,.1)', color: '#f87171' },
+  'completed':    { label: 'Done',        bg: 'rgba(52,211,153,.1)',  color: '#34d399' }
 };
 
 const TASK_CATEGORIES = {
@@ -1223,7 +1224,7 @@ function renderTaskBoard(confId, containerId) {
   const el = document.getElementById(containerId);
   if (!el) return;
 
-  const statusOrder = ['not_started', 'in_progress', 'blocked', 'completed'];
+  const statusOrder = ['not_started', 'in_progress', 'in_review', 'blocked', 'completed'];
   const sorted = [...tasks].sort((a,b) => {
     const si = statusOrder.indexOf(a.status) - statusOrder.indexOf(b.status);
     if (si !== 0) return si;
@@ -1277,7 +1278,7 @@ function renderTaskBoard(confId, containerId) {
         </div>
       </div>
       <div class="task-actions">
-        <button onclick="event.stopPropagation();deleteTask(${t.id});renderTaskBoard('${confId}','${containerId}')" title="Delete">🗑</button>
+        <button onclick="event.stopPropagation();deleteTask(${t.id});renderTaskBoard('${confId}','${containerId}')" title="Delete">×</button>
       </div>
     </div>`;
   });
@@ -1286,7 +1287,7 @@ function renderTaskBoard(confId, containerId) {
   html += `<div class="add-task-row">
     <input type="text" id="newTask-${confId}" placeholder="Add a task..." onkeydown="if(event.key==='Enter')addTaskFromForm('${confId}','${containerId}')">
     <select id="newTaskAssignee-${confId}"><option value="">Assignee</option>${TEAM.map(m=>`<option value="${esc(m.name)}">${esc(m.name)} (${m.email})</option>`).join('')}${getKnownTeamMembers().filter(n=>!TEAM.find(m=>m.name===n)).map(m=>`<option value="${esc(m)}">${esc(m)}</option>`).join('')}<option value="_new">+ New person</option></select>
-    <select id="newTaskPriority-${confId}"><option value="high">🔴 High</option><option value="medium" selected>🟡 Medium</option><option value="low">⚪ Low</option></select>
+    <select id="newTaskPriority-${confId}"><option value="high">High</option><option value="medium" selected>Medium</option><option value="low">Low</option></select>
     <select id="newTaskCategory-${confId}">${Object.entries(TASK_CATEGORIES).map(([k,v])=>`<option value="${k}">${v.label}</option>`).join('')}</select>
     <input type="date" id="newTaskDue-${confId}" style="width:140px;">
     <button class="add-task-btn" onclick="addTaskFromForm('${confId}','${containerId}')">Add Task</button>
@@ -1374,8 +1375,9 @@ function renderGlobalTasks() {
 
   document.getElementById('globalTaskFilters').innerHTML = `
     <button class="task-filter-btn ${globalTaskFilter==='all'?'active':''}" onclick="globalTaskFilter='all';renderGlobalTasks()">All</button>
-    <button class="task-filter-btn ${globalTaskFilter==='not_started'?'active':''}" onclick="globalTaskFilter='not_started';renderGlobalTasks()">Not Started</button>
+    <button class="task-filter-btn ${globalTaskFilter==='not_started'?'active':''}" onclick="globalTaskFilter='not_started';renderGlobalTasks()">To Do</button>
     <button class="task-filter-btn ${globalTaskFilter==='in_progress'?'active':''}" onclick="globalTaskFilter='in_progress';renderGlobalTasks()">In Progress</button>
+    <button class="task-filter-btn ${globalTaskFilter==='in_review'?'active':''}" onclick="globalTaskFilter='in_review';renderGlobalTasks()">In Review</button>
     <button class="task-filter-btn ${globalTaskFilter==='blocked'?'active':''}" onclick="globalTaskFilter='blocked';renderGlobalTasks()">Blocked</button>
     <button class="task-filter-btn ${globalTaskFilter==='completed'?'active':''}" onclick="globalTaskFilter='completed';renderGlobalTasks()">Done</button>
     <select onchange="globalTaskAssigneeFilter=this.value;renderGlobalTasks()" style="padding:4px 8px;border:1px solid var(--border);border-radius:8px;font-size:.78rem;">
@@ -1399,7 +1401,7 @@ function renderGlobalTasks() {
   });
 
   // Sort: blocked first, then by priority, then by due date
-  const statusOrder = { blocked: 0, in_progress: 1, not_started: 2, completed: 3 };
+  const statusOrder = { blocked: 0, in_progress: 1, in_review: 2, not_started: 3, completed: 4 };
   const prioOrder = { high: 0, medium: 1, low: 2 };
   filtered.sort((a,b) => {
     const s = (statusOrder[a.status]||2) - (statusOrder[b.status]||2);
@@ -1441,7 +1443,7 @@ function renderGlobalTasks() {
         </div>
       </div>
       <div class="task-actions">
-        <button onclick="event.stopPropagation();deleteTask(${t.id});renderGlobalTasks()" title="Delete">🗑</button>
+        <button onclick="event.stopPropagation();deleteTask(${t.id});renderGlobalTasks()" title="Delete">×</button>
       </div>
     </div>`;
   });
@@ -1455,14 +1457,14 @@ function renderGlobalTasks() {
   // Add task form
   document.getElementById('globalAddTask').innerHTML = `
     <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;">
-      <h3 style="font-size:.9rem;margin-bottom:12px;">➕ Add New Task</h3>
+      <h3 style="font-size:.9rem;margin-bottom:12px;">Add Task</h3>
       <div class="add-task-row">
         <input type="text" id="globalNewTask" placeholder="Task description...">
         <select id="globalNewConf"><option value="">Conference (optional)</option>${CONFERENCES.filter(c=>getConfData(c.id).gtmTag!=='skip').map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select>
       </div>
       <div class="add-task-row" style="margin-top:8px;">
         <select id="globalNewAssignee"><option value="">Assignee</option>${TEAM.map(m=>`<option value="${esc(m.name)}">${esc(m.name)} (${m.email})</option>`).join('')}<option value="_new">+ New person</option></select>
-        <select id="globalNewPriority"><option value="high">🔴 High</option><option value="medium" selected>🟡 Medium</option><option value="low">⚪ Low</option></select>
+        <select id="globalNewPriority"><option value="high">High</option><option value="medium" selected>Medium</option><option value="low">Low</option></select>
         <select id="globalNewCategory">${Object.entries(TASK_CATEGORIES).map(([k,v])=>`<option value="${k}">${v.label}</option>`).join('')}</select>
         <input type="date" id="globalNewDue" style="width:140px;">
         <button class="add-task-btn" onclick="addGlobalTask()">Add Task</button>

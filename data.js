@@ -1862,9 +1862,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ0NDQ3MjM=",
     "priority": "P1",
     "persona": "csuite",
-    "primaryMetric": "60+ FTEs freed / repurposed to patient-facing roles, 3x lower cost per PA",
-    "secondaryMetric": "$400M+ worth of oncology drugs authorized",
-    "metricHook": "Measurable cost reduction and workforce optimization"
+    "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
+    "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
+    "metricHook": "Workforce optimization with zero marginal cost to scale"
   },
   {
     "firstName": "Donna",
@@ -1892,9 +1892,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQxMDA1MzY=",
     "priority": "P1",
     "persona": "csuite",
-    "primaryMetric": "60+ FTEs freed / repurposed to patient-facing roles, 3x lower cost per PA",
-    "secondaryMetric": "$400M+ worth of oncology drugs authorized",
-    "metricHook": "Measurable cost reduction and workforce optimization"
+    "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
+    "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
+    "metricHook": "Workforce optimization with zero marginal cost to scale"
   },
   {
     "firstName": "Brian",
@@ -1921,9 +1921,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0ODU=",
     "priority": "P1",
     "persona": "revenue_cycle",
-    "primaryMetric": "97%+ first-pass approval + ensures claims approval (not just auth)",
-    "secondaryMetric": "30% touchless auths, 3x lower cost per PA",
-    "metricHook": "Auth approval that actually converts to claims payment"
+    "primaryMetric": "97%+ first-pass approval that converts to claims payment — not just auth approval but revenue certainty",
+    "secondaryMetric": "30% touchless auths, 3x lower cost per PA; payer behavior visibility that prevents the next denial",
+    "metricHook": "Auth outcomes + payer signals that prevent denials before they happen"
   },
   {
     "firstName": "Andrew",
@@ -1949,9 +1949,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0NTA=",
     "priority": "P1",
     "persona": "csuite",
-    "primaryMetric": "60+ FTEs freed / repurposed to patient-facing roles, 3x lower cost per PA",
-    "secondaryMetric": "$400M+ worth of oncology drugs authorized",
-    "metricHook": "Measurable cost reduction and workforce optimization"
+    "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
+    "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
+    "metricHook": "Workforce optimization with zero marginal cost to scale"
   },
   {
     "firstName": "Jonathan",
@@ -1976,9 +1976,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ1Nzg0NjA=",
     "priority": "P1",
     "persona": "medical",
-    "primaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "secondaryMetric": "Auths filed 21 days ahead of Date of Service",
-    "metricHook": "Clinical accuracy and guideline adherence built into every authorization"
+    "primaryMetric": "97%+ first-submission approval rate — NCCN, ASCO, FDA, CMS guidelines codified into executable logic with evidence mapped from EHR",
+    "secondaryMetric": "Auths filed 21 days ahead of DOS; confidence scoring with automatic human review when needed",
+    "metricHook": "Guideline-aligned authorization with supporting & contradictory evidence surfaced inline"
   },
   {
     "firstName": "Michael",
@@ -2003,9 +2003,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ0NDQ5MzE=",
     "priority": "P1",
     "persona": "other",
-    "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval aligned with NCCN",
-    "secondaryMetric": "60+ FTEs freed, 110+ sites live",
-    "metricHook": "AI OS transforming oncology operations"
+    "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval aligned with NCCN — with full traceability",
+    "secondaryMetric": "60+ FTEs freed, 110+ sites, works across any EHR and payer system",
+    "metricHook": "AI OS for oncology — autonomous where safe, human-reviewed where needed"
   },
   {
     "firstName": "Michael",
@@ -2031,9 +2031,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzNTI=",
     "priority": "P1",
     "persona": "csuite",
-    "primaryMetric": "60+ FTEs freed / repurposed to patient-facing roles, 3x lower cost per PA",
-    "secondaryMetric": "$400M+ worth of oncology drugs authorized",
-    "metricHook": "Measurable cost reduction and workforce optimization"
+    "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
+    "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
+    "metricHook": "Workforce optimization with zero marginal cost to scale"
   },
   {
     "firstName": "Pamela",
@@ -2058,9 +2058,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1NzM=",
     "priority": "P1",
     "persona": "other",
-    "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval aligned with NCCN",
-    "secondaryMetric": "60+ FTEs freed, 110+ sites live",
-    "metricHook": "AI OS transforming oncology operations"
+    "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval aligned with NCCN — with full traceability",
+    "secondaryMetric": "60+ FTEs freed, 110+ sites, works across any EHR and payer system",
+    "metricHook": "AI OS for oncology — autonomous where safe, human-reviewed where needed"
   },
   {
     "firstName": "Raymond",
@@ -2086,9 +2086,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzMjQ=",
     "priority": "P1",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Joseph",
@@ -2114,9 +2114,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0MjM=",
     "priority": "P1",
     "persona": "csuite",
-    "primaryMetric": "60+ FTEs freed / repurposed to patient-facing roles, 3x lower cost per PA",
-    "secondaryMetric": "$400M+ worth of oncology drugs authorized",
-    "metricHook": "Measurable cost reduction and workforce optimization"
+    "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
+    "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
+    "metricHook": "Workforce optimization with zero marginal cost to scale"
   },
   {
     "firstName": "Michael",
@@ -2142,9 +2142,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ4NDI3MjE=",
     "priority": "P1",
     "persona": "revenue_cycle",
-    "primaryMetric": "97%+ first-pass approval + ensures claims approval (not just auth)",
-    "secondaryMetric": "30% touchless auths, 3x lower cost per PA",
-    "metricHook": "Auth approval that actually converts to claims payment"
+    "primaryMetric": "97%+ first-pass approval that converts to claims payment — not just auth approval but revenue certainty",
+    "secondaryMetric": "30% touchless auths, 3x lower cost per PA; payer behavior visibility that prevents the next denial",
+    "metricHook": "Auth outcomes + payer signals that prevent denials before they happen"
   },
   {
     "firstName": "Barbara",
@@ -2170,9 +2170,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0ODc=",
     "priority": "P1",
     "persona": "revenue_cycle",
-    "primaryMetric": "97%+ first-pass approval + ensures claims approval (not just auth)",
-    "secondaryMetric": "30% touchless auths, 3x lower cost per PA",
-    "metricHook": "Auth approval that actually converts to claims payment"
+    "primaryMetric": "97%+ first-pass approval that converts to claims payment — not just auth approval but revenue certainty",
+    "secondaryMetric": "30% touchless auths, 3x lower cost per PA; payer behavior visibility that prevents the next denial",
+    "metricHook": "Auth outcomes + payer signals that prevent denials before they happen"
   },
   {
     "firstName": "Bernardo",
@@ -2198,9 +2198,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzNDE=",
     "priority": "P1",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Crystal",
@@ -2227,9 +2227,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ0NTI0MDc=",
     "priority": "P1",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Julie",
@@ -2253,9 +2253,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM5NDAxMDQ=",
     "priority": "P1",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Michael",
@@ -2281,9 +2281,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0ODI=",
     "priority": "P1",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Michelle",
@@ -2307,9 +2307,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ0NDUwODc=",
     "priority": "P1",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Rasu",
@@ -2335,9 +2335,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ0OTgzMjI=",
     "priority": "P1",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Roberta",
@@ -2363,9 +2363,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM1MzI5ODM=",
     "priority": "P1",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Sameer",
@@ -2391,9 +2391,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzOTQ=",
     "priority": "P1",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Yindalon",
@@ -2419,9 +2419,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzMzY=",
     "priority": "P1",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Jonathan",
@@ -2446,9 +2446,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ1Nzg4NTM=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Ramesh",
@@ -2473,9 +2473,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ0Mzg2MDM=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Anil",
@@ -2500,9 +2500,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQxMDA1MzQ=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Brett",
@@ -2529,9 +2529,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0NzM=",
     "priority": "P2",
     "persona": "csuite",
-    "primaryMetric": "60+ FTEs freed / repurposed to patient-facing roles, 3x lower cost per PA",
-    "secondaryMetric": "$400M+ worth of oncology drugs authorized",
-    "metricHook": "Measurable cost reduction and workforce optimization"
+    "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
+    "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
+    "metricHook": "Workforce optimization with zero marginal cost to scale"
   },
   {
     "firstName": "Doug",
@@ -2557,9 +2557,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQyNTE1NzY=",
     "priority": "P2",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Keith",
@@ -2584,9 +2584,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM5NjM3MTE=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Micky",
@@ -2611,9 +2611,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ2NjE5MzU=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Nabile",
@@ -2638,9 +2638,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM3MTI2MzY=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Nasim",
@@ -2665,9 +2665,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ2MTQ2Njc=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Robert",
@@ -2692,9 +2692,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM5MDE1MTA=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Adam",
@@ -2719,9 +2719,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ1MzM5ODA=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Albert",
@@ -2748,9 +2748,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ2MjYwMDI=",
     "priority": "P2",
     "persona": "medical",
-    "primaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "secondaryMetric": "Auths filed 21 days ahead of Date of Service",
-    "metricHook": "Clinical accuracy and guideline adherence built into every authorization"
+    "primaryMetric": "97%+ first-submission approval rate — NCCN, ASCO, FDA, CMS guidelines codified into executable logic with evidence mapped from EHR",
+    "secondaryMetric": "Auths filed 21 days ahead of DOS; confidence scoring with automatic human review when needed",
+    "metricHook": "Guideline-aligned authorization with supporting & contradictory evidence surfaced inline"
   },
   {
     "firstName": "Ameena",
@@ -2776,9 +2776,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0Mjk=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Amy",
@@ -2804,9 +2804,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMyODA=",
     "priority": "P2",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Beth",
@@ -2832,9 +2832,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMyNzc=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Bryon",
@@ -2860,9 +2860,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ2ODg2MDM=",
     "priority": "P2",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "David",
@@ -2887,9 +2887,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ1MzM5Nzk=",
     "priority": "P2",
     "persona": "medical",
-    "primaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "secondaryMetric": "Auths filed 21 days ahead of Date of Service",
-    "metricHook": "Clinical accuracy and guideline adherence built into every authorization"
+    "primaryMetric": "97%+ first-submission approval rate — NCCN, ASCO, FDA, CMS guidelines codified into executable logic with evidence mapped from EHR",
+    "secondaryMetric": "Auths filed 21 days ahead of DOS; confidence scoring with automatic human review when needed",
+    "metricHook": "Guideline-aligned authorization with supporting & contradictory evidence surfaced inline"
   },
   {
     "firstName": "Jeffrey",
@@ -2915,9 +2915,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQwNTg1OTc=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Joe",
@@ -2942,9 +2942,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQwNDQzMjg=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Karandeep",
@@ -2968,9 +2968,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ3NTUxMDY=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Kerry",
@@ -2997,9 +2997,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1MzA=",
     "priority": "P2",
     "persona": "clinical_ops",
-    "primaryMetric": "~80% administrative time reclaimed, 5x faster case completion",
-    "secondaryMetric": "99.5% visit authorization rate",
-    "metricHook": "Eliminate the operational grind in prior auth"
+    "primaryMetric": "~80% admin time reclaimed, 5x faster case completion — auto-populated payer forms, single interface across portals/e-fax/API",
+    "secondaryMetric": "99.5% visit auth rate; payer behavior and auth outcomes become visible feedback signals",
+    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow"
   },
   {
     "firstName": "Melissa",
@@ -3024,9 +3024,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1MDM=",
     "priority": "P2",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Vincent",
@@ -3052,9 +3052,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1Mjc=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Amish",
@@ -3079,9 +3079,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQxNTg1MjA=",
     "priority": "P2",
     "persona": "medical",
-    "primaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "secondaryMetric": "Auths filed 21 days ahead of Date of Service",
-    "metricHook": "Clinical accuracy and guideline adherence built into every authorization"
+    "primaryMetric": "97%+ first-submission approval rate — NCCN, ASCO, FDA, CMS guidelines codified into executable logic with evidence mapped from EHR",
+    "secondaryMetric": "Auths filed 21 days ahead of DOS; confidence scoring with automatic human review when needed",
+    "metricHook": "Guideline-aligned authorization with supporting & contradictory evidence surfaced inline"
   },
   {
     "firstName": "Anna",
@@ -3108,9 +3108,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzNDg=",
     "priority": "P2",
     "persona": "csuite",
-    "primaryMetric": "60+ FTEs freed / repurposed to patient-facing roles, 3x lower cost per PA",
-    "secondaryMetric": "$400M+ worth of oncology drugs authorized",
-    "metricHook": "Measurable cost reduction and workforce optimization"
+    "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
+    "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
+    "metricHook": "Workforce optimization with zero marginal cost to scale"
   },
   {
     "firstName": "Cheri",
@@ -3135,9 +3135,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ0NTEwOTc=",
     "priority": "P2",
     "persona": "clinical_ops",
-    "primaryMetric": "~80% administrative time reclaimed, 5x faster case completion",
-    "secondaryMetric": "99.5% visit authorization rate",
-    "metricHook": "Eliminate the operational grind in prior auth"
+    "primaryMetric": "~80% admin time reclaimed, 5x faster case completion — auto-populated payer forms, single interface across portals/e-fax/API",
+    "secondaryMetric": "99.5% visit auth rate; payer behavior and auth outcomes become visible feedback signals",
+    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow"
   },
   {
     "firstName": "Danny",
@@ -3162,9 +3162,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM2NzQwNTY=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "David",
@@ -3189,9 +3189,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQxMzU3MzA=",
     "priority": "P2",
     "persona": "other",
-    "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval aligned with NCCN",
-    "secondaryMetric": "60+ FTEs freed, 110+ sites live",
-    "metricHook": "AI OS transforming oncology operations"
+    "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval aligned with NCCN — with full traceability",
+    "secondaryMetric": "60+ FTEs freed, 110+ sites, works across any EHR and payer system",
+    "metricHook": "AI OS for oncology — autonomous where safe, human-reviewed where needed"
   },
   {
     "firstName": "Deepti",
@@ -3217,9 +3217,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM4OTYyNTQ=",
     "priority": "P2",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Jana",
@@ -3242,9 +3242,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzNjE=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Kali",
@@ -3269,9 +3269,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM5ODEyOTc=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Kathrina",
@@ -3296,9 +3296,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0OTU=",
     "priority": "P2",
     "persona": "clinical_ops",
-    "primaryMetric": "~80% administrative time reclaimed, 5x faster case completion",
-    "secondaryMetric": "99.5% visit authorization rate",
-    "metricHook": "Eliminate the operational grind in prior auth"
+    "primaryMetric": "~80% admin time reclaimed, 5x faster case completion — auto-populated payer forms, single interface across portals/e-fax/API",
+    "secondaryMetric": "99.5% visit auth rate; payer behavior and auth outcomes become visible feedback signals",
+    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow"
   },
   {
     "firstName": "Kathryn",
@@ -3323,9 +3323,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM4NzMyMDk=",
     "priority": "P2",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Katie",
@@ -3350,9 +3350,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQxMTY3MTI=",
     "priority": "P2",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Nader",
@@ -3377,9 +3377,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0NTE=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Nicholas “Shetal”",
@@ -3404,9 +3404,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ1MzI4NTc=",
     "priority": "P2",
     "persona": "medical",
-    "primaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "secondaryMetric": "Auths filed 21 days ahead of Date of Service",
-    "metricHook": "Clinical accuracy and guideline adherence built into every authorization"
+    "primaryMetric": "97%+ first-submission approval rate — NCCN, ASCO, FDA, CMS guidelines codified into executable logic with evidence mapped from EHR",
+    "secondaryMetric": "Auths filed 21 days ahead of DOS; confidence scoring with automatic human review when needed",
+    "metricHook": "Guideline-aligned authorization with supporting & contradictory evidence surfaced inline"
   },
   {
     "firstName": "Omkar",
@@ -3430,9 +3430,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ3ODcyNTM=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Philip",
@@ -3457,9 +3457,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzMTU=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Rachel",
@@ -3484,9 +3484,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM3MDk1ODg=",
     "priority": "P2",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Rajender",
@@ -3511,9 +3511,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1NjU=",
     "priority": "P2",
     "persona": "csuite",
-    "primaryMetric": "60+ FTEs freed / repurposed to patient-facing roles, 3x lower cost per PA",
-    "secondaryMetric": "$400M+ worth of oncology drugs authorized",
-    "metricHook": "Measurable cost reduction and workforce optimization"
+    "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
+    "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
+    "metricHook": "Workforce optimization with zero marginal cost to scale"
   },
   {
     "firstName": "Rebecca",
@@ -3539,9 +3539,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM1OTkxNTE=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Simon",
@@ -3566,9 +3566,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM5NzcwOTQ=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Srinivasan",
@@ -3593,9 +3593,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM2MjA4NTI=",
     "priority": "P2",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Suresh",
@@ -3620,9 +3620,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQwNTg1OTY=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Tamara",
@@ -3647,9 +3647,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ2MTQ2NjY=",
     "priority": "P2",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Thomas",
@@ -3675,9 +3675,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0MTk=",
     "priority": "P2",
     "persona": "csuite",
-    "primaryMetric": "60+ FTEs freed / repurposed to patient-facing roles, 3x lower cost per PA",
-    "secondaryMetric": "$400M+ worth of oncology drugs authorized",
-    "metricHook": "Measurable cost reduction and workforce optimization"
+    "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
+    "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
+    "metricHook": "Workforce optimization with zero marginal cost to scale"
   },
   {
     "firstName": "Tracy",
@@ -3702,9 +3702,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzODg=",
     "priority": "P2",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Amy",
@@ -3728,9 +3728,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQzODIyMTg=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Andrew",
@@ -3754,9 +3754,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1MzQ=",
     "priority": "P3",
     "persona": "csuite",
-    "primaryMetric": "60+ FTEs freed / repurposed to patient-facing roles, 3x lower cost per PA",
-    "secondaryMetric": "$400M+ worth of oncology drugs authorized",
-    "metricHook": "Measurable cost reduction and workforce optimization"
+    "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
+    "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
+    "metricHook": "Workforce optimization with zero marginal cost to scale"
   },
   {
     "firstName": "AnneMarie",
@@ -3780,9 +3780,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM5NzI3MzM=",
     "priority": "P3",
     "persona": "clinical_ops",
-    "primaryMetric": "~80% administrative time reclaimed, 5x faster case completion",
-    "secondaryMetric": "99.5% visit authorization rate",
-    "metricHook": "Eliminate the operational grind in prior auth"
+    "primaryMetric": "~80% admin time reclaimed, 5x faster case completion — auto-populated payer forms, single interface across portals/e-fax/API",
+    "secondaryMetric": "99.5% visit auth rate; payer behavior and auth outcomes become visible feedback signals",
+    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow"
   },
   {
     "firstName": "Bruce",
@@ -3806,9 +3806,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0MTU=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Casey",
@@ -3832,9 +3832,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMyODM=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Chris",
@@ -3858,9 +3858,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1NjQ=",
     "priority": "P3",
     "persona": "medical",
-    "primaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "secondaryMetric": "Auths filed 21 days ahead of Date of Service",
-    "metricHook": "Clinical accuracy and guideline adherence built into every authorization"
+    "primaryMetric": "97%+ first-submission approval rate — NCCN, ASCO, FDA, CMS guidelines codified into executable logic with evidence mapped from EHR",
+    "secondaryMetric": "Auths filed 21 days ahead of DOS; confidence scoring with automatic human review when needed",
+    "metricHook": "Guideline-aligned authorization with supporting & contradictory evidence surfaced inline"
   },
   {
     "firstName": "Christopher",
@@ -3884,9 +3884,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1NjM=",
     "priority": "P3",
     "persona": "medical",
-    "primaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "secondaryMetric": "Auths filed 21 days ahead of Date of Service",
-    "metricHook": "Clinical accuracy and guideline adherence built into every authorization"
+    "primaryMetric": "97%+ first-submission approval rate — NCCN, ASCO, FDA, CMS guidelines codified into executable logic with evidence mapped from EHR",
+    "secondaryMetric": "Auths filed 21 days ahead of DOS; confidence scoring with automatic human review when needed",
+    "metricHook": "Guideline-aligned authorization with supporting & contradictory evidence surfaced inline"
   },
   {
     "firstName": "Chuck",
@@ -3910,9 +3910,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ1MTQyMzQ=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "David",
@@ -3936,9 +3936,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ4NDM0NzQ=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "David",
@@ -3962,9 +3962,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMzMzk1NDA=",
     "priority": "P3",
     "persona": "csuite",
-    "primaryMetric": "60+ FTEs freed / repurposed to patient-facing roles, 3x lower cost per PA",
-    "secondaryMetric": "$400M+ worth of oncology drugs authorized",
-    "metricHook": "Measurable cost reduction and workforce optimization"
+    "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
+    "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
+    "metricHook": "Workforce optimization with zero marginal cost to scale"
   },
   {
     "firstName": "Elham",
@@ -3988,9 +3988,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzNTM=",
     "priority": "P3",
     "persona": "csuite",
-    "primaryMetric": "60+ FTEs freed / repurposed to patient-facing roles, 3x lower cost per PA",
-    "secondaryMetric": "$400M+ worth of oncology drugs authorized",
-    "metricHook": "Measurable cost reduction and workforce optimization"
+    "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
+    "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
+    "metricHook": "Workforce optimization with zero marginal cost to scale"
   },
   {
     "firstName": "Erik",
@@ -4014,9 +4014,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM4ODAzNTI=",
     "priority": "P3",
     "persona": "cybersecurity",
-    "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval",
-    "secondaryMetric": "110+ sites, 50K+ transactions/month",
-    "metricHook": "AI OS for oncology operations"
+    "primaryMetric": "Every AI action is configurable, explainable, and auditable — full traceability with confidence scoring",
+    "secondaryMetric": "110+ sites, 50K+ transactions/month with human-in-the-loop governance",
+    "metricHook": "Auditable AI with built-in human oversight and traceability"
   },
   {
     "firstName": "Jackie",
@@ -4041,9 +4041,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ4NTQxNjM=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Jane",
@@ -4068,9 +4068,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM1OTg3OTI=",
     "priority": "P3",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Jeff",
@@ -4094,9 +4094,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMyODQ=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Jeff",
@@ -4120,9 +4120,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM1OTkxNDM=",
     "priority": "P3",
     "persona": "cybersecurity",
-    "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval",
-    "secondaryMetric": "110+ sites, 50K+ transactions/month",
-    "metricHook": "AI OS for oncology operations"
+    "primaryMetric": "Every AI action is configurable, explainable, and auditable — full traceability with confidence scoring",
+    "secondaryMetric": "110+ sites, 50K+ transactions/month with human-in-the-loop governance",
+    "metricHook": "Auditable AI with built-in human oversight and traceability"
   },
   {
     "firstName": "John",
@@ -4146,9 +4146,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQwOTE0Mjg=",
     "priority": "P3",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Karen",
@@ -4172,9 +4172,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM5NzI5MTk=",
     "priority": "P3",
     "persona": "clinical_ops",
-    "primaryMetric": "~80% administrative time reclaimed, 5x faster case completion",
-    "secondaryMetric": "99.5% visit authorization rate",
-    "metricHook": "Eliminate the operational grind in prior auth"
+    "primaryMetric": "~80% admin time reclaimed, 5x faster case completion — auto-populated payer forms, single interface across portals/e-fax/API",
+    "secondaryMetric": "99.5% visit auth rate; payer behavior and auth outcomes become visible feedback signals",
+    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow"
   },
   {
     "firstName": "Karla",
@@ -4198,9 +4198,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ1NTI5MTU=",
     "priority": "P3",
     "persona": "clinical_ops",
-    "primaryMetric": "~80% administrative time reclaimed, 5x faster case completion",
-    "secondaryMetric": "99.5% visit authorization rate",
-    "metricHook": "Eliminate the operational grind in prior auth"
+    "primaryMetric": "~80% admin time reclaimed, 5x faster case completion — auto-populated payer forms, single interface across portals/e-fax/API",
+    "secondaryMetric": "99.5% visit auth rate; payer behavior and auth outcomes become visible feedback signals",
+    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow"
   },
   {
     "firstName": "Kimberly",
@@ -4225,9 +4225,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0Mjg=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Murat",
@@ -4251,9 +4251,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQxODI3MzM=",
     "priority": "P3",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Narayanan (Nari)",
@@ -4277,9 +4277,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM1OTkxNTA=",
     "priority": "P3",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Nathan",
@@ -4303,9 +4303,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQyNTYzMDE=",
     "priority": "P3",
     "persona": "cybersecurity",
-    "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval",
-    "secondaryMetric": "110+ sites, 50K+ transactions/month",
-    "metricHook": "AI OS for oncology operations"
+    "primaryMetric": "Every AI action is configurable, explainable, and auditable — full traceability with confidence scoring",
+    "secondaryMetric": "110+ sites, 50K+ transactions/month with human-in-the-loop governance",
+    "metricHook": "Auditable AI with built-in human oversight and traceability"
   },
   {
     "firstName": "Nerissa",
@@ -4329,9 +4329,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM4OTU2Mzc=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Ray",
@@ -4356,9 +4356,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM5NTA3NzQ=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Remle",
@@ -4382,9 +4382,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1MzU=",
     "priority": "P3",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Sarah",
@@ -4408,9 +4408,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM2OTg5NzE=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Sean",
@@ -4434,9 +4434,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM4OTU2NDA=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Sherri",
@@ -4460,9 +4460,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1Njk=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Stephanie",
@@ -4486,9 +4486,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM5NzI5MTg=",
     "priority": "P3",
     "persona": "clinical_ops",
-    "primaryMetric": "~80% administrative time reclaimed, 5x faster case completion",
-    "secondaryMetric": "99.5% visit authorization rate",
-    "metricHook": "Eliminate the operational grind in prior auth"
+    "primaryMetric": "~80% admin time reclaimed, 5x faster case completion — auto-populated payer forms, single interface across portals/e-fax/API",
+    "secondaryMetric": "99.5% visit auth rate; payer behavior and auth outcomes become visible feedback signals",
+    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow"
   },
   {
     "firstName": "Stephen",
@@ -4513,9 +4513,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1Mzk=",
     "priority": "P3",
     "persona": "other",
-    "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval aligned with NCCN",
-    "secondaryMetric": "60+ FTEs freed, 110+ sites live",
-    "metricHook": "AI OS transforming oncology operations"
+    "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval aligned with NCCN — with full traceability",
+    "secondaryMetric": "60+ FTEs freed, 110+ sites, works across any EHR and payer system",
+    "metricHook": "AI OS for oncology — autonomous where safe, human-reviewed where needed"
   },
   {
     "firstName": "Tiffany",
@@ -4539,9 +4539,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMyODE=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Wynn",
@@ -4565,9 +4565,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1NzI=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Yonathan",
@@ -4589,9 +4589,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ3ODcwNTE=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Zeb",
@@ -4615,9 +4615,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ4NDI3MjA=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Betro",
@@ -4641,9 +4641,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0MDA=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Brian",
@@ -4667,9 +4667,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM5NDcwMzQ=",
     "priority": "P3",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Cherodeep",
@@ -4694,9 +4694,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0MTg=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Chethan",
@@ -4721,9 +4721,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0NzI=",
     "priority": "P3",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Dan",
@@ -4747,9 +4747,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM4ODA3Mzk=",
     "priority": "P3",
     "persona": "csuite",
-    "primaryMetric": "60+ FTEs freed / repurposed to patient-facing roles, 3x lower cost per PA",
-    "secondaryMetric": "$400M+ worth of oncology drugs authorized",
-    "metricHook": "Measurable cost reduction and workforce optimization"
+    "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
+    "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
+    "metricHook": "Workforce optimization with zero marginal cost to scale"
   },
   {
     "firstName": "Donna",
@@ -4773,9 +4773,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQxMTQxMDI=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Esther",
@@ -4799,9 +4799,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ1NzIxMDQ=",
     "priority": "P3",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Glenn",
@@ -4826,9 +4826,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ4NjMzNzg=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Jeffrey",
@@ -4853,9 +4853,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzMzQ=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Michael",
@@ -4880,9 +4880,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM3NDUwODA=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Michael",
@@ -4906,9 +4906,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM1MzI5ODI=",
     "priority": "P3",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Nikhil",
@@ -4933,9 +4933,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQxMzI3Mjg=",
     "priority": "P3",
     "persona": "csuite",
-    "primaryMetric": "60+ FTEs freed / repurposed to patient-facing roles, 3x lower cost per PA",
-    "secondaryMetric": "$400M+ worth of oncology drugs authorized",
-    "metricHook": "Measurable cost reduction and workforce optimization"
+    "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
+    "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
+    "metricHook": "Workforce optimization with zero marginal cost to scale"
   },
   {
     "firstName": "Robert",
@@ -4959,9 +4959,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQxMjg1MzM=",
     "priority": "P3",
     "persona": "cybersecurity",
-    "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval",
-    "secondaryMetric": "110+ sites, 50K+ transactions/month",
-    "metricHook": "AI OS for oncology operations"
+    "primaryMetric": "Every AI action is configurable, explainable, and auditable — full traceability with confidence scoring",
+    "secondaryMetric": "110+ sites, 50K+ transactions/month with human-in-the-loop governance",
+    "metricHook": "Auditable AI with built-in human oversight and traceability"
   },
   {
     "firstName": "Vikesh",
@@ -4985,9 +4985,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ3NTY1OTI=",
     "priority": "P3",
     "persona": "clinical_ops",
-    "primaryMetric": "~80% administrative time reclaimed, 5x faster case completion",
-    "secondaryMetric": "99.5% visit authorization rate",
-    "metricHook": "Eliminate the operational grind in prior auth"
+    "primaryMetric": "~80% admin time reclaimed, 5x faster case completion — auto-populated payer forms, single interface across portals/e-fax/API",
+    "secondaryMetric": "99.5% visit auth rate; payer behavior and auth outcomes become visible feedback signals",
+    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow"
   },
   {
     "firstName": "Chantal",
@@ -5010,9 +5010,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQzMDIzMDk=",
     "priority": "P3",
     "persona": "nursing",
-    "primaryMetric": "~80% admin time reclaimed — repurposed to patient-facing roles",
-    "secondaryMetric": "60+ FTEs freed to higher-purpose clinical work",
-    "metricHook": "Give your nurses time back with patients"
+    "primaryMetric": "~80% admin time reclaimed — staff repurposed to patient-facing roles, not replaced",
+    "secondaryMetric": "60+ FTEs freed; auto-populated forms and real-time eligibility checks before care is delivered",
+    "metricHook": "Give clinical staff time back with patients"
   },
   {
     "firstName": "David",
@@ -5036,9 +5036,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ4NDI3MDI=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Erica",
@@ -5061,9 +5061,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ0MTY4NjU=",
     "priority": "P3",
     "persona": "nursing",
-    "primaryMetric": "~80% admin time reclaimed — repurposed to patient-facing roles",
-    "secondaryMetric": "60+ FTEs freed to higher-purpose clinical work",
-    "metricHook": "Give your nurses time back with patients"
+    "primaryMetric": "~80% admin time reclaimed — staff repurposed to patient-facing roles, not replaced",
+    "secondaryMetric": "60+ FTEs freed; auto-populated forms and real-time eligibility checks before care is delivered",
+    "metricHook": "Give clinical staff time back with patients"
   },
   {
     "firstName": "Kara",
@@ -5087,9 +5087,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzMzI=",
     "priority": "P3",
     "persona": "csuite",
-    "primaryMetric": "60+ FTEs freed / repurposed to patient-facing roles, 3x lower cost per PA",
-    "secondaryMetric": "$400M+ worth of oncology drugs authorized",
-    "metricHook": "Measurable cost reduction and workforce optimization"
+    "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
+    "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
+    "metricHook": "Workforce optimization with zero marginal cost to scale"
   },
   {
     "firstName": "Kaylee",
@@ -5112,9 +5112,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzNTQ=",
     "priority": "P3",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Kevin",
@@ -5139,9 +5139,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0OTc=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Kristen",
@@ -5165,9 +5165,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQzMjczNzY=",
     "priority": "P3",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Mara",
@@ -5191,9 +5191,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ0OTU0NzQ=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "MaryJoy",
@@ -5220,9 +5220,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0NzY=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Penni",
@@ -5245,9 +5245,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM4OTU2Mzg=",
     "priority": "P3",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Phil",
@@ -5270,9 +5270,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1NTc=",
     "priority": "P3",
     "persona": "cybersecurity",
-    "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval",
-    "secondaryMetric": "110+ sites, 50K+ transactions/month",
-    "metricHook": "AI OS for oncology operations"
+    "primaryMetric": "Every AI action is configurable, explainable, and auditable — full traceability with confidence scoring",
+    "secondaryMetric": "110+ sites, 50K+ transactions/month with human-in-the-loop governance",
+    "metricHook": "Auditable AI with built-in human oversight and traceability"
   },
   {
     "firstName": "Richard",
@@ -5293,9 +5293,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzNDU=",
     "priority": "P3",
     "persona": "cybersecurity",
-    "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval",
-    "secondaryMetric": "110+ sites, 50K+ transactions/month",
-    "metricHook": "AI OS for oncology operations"
+    "primaryMetric": "Every AI action is configurable, explainable, and auditable — full traceability with confidence scoring",
+    "secondaryMetric": "110+ sites, 50K+ transactions/month with human-in-the-loop governance",
+    "metricHook": "Auditable AI with built-in human oversight and traceability"
   },
   {
     "firstName": "Steven",
@@ -5318,9 +5318,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ2NTYyMzQ=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Christian",
@@ -5343,9 +5343,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM1OTkxNDQ=",
     "priority": "P3",
     "persona": "cybersecurity",
-    "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval",
-    "secondaryMetric": "110+ sites, 50K+ transactions/month",
-    "metricHook": "AI OS for oncology operations"
+    "primaryMetric": "Every AI action is configurable, explainable, and auditable — full traceability with confidence scoring",
+    "secondaryMetric": "110+ sites, 50K+ transactions/month with human-in-the-loop governance",
+    "metricHook": "Auditable AI with built-in human oversight and traceability"
   },
   {
     "firstName": "Guido",
@@ -5370,9 +5370,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMzMTk4ODM=",
     "priority": "P3",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Josh",
@@ -5395,9 +5395,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1MTE=",
     "priority": "P3",
     "persona": "pharmacy",
-    "primaryMetric": "1,400+ drugs supported (Part B + Part D), Part D auths within 24hrs tracking to <2hrs",
-    "secondaryMetric": "Down from 8-day backlog to 24hrs across Part D",
-    "metricHook": "Broadest drug coverage with fastest pharmacy auth turnaround"
+    "primaryMetric": "1,400+ drugs supported (Part B + Part D), Part D auths within 24hrs tracking to <2hrs — down from 8-day backlog",
+    "secondaryMetric": "Diagnosis-code-regimen alignment enforced; single-drug, specialty, infusions, multi-drug regimens all covered",
+    "metricHook": "Broadest oncology drug coverage with fastest pharmacy auth turnaround"
   },
   {
     "firstName": "Joy",
@@ -5420,9 +5420,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQxMTYzNTY=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Julie",
@@ -5445,9 +5445,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1MDk=",
     "priority": "P3",
     "persona": "digital_ai_innovation",
-    "primaryMetric": "30% touchless prior auths — real autonomous AI in production",
+    "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "AI that actually runs without humans in the loop"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
   },
   {
     "firstName": "Kathleen",
@@ -5470,9 +5470,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1MjI=",
     "priority": "P3",
     "persona": "csuite",
-    "primaryMetric": "60+ FTEs freed / repurposed to patient-facing roles, 3x lower cost per PA",
-    "secondaryMetric": "$400M+ worth of oncology drugs authorized",
-    "metricHook": "Measurable cost reduction and workforce optimization"
+    "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
+    "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
+    "metricHook": "Workforce optimization with zero marginal cost to scale"
   },
   {
     "firstName": "Russ",
@@ -5495,9 +5495,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ0ODQzMDE=",
     "priority": "P3",
     "persona": "csuite",
-    "primaryMetric": "60+ FTEs freed / repurposed to patient-facing roles, 3x lower cost per PA",
-    "secondaryMetric": "$400M+ worth of oncology drugs authorized",
-    "metricHook": "Measurable cost reduction and workforce optimization"
+    "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
+    "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
+    "metricHook": "Workforce optimization with zero marginal cost to scale"
   },
   {
     "firstName": "Aaron",
@@ -5518,9 +5518,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzNDA=",
     "priority": "P3",
     "persona": "cybersecurity",
-    "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval",
-    "secondaryMetric": "110+ sites, 50K+ transactions/month",
-    "metricHook": "AI OS for oncology operations"
+    "primaryMetric": "Every AI action is configurable, explainable, and auditable — full traceability with confidence scoring",
+    "secondaryMetric": "110+ sites, 50K+ transactions/month with human-in-the-loop governance",
+    "metricHook": "Auditable AI with built-in human oversight and traceability"
   },
   {
     "firstName": "Chris",
@@ -5541,9 +5541,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ1MTQyMzc=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Greg",
@@ -5564,9 +5564,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM5Mjk1MTk=",
     "priority": "P3",
     "persona": "cybersecurity",
-    "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval",
-    "secondaryMetric": "110+ sites, 50K+ transactions/month",
-    "metricHook": "AI OS for oncology operations"
+    "primaryMetric": "Every AI action is configurable, explainable, and auditable — full traceability with confidence scoring",
+    "secondaryMetric": "110+ sites, 50K+ transactions/month with human-in-the-loop governance",
+    "metricHook": "Auditable AI with built-in human oversight and traceability"
   },
   {
     "firstName": "Hannah",
@@ -5588,9 +5588,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzNDM=",
     "priority": "P3",
     "persona": "tech_informatics",
-    "primaryMetric": "50K+ transactions/month across 110+ sites — proven at scale",
-    "secondaryMetric": "Zero incremental hiring as volume grows",
-    "metricHook": "Enterprise-grade system already live in production"
+    "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
+    "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
   },
   {
     "firstName": "Jeff",
@@ -5611,9 +5611,9 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQxMzQ0Mzg=",
     "priority": "P3",
     "persona": "cybersecurity",
-    "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval",
-    "secondaryMetric": "110+ sites, 50K+ transactions/month",
-    "metricHook": "AI OS for oncology operations"
+    "primaryMetric": "Every AI action is configurable, explainable, and auditable — full traceability with confidence scoring",
+    "secondaryMetric": "110+ sites, 50K+ transactions/month with human-in-the-loop governance",
+    "metricHook": "Auditable AI with built-in human oversight and traceability"
   },
   {
     "firstName": "Teresa",
@@ -5632,8 +5632,8 @@ const SPEAKERS = [
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ3ODc0OTY=",
     "priority": "P3",
     "persona": "other",
-    "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval aligned with NCCN",
-    "secondaryMetric": "60+ FTEs freed, 110+ sites live",
-    "metricHook": "AI OS transforming oncology operations"
+    "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval aligned with NCCN — with full traceability",
+    "secondaryMetric": "60+ FTEs freed, 110+ sites, works across any EHR and payer system",
+    "metricHook": "AI OS for oncology — autonomous where safe, human-reviewed where needed"
   }
 ];

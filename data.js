@@ -1963,7 +1963,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. Slotkin is board certified in neurosurgery by the American Board of Neurological Surgery. His clinical interests include care for back and neck pain, as well as sports-related spine injuries, and he has particular interests in consumerism and the digital transformation of healthcare. His research interests include post spinal cord injury regeneration. Dr. Slotkin has expertise in spine outcomes, caring for degenerative and congenital spine conditions, spinal tumors and spine/spinal cord injury. He earned his medical degree from the University of Maryland, and completed his residency at Harvard University, Brigham and Women's Hospital. He completed his fellowship in spine surgery at New England Baptist Hospital. Dr. Slotkin is director of Spinal Surgery for Geisinger and also serves as associate chief medical informatics officer.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ1Nzg0NjA=",
     "priority": "P1",
-    "persona": "csuite"
+    "persona": "medical"
   },
   {
     "firstName": "Michael",
@@ -2651,7 +2651,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. Al Villarin serves as the Vice President and Chief Medical Information Officer at Nuvance-Northwell Health, a not-for-profit health system serving communities across New York and Connecticut. With extensive experience in informatics leadership, Dr. Villarin spearheads the integration of AI and digital tools into clinical operations, enhancing efficiency, patient care, and clinician experience.  His work focuses on the responsible and meaningful application of technology within frontline healthcare, particularly in improving Veteran's care. Additionally, he is the creator of the monthly educational podcast \"Al's A.I. Insights.\" Dr. Villarin is the executive sponsor for the Nuvance Hispanic/Latin Employee Resource Group and the LGBTQ+ Employee Resource Group, which was awarded the 2023 Gold Award for TechQuity: Technology and Equity. This award recognized efforts to redesign EMR systems to remove clinically biased algorithms.  His recent presentations include national conferences on clinical strategy, AI adoption, and reducing burnout through innovative workflow enhancements.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ2MjYwMDI=",
     "priority": "P2",
-    "persona": "csuite"
+    "persona": "medical"
   },
   {
     "firstName": "Ameena",
@@ -2775,7 +2775,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. David Kirk serves as Regard’s inaugural Chief Medical Officer, following his tenure as Chief Clinical Integration Officer at WakeMed, where he led transformative initiatives in quality, efficiency, and access. Over 22 years at WakeMed, he advanced critical care operations, pioneered predictive analytics in the ICU, and launched the PreciselyYou precision medicine program, offering no-cost genetic screening to 100,000 participants for early disease detection.\nAs executive medical director of Critical Care Medicine and the tele critical care program, he oversaw operations across three hospitals, driving systemwide improvements that reduced mortality, length of stay, and costs while enhancing clinician support. Board-certified in Internal Medicine, Pulmonary Medicine, and Critical Care Medicine, he continues to serve as a bedside intensivist. In recognition of his leadership and innovation, Dr. Kirk recently was awarded the North Carolina Healthcare Association’s 2025 Clinical Leadership Award.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ1MzM5Nzk=",
     "priority": "P2",
-    "persona": "other"
+    "persona": "medical"
   },
   {
     "firstName": "Jeffrey",
@@ -2946,7 +2946,7 @@ const SPEAKERS = [
     "aboutMe": "Honorific\nMD MSc",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQxNTg1MjA=",
     "priority": "P2",
-    "persona": "csuite"
+    "persona": "medical"
   },
   {
     "firstName": "Anna",
@@ -3235,7 +3235,7 @@ const SPEAKERS = [
     "aboutMe": "Nicholas “Shetal” Desai, MD, is a seasoned healthcare executive who serves as Vice President, Chief Operating Officer, Chief Medical Officer & Chief Quality Officer at Houston Methodist Cypress Hospital, where he oversees hospital operations, clinical quality, and strategic planning for one of the health system’s newest and most digital campuses. With a background that includes leadership roles in quality, operations, and medical informatics, he brings both clinical insight and administrative expertise to the development and delivery of high-quality, innovative patient care across the Houston Methodist system.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ1MzI4NTc=",
     "priority": "P2",
-    "persona": "csuite"
+    "persona": "medical"
   },
   {
     "firstName": "Omkar",
@@ -3638,7 +3638,7 @@ const SPEAKERS = [
     "aboutMe": "In his role as senior vice president, chief medical officer, and chief quality officer, Dr. Chris Frost is responsible for overseeing the development of specific clinical and quality-focused processes to enhance safety and ensure optimal outcomes for patients. Dr. Frost coordinates and integrates key functions—including peer review, medical staff governance, quality data and analytics, and clinical content governance—as essential infrastructure components that support the quality work of Lifepoint’s medical teams and clinical staff. Additionally, he leads the quality and clinical operations team and oversees the company’s National Quality Program. Dr. Frost most recently served as Senior Vice President and Chief Medical Officer of Lifepoint communities. Previously, he served the company as national medical director, hospital-based services. Dr. Frost served on the Board of Directors for the Society of Hospital Medicine and is past president of the organization. Throughout his career he has held a number of clinical roles, including emergency department physician, hospitalist, and medical director for large community hospitalist programs. He also served as a physician in the United States Air Force, completing his military service at the rank of Major. Dr. Frost attended Oglethorpe University in Atlanta, earning a Bachelor of Science in Biology and a Bachelor of Arts in Psychology. He graduated from the Medical College of Georgia and then completed his internship and residency at the University of Tennessee Health Science Center in Memphis, Tennessee.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1NjQ=",
     "priority": "P3",
-    "persona": "csuite"
+    "persona": "medical"
   },
   {
     "firstName": "Christopher",
@@ -3661,7 +3661,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. Sharp serves as the Chief Medical Information Officer at Stanford Health Care, where he is a physician leader in the application of innovative clinical technologies for the delivery of care. He has responsibility for assuring that clinical information systems work well for clinicians—and that clinicians are proficient and effective in their use of these systems in the care of their patients. He drives the clinical strategy, design, enhancement, usability, adoption, and workflow integration of clinical information systems and digital health for Stanford Health Care. As Clinical Professor in the Department of Medicine, Dr. Sharp maintains an active primary care and inpatient practice. He has published multiple academic articles on the impacts of clinical informatics in safety, outcomes and clinician wellness. Dr. Sharp serves as a mentor and educator for Stanford Clinical Informatics Fellows, junior faculty and other trainees.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1NjM=",
     "priority": "P3",
-    "persona": "other"
+    "persona": "medical"
   },
   {
     "firstName": "Chuck",

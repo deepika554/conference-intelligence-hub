@@ -1823,17 +1823,17 @@ const CONFERENCES = [
 
 // GTM tag display config
 const GTM_TAGS = {
-  'must_attend':    { label: 'Must Attend',    bg: 'rgba(52,211,153,.12)', color: '#34d399', icon: '' },
-  'must_sponsor':   { label: 'Must Sponsor',   bg: 'rgba(91,138,247,.12)', color: '#5b8af7', icon: '' },
-  'outreach_only':  { label: 'Outreach Only',  bg: 'rgba(251,191,36,.1)', color: '#fbbf24', icon: '' },
-  'skip':           { label: 'Skip / Monitor', bg: 'rgba(107,114,128,.1)', color: '#6b7280', icon: '' }
+  'must_attend':    { label: 'Must Attend',    bg: '#ecfdf5', color: '#16a34a', icon: '' },
+  'must_sponsor':   { label: 'Must Sponsor',   bg: '#edf2ff', color: '#3b6cf5', icon: '' },
+  'outreach_only':  { label: 'Outreach Only',  bg: '#fef9ec', color: '#d4920a', icon: '' },
+  'skip':           { label: 'Skip / Monitor', bg: '#f0f3f8', color: '#9ca3af', icon: '' }
 };
 
 const OUTREACH_STATUSES = {
-  'not_started': { label: 'Not Started', bg: 'rgba(140,145,164,.1)', color: '#8891a4' },
-  'in_progress': { label: 'In Progress', bg: 'rgba(91,138,247,.12)', color: '#5b8af7' },
-  'completed':   { label: 'Completed',   bg: 'rgba(52,211,153,.1)', color: '#34d399' },
-  'paused':      { label: 'Paused',      bg: 'rgba(251,191,36,.1)', color: '#fbbf24' }
+  'not_started': { label: 'Not Started', bg: '#f0f3f8', color: '#6b7b94' },
+  'in_progress': { label: 'In Progress', bg: '#edf2ff', color: '#3b6cf5' },
+  'completed':   { label: 'Completed',   bg: '#ecfdf5', color: '#16a34a' },
+  'paused':      { label: 'Paused',      bg: '#fef9ec', color: '#d4920a' }
 };
 
 const SPEAKERS = [

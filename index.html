@@ -4,33 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Conference Intelligence Hub</title>
-<style>html{color-scheme:dark;}</style>
+<style>html{color-scheme:light;}</style>
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <script src="data.js"></script>
 <style>
 :root {
-  --bg: #0c0c10;
-  --surface: #16161c;
-  --surface2: #1e1e26;
-  --surface3: #252530;
-  --border: #2c2c38;
-  --border-hover: #3e3e4e;
-  --text: #eef0f4;
-  --text2: #8891a4;
-  --text3: #5c6478;
-  --accent: #5b8af7;
-  --accent2: #4070e8;
-  --accent-light: rgba(91,138,247,.1);
-  --accent-glow: rgba(91,138,247,.15);
-  --p1: #f87171;
-  --p2: #fbbf24;
+  --bg: #f0f4f8;
+  --surface: #ffffff;
+  --surface2: #f7f9fc;
+  --surface3: #eef2f7;
+  --border: #e2e8f0;
+  --border-hover: #cbd5e1;
+  --text: #1e293b;
+  --text2: #64748b;
+  --text3: #94a3b8;
+  --accent: #3b6cf5;
+  --accent2: #2b5ce5;
+  --accent-light: rgba(59,108,245,.08);
+  --accent-glow: rgba(59,108,245,.12);
+  --p1: #ef4444;
+  --p2: #f59e0b;
   --p3: #6b7280;
-  --green: #34d399;
-  --purple: #a78bfa;
+  --green: #16a34a;
+  --purple: #7c3aed;
   --radius: 14px;
-  --shadow: 0 1px 2px rgba(0,0,0,.2);
-  --shadow-md: 0 4px 12px rgba(0,0,0,.3);
-  --shadow-lg: 0 8px 24px rgba(0,0,0,.4);
+  --shadow: 0 1px 3px rgba(0,0,0,.06);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,.12);
   --transition: .2s cubic-bezier(.4,0,.2,1);
 }
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -38,10 +38,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter'
 a { color:var(--accent); text-decoration:none; }
 a:hover { text-decoration:underline; }
 
-::-webkit-scrollbar { width:6px; height:6px; }
+::-webkit-scrollbar { width:5px; height:5px; }
 ::-webkit-scrollbar-track { background:var(--bg); }
-::-webkit-scrollbar-thumb { background:var(--border); border-radius:3px; }
-::-webkit-scrollbar-thumb:hover { background:var(--border-hover); }
+::-webkit-scrollbar-thumb { background:#cbd5e1; border-radius:3px; }
+::-webkit-scrollbar-thumb:hover { background:#94a3b8; }
 
 /* Task Management */
 .task-board { margin-top:12px; }
@@ -130,7 +130,7 @@ input::placeholder, textarea::placeholder { color:var(--text2); }
 .team-tag.add { background:var(--surface2); color:var(--text2); border:1px dashed var(--border); }
 
 /* Budget */
-.budget-badge { font-size:.72rem; padding:2px 8px; border-radius:8px; background:rgba(52,211,153,.1); color:var(--green); font-weight:600; }
+.budget-badge { font-size:.72rem; padding:2px 8px; border-radius:8px; background:#ecfdf5; color:var(--green); font-weight:600; }
 
 /* Countdown */
 .countdown { font-size:.72rem; padding:3px 8px; border-radius:8px; font-weight:600; }
@@ -185,8 +185,8 @@ input::placeholder, textarea::placeholder { color:var(--text2); }
 #landing .subtitle { color:var(--text2); font-size:1rem; margin-top:6px; margin-bottom:56px; font-weight:400; }
 .conf-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:20px; }
 .conf-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:32px; cursor:pointer; transition:all var(--transition); position:relative; box-shadow:var(--shadow); overflow:hidden; }
-.conf-card::before { content:''; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,var(--accent-glow),transparent); opacity:0; transition:opacity .3s; }
-.conf-card:hover::before { opacity:1; }
+.conf-card::before { content:''; position:absolute; top:0; left:-100%; width:100%; height:100%; background:linear-gradient(90deg,transparent,rgba(59,108,245,.04),transparent); transition:left .6s ease; pointer-events:none; }
+.conf-card:hover::before { left:100%; }
 .conf-card:hover { transform:translateY(-2px); box-shadow:var(--shadow-lg); border-color:var(--border-hover); }
 .conf-card h3 { font-size:1.2rem; font-weight:600; color:var(--text); margin-bottom:4px; }
 .conf-card .meta { color:var(--text2); font-size:.88rem; margin-bottom:20px; }
@@ -200,7 +200,7 @@ input::placeholder, textarea::placeholder { color:var(--text2); }
 .back-btn:hover { color:var(--accent); }
 
 /* Animated gradient header */
-.detail-header { background:linear-gradient(135deg,#1a2744,#253a6a,#1e3060,#1a2744); background-size:300% 300%; animation:gradientShift 8s ease infinite; border-radius:var(--radius); padding:40px 44px; margin-bottom:32px; color:#fff; border:1px solid rgba(91,138,247,.15); }
+.detail-header { background:linear-gradient(135deg,#3b6cf5,#5b8af7,#4b78f6,#3b6cf5); background-size:300% 300%; animation:gradientShift 8s ease infinite; border-radius:var(--radius); padding:40px 44px; margin-bottom:32px; color:#fff; }
 @keyframes gradientShift { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
 .detail-header h2 { font-size:1.8rem; font-weight:700; color:#fff; letter-spacing:-.01em; }
 .detail-header .info { color:rgba(255,255,255,.75); margin-top:10px; display:flex; gap:28px; flex-wrap:wrap; font-size:.9rem; font-weight:400; }
@@ -253,7 +253,7 @@ input::placeholder, textarea::placeholder { color:var(--text2); }
 /* Card with hover animations, progress bar, checkbox */
 .speaker-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:28px 28px 8px; transition:all var(--transition); box-shadow:var(--shadow); border-left:3px solid transparent; position:relative; overflow:hidden; opacity:0; animation:cardEnter .3s ease forwards; }
 .speaker-card:hover { box-shadow:var(--shadow-lg); transform:scale(1.01); border-left-color:var(--accent); }
-.speaker-card.selected { border-color:var(--accent); background:rgba(91,138,247,.04); box-shadow:0 0 0 1px var(--accent), var(--shadow-md); }
+.speaker-card.selected { border-color:var(--accent); background:rgba(59,108,245,.02); box-shadow:0 0 0 1px var(--accent), var(--shadow-md); }
 .speaker-card.selected:hover { box-shadow:0 0 0 1px var(--accent), var(--shadow-lg); }
 
 @keyframes cardEnter { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
@@ -698,13 +698,13 @@ function updateLog(name, field, key, value) {
 
 // ============ STAGE COLORS & PROGRESS ============
 const STAGE_STYLES = {
-  'Not Started':       { bg:'rgba(140,145,164,.1)', color:'#8891a4' },
-  'First Email Sent':  { bg:'rgba(91,138,247,.12)', color:'#5b8af7' },
-  'First Follow-up':   { bg:'rgba(251,191,36,.1)', color:'#fbbf24' },
-  'Second Follow-up':  { bg:'rgba(251,146,60,.1)', color:'#fb923c' },
-  'Third Follow-up':   { bg:'rgba(248,113,113,.1)', color:'#f87171' },
-  'Meeting Booked':    { bg:'rgba(52,211,153,.1)', color:'#34d399' },
-  'Not Interested':    { bg:'rgba(107,114,128,.1)', color:'#6b7280' }
+  'Not Started':       { bg:'#f0f3f8', color:'#6b7b94' },
+  'First Email Sent':  { bg:'#edf2ff', color:'#3b6cf5' },
+  'First Follow-up':   { bg:'#fef9ec', color:'#d4920a' },
+  'Second Follow-up':  { bg:'#fff5eb', color:'#ea580c' },
+  'Third Follow-up':   { bg:'#fef2f2', color:'#e03e3e' },
+  'Meeting Booked':    { bg:'#ecfdf5', color:'#16a34a' },
+  'Not Interested':    { bg:'#f0f3f8', color:'#9ca3af' }
 };
 const STAGES = Object.keys(STAGE_STYLES);
 
@@ -1154,11 +1154,11 @@ function getConfTasks(confId) {
 }
 
 const TASK_STATUSES = {
-  'not_started':  { label: 'To Do',       bg: 'rgba(140,145,164,.1)', color: '#8891a4' },
-  'in_progress':  { label: 'In Progress', bg: 'rgba(91,138,247,.12)', color: '#5b8af7' },
-  'in_review':    { label: 'In Review',   bg: 'rgba(251,191,36,.1)',  color: '#fbbf24' },
-  'blocked':      { label: 'Blocked',     bg: 'rgba(248,113,113,.1)', color: '#f87171' },
-  'completed':    { label: 'Done',        bg: 'rgba(52,211,153,.1)',  color: '#34d399' }
+  'not_started':  { label: 'To Do',       bg: '#f0f3f8', color: '#6b7b94' },
+  'in_progress':  { label: 'In Progress', bg: '#edf2ff', color: '#3b6cf5' },
+  'in_review':    { label: 'In Review',   bg: '#fef9ec', color: '#d4920a' },
+  'blocked':      { label: 'Blocked',     bg: '#fef2f2', color: '#e03e3e' },
+  'completed':    { label: 'Done',        bg: '#ecfdf5', color: '#16a34a' }
 };
 
 const TASK_CATEGORIES = {
@@ -1769,7 +1769,7 @@ function renderTimeline() {
     { name: 'June', start: 92, days: 30 }
   ];
 
-  const gtmColors = { must_attend: '#34d399', must_sponsor: '#5b8af7', outreach_only: '#fbbf24' };
+  const gtmColors = { must_attend: '#16a34a', must_sponsor: '#3b6cf5', outreach_only: '#d4920a' };
 
   let html = '<div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;overflow-x:auto;">';
   html += '<div style="font-size:.82rem;font-weight:600;margin-bottom:12px;">Conference Timeline</div>';

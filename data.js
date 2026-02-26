@@ -1864,7 +1864,8 @@ const SPEAKERS = [
     "persona": "csuite",
     "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
     "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
-    "metricHook": "Workforce optimization with zero marginal cost to scale"
+    "metricHook": "Workforce optimization with zero marginal cost to scale",
+    "emailDraft": "Hi Noel,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to improve institutional financial performance while shortening time to treatment.\n\nLeadership teams move from multi-day backlogs to 24-hour filing with 97%+ first-pass approval rates, ~30% touchless authorization processing, and 5x faster case completion. At one site, this repurposed 50+ FTEs to patient-facing roles. Teams achieve predictable access without scaling overhead — all without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching operational scalability at Stanford Health Care.\n\nBest,"
   },
   {
     "firstName": "Donna",
@@ -1894,7 +1895,8 @@ const SPEAKERS = [
     "persona": "csuite",
     "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
     "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
-    "metricHook": "Workforce optimization with zero marginal cost to scale"
+    "metricHook": "Workforce optimization with zero marginal cost to scale",
+    "emailDraft": "Hi Donna,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to improve institutional financial performance while shortening time to treatment.\n\nLeadership teams move from multi-day backlogs to 24-hour filing with 97%+ first-pass approval rates, ~30% touchless authorization processing, and 5x faster case completion. At one site, this repurposed 50+ FTEs to patient-facing roles. Teams achieve predictable access without scaling overhead — all without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching operational scalability at Wellspan Health.\n\nBest,"
   },
   {
     "firstName": "Brian",
@@ -1923,7 +1925,8 @@ const SPEAKERS = [
     "persona": "revenue_cycle",
     "primaryMetric": "97%+ first-pass approval that converts to claims payment — not just auth approval but revenue certainty",
     "secondaryMetric": "30% touchless auths, 3x lower cost per PA; payer behavior visibility that prevents the next denial",
-    "metricHook": "Auth outcomes + payer signals that prevent denials before they happen"
+    "metricHook": "Auth outcomes + payer signals that prevent denials before they happen",
+    "emailDraft": "Hi Brian,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to help RCM leaders capture revenue lost to operational inefficiencies by automating prior auth and claims workflows.\n\nRCM teams achieve 97%+ first-pass approval rates, ~30% touchless authorization processing, 3x lower cost per PA, and 5x faster case completion — without adding headcount as volume grows. At one of our sites, this freed 50+ FTEs to move into higher-value work, and at larger sites has reclaimed ~80% of administrative time.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Tufts Medicine.\n\nBest,"
   },
   {
     "firstName": "Andrew",
@@ -1951,7 +1954,8 @@ const SPEAKERS = [
     "persona": "csuite",
     "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
     "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
-    "metricHook": "Workforce optimization with zero marginal cost to scale"
+    "metricHook": "Workforce optimization with zero marginal cost to scale",
+    "emailDraft": "Hi Andrew,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to improve institutional financial performance while shortening time to treatment.\n\nLeadership teams move from multi-day backlogs to 24-hour filing with 97%+ first-pass approval rates, ~30% touchless authorization processing, and 5x faster case completion. At one site, this repurposed 50+ FTEs to patient-facing roles. Teams achieve predictable access without scaling overhead — all without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching operational scalability at NYU Langone Health.\n\nBest,"
   },
   {
     "firstName": "Jonathan",
@@ -1978,7 +1982,8 @@ const SPEAKERS = [
     "persona": "medical",
     "primaryMetric": "97%+ first-submission approval rate — NCCN, ASCO, FDA, CMS guidelines codified into executable logic with evidence mapped from EHR",
     "secondaryMetric": "Auths filed 21 days ahead of DOS; confidence scoring with automatic human review when needed",
-    "metricHook": "Guideline-aligned authorization with supporting & contradictory evidence surfaced inline"
+    "metricHook": "Guideline-aligned authorization with supporting & contradictory evidence surfaced inline",
+    "emailDraft": "Hi Jonathan,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical workflows.\n\nWe codify NCCN, ASCO, FDA, and CMS guidelines into executable logic — mapping evidence directly from the EHR with supporting and contradictory evidence surfaced inline. This delivers 97%+ first-submission approval rates with auths filed 21 days ahead of date of service, and every AI decision comes with human-readable rationale and confidence scoring.\n\nCurious to hear what you're seeing at Geisinger and compare notes on clinical AI governance!\n\nBest,"
   },
   {
     "firstName": "Michael",
@@ -2005,7 +2010,8 @@ const SPEAKERS = [
     "persona": "other",
     "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval aligned with NCCN — with full traceability",
     "secondaryMetric": "60+ FTEs freed, 110+ sites, works across any EHR and payer system",
-    "metricHook": "AI OS for oncology — autonomous where safe, human-reviewed where needed"
+    "metricHook": "AI OS for oncology — autonomous where safe, human-reviewed where needed",
+    "emailDraft": "Hi Michael,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules.\n\nSeveral early partners have already expanded into second and third workflows.\n\nCurious to hear what you're seeing at Dana-Farber Cancer Institute and compare notes!\n\nBest,"
   },
   {
     "firstName": "Michael",
@@ -2033,7 +2039,8 @@ const SPEAKERS = [
     "persona": "csuite",
     "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
     "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
-    "metricHook": "Workforce optimization with zero marginal cost to scale"
+    "metricHook": "Workforce optimization with zero marginal cost to scale",
+    "emailDraft": "Hi Michael,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to improve institutional financial performance while shortening time to treatment.\n\nLeadership teams move from multi-day backlogs to 24-hour filing with 97%+ first-pass approval rates, ~30% touchless authorization processing, and 5x faster case completion. At one site, this repurposed 50+ FTEs to patient-facing roles. Teams achieve predictable access without scaling overhead — all without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching operational scalability at Hackensack Meridian Health.\n\nBest,"
   },
   {
     "firstName": "Pamela",
@@ -2060,7 +2067,8 @@ const SPEAKERS = [
     "persona": "other",
     "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval aligned with NCCN — with full traceability",
     "secondaryMetric": "60+ FTEs freed, 110+ sites, works across any EHR and payer system",
-    "metricHook": "AI OS for oncology — autonomous where safe, human-reviewed where needed"
+    "metricHook": "AI OS for oncology — autonomous where safe, human-reviewed where needed",
+    "emailDraft": "Hi Pamela,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules.\n\nSeveral early partners have already expanded into second and third workflows.\n\nCurious to hear what you're seeing at Ballad Health and compare notes!\n\nBest,"
   },
   {
     "firstName": "Raymond",
@@ -2088,7 +2096,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Raymond,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Mass General Brigham and compare notes!\n\nBest,"
   },
   {
     "firstName": "Joseph",
@@ -2116,7 +2125,8 @@ const SPEAKERS = [
     "persona": "csuite",
     "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
     "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
-    "metricHook": "Workforce optimization with zero marginal cost to scale"
+    "metricHook": "Workforce optimization with zero marginal cost to scale",
+    "emailDraft": "Hi Joseph,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to improve institutional financial performance while shortening time to treatment.\n\nLeadership teams move from multi-day backlogs to 24-hour filing with 97%+ first-pass approval rates, ~30% touchless authorization processing, and 5x faster case completion. At one site, this repurposed 50+ FTEs to patient-facing roles. Teams achieve predictable access without scaling overhead — all without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching operational scalability at Northwell Health Laboratories.\n\nBest,"
   },
   {
     "firstName": "Michael",
@@ -2144,7 +2154,8 @@ const SPEAKERS = [
     "persona": "revenue_cycle",
     "primaryMetric": "97%+ first-pass approval that converts to claims payment — not just auth approval but revenue certainty",
     "secondaryMetric": "30% touchless auths, 3x lower cost per PA; payer behavior visibility that prevents the next denial",
-    "metricHook": "Auth outcomes + payer signals that prevent denials before they happen"
+    "metricHook": "Auth outcomes + payer signals that prevent denials before they happen",
+    "emailDraft": "Hi Michael,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to help RCM leaders capture revenue lost to operational inefficiencies by automating prior auth and claims workflows.\n\nRCM teams achieve 97%+ first-pass approval rates, ~30% touchless authorization processing, 3x lower cost per PA, and 5x faster case completion — without adding headcount as volume grows. At one of our sites, this freed 50+ FTEs to move into higher-value work, and at larger sites has reclaimed ~80% of administrative time.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Novant Health.\n\nBest,"
   },
   {
     "firstName": "Barbara",
@@ -2172,7 +2183,8 @@ const SPEAKERS = [
     "persona": "revenue_cycle",
     "primaryMetric": "97%+ first-pass approval that converts to claims payment — not just auth approval but revenue certainty",
     "secondaryMetric": "30% touchless auths, 3x lower cost per PA; payer behavior visibility that prevents the next denial",
-    "metricHook": "Auth outcomes + payer signals that prevent denials before they happen"
+    "metricHook": "Auth outcomes + payer signals that prevent denials before they happen",
+    "emailDraft": "Hi Barbara,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to help RCM leaders capture revenue lost to operational inefficiencies by automating prior auth and claims workflows.\n\nRCM teams achieve 97%+ first-pass approval rates, ~30% touchless authorization processing, 3x lower cost per PA, and 5x faster case completion — without adding headcount as volume grows. At one of our sites, this freed 50+ FTEs to move into higher-value work, and at larger sites has reclaimed ~80% of administrative time.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Shriners Children's.\n\nBest,"
   },
   {
     "firstName": "Bernardo",
@@ -2200,7 +2212,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Bernardo,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Mass General Brigham and compare notes!\n\nBest,"
   },
   {
     "firstName": "Crystal",
@@ -2229,7 +2242,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Crystal,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Medical University of South Carolina (MUSC) and compare notes!\n\nBest,"
   },
   {
     "firstName": "Julie",
@@ -2255,7 +2269,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Julie,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Stony Brook Medicine.\n\nBest,"
   },
   {
     "firstName": "Michael",
@@ -2283,7 +2298,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Michael,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Cooper University Health Care and compare notes!\n\nBest,"
   },
   {
     "firstName": "Michelle",
@@ -2309,7 +2325,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Michelle,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at University of Virginia.\n\nBest,"
   },
   {
     "firstName": "Rasu",
@@ -2337,7 +2354,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Rasu,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Advocate Health and compare notes!\n\nBest,"
   },
   {
     "firstName": "Roberta",
@@ -2365,7 +2383,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Roberta,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Houston Methodist and compare notes!\n\nBest,"
   },
   {
     "firstName": "Sameer",
@@ -2393,7 +2412,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Sameer,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Hackensack Meridian Health and compare notes!\n\nBest,"
   },
   {
     "firstName": "Yindalon",
@@ -2421,7 +2441,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Yindalon,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at NYU Langone School of Medicine and Medical Center and compare notes!\n\nBest,"
   },
   {
     "firstName": "Jonathan",
@@ -2448,7 +2469,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Jonathan,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Lee Health and compare notes!\n\nBest,"
   },
   {
     "firstName": "Ramesh",
@@ -2475,7 +2497,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Ramesh,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Mass General Brigham and compare notes!\n\nBest,"
   },
   {
     "firstName": "Anil",
@@ -2502,7 +2525,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Anil,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Rush University Medical Center and compare notes!\n\nBest,"
   },
   {
     "firstName": "Brett",
@@ -2531,7 +2555,8 @@ const SPEAKERS = [
     "persona": "csuite",
     "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
     "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
-    "metricHook": "Workforce optimization with zero marginal cost to scale"
+    "metricHook": "Workforce optimization with zero marginal cost to scale",
+    "emailDraft": "Hi Brett,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to improve institutional financial performance while shortening time to treatment.\n\nLeadership teams move from multi-day backlogs to 24-hour filing with 97%+ first-pass approval rates, ~30% touchless authorization processing, and 5x faster case completion. At one site, this repurposed 50+ FTEs to patient-facing roles. Teams achieve predictable access without scaling overhead — all without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching operational scalability at Parkland Health.\n\nBest,"
   },
   {
     "firstName": "Doug",
@@ -2559,7 +2584,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Doug,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Orlando Health.\n\nBest,"
   },
   {
     "firstName": "Keith",
@@ -2586,7 +2612,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Keith,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Mass General Brigham and compare notes!\n\nBest,"
   },
   {
     "firstName": "Micky",
@@ -2613,7 +2640,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Micky,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Mayo Clinic and compare notes!\n\nBest,"
   },
   {
     "firstName": "Nabile",
@@ -2640,7 +2668,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Nabile,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Emory Healthcare and compare notes!\n\nBest,"
   },
   {
     "firstName": "Nasim",
@@ -2667,7 +2696,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Nasim,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at City of Hope and compare notes!\n\nBest,"
   },
   {
     "firstName": "Robert",
@@ -2694,7 +2724,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Robert,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Advent Health and compare notes!\n\nBest,"
   },
   {
     "firstName": "Adam",
@@ -2721,7 +2752,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Adam,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Brown University Health and compare notes!\n\nBest,"
   },
   {
     "firstName": "Albert",
@@ -2750,7 +2782,8 @@ const SPEAKERS = [
     "persona": "medical",
     "primaryMetric": "97%+ first-submission approval rate — NCCN, ASCO, FDA, CMS guidelines codified into executable logic with evidence mapped from EHR",
     "secondaryMetric": "Auths filed 21 days ahead of DOS; confidence scoring with automatic human review when needed",
-    "metricHook": "Guideline-aligned authorization with supporting & contradictory evidence surfaced inline"
+    "metricHook": "Guideline-aligned authorization with supporting & contradictory evidence surfaced inline",
+    "emailDraft": "Hi Albert,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical workflows.\n\nWe codify NCCN, ASCO, FDA, and CMS guidelines into executable logic — mapping evidence directly from the EHR with supporting and contradictory evidence surfaced inline. This delivers 97%+ first-submission approval rates with auths filed 21 days ahead of date of service, and every AI decision comes with human-readable rationale and confidence scoring.\n\nCurious to hear what you're seeing at Nuvance – Northwell Health and compare notes on clinical AI governance!\n\nBest,"
   },
   {
     "firstName": "Ameena",
@@ -2778,7 +2811,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Ameena,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Penn Medicine and compare notes!\n\nBest,"
   },
   {
     "firstName": "Amy",
@@ -2806,7 +2840,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Amy,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Cleveland Clinic.\n\nBest,"
   },
   {
     "firstName": "Beth",
@@ -2834,7 +2869,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Beth,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Cleveland Clinic and compare notes!\n\nBest,"
   },
   {
     "firstName": "Bryon",
@@ -2862,7 +2898,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Bryon,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at McLeod Health.\n\nBest,"
   },
   {
     "firstName": "David",
@@ -2889,7 +2926,8 @@ const SPEAKERS = [
     "persona": "medical",
     "primaryMetric": "97%+ first-submission approval rate — NCCN, ASCO, FDA, CMS guidelines codified into executable logic with evidence mapped from EHR",
     "secondaryMetric": "Auths filed 21 days ahead of DOS; confidence scoring with automatic human review when needed",
-    "metricHook": "Guideline-aligned authorization with supporting & contradictory evidence surfaced inline"
+    "metricHook": "Guideline-aligned authorization with supporting & contradictory evidence surfaced inline",
+    "emailDraft": "Hi David,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical workflows.\n\nWe codify NCCN, ASCO, FDA, and CMS guidelines into executable logic — mapping evidence directly from the EHR with supporting and contradictory evidence surfaced inline. This delivers 97%+ first-submission approval rates with auths filed 21 days ahead of date of service, and every AI decision comes with human-readable rationale and confidence scoring.\n\nCurious to hear what you're seeing at WakeMed and compare notes on clinical AI governance!\n\nBest,"
   },
   {
     "firstName": "Jeffrey",
@@ -2917,7 +2955,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Jeffrey,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Duke Health and compare notes!\n\nBest,"
   },
   {
     "firstName": "Joe",
@@ -2944,7 +2983,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Joe,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Parkland Health and compare notes!\n\nBest,"
   },
   {
     "firstName": "Karandeep",
@@ -2970,7 +3010,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Karandeep,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at UC San Diego Health and compare notes!\n\nBest,"
   },
   {
     "firstName": "Kerry",
@@ -2999,7 +3040,8 @@ const SPEAKERS = [
     "persona": "clinical_ops",
     "primaryMetric": "~80% admin time reclaimed, 5x faster case completion — auto-populated payer forms, single interface across portals/e-fax/API",
     "secondaryMetric": "99.5% visit auth rate; payer behavior and auth outcomes become visible feedback signals",
-    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow"
+    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow",
+    "emailDraft": "Hi Kerry,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to eliminate the operational grind in prior auth and access workflows.\n\nClinical ops teams achieve ~80% administrative time reclaimed, 5x faster case completion, and 99.5% visit authorization rates — through auto-populated payer forms and a single interface across portals, e-fax, and API. Payer behavior and auth outcomes become visible feedback signals that prevent the next denial.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at NYU Langone Health.\n\nBest,"
   },
   {
     "firstName": "Melissa",
@@ -3026,7 +3068,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Melissa,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Inova Health System.\n\nBest,"
   },
   {
     "firstName": "Vincent",
@@ -3054,7 +3097,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Vincent,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at NYU Langone Health and compare notes!\n\nBest,"
   },
   {
     "firstName": "Amish",
@@ -3081,7 +3125,8 @@ const SPEAKERS = [
     "persona": "medical",
     "primaryMetric": "97%+ first-submission approval rate — NCCN, ASCO, FDA, CMS guidelines codified into executable logic with evidence mapped from EHR",
     "secondaryMetric": "Auths filed 21 days ahead of DOS; confidence scoring with automatic human review when needed",
-    "metricHook": "Guideline-aligned authorization with supporting & contradictory evidence surfaced inline"
+    "metricHook": "Guideline-aligned authorization with supporting & contradictory evidence surfaced inline",
+    "emailDraft": "Hi Amish,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical workflows.\n\nWe codify NCCN, ASCO, FDA, and CMS guidelines into executable logic — mapping evidence directly from the EHR with supporting and contradictory evidence surfaced inline. This delivers 97%+ first-submission approval rates with auths filed 21 days ahead of date of service, and every AI decision comes with human-readable rationale and confidence scoring.\n\nCurious to hear what you're seeing at Northwestern Memorial HealthCare and compare notes on clinical AI governance!\n\nBest,"
   },
   {
     "firstName": "Anna",
@@ -3110,7 +3155,8 @@ const SPEAKERS = [
     "persona": "csuite",
     "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
     "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
-    "metricHook": "Workforce optimization with zero marginal cost to scale"
+    "metricHook": "Workforce optimization with zero marginal cost to scale",
+    "emailDraft": "Hi Anna,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to improve institutional financial performance while shortening time to treatment.\n\nLeadership teams move from multi-day backlogs to 24-hour filing with 97%+ first-pass approval rates, ~30% touchless authorization processing, and 5x faster case completion. At one site, this repurposed 50+ FTEs to patient-facing roles. Teams achieve predictable access without scaling overhead — all without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching operational scalability at MultiCare Health System.\n\nBest,"
   },
   {
     "firstName": "Cheri",
@@ -3137,7 +3183,8 @@ const SPEAKERS = [
     "persona": "clinical_ops",
     "primaryMetric": "~80% admin time reclaimed, 5x faster case completion — auto-populated payer forms, single interface across portals/e-fax/API",
     "secondaryMetric": "99.5% visit auth rate; payer behavior and auth outcomes become visible feedback signals",
-    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow"
+    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow",
+    "emailDraft": "Hi Cheri,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to eliminate the operational grind in prior auth and access workflows.\n\nClinical ops teams achieve ~80% administrative time reclaimed, 5x faster case completion, and 99.5% visit authorization rates — through auto-populated payer forms and a single interface across portals, e-fax, and API. Payer behavior and auth outcomes become visible feedback signals that prevent the next denial.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at St. Jude Children’s Research Hospital.\n\nBest,"
   },
   {
     "firstName": "Danny",
@@ -3164,7 +3211,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Danny,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Northwestern Medicine and compare notes!\n\nBest,"
   },
   {
     "firstName": "David",
@@ -3191,7 +3239,8 @@ const SPEAKERS = [
     "persona": "other",
     "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval aligned with NCCN — with full traceability",
     "secondaryMetric": "60+ FTEs freed, 110+ sites, works across any EHR and payer system",
-    "metricHook": "AI OS for oncology — autonomous where safe, human-reviewed where needed"
+    "metricHook": "AI OS for oncology — autonomous where safe, human-reviewed where needed",
+    "emailDraft": "Hi David,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules.\n\nSeveral early partners have already expanded into second and third workflows.\n\nCurious to hear what you're seeing at Northwestern Medicine and compare notes!\n\nBest,"
   },
   {
     "firstName": "Deepti",
@@ -3219,7 +3268,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Deepti,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at University of California Irvine Health.\n\nBest,"
   },
   {
     "firstName": "Jana",
@@ -3244,7 +3294,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Jana,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Geisinger Health and compare notes!\n\nBest,"
   },
   {
     "firstName": "Kali",
@@ -3271,7 +3322,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Kali,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Northwestern Medicine and compare notes!\n\nBest,"
   },
   {
     "firstName": "Kathrina",
@@ -3298,7 +3350,8 @@ const SPEAKERS = [
     "persona": "clinical_ops",
     "primaryMetric": "~80% admin time reclaimed, 5x faster case completion — auto-populated payer forms, single interface across portals/e-fax/API",
     "secondaryMetric": "99.5% visit auth rate; payer behavior and auth outcomes become visible feedback signals",
-    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow"
+    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow",
+    "emailDraft": "Hi Kathrina,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to eliminate the operational grind in prior auth and access workflows.\n\nClinical ops teams achieve ~80% administrative time reclaimed, 5x faster case completion, and 99.5% visit authorization rates — through auto-populated payer forms and a single interface across portals, e-fax, and API. Payer behavior and auth outcomes become visible feedback signals that prevent the next denial.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at UC San Diego Health.\n\nBest,"
   },
   {
     "firstName": "Kathryn",
@@ -3325,7 +3378,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Kathryn,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Medical University of South Carolina Health.\n\nBest,"
   },
   {
     "firstName": "Katie",
@@ -3352,7 +3406,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Katie,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Advocate Health.\n\nBest,"
   },
   {
     "firstName": "Nader",
@@ -3379,7 +3434,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Nader,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at NYU Langone Health and compare notes!\n\nBest,"
   },
   {
     "firstName": "Nicholas “Shetal”",
@@ -3406,7 +3462,8 @@ const SPEAKERS = [
     "persona": "medical",
     "primaryMetric": "97%+ first-submission approval rate — NCCN, ASCO, FDA, CMS guidelines codified into executable logic with evidence mapped from EHR",
     "secondaryMetric": "Auths filed 21 days ahead of DOS; confidence scoring with automatic human review when needed",
-    "metricHook": "Guideline-aligned authorization with supporting & contradictory evidence surfaced inline"
+    "metricHook": "Guideline-aligned authorization with supporting & contradictory evidence surfaced inline",
+    "emailDraft": "Hi Nicholas “Shetal”,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical workflows.\n\nWe codify NCCN, ASCO, FDA, and CMS guidelines into executable logic — mapping evidence directly from the EHR with supporting and contradictory evidence surfaced inline. This delivers 97%+ first-submission approval rates with auths filed 21 days ahead of date of service, and every AI decision comes with human-readable rationale and confidence scoring.\n\nCurious to hear what you're seeing at Houston Methodist Cypress Hospital and compare notes on clinical AI governance!\n\nBest,"
   },
   {
     "firstName": "Omkar",
@@ -3432,7 +3489,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Omkar,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Children’s Hospital Los Angeles and compare notes!\n\nBest,"
   },
   {
     "firstName": "Philip",
@@ -3459,7 +3517,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Philip,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Rush University Medical Center and compare notes!\n\nBest,"
   },
   {
     "firstName": "Rachel",
@@ -3486,7 +3545,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Rachel,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Cedars-Sinai Health System.\n\nBest,"
   },
   {
     "firstName": "Rajender",
@@ -3513,7 +3573,8 @@ const SPEAKERS = [
     "persona": "csuite",
     "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
     "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
-    "metricHook": "Workforce optimization with zero marginal cost to scale"
+    "metricHook": "Workforce optimization with zero marginal cost to scale",
+    "emailDraft": "Hi Rajender,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to improve institutional financial performance while shortening time to treatment.\n\nLeadership teams move from multi-day backlogs to 24-hour filing with 97%+ first-pass approval rates, ~30% touchless authorization processing, and 5x faster case completion. At one site, this repurposed 50+ FTEs to patient-facing roles. Teams achieve predictable access without scaling overhead — all without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching operational scalability at Lifepoint Health.\n\nBest,"
   },
   {
     "firstName": "Rebecca",
@@ -3541,7 +3602,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Rebecca,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Mass General Brigham and compare notes!\n\nBest,"
   },
   {
     "firstName": "Simon",
@@ -3568,7 +3630,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Simon,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at City of Hope and compare notes!\n\nBest,"
   },
   {
     "firstName": "Srinivasan",
@@ -3595,7 +3658,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Srinivasan,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at UPMC Children’s Hospital of Pittsburgh.\n\nBest,"
   },
   {
     "firstName": "Suresh",
@@ -3622,7 +3686,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Suresh,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Duke University School of Medicine and compare notes!\n\nBest,"
   },
   {
     "firstName": "Tamara",
@@ -3649,7 +3714,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Tamara,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Intermountain Health.\n\nBest,"
   },
   {
     "firstName": "Thomas",
@@ -3677,7 +3743,8 @@ const SPEAKERS = [
     "persona": "csuite",
     "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
     "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
-    "metricHook": "Workforce optimization with zero marginal cost to scale"
+    "metricHook": "Workforce optimization with zero marginal cost to scale",
+    "emailDraft": "Hi Thomas,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to improve institutional financial performance while shortening time to treatment.\n\nLeadership teams move from multi-day backlogs to 24-hour filing with 97%+ first-pass approval rates, ~30% touchless authorization processing, and 5x faster case completion. At one site, this repurposed 50+ FTEs to patient-facing roles. Teams achieve predictable access without scaling overhead — all without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching operational scalability at Jefferson Health.\n\nBest,"
   },
   {
     "firstName": "Tracy",
@@ -3704,7 +3771,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Tracy,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Advocate Health and compare notes!\n\nBest,"
   },
   {
     "firstName": "Amy",
@@ -3730,7 +3798,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Amy,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Ochsner Health.\n\nBest,"
   },
   {
     "firstName": "Andrew",
@@ -3756,7 +3825,8 @@ const SPEAKERS = [
     "persona": "csuite",
     "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
     "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
-    "metricHook": "Workforce optimization with zero marginal cost to scale"
+    "metricHook": "Workforce optimization with zero marginal cost to scale",
+    "emailDraft": "Hi Andrew,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to improve institutional financial performance while shortening time to treatment.\n\nLeadership teams move from multi-day backlogs to 24-hour filing with 97%+ first-pass approval rates, ~30% touchless authorization processing, and 5x faster case completion. At one site, this repurposed 50+ FTEs to patient-facing roles. Teams achieve predictable access without scaling overhead — all without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching operational scalability at Atlantic Health System.\n\nBest,"
   },
   {
     "firstName": "AnneMarie",
@@ -3782,7 +3852,8 @@ const SPEAKERS = [
     "persona": "clinical_ops",
     "primaryMetric": "~80% admin time reclaimed, 5x faster case completion — auto-populated payer forms, single interface across portals/e-fax/API",
     "secondaryMetric": "99.5% visit auth rate; payer behavior and auth outcomes become visible feedback signals",
-    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow"
+    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow",
+    "emailDraft": "Hi AnneMarie,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to eliminate the operational grind in prior auth and access workflows.\n\nClinical ops teams achieve ~80% administrative time reclaimed, 5x faster case completion, and 99.5% visit authorization rates — through auto-populated payer forms and a single interface across portals, e-fax, and API. Payer behavior and auth outcomes become visible feedback signals that prevent the next denial.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Advocate Health.\n\nBest,"
   },
   {
     "firstName": "Bruce",
@@ -3808,7 +3879,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Bruce,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Brooke Army Medical Center.\n\nBest,"
   },
   {
     "firstName": "Casey",
@@ -3834,7 +3906,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Casey,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at University of Maryland Medical System.\n\nBest,"
   },
   {
     "firstName": "Chris",
@@ -3860,7 +3933,8 @@ const SPEAKERS = [
     "persona": "medical",
     "primaryMetric": "97%+ first-submission approval rate — NCCN, ASCO, FDA, CMS guidelines codified into executable logic with evidence mapped from EHR",
     "secondaryMetric": "Auths filed 21 days ahead of DOS; confidence scoring with automatic human review when needed",
-    "metricHook": "Guideline-aligned authorization with supporting & contradictory evidence surfaced inline"
+    "metricHook": "Guideline-aligned authorization with supporting & contradictory evidence surfaced inline",
+    "emailDraft": "Hi Chris,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical workflows.\n\nWe codify NCCN, ASCO, FDA, and CMS guidelines into executable logic — mapping evidence directly from the EHR with supporting and contradictory evidence surfaced inline. This delivers 97%+ first-submission approval rates with auths filed 21 days ahead of date of service, and every AI decision comes with human-readable rationale and confidence scoring.\n\nCurious to hear what you're seeing at Lifepoint Health and compare notes on clinical AI governance!\n\nBest,"
   },
   {
     "firstName": "Christopher",
@@ -3886,7 +3960,8 @@ const SPEAKERS = [
     "persona": "medical",
     "primaryMetric": "97%+ first-submission approval rate — NCCN, ASCO, FDA, CMS guidelines codified into executable logic with evidence mapped from EHR",
     "secondaryMetric": "Auths filed 21 days ahead of DOS; confidence scoring with automatic human review when needed",
-    "metricHook": "Guideline-aligned authorization with supporting & contradictory evidence surfaced inline"
+    "metricHook": "Guideline-aligned authorization with supporting & contradictory evidence surfaced inline",
+    "emailDraft": "Hi Christopher,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical workflows.\n\nWe codify NCCN, ASCO, FDA, and CMS guidelines into executable logic — mapping evidence directly from the EHR with supporting and contradictory evidence surfaced inline. This delivers 97%+ first-submission approval rates with auths filed 21 days ahead of date of service, and every AI decision comes with human-readable rationale and confidence scoring.\n\nCurious to hear what you're seeing at Stanford Health Care and compare notes on clinical AI governance!\n\nBest,"
   },
   {
     "firstName": "Chuck",
@@ -3912,7 +3987,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Chuck,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Franciscan Health.\n\nBest,"
   },
   {
     "firstName": "David",
@@ -3938,7 +4014,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi David,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Tidelands Health.\n\nBest,"
   },
   {
     "firstName": "David",
@@ -3964,7 +4041,8 @@ const SPEAKERS = [
     "persona": "csuite",
     "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
     "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
-    "metricHook": "Workforce optimization with zero marginal cost to scale"
+    "metricHook": "Workforce optimization with zero marginal cost to scale",
+    "emailDraft": "Hi David,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to improve institutional financial performance while shortening time to treatment.\n\nLeadership teams move from multi-day backlogs to 24-hour filing with 97%+ first-pass approval rates, ~30% touchless authorization processing, and 5x faster case completion. At one site, this repurposed 50+ FTEs to patient-facing roles. Teams achieve predictable access without scaling overhead — all without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching operational scalability at AdventHealth.\n\nBest,"
   },
   {
     "firstName": "Elham",
@@ -3990,7 +4068,8 @@ const SPEAKERS = [
     "persona": "csuite",
     "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
     "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
-    "metricHook": "Workforce optimization with zero marginal cost to scale"
+    "metricHook": "Workforce optimization with zero marginal cost to scale",
+    "emailDraft": "Hi Elham,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to improve institutional financial performance while shortening time to treatment.\n\nLeadership teams move from multi-day backlogs to 24-hour filing with 97%+ first-pass approval rates, ~30% touchless authorization processing, and 5x faster case completion. At one site, this repurposed 50+ FTEs to patient-facing roles. Teams achieve predictable access without scaling overhead — all without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching operational scalability at Hackensack Meridian Health.\n\nBest,"
   },
   {
     "firstName": "Erik",
@@ -4016,7 +4095,8 @@ const SPEAKERS = [
     "persona": "cybersecurity",
     "primaryMetric": "Every AI action is configurable, explainable, and auditable — full traceability with confidence scoring",
     "secondaryMetric": "110+ sites, 50K+ transactions/month with human-in-the-loop governance",
-    "metricHook": "Auditable AI with built-in human oversight and traceability"
+    "metricHook": "Auditable AI with built-in human oversight and traceability",
+    "emailDraft": "Hi Erik,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology — where every AI action is configurable, explainable, and auditable with full traceability.\n\nWe're live across 110+ sites processing 50K+ transactions/month with confidence scoring and automatic human-in-the-loop governance when needed. The system is designed for institutional trust from the ground up.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on AI governance at Intermountain Health.\n\nBest,"
   },
   {
     "firstName": "Jackie",
@@ -4043,7 +4123,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Jackie,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Frederick Health.\n\nBest,"
   },
   {
     "firstName": "Jane",
@@ -4070,7 +4151,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Jane,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Mass General Brigham and compare notes!\n\nBest,"
   },
   {
     "firstName": "Jeff",
@@ -4096,7 +4178,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Jeff,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Sentara Healthcare.\n\nBest,"
   },
   {
     "firstName": "Jeff",
@@ -4122,7 +4205,8 @@ const SPEAKERS = [
     "persona": "cybersecurity",
     "primaryMetric": "Every AI action is configurable, explainable, and auditable — full traceability with confidence scoring",
     "secondaryMetric": "110+ sites, 50K+ transactions/month with human-in-the-loop governance",
-    "metricHook": "Auditable AI with built-in human oversight and traceability"
+    "metricHook": "Auditable AI with built-in human oversight and traceability",
+    "emailDraft": "Hi Jeff,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology — where every AI action is configurable, explainable, and auditable with full traceability.\n\nWe're live across 110+ sites processing 50K+ transactions/month with confidence scoring and automatic human-in-the-loop governance when needed. The system is designed for institutional trust from the ground up.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on AI governance at UC San Diego Health.\n\nBest,"
   },
   {
     "firstName": "John",
@@ -4148,7 +4232,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi John,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Rady Children’s Health and compare notes!\n\nBest,"
   },
   {
     "firstName": "Karen",
@@ -4174,7 +4259,8 @@ const SPEAKERS = [
     "persona": "clinical_ops",
     "primaryMetric": "~80% admin time reclaimed, 5x faster case completion — auto-populated payer forms, single interface across portals/e-fax/API",
     "secondaryMetric": "99.5% visit auth rate; payer behavior and auth outcomes become visible feedback signals",
-    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow"
+    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow",
+    "emailDraft": "Hi Karen,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to eliminate the operational grind in prior auth and access workflows.\n\nClinical ops teams achieve ~80% administrative time reclaimed, 5x faster case completion, and 99.5% visit authorization rates — through auto-populated payer forms and a single interface across portals, e-fax, and API. Payer behavior and auth outcomes become visible feedback signals that prevent the next denial.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Advocate Health.\n\nBest,"
   },
   {
     "firstName": "Karla",
@@ -4200,7 +4286,8 @@ const SPEAKERS = [
     "persona": "clinical_ops",
     "primaryMetric": "~80% admin time reclaimed, 5x faster case completion — auto-populated payer forms, single interface across portals/e-fax/API",
     "secondaryMetric": "99.5% visit auth rate; payer behavior and auth outcomes become visible feedback signals",
-    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow"
+    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow",
+    "emailDraft": "Hi Karla,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to eliminate the operational grind in prior auth and access workflows.\n\nClinical ops teams achieve ~80% administrative time reclaimed, 5x faster case completion, and 99.5% visit authorization rates — through auto-populated payer forms and a single interface across portals, e-fax, and API. Payer behavior and auth outcomes become visible feedback signals that prevent the next denial.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Mercy.\n\nBest,"
   },
   {
     "firstName": "Kimberly",
@@ -4227,7 +4314,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Kimberly,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Children's Wisconsin.\n\nBest,"
   },
   {
     "firstName": "Murat",
@@ -4253,7 +4341,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Murat,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Houston Methodist and compare notes!\n\nBest,"
   },
   {
     "firstName": "Narayanan (Nari)",
@@ -4279,7 +4368,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Narayanan (Nari),\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Mayo Clinic and compare notes!\n\nBest,"
   },
   {
     "firstName": "Nathan",
@@ -4305,7 +4395,8 @@ const SPEAKERS = [
     "persona": "cybersecurity",
     "primaryMetric": "Every AI action is configurable, explainable, and auditable — full traceability with confidence scoring",
     "secondaryMetric": "110+ sites, 50K+ transactions/month with human-in-the-loop governance",
-    "metricHook": "Auditable AI with built-in human oversight and traceability"
+    "metricHook": "Auditable AI with built-in human oversight and traceability",
+    "emailDraft": "Hi Nathan,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology — where every AI action is configurable, explainable, and auditable with full traceability.\n\nWe're live across 110+ sites processing 50K+ transactions/month with confidence scoring and automatic human-in-the-loop governance when needed. The system is designed for institutional trust from the ground up.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on AI governance at Children's National Hospital.\n\nBest,"
   },
   {
     "firstName": "Nerissa",
@@ -4331,7 +4422,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Nerissa,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Stanford Health Care.\n\nBest,"
   },
   {
     "firstName": "Ray",
@@ -4358,7 +4450,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Ray,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at AltaMed Health Services.\n\nBest,"
   },
   {
     "firstName": "Remle",
@@ -4384,7 +4477,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Remle,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at NYC Health + Hospitals and compare notes!\n\nBest,"
   },
   {
     "firstName": "Sarah",
@@ -4410,7 +4504,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Sarah,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Cleveland Clinic.\n\nBest,"
   },
   {
     "firstName": "Sean",
@@ -4436,7 +4531,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Sean,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Orlando Health.\n\nBest,"
   },
   {
     "firstName": "Sherri",
@@ -4462,7 +4558,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Sherri,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at HCA Healthcare.\n\nBest,"
   },
   {
     "firstName": "Stephanie",
@@ -4488,7 +4585,8 @@ const SPEAKERS = [
     "persona": "clinical_ops",
     "primaryMetric": "~80% admin time reclaimed, 5x faster case completion — auto-populated payer forms, single interface across portals/e-fax/API",
     "secondaryMetric": "99.5% visit auth rate; payer behavior and auth outcomes become visible feedback signals",
-    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow"
+    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow",
+    "emailDraft": "Hi Stephanie,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to eliminate the operational grind in prior auth and access workflows.\n\nClinical ops teams achieve ~80% administrative time reclaimed, 5x faster case completion, and 99.5% visit authorization rates — through auto-populated payer forms and a single interface across portals, e-fax, and API. Payer behavior and auth outcomes become visible feedback signals that prevent the next denial.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Advocate Health.\n\nBest,"
   },
   {
     "firstName": "Stephen",
@@ -4515,7 +4613,8 @@ const SPEAKERS = [
     "persona": "other",
     "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval aligned with NCCN — with full traceability",
     "secondaryMetric": "60+ FTEs freed, 110+ sites, works across any EHR and payer system",
-    "metricHook": "AI OS for oncology — autonomous where safe, human-reviewed where needed"
+    "metricHook": "AI OS for oncology — autonomous where safe, human-reviewed where needed",
+    "emailDraft": "Hi Stephen,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules.\n\nSeveral early partners have already expanded into second and third workflows.\n\nCurious to hear what you're seeing at Intermountain Health and compare notes!\n\nBest,"
   },
   {
     "firstName": "Tiffany",
@@ -4541,7 +4640,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Tiffany,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at University of Maryland Medical System.\n\nBest,"
   },
   {
     "firstName": "Wynn",
@@ -4567,7 +4667,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Wynn,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Ballad Health.\n\nBest,"
   },
   {
     "firstName": "Yonathan",
@@ -4591,7 +4692,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Yonathan,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Oregon Health Sciences University.\n\nBest,"
   },
   {
     "firstName": "Zeb",
@@ -4617,7 +4719,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Zeb,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at UVA Health System.\n\nBest,"
   },
   {
     "firstName": "Betro",
@@ -4643,7 +4746,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Betro,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Wellstar Medical College of Georgia.\n\nBest,"
   },
   {
     "firstName": "Brian",
@@ -4669,7 +4773,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Brian,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Bon Secours Mercy Health and compare notes!\n\nBest,"
   },
   {
     "firstName": "Cherodeep",
@@ -4696,7 +4801,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Cherodeep,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Providence Health.\n\nBest,"
   },
   {
     "firstName": "Chethan",
@@ -4723,7 +4829,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Chethan,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Cornell Tech and compare notes!\n\nBest,"
   },
   {
     "firstName": "Dan",
@@ -4749,7 +4856,8 @@ const SPEAKERS = [
     "persona": "csuite",
     "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
     "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
-    "metricHook": "Workforce optimization with zero marginal cost to scale"
+    "metricHook": "Workforce optimization with zero marginal cost to scale",
+    "emailDraft": "Hi Dan,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to improve institutional financial performance while shortening time to treatment.\n\nLeadership teams move from multi-day backlogs to 24-hour filing with 97%+ first-pass approval rates, ~30% touchless authorization processing, and 5x faster case completion. At one site, this repurposed 50+ FTEs to patient-facing roles. Teams achieve predictable access without scaling overhead — all without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching operational scalability at Intermountain Health.\n\nBest,"
   },
   {
     "firstName": "Donna",
@@ -4775,7 +4883,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Donna,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Henry Ford Health System.\n\nBest,"
   },
   {
     "firstName": "Esther",
@@ -4801,7 +4910,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Esther,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Mass General Brigham and compare notes!\n\nBest,"
   },
   {
     "firstName": "Glenn",
@@ -4828,7 +4938,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Glenn,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Kern Medical.\n\nBest,"
   },
   {
     "firstName": "Jeffrey",
@@ -4855,7 +4966,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Jeffrey,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at AltaMed Health Services.\n\nBest,"
   },
   {
     "firstName": "Michael",
@@ -4882,7 +4994,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Michael,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Mt. San Rafael Hospital.\n\nBest,"
   },
   {
     "firstName": "Michael",
@@ -4908,7 +5021,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Michael,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Nebraska Medicine and compare notes!\n\nBest,"
   },
   {
     "firstName": "Nikhil",
@@ -4935,7 +5049,8 @@ const SPEAKERS = [
     "persona": "csuite",
     "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
     "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
-    "metricHook": "Workforce optimization with zero marginal cost to scale"
+    "metricHook": "Workforce optimization with zero marginal cost to scale",
+    "emailDraft": "Hi Nikhil,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to improve institutional financial performance while shortening time to treatment.\n\nLeadership teams move from multi-day backlogs to 24-hour filing with 97%+ first-pass approval rates, ~30% touchless authorization processing, and 5x faster case completion. At one site, this repurposed 50+ FTEs to patient-facing roles. Teams achieve predictable access without scaling overhead — all without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching operational scalability at Ambience Healthcare.\n\nBest,"
   },
   {
     "firstName": "Robert",
@@ -4961,7 +5076,8 @@ const SPEAKERS = [
     "persona": "cybersecurity",
     "primaryMetric": "Every AI action is configurable, explainable, and auditable — full traceability with confidence scoring",
     "secondaryMetric": "110+ sites, 50K+ transactions/month with human-in-the-loop governance",
-    "metricHook": "Auditable AI with built-in human oversight and traceability"
+    "metricHook": "Auditable AI with built-in human oversight and traceability",
+    "emailDraft": "Hi Robert,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology — where every AI action is configurable, explainable, and auditable with full traceability.\n\nWe're live across 110+ sites processing 50K+ transactions/month with confidence scoring and automatic human-in-the-loop governance when needed. The system is designed for institutional trust from the ground up.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on AI governance at Stanford Children's Health.\n\nBest,"
   },
   {
     "firstName": "Vikesh",
@@ -4987,7 +5103,8 @@ const SPEAKERS = [
     "persona": "clinical_ops",
     "primaryMetric": "~80% admin time reclaimed, 5x faster case completion — auto-populated payer forms, single interface across portals/e-fax/API",
     "secondaryMetric": "99.5% visit auth rate; payer behavior and auth outcomes become visible feedback signals",
-    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow"
+    "metricHook": "Eliminate prior auth grind — one surface across every payer workflow",
+    "emailDraft": "Hi Vikesh,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to eliminate the operational grind in prior auth and access workflows.\n\nClinical ops teams achieve ~80% administrative time reclaimed, 5x faster case completion, and 99.5% visit authorization rates — through auto-populated payer forms and a single interface across portals, e-fax, and API. Payer behavior and auth outcomes become visible feedback signals that prevent the next denial.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at HCA Healthcare Digital Transformation & Innovation.\n\nBest,"
   },
   {
     "firstName": "Chantal",
@@ -5012,7 +5129,8 @@ const SPEAKERS = [
     "persona": "nursing",
     "primaryMetric": "~80% admin time reclaimed — staff repurposed to patient-facing roles, not replaced",
     "secondaryMetric": "60+ FTEs freed; auto-populated forms and real-time eligibility checks before care is delivered",
-    "metricHook": "Give clinical staff time back with patients"
+    "metricHook": "Give clinical staff time back with patients",
+    "emailDraft": "Hi Chantal,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that gives clinical staff time back with patients by automating prior auth and access workflows.\n\nAt our sites, ~80% of administrative time has been reclaimed and 60+ FTEs have been repurposed to patient-facing roles — not replaced. Auto-populated forms and real-time eligibility checks are completed before care is delivered, so nursing teams can focus on what matters.\n\nCurious to hear what you're seeing at Duke University Hospital and compare notes!\n\nBest,"
   },
   {
     "firstName": "David",
@@ -5038,7 +5156,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi David,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at RiverSpring Living.\n\nBest,"
   },
   {
     "firstName": "Erica",
@@ -5063,7 +5182,8 @@ const SPEAKERS = [
     "persona": "nursing",
     "primaryMetric": "~80% admin time reclaimed — staff repurposed to patient-facing roles, not replaced",
     "secondaryMetric": "60+ FTEs freed; auto-populated forms and real-time eligibility checks before care is delivered",
-    "metricHook": "Give clinical staff time back with patients"
+    "metricHook": "Give clinical staff time back with patients",
+    "emailDraft": "Hi Erica,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that gives clinical staff time back with patients by automating prior auth and access workflows.\n\nAt our sites, ~80% of administrative time has been reclaimed and 60+ FTEs have been repurposed to patient-facing roles — not replaced. Auto-populated forms and real-time eligibility checks are completed before care is delivered, so nursing teams can focus on what matters.\n\nCurious to hear what you're seeing at Sanford Health and compare notes!\n\nBest,"
   },
   {
     "firstName": "Kara",
@@ -5089,7 +5209,8 @@ const SPEAKERS = [
     "persona": "csuite",
     "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
     "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
-    "metricHook": "Workforce optimization with zero marginal cost to scale"
+    "metricHook": "Workforce optimization with zero marginal cost to scale",
+    "emailDraft": "Hi Kara,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to improve institutional financial performance while shortening time to treatment.\n\nLeadership teams move from multi-day backlogs to 24-hour filing with 97%+ first-pass approval rates, ~30% touchless authorization processing, and 5x faster case completion. At one site, this repurposed 50+ FTEs to patient-facing roles. Teams achieve predictable access without scaling overhead — all without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching operational scalability at California Health Care Foundation.\n\nBest,"
   },
   {
     "firstName": "Kaylee",
@@ -5114,7 +5235,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Kaylee,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Orlando Health and compare notes!\n\nBest,"
   },
   {
     "firstName": "Kevin",
@@ -5141,7 +5263,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Kevin,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Jupiter Medical Center.\n\nBest,"
   },
   {
     "firstName": "Kristen",
@@ -5167,7 +5290,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Kristen,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at North Kansas City Health and compare notes!\n\nBest,"
   },
   {
     "firstName": "Mara",
@@ -5193,7 +5317,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Mara,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Grady Health System.\n\nBest,"
   },
   {
     "firstName": "MaryJoy",
@@ -5222,7 +5347,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi MaryJoy,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at New York Presbyterian Hospital.\n\nBest,"
   },
   {
     "firstName": "Penni",
@@ -5247,7 +5373,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Penni,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at Ballad Health and compare notes!\n\nBest,"
   },
   {
     "firstName": "Phil",
@@ -5272,7 +5399,8 @@ const SPEAKERS = [
     "persona": "cybersecurity",
     "primaryMetric": "Every AI action is configurable, explainable, and auditable — full traceability with confidence scoring",
     "secondaryMetric": "110+ sites, 50K+ transactions/month with human-in-the-loop governance",
-    "metricHook": "Auditable AI with built-in human oversight and traceability"
+    "metricHook": "Auditable AI with built-in human oversight and traceability",
+    "emailDraft": "Hi Phil,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology — where every AI action is configurable, explainable, and auditable with full traceability.\n\nWe're live across 110+ sites processing 50K+ transactions/month with confidence scoring and automatic human-in-the-loop governance when needed. The system is designed for institutional trust from the ground up.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on AI governance at Cooper University Health Care.\n\nBest,"
   },
   {
     "firstName": "Richard",
@@ -5295,7 +5423,8 @@ const SPEAKERS = [
     "persona": "cybersecurity",
     "primaryMetric": "Every AI action is configurable, explainable, and auditable — full traceability with confidence scoring",
     "secondaryMetric": "110+ sites, 50K+ transactions/month with human-in-the-loop governance",
-    "metricHook": "Auditable AI with built-in human oversight and traceability"
+    "metricHook": "Auditable AI with built-in human oversight and traceability",
+    "emailDraft": "Hi Richard,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology — where every AI action is configurable, explainable, and auditable with full traceability.\n\nWe're live across 110+ sites processing 50K+ transactions/month with confidence scoring and automatic human-in-the-loop governance when needed. The system is designed for institutional trust from the ground up.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on AI governance at Alberta Health Services.\n\nBest,"
   },
   {
     "firstName": "Steven",
@@ -5320,7 +5449,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Steven,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Renown Health.\n\nBest,"
   },
   {
     "firstName": "Christian",
@@ -5345,7 +5475,8 @@ const SPEAKERS = [
     "persona": "cybersecurity",
     "primaryMetric": "Every AI action is configurable, explainable, and auditable — full traceability with confidence scoring",
     "secondaryMetric": "110+ sites, 50K+ transactions/month with human-in-the-loop governance",
-    "metricHook": "Auditable AI with built-in human oversight and traceability"
+    "metricHook": "Auditable AI with built-in human oversight and traceability",
+    "emailDraft": "Hi Christian,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology — where every AI action is configurable, explainable, and auditable with full traceability.\n\nWe're live across 110+ sites processing 50K+ transactions/month with confidence scoring and automatic human-in-the-loop governance when needed. The system is designed for institutional trust from the ground up.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on AI governance at University of California San Diego.\n\nBest,"
   },
   {
     "firstName": "Guido",
@@ -5372,7 +5503,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Guido,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at St. James Hospital and compare notes!\n\nBest,"
   },
   {
     "firstName": "Josh",
@@ -5397,7 +5529,8 @@ const SPEAKERS = [
     "persona": "pharmacy",
     "primaryMetric": "1,400+ drugs supported (Part B + Part D), Part D auths within 24hrs tracking to <2hrs — down from 8-day backlog",
     "secondaryMetric": "Diagnosis-code-regimen alignment enforced; single-drug, specialty, infusions, multi-drug regimens all covered",
-    "metricHook": "Broadest oncology drug coverage with fastest pharmacy auth turnaround"
+    "metricHook": "Broadest oncology drug coverage with fastest pharmacy auth turnaround",
+    "emailDraft": "Hi Josh,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to help pharmacy leaders get patients to therapy faster by automating benefit investigation and prior auth across Part B and Part D.\n\nPharmacy teams achieve 97%+ first-pass approval rates, ~30% touchless authorization processing, and file Part D submissions within 2hrs of tracking — with broad drug support across 1,400+ oncology drugs and complex multi-drug regimens.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at St. Mary’s Healthcare!\n\nBest,"
   },
   {
     "firstName": "Joy",
@@ -5422,7 +5555,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Joy,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Creighton University.\n\nBest,"
   },
   {
     "firstName": "Julie",
@@ -5447,7 +5581,8 @@ const SPEAKERS = [
     "persona": "digital_ai_innovation",
     "primaryMetric": "30% touchless prior auths with full traceability — every AI action is auditable with human-in-the-loop when confidence drops",
     "secondaryMetric": "97%+ first-submission approval rate aligned with NCCN guidelines",
-    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR"
+    "metricHook": "Autonomous execution with built-in clinical guardrails across any EHR",
+    "emailDraft": "Hi Julie,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules — with full traceability and human-in-the-loop when confidence drops.\n\nSeveral early partners have already expanded into second and third workflows. It's been exciting to see the broader platform vision take shape.\n\nCurious to hear what you're seeing at St. Mary’s Healthcare and compare notes!\n\nBest,"
   },
   {
     "firstName": "Kathleen",
@@ -5472,7 +5607,8 @@ const SPEAKERS = [
     "persona": "csuite",
     "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
     "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
-    "metricHook": "Workforce optimization with zero marginal cost to scale"
+    "metricHook": "Workforce optimization with zero marginal cost to scale",
+    "emailDraft": "Hi Kathleen,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to improve institutional financial performance while shortening time to treatment.\n\nLeadership teams move from multi-day backlogs to 24-hour filing with 97%+ first-pass approval rates, ~30% touchless authorization processing, and 5x faster case completion. At one site, this repurposed 50+ FTEs to patient-facing roles. Teams achieve predictable access without scaling overhead — all without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching operational scalability at Morris Hospital.\n\nBest,"
   },
   {
     "firstName": "Russ",
@@ -5497,7 +5633,8 @@ const SPEAKERS = [
     "persona": "csuite",
     "primaryMetric": "60+ FTEs freed to patient-facing roles, 3x lower cost per PA, zero incremental hiring as volume grows",
     "secondaryMetric": "$400M+ oncology drugs authorized, deploy once → configure anything → zero marginal cost to scale",
-    "metricHook": "Workforce optimization with zero marginal cost to scale"
+    "metricHook": "Workforce optimization with zero marginal cost to scale",
+    "emailDraft": "Hi Russ,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology to improve institutional financial performance while shortening time to treatment.\n\nLeadership teams move from multi-day backlogs to 24-hour filing with 97%+ first-pass approval rates, ~30% touchless authorization processing, and 5x faster case completion. At one site, this repurposed 50+ FTEs to patient-facing roles. Teams achieve predictable access without scaling overhead — all without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching operational scalability at Owensboro Health.\n\nBest,"
   },
   {
     "firstName": "Aaron",
@@ -5520,7 +5657,8 @@ const SPEAKERS = [
     "persona": "cybersecurity",
     "primaryMetric": "Every AI action is configurable, explainable, and auditable — full traceability with confidence scoring",
     "secondaryMetric": "110+ sites, 50K+ transactions/month with human-in-the-loop governance",
-    "metricHook": "Auditable AI with built-in human oversight and traceability"
+    "metricHook": "Auditable AI with built-in human oversight and traceability",
+    "emailDraft": "Hi Aaron,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology — where every AI action is configurable, explainable, and auditable with full traceability.\n\nWe're live across 110+ sites processing 50K+ transactions/month with confidence scoring and automatic human-in-the-loop governance when needed. The system is designed for institutional trust from the ground up.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on AI governance at Main Line Health.\n\nBest,"
   },
   {
     "firstName": "Chris",
@@ -5543,7 +5681,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Chris,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Community Health Network.\n\nBest,"
   },
   {
     "firstName": "Greg",
@@ -5566,7 +5705,8 @@ const SPEAKERS = [
     "persona": "cybersecurity",
     "primaryMetric": "Every AI action is configurable, explainable, and auditable — full traceability with confidence scoring",
     "secondaryMetric": "110+ sites, 50K+ transactions/month with human-in-the-loop governance",
-    "metricHook": "Auditable AI with built-in human oversight and traceability"
+    "metricHook": "Auditable AI with built-in human oversight and traceability",
+    "emailDraft": "Hi Greg,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology — where every AI action is configurable, explainable, and auditable with full traceability.\n\nWe're live across 110+ sites processing 50K+ transactions/month with confidence scoring and automatic human-in-the-loop governance when needed. The system is designed for institutional trust from the ground up.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on AI governance at Michigan Medicine.\n\nBest,"
   },
   {
     "firstName": "Hannah",
@@ -5590,7 +5730,8 @@ const SPEAKERS = [
     "persona": "tech_informatics",
     "primaryMetric": "50K+ transactions/month across 110+ sites — works across any EHR, payer portal, e-fax, clearinghouse via FHIR, HL7, API",
     "secondaryMetric": "Zero incremental hiring as volume grows; multi-agent system adapts as payer rules/interfaces change",
-    "metricHook": "One execution surface across 100+ payer plan types, any EHR"
+    "metricHook": "One execution surface across 100+ payer plan types, any EHR",
+    "emailDraft": "Hi Hannah,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that works across any EHR, payer portal, e-fax, and clearinghouse through FHIR, HL7, and API integrations.\n\nWe're live across 110+ sites processing 50K+ transactions/month with 97%+ first-pass approvals and ~30% touchless authorizations. The system adapts in real time as payer rules and interfaces change — zero reprogramming needed.\n\nSeveral early partners have already expanded into second and third workflows without incremental hiring as volume grows.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on how you're approaching this at Cambridge Health Alliance.\n\nBest,"
   },
   {
     "firstName": "Jeff",
@@ -5613,7 +5754,8 @@ const SPEAKERS = [
     "persona": "cybersecurity",
     "primaryMetric": "Every AI action is configurable, explainable, and auditable — full traceability with confidence scoring",
     "secondaryMetric": "110+ sites, 50K+ transactions/month with human-in-the-loop governance",
-    "metricHook": "Auditable AI with built-in human oversight and traceability"
+    "metricHook": "Auditable AI with built-in human oversight and traceability",
+    "emailDraft": "Hi Jeff,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology — where every AI action is configurable, explainable, and auditable with full traceability.\n\nWe're live across 110+ sites processing 50K+ transactions/month with confidence scoring and automatic human-in-the-loop governance when needed. The system is designed for institutional trust from the ground up.\n\nIf you're open to it, I'd love to grab a quick coffee at HIMSS to compare notes on AI governance at Hoag Memorial Hospital Presbyterian.\n\nBest,"
   },
   {
     "firstName": "Teresa",
@@ -5634,6 +5776,7 @@ const SPEAKERS = [
     "persona": "other",
     "primaryMetric": "30% touchless prior auths, 97%+ first-submission approval aligned with NCCN — with full traceability",
     "secondaryMetric": "60+ FTEs freed, 110+ sites, works across any EHR and payer system",
-    "metricHook": "AI OS for oncology — autonomous where safe, human-reviewed where needed"
+    "metricHook": "AI OS for oncology — autonomous where safe, human-reviewed where needed",
+    "emailDraft": "Hi Teresa,\n\nI saw you're speaking at HIMSS'26 and wanted to reach out ahead of the conference.\n\nAt RISA, we're building an AI operating system with our initial focus on oncology that aligns evidence and policy with real-world clinical and admin workflows. We began with prior auth and are now live at scale.\n\nWe're seeing ~30% touchless authorizations and 97%+ first-pass approvals. This comes from embedding NCCN, ASCO, FDA, and CMS logic into a configurable policy layer aligned to payer rules.\n\nSeveral early partners have already expanded into second and third workflows.\n\nCurious to hear what you're seeing at  and compare notes!\n\nBest,"
   }
 ];

@@ -543,6 +543,17 @@ input::placeholder, textarea::placeholder { color:var(--text2); }
       <option value="name">Sort: Name</option>
       <option value="org">Sort: Organization</option>
     </select>
+    <select class="sort-select" id="personaSelect" onchange="filterSpeakers()">
+      <option value="all">Persona: All</option>
+      <option value="informatics">Informatics & Information (46)</option>
+      <option value="digital_ai">Digital & AI (27)</option>
+      <option value="csuite">C-Suite (24)</option>
+      <option value="other">Other (19)</option>
+      <option value="clinical_ops">Clinical Ops (10)</option>
+      <option value="cybersecurity">Cybersecurity (10)</option>
+      <option value="nursing">Nursing Leadership (4)</option>
+      <option value="revenue_cycle">Revenue Cycle (3)</option>
+    </select>
     <button class="apollo-btn" onclick="openApolloModal()">Apollo</button>
     <button class="apollo-btn" onclick="openSettingsModal()">Settings</button>
     <div class="view-toggle">
@@ -2458,6 +2469,9 @@ function getFiltered() {
     }
     if (currentFilter === 'replied' && !getOutreach(s.name).engagement.replied) return false;
     if (currentFilter === 'meeting_booked' && getOutreach(s.name).stage !== 'Meeting Booked') return false;
+    // Persona filter
+    const personaVal = document.getElementById('personaSelect')?.value || 'all';
+    if (personaVal !== 'all' && s.persona !== personaVal) return false;
     if (q) {
       const hay = (s.name + ' ' + s.org + ' ' + s.title).toLowerCase();
       if (!hay.includes(q)) return false;

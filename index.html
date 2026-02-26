@@ -2585,6 +2585,10 @@ function filterSpeakers() {
       ${stageSelectHTML(s.name)}
       <div class="engagement-tags" data-name="${esc(s.name)}"></div>
       <div class="onc-signal">${oncLabel(s)}</div>
+      ${s.primaryMetric ? `<div style="margin-top:8px;padding:8px 10px;background:var(--surface2);border-radius:8px;border-left:2px solid var(--accent);font-size:.75rem;line-height:1.5;">
+        <div style="color:var(--text);font-weight:500;">${esc(s.metricHook || '')}</div>
+        <div style="color:var(--text2);margin-top:2px;">${esc(s.primaryMetric)}</div>
+      </div>` : ''}
       ${s.sessions.length ? `<div class="sessions-list"><h4>Sessions</h4>${s.sessions.map(ss=>`<div class="session-item"><span class="dot"></span>${esc(ss)}</div>`).join('')}</div>` : ''}
       <div class="links">
         ${s.profileUrl ? `<a href="${s.profileUrl}" target="_blank">HIMSS Profile</a>` : ''}

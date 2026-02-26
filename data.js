@@ -2061,7 +2061,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. Raymond Mak is an Associate Professor of Radiation Oncology at Harvard Medical School and a faculty member in Mass General Brigham’s AI in Medicine Program. Dr. Mak is a graduate of Cornell University and Harvard Medical School, and completed his residency training in the Harvard Radiation Oncology Residency Program. His main research interests are in developing clinically-relevant biomarkers of both tumor response and radiation-induced toxicity after radiation therapy in lung cancer, using AI and novel imaging technologies, He is also interested in the clinical application of AI solutions to improve the quality and effectiveness of cancer therapy through the design and implementation of clinical trials.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzMjQ=",
     "priority": "P1",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Joseph",
@@ -2161,7 +2161,7 @@ const SPEAKERS = [
     "aboutMe": "Bernardo C. Bizzo is a trained diagnostic radiologist and Senior Director at the Mass General Brigham AI business, responsible for clinical AI activities and its Digital Clinical Research Organization. Dr. Bizzo leads collaborations with industry to develop, validate and implement AI/machine learning-based software medical devices and other clinical AI applications. In the last decade, he has led the development and successful FDA clearance of dozens of AI products. Dr. Bizzo runs the Mass General Brigham AI Imaging Governance Committee and oversees the clinical implementation of imaging AI solutions across Mass General Brigham. He is an Assistant Professor of Radiology at Harvard Medical School, on the faculty at the Mass General Brigham Radiology Department, and a Associate Chief Science Officer at the American College of Radiology Data Science Institute.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzNDE=",
     "priority": "P1",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Crystal",
@@ -2187,7 +2187,7 @@ const SPEAKERS = [
     "aboutMe": "Crystal Broj is the Enterprise Chief Digital Transformation Officer at the Medical University of South Carolina (MUSC), leading innovation and transformation for the enterprise. Her work has delivered measurable ROI through the adoption of advanced digital tools and data-driven strategies that improve patient and staff experiences. A nationwide speaker and award-winning executive, Crystal has been recognized in the Global CDO 100 and honored with a Stevie Award for Female Executive of the Year for Non-Profit. She brings a cross-industry perspective, agile change leadership, and a relentless focus on driving meaningful outcomes in healthcare.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ0NTI0MDc=",
     "priority": "P1",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Julie",
@@ -2210,7 +2210,7 @@ const SPEAKERS = [
     "aboutMe": "Julie Luengas is a doctorally prepared nurse executive and board-certified informatics leader with more than 25 years of experience advancing enterprise EHR strategy, governance, and digital transformation across complex academic and integrated health systems. As Chief Nursing Informatics Officer at Stony Brook Medicine, she provides strategic oversight for clinical informatics, system optimization, and technology-enabled quality initiatives that strengthen patient safety, enhance clinician experience, and align innovation with organizational priorities.\nShe is recognized for building high-performing, multidisciplinary teams and establishing robust governance infrastructures that drive sustainable change. Her leadership has resulted in successful enterprise EHR implementations, streamlined clinical documentation, barcode medication administration expansion, eConsent integration, and regulatory compliance initiatives. She is particularly skilled at aligning clinical workflow redesign with data strategy, ensuring technology solutions are practical, user-centered, and outcome-driven.\nPreviously, she served in executive informatics roles at Moffitt Cancer Center and Saint Thomas Health, where she led large-scale optimization efforts, standardized order sets, advanced Meaningful Use initiatives, and unified informatics teams to support clinical, operational, and research priorities. Her ability to bridge clinical practice and information technology has consistently improved efficiency, adoption, and measurable quality outcomes across inpatient and ambulatory settings.\nA nationally engaged thought leader, she actively contributes to professional organizations including Healthcare Information and Management Systems Society, American Nursing Informatics Association, Friends of the National Library of Medicine and the Alliance for Nursing Informatics. She holds a Doctor of Nursing Practice degree and maintains Nursing Informatics certification through the American Nurses Credentialing Center. Her work reflects a deep commitment to advancing nursing leadership, fostering innovation, and shaping the future of digitally enabled healthcare delivery.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM5NDAxMDQ=",
     "priority": "P1",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Michael",
@@ -2235,7 +2235,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. Michael Kirchhoff is the Chief Innovation Officer at Cooper University Health Care where he actively practices Emergency Medicine and is an Assistant Professor at the Cooper Medical School of Rowan University. He has been on key teams that have brought new business units to Cooper including Emergency Medicine Contracted Services, Urgent Care, Emergency Medical Services and the Helicopter Transport Program. He has developed applications for Graduate Medical Education procedure tracking, hospital coding/charging and revenue cycle audit, external provider post-acute communication, and Emergency Department overcrowding surveillance. He currently helps to drive organizational intellectual property management and development, outside business development partnerships and inter-institutional resource sharing. He has served as the Medical Director for the Emergency Department, Urgent Care, Simulation Lab, and EM Ultrasound. Dr. Kirchhoff is the Patient Safety Officer for the healthcare system as well as board eligible for Medical Informatics and is active in business intelligence, reporting and planning.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0ODI=",
     "priority": "P1",
-    "persona": "other"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Michelle",
@@ -2258,7 +2258,7 @@ const SPEAKERS = [
     "aboutMe": "Michelle Lardner is the inaugural Chief Nursing Information Officer at UVA Health. She is responsible for driving activities to improve clinician EMR utilization and efficiency including fostering collaboration with leaders across the UVA Health System to develop sound, clinically relevant technology solutions that promote standardization and high quality patient care. Prior to this role, she served as the System Executive Director of Enterprise Clinical Systems at City of Hope and the Senior Vice President of Clinical Informatics at Cancer Treatment Centers of America. Her past positions also include Deputy Chief Information Officer and Chief of Clinical Informatics at the National Institutes of Health Clinical Center, various informatics leadership roles in the DC metro area and application coordinator at Epic Systems. She served in the US Navy Nurse Corps and has completed wartime and humanitarian deployments aboard the USNS Comfort and USNS Mercy. Michelle earned her BSN from the University of Illinois and MS and DNP from the University of Maryland.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ0NDUwODc=",
     "priority": "P1",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Rasu",
@@ -2283,7 +2283,7 @@ const SPEAKERS = [
     "aboutMe": "Honorific\nMD, MBA",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ0OTgzMjI=",
     "priority": "P1",
-    "persona": "csuite"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Roberta",
@@ -2308,7 +2308,7 @@ const SPEAKERS = [
     "aboutMe": "Roberta L. Schwartz is the executive vice president of Houston Methodist Hospital — one of the founding institutions of the Texas Medical Center — and the chief innovation officer of Houston Methodist. As executive vice president of Houston Methodist Hospital, Roberta oversees all operations at the 1,020-bed hospital, which U.S. News & World Report named the No. 1 hospital in Texas for 14 straight years. The publication also listed Houston Methodist Hospital on its prestigious “Honor Roll” nine times. The hospital employs more than 3,000 medical staff and 8,000 employees. Roberta also participates in the strategic direction of the nine-hospital system and has oversight of multiple system departments, including information technology, pharmacy and laboratory. \nAs chief innovation officer, Roberta is responsible for advancing and expanding Houston Methodist’s digital innovation platforms, including telemedicine, artificial intelligence and big data. Roberta is the founder and leader of the Center for Innovation, which impacts all aspects of the organization, focusing on improving the patient and physician experience and operational efficiencies through innovation. With Roberta at the helm of the Center for Innovation, Houston Methodist has been named to Fortune magazine's list of America’s Most Innovative Companies for the past three years.  \nPrior to joining Houston Methodist, Roberta worked as the director of business development for the Icahn School of Medicine at Mount Sinai in New York. She was also a consultant and project manager for several academic medical centers for APM/Computer Sciences Corp. and the Centers for Medicare & Medicaid Services.\nRoberta earned a master’s degree in health science from Johns Hopkins University and an honors undergraduate degree from Barnard College at Columbia University. She has a Ph.D. from UTHealth Houston School of Public Health. \nRoberta is nationally recognized for her professional and nonprofit work. She was recognized by Modern Healthcare’s Top 25 Women Leaders as one of its “10 Women to Watch.” She is involved in many nonprofit organizations, such as LifeGift, the Robert M. Beren Academy, the United Orthodox Synagogues and the Young Survival Coalition.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM1MzI5ODM=",
     "priority": "P1",
-    "persona": "csuite"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Sameer",
@@ -2333,7 +2333,7 @@ const SPEAKERS = [
     "aboutMe": "Sameer Sethi is a seasoned leader and expert in healthcare data and analytics with a proven track record of enabling use of data and analytical techniques to drive distinctiveness and deliver transformative impact. He has focused his career on data, technology, and innovation for healthcare providers. Starting his healthcare career in EMR implementations motivated Sameer to find ways to use digitized medical data to improve patient care, influence clinical workflow and provider network operations. He has since operated at the cross-section of healthcare and technology to improve quality, access and cost-of-care delivery. Sameer previously worked at Mount Sinai Health System, McKinsey, Bon Secours Mercy Health and now serves as Chief AI & Insights Officer at Hackensack Meridian Health. His experiences in data and analytics roles across consulting and health systems gives him diverse perspectives on the challenges facing providers in data and insights enablement and technology adoption. Sameer and his team are currently focused on accelerating the use of Artificial Intelligence (AI) and Machine Learning (ML) to deliver high quality, affordable, more accessible, and more efficient healthcare. Recently, Sameer was named by Becker’s Hospital Review among leading hospital and health system chief data and analytics officers making an impact.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzOTQ=",
     "priority": "P1",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Yindalon",
@@ -2358,7 +2358,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. Yindalon Aphinyanaphongs is a Research Professor in the Department of Population Health and the Center for Healthcare Innovation and Delivery Science at NYU Langone School of Medicine. He is also the Director of Operational Data Science and Machine Learning at NYU Langone in the Division of Applied AI Technologies within the Department of Health Informatics’ Medical Center Information Technology. The Division builds, implements, deploys, and evaluates AI models and leads the operational use of AI and large language models across our clinical, research and education missions. The enterprise currently has 63 AI models in production. His lab focuses on transformative use cases of large language models, studying the reliability of the models in context.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzMzY=",
     "priority": "P1",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Jonathan",
@@ -2382,7 +2382,7 @@ const SPEAKERS = [
     "aboutMe": "Jonathan Witenko is the System Director of Digital Transformation at Lee Health, where he leads enterprise innovation across virtual health, AI, automation, and emerging technologies. He has played a central role in scaling virtual health, remote patient monitoring, digital access solutions, and clinical AI initiatives across the system. Jonathan is a recognized leader in digital health strategy, presenting on AI, connected care, and modernization of clinical operations across multiple organizational forums.  Jonathan can also be heard on the Podcast he cohosts, the Digital Health Revolution on Spotify & Apple Podcasts.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ1Nzg4NTM=",
     "priority": "P2",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Ramesh",
@@ -2406,7 +2406,7 @@ const SPEAKERS = [
     "aboutMe": "Ramesh Yapalparvi, Ph.D., is the Senior Director of Enterprise Data Science at Mass General Brigham. He leads AI/ML initiatives to support large-scale healthcare operations, clinical decision-making, and resource optimization throughout the system. Previously, he managed data science teams at Optum in Payment Integrity, developing machine learning solutions to address fraud, waste, abuse, and errors across pre- and post-payment workflows. Prior to that, at Dartmouth-Hitchcock, he created predictive analytics platforms for remote patient monitoring and outcomes optimization in collaboration with clinical teams. He holds a Ph.D. in Applied Mathematics from the University of Manchester and brings a wealth of cross-sector experience in healthcare, insurance analytics, scientific computing, and academic program development. Significantly, Ramesh co-designed the Master’s in Health Data Science program at Dartmouth College.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ0Mzg2MDM=",
     "priority": "P2",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Anil",
@@ -2430,7 +2430,7 @@ const SPEAKERS = [
     "aboutMe": "",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQxMDA1MzQ=",
     "priority": "P2",
-    "persona": "other"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Brett",
@@ -2481,7 +2481,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. McKee was trained in Family Medicine and has practiced for more than 20 years.  His interests in optimization and helping his colleagues gradually morphed into a career in informatics, when he became board certified in informatics in 2015.  \nHe worked in the VA for almost a decade and was able to work on interesting projects there such as a collaboration with IBM and Mitre to evaluate AI with Watson.  He moved to a local IDN as the CMIO in 2017, when met his wife, a practicing family medicine physician.  \nDr. McKee is very interested in the intersection of technology and medicine, and has been on the Advisory Boards of three different startup companies as well.  His goal is to be a part of decreasing the terrible statistic of 26.7 hours a day of work being generated in an average PCP practice.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQyNTE1NzY=",
     "priority": "P2",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Keith",
@@ -2505,7 +2505,7 @@ const SPEAKERS = [
     "aboutMe": "Keith J. Dreyer, DO, PhD, FACR, FSIIM, is Chief Data Science Officer and Chief Imaging Information Officer at Mass General Brigham (MGB).  He founded the MGH & BWH Center for Clinical Data Science and oversees the development and deployment of AI at MGB.  As the chief data science officer, Dr. Dreyer leads the global Mass General Brigham AI team to develop and scale advanced analytic capabilities in support of Mass General Brigham’s strategic initiatives. He interfaces with executive leadership from public and private sector businesses and senior leadership across Mass General Brigham, fostering an environment to support health care transformation through cutting-edge data science, machine learning, and artificial intelligence. His most recent focus has been on garnering feedback regarding use of AI in clinical practice from radiologists nationally and uncovering the challenges that exist in medical imaging AI today. \nDr. Dreyer has held numerous positions with the American College of Radiology including chairman of the Informatics Commission and is currently the ACR DSI’s Chief Science Officer.  In 2023, Dr. Dreyer received global recognition for his achievements when Time Magazine named him to its first ever Time 100 AI List, highlighting the 100 most influential individuals in artificial intelligence today. The list features leaders, policy makers, artists, and entrepreneurs across a variety of fields from countries around the world. Additionally, Dr. Dreyer received The Dr. Joe Gitlin Award in 2023. Presented annually from SIIM, this honorary award is given in recognition of outstanding lifetime contributions to the field of imaging and informatics through the development of innovative, high impact solutions.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM5NjM3MTE=",
     "priority": "P2",
-    "persona": "informatics"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Micky",
@@ -2529,7 +2529,7 @@ const SPEAKERS = [
     "aboutMe": "",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ2NjE5MzU=",
     "priority": "P2",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Nabile",
@@ -2553,7 +2553,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. Nabile M. Safdar is a board-certified radiologist and informaticist whose leadership bridges imaging clinical practice, enterprise informatics and artificial intelligence. He holds the positions of Endowed Professor and Vice Chair of Imaging Informatics in the Department of Radiology & Imaging Sciences at Emory University.  He is currently the board chair of the Society for Imaging Informatics in Medicine.\nIn his executive role as Chief AI Officer for Emory Healthcare, he oversees the institution’s strategy for deploying AI across clinical, research and operational domains—ensuring responsible, scalable innovation.\nDr. Safdar maintains an active research portfolio in imaging informatics, ethics of AI in radiology, machine-learning pipelines for medical images and informatics fellowship curriculum design.  With subspecialty training in imaging informatics, pediatric radiology, and musculoskeletal imaging, Dr. Safdar has built a career focused on how advanced data, workflow optimization, and AI can improve diagnostic imaging, patient safety and health-system performance.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM3MTI2MzY=",
     "priority": "P2",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Nasim",
@@ -2577,7 +2577,7 @@ const SPEAKERS = [
     "aboutMe": "",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ2MTQ2Njc=",
     "priority": "P2",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Robert",
@@ -2601,7 +2601,7 @@ const SPEAKERS = [
     "aboutMe": "Rob Purinton is the Chief AI Officer at AdventHealth, where he leads the organization’s enterprise AI strategy, driving innovation, governance, and the responsible deployment of advanced technologies to enhance patient care and operational excellence.\nSince joining AdventHealth in 2005, Rob has served in multiple strategic roles spanning analytics, quality, and technology. In 2010, he led systemwide accreditation readiness for the nation’s largest hospital, overseeing AdventHealth’s successful transition from The Joint Commission to DNV accreditation.\nAs Vice President of Analytics & Performance Improvement, he advanced large-scale Lean transformation initiatives and quality improvement programs that helped AdventHealth Orlando become the largest U.S. hospital to earn ISO 9001 certification, a 5-Star CMS rating, and sustained “A” Leapfrog safety grades.\nIn 2023, Rob established AdventHealth’s Clinical AI Advisory Board, convening national experts across healthcare and industry to accelerate the safe, scalable adoption of AI. His leadership has positioned AdventHealth as a collaborator with leading national initiatives, including CHAI, TRAIN, and ARPA-H PRECISE AI.\nRob holds degrees in computer science, healthcare administration, and strategic management, and is currently enrolled in MIT’s Chief Technology Officer program. He is a passionate advocate for ethical innovation and a lifelong learner committed to transforming care through technology.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM5MDE1MTA=",
     "priority": "P2",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Adam",
@@ -2625,7 +2625,7 @@ const SPEAKERS = [
     "aboutMe": "Adam Landman, MD, MS, MIS, MHS is Chief Digital Information Officer at Brown University Health in Providence, Rhode Island, and a member of the faculty (appointment in process) in the Department of Emergency Medicine at the Warren Alpert Medical School of Brown University. He is an attending emergency physician and a nationally recognized expert in health information technology and digital health design, development, and implementation.\nPreviously, Dr. Landman served for 15 years at Brigham and Women’s Hospital and Mass General Brigham (MGB), most recently as CIO and SVP of Digital. In that role, he was responsible for technology solution delivery and support across all MGB hospitals and practices, collaborating with clinical and operational leaders to design and implement the system’s digital strategy, ensuring that frontline needs for digital capabilities were met while incorporating emerging technologies into care delivery.  He was also Associate Professor of Emergency Medicine at Harvard Medical School.\nDr. Landman received his medical degree from Rutgers Robert Wood Johnson Medical School and trained in Emergency Medicine at the University of California, Los Angeles (UCLA) Medical Center. He was a Robert Wood Johnson Foundation Clinical Scholar at Yale University, where he also earned a Master of Health Sciences degree. In addition, he completed graduate degrees in Information Systems and Health Care Policy and Management at Carnegie Mellon University.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ1MzM5ODA=",
     "priority": "P2",
-    "persona": "informatics"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Albert",
@@ -2676,7 +2676,7 @@ const SPEAKERS = [
     "aboutMe": "Ameena Elahi is Associate Director of AI Initiatives at Penn Medicine, where she leads enterprise efforts in artificial intelligence governance, implementation, and education. With over 20 years of experience spanning radiology, imaging informatics, and global health, she has advanced initiatives that bridge clinical practice, technology, and strategy. Ameena also serves as Director of Operations for RAD-AID International and sits on the Board of Directors for the Society for Imaging Informatics in Medicine (SIIM), contributing nationally and internationally to the advancement of responsible AI and health informatics.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0Mjk=",
     "priority": "P2",
-    "persona": "informatics"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Amy",
@@ -2701,7 +2701,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. Amy Merlino is the Enterprise Chief Medical Information Officer at Cleveland Clinic, where she leads clinical informatics and digital strategy initiatives. As a practicing OB/GYN and the most senior female IT executive at the organization, she combines frontline clinical insight with enterprise IT leadership to guide the safe, scalable adoption of emerging technologies. Dr. Merlino directs a multidisciplinary informatics team focused on optimizing workflows, standardizing digital tools across care sites, and aligning innovations with Cleveland Clinic’s standards for quality, compliance, and patient safety. She was instrumental in the rollout of ambient AI documentation across more than 80 specialties, overseeing vendor evaluation, governance and enterprise deployment. Her efforts have resulted in significant improvements in providing clinicians with up-to-date technology while standardizing tools that support the organization's global expansion. Dr. Merlino helped lead the development of Cleveland Clinic's digital strategy, integrating mobile, analytics, voice and virtual reality into patient care. Dr. Merlino earned her medical degree from Case Western Reserve University School of Medicine and completed her residency and fellowship in Obstetrics and Gynecology and Maternal-Fetal Medicine at MetroHealth Medical Center in Cleveland, Ohio. CRAIN'S Cleveland Business recognized her a “Notable Women in Technology” in 2018 and Beckers’ Hospital Review included her in a list of “102 Women in Health IT to Know” in 2019.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMyODA=",
     "priority": "P2",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Beth",
@@ -2726,7 +2726,7 @@ const SPEAKERS = [
     "aboutMe": "Beth Meese, RN, MBA, is Executive Director of Information Technology at Cleveland Clinic, where she leads the clinical IT and digital health domains. Beth manages a team of more than 250 clinicians and oversees the clinical applications portfolio—including Epic—for more than 55,000 users across multiple sites. A former Neonatal Intensive Care Unit nurse turned IT executive, Beth blends clinical empathy with operational rigor. She plays a key role in AI strategy, partnering with Cleveland Clinic’s Chief Digital and AI Officers to ensure responsible, secure and patient-centered AI deployment. Notably, she helped lead the enterprise rollout of ambient AI scribes, reducing documentation burden, improving note quality, freeing up time for patient care and yielding strong Return On Investment. Beth is a trusted advisor on clinical AI, digital transformation and scaling health system–tech partnerships. She has shared Cleveland Clinic’s approach to AI and digital health strategy at ViVE 2025, CHIME 2024, and the Cleveland Clinic AI Summit, contributing to national dialogue on AI adoption, clinician usability and responsible innovation. She holds an Executive MBA from Case Western Reserve University, a BS in Nursing from Cleveland State University, and a BBA in MIS and Marketing from Ohio University.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMyNzc=",
     "priority": "P2",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Bryon",
@@ -2751,7 +2751,7 @@ const SPEAKERS = [
     "aboutMe": "Bryon K. Frost, MD, is Chief Medical Informatics Officer at McLeod Health, where he leads clinical informatics and enterprise AI initiatives across a multi-hospital nonprofit health system. His work focuses on the responsible application of machine learning and generative AI to improve clinical decision support, operational efficiency, and clinician experience.\nA board-certified emergency physician with more than 25 years of experience, Dr. Frost continues to practice at McLeod Regional Medical Center, a Level II trauma center. He has led health-system evaluations and implementations of ambient clinical intelligence and large language model–based systems, with an emphasis on measurable outcomes, safety, governance, and clinician trust. Dr. Frost earned his medical degree from the Medical University of South Carolina and completed his emergency medicine residency at the University of Virginia.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ2ODg2MDM=",
     "priority": "P2",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "David",
@@ -2800,7 +2800,7 @@ const SPEAKERS = [
     "aboutMe": "Jeffrey M. Ferranti, MD, MS, is the Senior Vice President and Chief Digital Officer for Duke Health.  He is a Professor of Pediatrics, Bioinformatics, and Biostatistics at the Duke University School of Medicine, and the Program Director of Duke’s Master’s Program in Clinical Informatics (MMCI program). Dr. Ferranti also serves as the Executive Director of the Duke Institute of Health Innovation.\n \nHe is responsible for the visioning, strategic planning, and effective adoption of integrated technology and Artificial Intelligence solutions that enable high-quality clinical care, research, and education. He serves as an informatics thought leader, both internal and external to Duke, and, in partnership with our wider medical community, develops the overarching Digital strategy in support of the Duke Health mission.  Dr Ferranti leads a large group of talented IT professionals responsible for all technology and biomedical engineering services across DUHS, the School of Medicine, the School of Nursing, and the Duke Health Integrated Practice.  He also leads Duke Health’s enterprise strategies in digital health, industry tech partnerships, and data science.  He received his medical degree from McGill University, Montreal, Quebec, and his master’s degree in biomedical engineering and medical informatics from the Duke Pratt School of Engineering. Dr. Ferranti completed both his Pediatric Residency and Neonatology Fellowship at Duke University Medical Center and maintains an active clinical practice in neonatal critical care at Duke University Hospital.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQwNTg1OTc=",
     "priority": "P2",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Joe",
@@ -2824,7 +2824,7 @@ const SPEAKERS = [
     "aboutMe": "Joe Longo serves as the Senior Vice President/Chief Digital & Information Officer for Parkland Health in Dallas, Texas, one of the largest public health systems in the country. He is a recognized progressive healthcare technology executive who has stewarded IT strategic plans and technology direction for major hospital systems and IT firms. \nJoe prides himself on his service to public health, applying advanced healthcare IT capabilities to environments typically under-represented in the high-tech community. His executive tenure at Parkland began managing the technology program for the new Parkland campus project, which was one of the world's most significant greenfield hospital construction endeavors. \nSince joining Parkland’s leadership team, he has propelled the organization to achieve significant milestones, including its first 10 Most Wired designations, HITRUST certification, Stage 7 on the HIMSS Analytics Maturity Model (AMAM), and two of the prestigious Davis Awards in 2017 and 2022.  He was the Dallas CIO 2022 “CIO of the Year” ORBIE award recipient and Transformational Leader Award in 2025. Joe is a Certified Healthcare CIO (CHCIO) and Certified Digital Health – Executive (CDH-E) through the College of Healthcare Information Management Executives (CHIME) organization and holds an MBA from Baylor University.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQwNDQzMjg=",
     "priority": "P2",
-    "persona": "informatics"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Karandeep",
@@ -2847,7 +2847,7 @@ const SPEAKERS = [
     "aboutMe": "Karandeep Singh, MD, MMSc is the Executive Director of the Joan and Irwin Jacobs Center for Health Innovation, Chief Health AI Officer for UC San Diego Health, and holds the Jacobs Chancellor’s Endowed Chair in the Division of Biomedical Informatics at the University of California, San Diego. In these roles, Dr. Singh oversees AI strategy and governance for the health system and leads an academic AI lab within the Jacobs Center for Health Innovation.\nHe completed his internal medicine residency at UCLA Medical Center, where he served as chief resident, and a nephrology fellowship in the combined Brigham and Women’s Hospital and Massachusetts General Hospital program. He completed his medical education at the University of Michigan Medical School and holds a master’s degree in Biomedical Informatics from Harvard Medical School.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ3NTUxMDY=",
     "priority": "P2",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Kerry",
@@ -2897,7 +2897,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. Melissa Koehler is Assistant Vice President of Health Information Management at Inova Health System with a career in revenue cycle leadership. She is a Fellow of AHIMA and a member of ACHE and HFMA. She holds a BS in Health Informatics from The College of St. Scholastica, an MBA from Tusculum University, and a DHA from Virginia University-Lynchburg. She serves on the AHIMA House of Delegates, Morehouse Health Informatics Advisory Council, and chairs the AHIMA Program Committee.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1MDM=",
     "priority": "P2",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Vincent",
@@ -2922,7 +2922,7 @@ const SPEAKERS = [
     "aboutMe": "Vincent J. Major, PhD, is an Assistant Professor of Population Health at NYU Grossman School of Medicine and Associate Director of NYU Langone Health's (NYULH) Department of Health Informatics internal AI group, the Division of Applied AI Technologies. Vincent's work focuses on applied machine learning for healthcare and involves the development, validation and deployment of predictive models using electronic health record (EHR) data. His interest in responsible use of AI spans from research, academic partnerships and NYULH's internal AI management process. Vincent received his PhD from New York University in 2020 for his thesis work using EHR data to develop machine learning models to estimate risk of death within 60 days of hospitalization to encourage end-of-life planning.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1Mjc=",
     "priority": "P2",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Amish",
@@ -3020,7 +3020,7 @@ const SPEAKERS = [
     "aboutMe": "Danny Sama is the Vice President, Digital Platform & Strategy within Information Services for Northwestern Medicine and leads the integrated academic health system’s technology strategic planning in addition to the development of a cloud-native digital platform to enable the NM vision & strategy. His portfolio includes digital capabilities & innovation, enterprise data, and data governance, leveraging the technical disciplines of data engineering, software developing and machine learning to enable value creation for NM patients, clinicians, and employees. He earned his undergraduate degree in Management Information Systems from the University of Illinois at Urbana-Champaign and his MBA from Northwestern University’s Kellogg School of Management. He is a member of the faculty at Northwestern University’s School of Professional Studies’ MS of Healthcare Administration and MS of Health Analytics programs.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM2NzQwNTY=",
     "priority": "P2",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "David",
@@ -3069,7 +3069,7 @@ const SPEAKERS = [
     "aboutMe": "Deepti Pandita, MD, is the vice president of informatics and chief medical information officer at University of California Irvine Health, and associate professor in the Department of Medicine at UCI. Dr. Pandita is board-certified in internal medicine and in clinical informatics. She was previously CHIO and program director of the Clinical Informatics Fellowship at Hennepin Healthcare in Minneapolis. She received her medical degree from Christian Medical College, Vellore, India, and did her residency training at University of North Dakota. Dr. Pandita is a Board Member of the American Medical Informatics Association, Immediate past Chair of the Medical Informatics Committee for the American College of Physicians, and Immediate past Chair for HIMSS Physician Informatics committee. She also is a member for the Physician Advisory Board for Epic. Deepti also has a passion for using innovation and technology to improve care delivery for the underserved and marginalized populations, and she participates in health disparities research, more specifically on bridging digital disparities, and has published on this topic.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM4OTYyNTQ=",
     "priority": "P2",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Jana",
@@ -3091,7 +3091,7 @@ const SPEAKERS = [
     "aboutMe": "Jana B. Kass is the Nursing Program Director for Technology and Innovation at Geisinger Health, where she leads transformative initiatives that integrate technology into nursing practice to improve patient outcomes and operational efficiency. With a strong foundation in critical care and more than a decade of experience in nursing informatics, Jana has become a trusted leader in healthcare innovation. She has spearheaded systemwide automation projects that have saved tens of thousands of clinical hours, including initiatives focused on suicide precautions, restraint documentation and patient weight tracking. Jana is also a key contributor to the integration of generative AI tools to support clinical decision-making. Jana collaborates closely with the Business Intelligence Advanced Analytics team to develop dashboards and reports that drive data-informed nursing strategies. She plays a vital role in regulatory readiness, having supported multiple Joint Commission and American Heart Association surveys, and serves as a liaison between clinical operations and IT. Her academic credentials include an MBA in Healthcare and an MS in Nursing Administration with Informatics from Molloy College and a BSN from Adelphi University. Jana has also served as an adjunct professor, teaching nursing informatics and professional practice, and has presented nationally on healthcare technology. She is actively involved in community leadership through the Friedman Jewish Community Center and Leadership Northeast, and continues to advocate for innovation, equity and excellence in nursing.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzNjE=",
     "priority": "P2",
-    "persona": "nursing"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Kali",
@@ -3115,7 +3115,7 @@ const SPEAKERS = [
     "aboutMe": "As Director of Innovation for Northwestern Medicine, Kali has led the identification, evaluation, and activation of internal and external innovative technology solutions to issues faced by NM patients and care providers today and the challenges of tomorrow for the last 4 years. She’s been at NM for 11 years.  \nLeading with her background in healthcare IT, team building, collaboration, project management, and strategy, Kali leads a team of innovators to support system-wide innovation efforts aligned with health system goals. Kali has nearly 20 years of experience in healthcare technology, strategic planning, solutions activation and innovation. She has spent much of her career in academic medicine, but also time working for digital health vendors implementing new technology across the US.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM5ODEyOTc=",
     "priority": "P2",
-    "persona": "other"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Kathrina",
@@ -3163,7 +3163,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. King has spent her career adapting technology to reduce the burden of modern health care for both patients and providers. She spent 7 years building telehealth programs to address specific public health needs in South Carolina from School-based telehealth to Virtual Urgent Care and Remote Patient Monitoring.  She used this background to scale these programs dramatically during the COVID-19 pandemic, allowing for rapid response to the public health crisis from testing and monitoring to treatment and vaccination.\n \nAs Co-Director for one of two National Telehealth Centers of Excellence, Dr. King helps to lead a team of over 20 researchers who are conducting a rigorous scientific evaluation of a variety of telehealth programs to inform the national telehealth landscape.\nAs the enterprise CMIO, Dr. King focuses on using data driving approaches to improving the physician experience with technology throughout the growing health system. Dr. King leads teams dedicated to technology education, training, optimization and personalization as well as specialty specific IT medical directors and clinician builders. In her time as CMIO she has improved clinician satisfaction by implementing an EHR personalization program, established a clinical governance structure, and launched an enterprise-wide ambient scribe program across the enterprise. She is dedicated to applying the newest solutions to drastically simplify how clinicians interact with the EHR and improve health care efficiency.\n \n Dr. King attended medical school at the Medical College of Virginia, completed her pediatric residency training at the Medical University of South Carolina and a general academic fellowship at The Johns Hopkins University, earning a Masters of Health Science at The Johns Hopkins Bloomberg School of Public Health.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM4NzMyMDk=",
     "priority": "P2",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Katie",
@@ -3187,7 +3187,7 @@ const SPEAKERS = [
     "aboutMe": "Katie Barr serves as Senior Vice President and Chief Nursing & Clinical Informatics Officer at Advocate Health, one of the nation’s largest health systems. In this role, Katie provides strategic leadership for Nursing and Clinical Informatics across the enterprise, driving innovation in technology adoption, informatics education, and digital transformation initiatives that support clinical excellence.   With more than three decades of experience spanning healthcare delivery and information technology, Katie has built a distinguished career focused on leveraging technology to advance patient care. Her expertise includes clinical applications, electronic health record systems, and workflow optimization. She is recognized for her ability to align technology solutions with clinical priorities, ensuring that digital tools enhance—not hinder—the care experience.   Katie’s leadership philosophy centers on collaboration and innovation. She partners with clinicians and operational leaders to evaluate emerging technologies, including Augmented/Artificial Intelligence, as a means to reduce administrative and cognitive burdens. By championing solutions that improve efficiency and support clinician well-being, Katie helps create an environment where caregivers can focus on what matters most—delivering exceptional care to patients.   Beyond her operational responsibilities, Katie is a passionate advocate for advancing nursing practice through informatics. She leads enterprise-wide efforts to integrate technology into clinical workflows, improve data-driven decision-making, and foster continuous learning through informatics training programs. Her work reflects a commitment to improving outcomes, enhancing patient safety, and shaping the future of healthcare through innovation.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQxMTY3MTI=",
     "priority": "P2",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Nader",
@@ -3211,7 +3211,7 @@ const SPEAKERS = [
     "aboutMe": "Nader Mherabi, executive vice president and vice dean, chief digital and information officer, is responsible for all information technology (IT) strategy, digital transformation for NYU Langone Health and for information technology’s development as a strategic organizational asset. He previously was vice president for IT product solutions and chief technology officer for NYU Langone, responsible for technology strategy, infrastructure engineering, networks, data centers, and application architecture. Nader currently leads NYU Langone Health’s digital transformation and AI initiatives, driving the integration of the institution’s workflows, revolutionizing the digital patient experience and clinical environment, and empowering the institution with big data and advanced analytics to improve care delivery, quality and efficiency. \nNader has designed and implemented many large-scale, diverse systems for NYU Langone and has extensive experience in hospital clinical systems integration, research information technology, and education systems. He has developed an operational architecture for in-house application development and integration, as well as an electronic data repository, warehouse and dashboards center, research-specific infrastructure for computation and collaboration, and scores of mid-size applications for research, education, and clinical care environments. \nDuring his more than 36 years in the information technology field, Nader has implemented large-scale systems for top Fortune 500 companies worldwide, such as Credit Suisse and CitiGroup, and held several prominent IT management positions including senior director at Mount Sinai–NYU Health, vice president at Credit Suisse First Boston, and vice president at Citibank.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0NTE=",
     "priority": "P2",
-    "persona": "informatics"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Nicholas “Shetal”",
@@ -3258,7 +3258,7 @@ const SPEAKERS = [
     "aboutMe": "Honorific\nMPH",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ3ODcyNTM=",
     "priority": "P2",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Philip",
@@ -3282,7 +3282,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. Philip Held is a licensed clinical psychologist and Director of Research and Innovation at the Road Home Program: National Center for Veterans and Their Families at Rush University Medical Center, a nationwide PTSD treatment program. As a distinguished mental health services researcher, his work is dedicated to improving outcomes for individuals with PTSD and other trauma-related disorders, with a strong focus on clinical innovation and the integration of cutting-edge technology. Dr. Held is at the forefront of using AI and machine learning to personalize treatment pathways and enhance clinical decision-making for veterans. He played an instrumental role at Rush University Medical Center, achieving the prestigious HIMSS Davies Award and reaching Stage 7 in Data Analytics, signifying excellence in leveraging data for personalized medicine and prescriptive analytics. A key area of Dr. Held’s research involves making evidence-based mental healthcare more accessible and efficient, including pioneering studies on delivering full courses of treatment in condensed, intensive formats. He actively collaborates across disciplines to integrate generative AI into both direct patient care and provider training processes, exemplified by tools like Socrates 2.0, aiming to better support patients and empower clinicians. Dr. Held serves as Principal Investigator on several federally- and foundation-funded studies focused on the clinical application and responsible deployment of machine learning and artificial intelligence to transform veteran mental healthcare.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzMTU=",
     "priority": "P2",
-    "persona": "other"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Rachel",
@@ -3306,7 +3306,7 @@ const SPEAKERS = [
     "aboutMe": "Rachel Coren is a senior healthcare executive with more than 20 years of experience leading complex, enterprise-wide transformation at Cedars-Sinai Health System. As Associate Chief Information Officer, she plays a central role in defining and executing enterprise technology strategy for one of the nation’s leading academic medical centers.\nWith a background in hospital operations, Rachel brings a comprehensive understanding of clinical, operational, and patient experience priorities. She founded Cedars-Sinai’s clinical informatics program in 2011, building and leading a multidisciplinary team focused on workflow optimization, user engagement, meaningful use of technology and data-driven decision-making.\nRachel has led numerous high-risk, large-scale technology initiatives and is currently guiding the technology implementation strategy at Cedars-Sinai’s newest smart hospital while collaborating to retrofit existing facilities to deliver a consistent patient and clinician experience.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM3MDk1ODg=",
     "priority": "P2",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Rajender",
@@ -3355,7 +3355,7 @@ const SPEAKERS = [
     "aboutMe": "Rebecca Mishuris, MD, MS, MPH, FAMIA is Chief Medical Information Officer and VP, Digital at Mass General Brigham. She is Faculty at Harvard Medical School, and a practicing primary care physician at Brigham and Women’s Hospital. In her role as CMIO she is responsible for vision, strategy, and implementation of digital solutions aligned with enterprise strategies to enable the delivery of high quality, safe, equitable and efficient care, while enhancing the patient and care team experience. Dr. Mishuris conducts research on the intersection of technology and the quintuple aim of healthcare, currently focused on the role of digital solutions in physician wellbeing, quality, and equity. She is an active leader in the American Medical Informatics Association and New England HIMSS.\nDr. Mishuris received her undergraduate degree from M.I.T. and her Master’s in Science from Georgetown University. She received her medical degree from Boston University School of Medicine and trained in Internal Medicine at Boston Medical Center, serving as Chief Medical Resident. She completed a General Internal Medicine fellowship at Brigham and Women’s Hospital/Harvard Medical School, earning her Master in Public Health from the Harvard TH Chan School of Public Health. She was previously the CMIO for the Boston Medical Center Health System, and prior to entering medicine was a consultant for an international business and technology consulting firm.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM1OTkxNTE=",
     "priority": "P2",
-    "persona": "informatics"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Simon",
@@ -3379,7 +3379,7 @@ const SPEAKERS = [
     "aboutMe": "Simon Nazarian serves as City of Hope®’s system executive vice president and chief digital and technology officer. Nazarian leads the organization’s overall technology strategy, transforming and expanding technology innovation through digital, AI and advanced analytics initiatives. He is responsible for evolving City of Hope’s technology and digital ecosystem, with the goal of enabling scientific discoveries, enhancing the overall patient and care team experience and driving commercialization.\nA seasoned visionary leader, Nazarian, joined City of Hope in 2024 after serving for four years as chief information officer at Optum Health-Care Delivery, one of America’s leading health care providers and health plans. He brings more than 25 years of experience developing innovative strategies and leading large transformational initiatives for Optum®, McKinsey & Company, Kaiser Permanente, Sony Pictures Entertainment and other large organizations.\nNazarian holds an M.B.A. in information strategy from San Diego State University.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM5NzcwOTQ=",
     "priority": "P2",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Srinivasan",
@@ -3403,7 +3403,7 @@ const SPEAKERS = [
     "aboutMe": "Srinivasan Suresh, MD, MBA, FAAP, is the Director of the Division of Health Informatics in the Department of Pediatrics at the University of Pittsburgh School of Medicine. He is a Professor of Pediatrics and is also faculty in the Division of Emergency Medicine. Additionally, he serves as the Chief Information Officer, Chief Medical Information Officer (CMIO) and Vice President at UPMC Children's Hospital of Pittsburgh.\nDr. Suresh is a physician executive with a business degree, and experience and achievements as a senior leader in pediatric healthcare in the areas of clinical care, information science, medical education, business development, and corporate strategy. He has presented and published extensively in the fields of medical education, childhood emergencies, quality and patient safety, health information technology, machine learning, and predictive analytics. His scholarly work spans epidemiology, diagnostic techniques, therapeutic tools, clinical pathways, and value-based care. Lately, he is focused on applications that integrate artificial intelligence into hospital operations, especially in the care of children.\nDr. Suresh is a TEDx speaker and has been named by Becker’s Hospital Review as one of “50 hospital and health system CMIOs to know”. In 2023, he was awarded the ‘Healthcare Changemaker Award’ (Senior Executive Category) by the Healthcare Information & Management Systems Society (HIMSS). He serves as the Co-Chair of the Artificial Intelligence Special Interest Group for the American Academy of Pediatrics, where he is the immediate past-chair of the Council on Clinical Information Technology. He is a member of the Board of Directors of the International Society for Pediatric Innovation. He is a past chair of the Medical Informatics Special Interest Group of the Academic Pediatric Association, and of the HIMSS Physician Committee.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM2MjA4NTI=",
     "priority": "P2",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Suresh",
@@ -3427,7 +3427,7 @@ const SPEAKERS = [
     "aboutMe": "",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQwNTg1OTY=",
     "priority": "P2",
-    "persona": "other"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Tamara",
@@ -3451,7 +3451,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. Tamara Moores Todd is a distinguished leader in healthcare, known for her commitment to transforming healthcare through technology, operational excellence, and human-centered innovation.   With over a decade of experience in clinical leadership, health IT, and medical education, she has led high-performing teams to deliver scalable, technology-driven solutions that improve patient outcomes. \n \nDr. Moores Todd’s educational background includes a Doctor of Medicine from Loma Linda University School of Medicine, residency in Emergency Medicine at the University of Utah Affiliated Hospitals, and a fellowship in Clinical Informatics. She is triple board certified in Emergency Medicine, Clinical Informatics, and Healthcare Administration, Leadership, and Management (HALM). She also is a leader in Digital Health, shaping digital strategy and technology road map of the consumer experience, with a particular focus on Clinical AI & digital therapeutics. \n \nIn her current role as Chief Health Informatics Officer at Intermountain Health, her passion is to create systems which sustain the heart of healthcare – the patient & caregiver experience. Dr. Moores Todd leads a multi-disciplinary team of physicians, informaticists, analysts, managers, and directors to optimize the healthcare experience through the blending of technology and workflow, in order to create a better embodiment of health for our community.\n \nHer leadership style draws from a conscious commitment to the beauty of life. She firmly believes that every person is talented, motivated, and want to improve. Her greatest success as a leader is achieved by drawing each teammate into their genius zone, multiplying their talents, and giving them trust to believe in their own ability to craft our future. She fiercely believes that our future will be better than our past, because we will make it so.\n \nFor clinical process improvement, Dr. Moores Todd also co-founded the Simulation Program for Utah Emergency Physicians (UEP), facilitating high-fidelity continuing education with a teams-based approach for Attending Physicians of UEP, training more than 100 physicians per year.\n \nDr Moores Todd has been recognized for her contributions to healthcare with numerous awards, including being named #1 of Top Women in Leaders in Healthcare 2025 and Utah HIMSS Mental Health Leader of the Year 2023. \n \nTamara grew up in the wild woods of California, where she learned salsa dancing and boriqua cooking from her mother, and road biking from her father. She enjoys poetry, ukulele, and spending time with her growing family.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ2MTQ2NjY=",
     "priority": "P2",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Thomas",
@@ -3500,7 +3500,7 @@ const SPEAKERS = [
     "aboutMe": "Tracy Breece is a registered nurse with more than 25 years of experience in the hospital and healthcare system. Early in her career, Tracy discovered a natural affinity for integrating technology into nursing practices, quickly becoming an advocate for enhanced workflows and an early adopter of new technological advancements. Her passion lies in improving the daily lives of nurses, freeing up their time to focus on patient care. Currently, Tracy serves as the Executive Director of Nursing Informatics at Mercy. In this role, she oversees the integration of clinical, technical, operational, financial and usability components of various information systems. Tracy provides strategic guidance for the development and implementation of digital healthcare solutions aimed at transforming nursing and patient care practices. She collaborates with executive leadership to ensure innovation initiatives align with the organization’s strategic goals and objectives. Tracy is also dedicated to nurturing the growth of the nursing profession. She routinely mentors nursing students pursuing both baccalaureate and master’s degrees, sharing her expertise and experience to support their professional development. Tracy holds a master’s degree in Nursing with an emphasis on Healthcare Leadership. She is a Certified Informatics Nurse from the American Nurses Credentialing Center and a Certified Professional in Health Information Management from the Healthcare Information Management Systems Society (HIMSS).",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzODg=",
     "priority": "P2",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Amy",
@@ -3523,7 +3523,7 @@ const SPEAKERS = [
     "aboutMe": "",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQzODIyMTg=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Andrew",
@@ -3592,7 +3592,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. Bruce Barnes is a Senior Health IT Leader and Army officer with 17+ years of experience working in the military and healthcare sectors. Currently serving as Chief Information Officer at Brooke Army Medical Center, the Department of War's largest and only Level I trauma center - leading 170 professionals and supporting 8,000 employees. In addition, he maintains status as an Adjunct Professor of Digital Health and Project Management through Baylor University. He currently serves the South Texas HIMSS Chapter as VP of Plans and Programs.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0MTU=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Casey",
@@ -3615,7 +3615,7 @@ const SPEAKERS = [
     "aboutMe": "Casey Bor began her career in Pediatric Cardiac Critical Care as both a nurse and nurse practitioner. Since entering the field in 2008, she has developed a strong interest in health information technology, driven by a desire to enhance her own experience with Electronic Medical Records (EMRs).\nAfter joining the Physician Builder Team at the University of Maryland Medical System, Casey played a key role in identifying and resolving EMR inefficiencies across various departments. Her work has led to the successful implementation of technology solutions across multiple clinical disciplines, both at the hospital and system-wide level. Leveraging her expertise in data analytics, she has developed tools to support quality improvement and patient safety initiatives.\nIn July, Casey transitioned to Jefferson Health as Associate Chief Medical Information Officer. In this role, she oversees medical informatics for Perioperative Services and represents the East Region of the enterprise. She holds certifications in Physician Builder, Physician Builder Analytics, Cogito, Clarity, and the Caboodle Data Model.\nA dedicated mentor to emerging Physician Builders and health informatics professionals, Casey is passionate about deploying technology that streamlines clinical workflows and reduces EMR-related burnout.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMyODM=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Chris",
@@ -3684,7 +3684,7 @@ const SPEAKERS = [
     "aboutMe": "",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ1MTQyMzQ=",
     "priority": "P3",
-    "persona": "other"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "David",
@@ -3707,7 +3707,7 @@ const SPEAKERS = [
     "aboutMe": "Honorific\nMD",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ4NDM0NzQ=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "David",
@@ -3800,7 +3800,7 @@ const SPEAKERS = [
     "aboutMe": "Jackie Rice, BSN, RN, serves as Vice President for Information Technology and Chief Information Officer at Frederick Health, where she leads the organization’s enterprise technology strategy, digital innovation efforts, and information security program. In this role, she drives the development of a secure, reliable, and forward-thinking technology environment that enables exceptional patient care and operational excellence across the health system.\nJackie oversees a broad portfolio of strategic technology initiatives, including governance and policy development, cybersecurity and AI strategy, resource allocation, IT infrastructure and service delivery, and population health technology. Under her leadership, her team supports and advances the systems that power Frederick Health’s 26 locations and nearly 4000 team members, ensuring the organization’s 269-bed hospital and expansive network of care providers have the tools needed to serve the Frederick County community.\nA recognized leader in healthcare technology, Jackie serves on the Maryland HIMSS Chapter Board of Directors as past president, contributes to the TechFrederick Earn Education Committee, and is President-Elect of the MUSE Board. She also lends her expertise to several additional advisory boards, helping shape the future of healthcare IT regionally and nationally.\nJackie’s career began with more than 20 years in nursing, a foundation that continues to inform herpatient-centered approach to technology. Her transition to Information  Services was driven by a passion for improving care through innovation and aligning digital capabilities with clinical and operational needs. She remains deeply committed to Frederick Health’s mission to positively impact the well-being of every individual in the community.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ4NTQxNjM=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Jane",
@@ -3824,7 +3824,7 @@ const SPEAKERS = [
     "aboutMe": "Chief Information and Digital Officer, Mass General Brigham\n \nJane Moran is Chief Information and Digital Officer for Mass General Brigham.  Jane leads the development, deployment, and efficient operations of technology across the organization.  Accelerating Mass General Brigham’s overall technology and digital strategy, Jane is focused on delivering digital health capabilities enhancing the equity and efficiency of healthcare delivery and helping to make medicine more personalized and precise. \nIn 2024, Jane was appointed to Massachusetts Governor Maura Healey's AI Strategic Task Force, where she contributes to shaping the future of artificial intelligence (AI) and generative AI adoption across the state. The AI Strategic Task Force is responsible for studying AI's impact on various sectors, including healthcare, and developing recommendations for leveraging AI to drive economic growth and innovation.\nJane’s passion for technology stems from her early career as a developer, where she built financial portfolio management and trading software applications. She later became an IT consultant for Fortune 500 companies, implementing large-scale ERP and CRM platforms. With over 25 years of experience in CIO/CTO roles, Jane most recently served as Chief Information Officer and Chief Technology Advisor at Unilever for nearly seven years before joining Mass General Brigham in 2021. She also served as Group CIO at Thomson Reuters.  Jane is a non-executive director for JP Morgan Securities, PLC and a member of the Board of Managers for Ensemble Health Partners, LLC.\nJane lives and works in Boston.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM1OTg3OTI=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Jeff",
@@ -3847,7 +3847,7 @@ const SPEAKERS = [
     "aboutMe": "Jeffrey Thomas is a seasoned technology leader with more than 25 years of experience driving digital, cloud and organizational transformation across healthcare, government and commercial sectors. As CTO of Sentara Health, he leads enterprise architecture, IT operations, cost optimization and cloud modernization efforts that improve care delivery and operational efficiency. Widely recognized as a change agent, Jeff excels at unifying complex IT environments and accelerating innovation. He also cofounded a for-profit healthcare cloud joint venture and serves on its board. Jeff is a THMA 2026 AWS Technology Fellow and a CHIME-certified Healthcare CIO and Digital Health Leader.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMyODQ=",
     "priority": "P3",
-    "persona": "other"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Jeff",
@@ -3893,7 +3893,7 @@ const SPEAKERS = [
     "aboutMe": "John Henderson is the vice president and chief information officer of Rady Children’s Health, formally known as CHOC, Children's Hospital of Orange County.\nA seasoned information technology (IT) leader, Henderson has a successful track record of guiding cohesive teams in the design, deployment, administration and enhancement of enterprise IT applications and infrastructures.\nHenderson served as an assistant vice president at Texas Children’s Hospital. There, he was responsible for IT operations, including business and clinical application delivery, business intelligence and analytics, and infrastructure technology.\nHenderson earned a bachelor’s degree in business administration from University of Houston and an MBA from Texas A&M University. He’s a member of numerous professional associations, including College Healthcare Information Management Executives, Healthcare Information & Management Systems Society, and Association for Executives Healthcare IT Applications, for which he serves on the advisory board. In 2011, he received the CIO 100 Innovation Award.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQwOTE0Mjg=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Karen",
@@ -3963,7 +3963,7 @@ const SPEAKERS = [
     "aboutMe": "Kim Cronsell, MD, serves as the Associate Chief Medical Officer for Experience and Digital Innovation and is the acting Chief Medical Information Officer at Children's Wisconsin. She is passionate about leveraging technology to transform healthcare, focusing on redesigning services around the child and family to create meaningful and personalized experiences. In her current role, Dr. Cronsell plays a pivotal part in shaping digital health initiatives and enhancing the overall experience across the Children's Wisconsin enterprise. Her notable achievements include implementing digital and emerging technology solutions, promoting remote care, and fostering provider engagement and innovation. Dr. Cronsell earned her medical degree from Loyola University Chicago and completed her pediatric residency at Children's Wisconsin.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0Mjg=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Murat",
@@ -3986,7 +3986,7 @@ const SPEAKERS = [
     "aboutMe": "Murat Uralkan serves as the Director of Innovation at Houston Methodist Center for Innovation (CFI). Guided by a passion for transforming healthcare through technology, he oversees the strategic initiatives and operations of the Tech Hub, a living laboratory for digital innovation, and manages strategic partnerships with industry leaders. Murat's commitment to innovation has been pivotal in establishing the Center for Innovation as a nationally recognized leader since its inception, where he previously excelled as Program Manager.\nBefore his current role, Murat was an Administrative Fellow at Houston Methodist, where he worked closely with Executive Leadership on various strategic initiatives, including the formation of the Center for Innovation. His international experience includes consulting roles with Houston Methodist Global, where he led strategy, business development, and operational commissioning projects across Dubai, Saudi Arabia, and Turkey.\nMurat holds a Master of Health Administration from the Sloan Program at Cornell University and a Bachelor of Arts in Economics from Bogazici University, Turkey. His commitment to advancing healthcare is recognized by his accolades, including \"Emerging Leaders Under 40\" from Becker’s Hospital Review and \"40 Under 40\" from Healthcare Innovation. Off the clock, Murat enjoys playing, watching, talking about, and listening to real football (soccer).",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQxODI3MzM=",
     "priority": "P3",
-    "persona": "other"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Narayanan (Nari)",
@@ -4009,7 +4009,7 @@ const SPEAKERS = [
     "aboutMe": "Nari Gopala is the Chief Digital Officer at Mayo Clinic, leading the digital strategy and the Center for Digital Health. In this role, he partners with Bradley Leibovich, M.D., to drive digital transformation across Mayo Clinic's Practice, Research, and Education functions. The Center focuses on creating seamless experiences for care teams and patients through data, analytics, decision support, and virtual solutions.\nNari has three decades of experience in software engineering leadership, specializing in building large-scale distributed platforms, highly performant backend services, and user-friendly digital presence for consumers and businesses across various industries. Before joining Mayo Clinic, he was the Senior Vice President and Chief Digital Officer at Kaiser Permanente, where he led digital strategy, development, and operations of enterprise digital capabilities and infrastructure modernization. Prior to that, Nari held technology and platform leadership positions at Amazon Web Services and Sony Online Entertainment.\nNari holds an MBA in high technology and innovation management from Northeastern University, Boston, and a Bachelor of Technology in Metallurgical Engineering from the Indian Institute of Technology, Varanasi.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM1OTkxNTA=",
     "priority": "P3",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Nathan",
@@ -4055,7 +4055,7 @@ const SPEAKERS = [
     "aboutMe": "Nerissa Ambers, MPH, CPHIMS, is the Director of Health Informatics Transformation at Stanford Health Care, where she leads innovative projects that enhance patient care. With expertise in operations and strategic planning, she excels in cross-functional collaboration. Recently, Nerissa has spearheaded the development of ChatEHR, a transformative technology utilizing Large Language Models to streamline workflows and improve clinician access to patient information. Her work fosters a culture of continuous improvement and drives efficiency across the organization.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM4OTU2Mzc=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Ray",
@@ -4079,7 +4079,7 @@ const SPEAKERS = [
     "aboutMe": "Ray Lowe is a nationally recognized healthcare IT executive with over 25 years of experience leading digital transformation and health equity initiatives across some of the nation’s largest and most innovative health systems. Since 2018, Ray has served as Senior Vice President and Chief Information Officer for AltaMed Health Services, and has previously held leadership roles at Dignity Health (CommonSpirit), Providence Health & Services, and Kaiser Permanente.\nRay’s expertise spans large-scale implementations of electronic health records (Epic, Cerner, Meditech), enterprise resource planning (ERP/Workday), and enterprise-wide telehealth initiatives. He has led multidisciplinary teams focused on clinical informatics, process optimization, technology, and cybersecurity. His ability to bridge clinical needs with business objectives has resulted in measurable improvements in patient outcomes, workflow efficiency, and cost management.\nA mission-driven leader, Ray is deeply committed to advancing health equity and improving care for underserved communities. He works tirelessly to ensure that Medicaid and non-English-speaking patients—often living at or below 200% of the federal poverty level—receive high-quality, culturally competent care. Under his leadership, vulnerable patient populations have achieved HEDIS quality scores consistently above the 85th percentile, with significant increases in EMR portal adoption and patient engagement. His focus on value-based care, advanced analytics, and AI adoption has aligned health plan and provider delivery, reduced redundant orders, and improved proper utilization of both acute and ambulatory services.\nRay’s leadership and innovation have been recognized with numerous industry honors, including the 2024/2025 Epic 10 Gold Stars, 2024 AltaMed Visionary Award, Becker’s Top CIOs to Know, 2023 HIMSS Senior Executive Change Maker, and 2023 Orbie SoCal Healthcare Finalist.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM5NTA3NzQ=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Remle",
@@ -4102,7 +4102,7 @@ const SPEAKERS = [
     "aboutMe": "Trained as an epidemiologist at Johns Hopkins () and the NYC Department of Health, Remle co-created the first chronic disease municipal surveillance system using electronic healthcare records data. She brings 17 years of experience in applied public health informatics to H+H. Remle runs the OPH Data Core team, which tackles risk targeting, access to care, depression, chronic disease, social determinants of health, pediatrics, preventive screenings, homelessness, and care management. She oversees development of the OPH risk prediction portfolio, across adults, adolescents and young children. She has served since 2023 as the Principal Investigator for the Bias in Algorithms study.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1MzU=",
     "priority": "P3",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Sarah",
@@ -4125,7 +4125,7 @@ const SPEAKERS = [
     "aboutMe": "Sarah Hatchett has over 20 years of experience of healthcare IT leadership. She has been at Cleveland Clinic for the past 9 years and is currently serving as Senior Vice President and Chief Information Officer.  Prior to joining Cleveland Clinic, Ms. Hatchett worked at Epic, Sutter Health, and NYC Health + Hospitals. She received her BA from the University of Wisconsin-Madison and her Executive MBA from Baldwin Wallace University.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM2OTg5NzE=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Sean",
@@ -4148,7 +4148,7 @@ const SPEAKERS = [
     "aboutMe": "Honorific\nDNP, MBA-HCA, RN, CHCIO,CDH-E, CPHIMS",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM4OTU2NDA=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Sherri",
@@ -4171,7 +4171,7 @@ const SPEAKERS = [
     "aboutMe": "Sherri Hess is the VP Chief Nursing Informatics Officer at HCA Healthcare. Her career spans almost 40 years in healthcare. She is a uniquely experienced executive with a very diverse and extensive background. She has a proven track record as an executive with extensive informatics and leadership experience. Her transformational leadership style utilizes best practice delivering on target and high quality.\n\nSherri has worked in all facets of healthcare from a community hospital, mutli-facility systems, university and a safety net system. She paved the way at all of the health systems by creating an informatics department or bringing best practices that were lacking.\n\nSherri’s board positions include Colorado, Arizona and Tennessee HIMSS board. When she was board president, the Colorado chapter won chapter of the year.\n\nShe spent 10 years as an adjunct professor teaching master students informatics. She is frequently sought out to speak across the U.S. She was bestowed one of the greatest honors a nurse could receive - the coveted Nightingale Luminary Award in 2017.\n\nSherri holds a Masters in Information Systems from the University of Colorado-Denver a Bachelor’s of Science in Nursing and is a certified Informatics Nurse through the American Nurses Credentialing Center. She is a HIMSS Fellow.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1Njk=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Stephanie",
@@ -4241,7 +4241,7 @@ const SPEAKERS = [
     "aboutMe": "Tiffany Kuebler is a distinguished leader in clinical informatics, currently serving as the Medical Director of Clinical Informatics at UMMC, a nationally recognized academic medical center and teaching hospital of more than 700 beds in Baltimore, Maryland. A board-certified Physician Assistant since 2007, Tiffany dedicated her entire career to advancing patient care at the renowned R. Adams Cowley Shock Trauma Center. Her deep understanding of bedside clinical workflows provided a unique foundation for her transition into informatics. Tiffany's journey began as an Epic Certified Inpatient Trainer in 2015 and an Epic Physician Builder in 2016, skills that empowered her to bridge clinical practice with technology. In 2018, she was named Co-Medical Director of Clinical Informatics at UMMC, translating clinician needs into actionable IT solutions focused on EHR usability, efficient clinical communication and patient safety, demonstrating her commitment to empowering fellow providers. Additionally, in 2020 Tiffany became Director of the UMMS Physician Builder Program. In this role, she oversees a team of more than 20 provider builders across more than 12 medical specialties, fostering innovation and continuous improvement in patient care through strategic EMR enhancements. Her leadership drives technology-enabled transformation that directly improves clinical workflows and patient outcomes. Beyond her institutional role, Tiffany is also a cofounder of Diagnosa, LLC, a healthcare IT consultancy focused on workflow improvement, EHR optimization, and enhancing healthcare tech product user experience.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMyODE=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Wynn",
@@ -4264,7 +4264,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. Wynn Clement is an accomplished healthcare leader with extensive experience at the intersection of clinical practice and health informatics. With more than 12 years in informatics consulting, she has progressively advanced into senior leadership roles, culminating in her current position as Senior Director of Clinical Informatics. Dr. Clement holds a Doctor of Nursing Practice and brings a unique blend of clinical expertise, strategic vision and operational excellence to her work. Throughout her career, Dr. Clement has led enterprise-wide electronic health record optimizations, supported multi-facility system implementations, and developed high-impact informatics strategies that improve provider efficiency and patient outcomes. Her leadership fosters collaboration across clinical education, IT and provider teams to ensure evidence-based, user-centered solutions. Recognized for her innovative approach and ability to bridge the gap between technology and patient care, Dr. Clement continues to shape the future of healthcare delivery through thoughtful, data-driven informatics leadership.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1NzI=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Yonathan",
@@ -4285,7 +4285,7 @@ const SPEAKERS = [
     "aboutMe": "",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ3ODcwNTE=",
     "priority": "P3",
-    "persona": "clinical_ops"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Zeb",
@@ -4308,7 +4308,7 @@ const SPEAKERS = [
     "aboutMe": "",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ4NDI3MjA=",
     "priority": "P3",
-    "persona": "other"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Betro",
@@ -4331,7 +4331,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. Betro Sadek earned his medical degree from the University of Alexandria, Egypt, where he completed his internship. He then joined Massachusetts General Hospital/Harvard Medical School as a Research Fellow and was later promoted to Instructor at Harvard Medical School, with numerous publications and more than 990 citations. He completed his residency in Family Medicine at Mercy Health in Ohio. He is an Assistant Professor of Family Medicine, a Fellow of the American Academy of Family Physicians (AAFP) and the Society of Hospital Medicine (SHM), and a practicing adult hospitalist. He earned the added qualification of “Designation of Focused Practice in Hospital Medicine” from the American Board of Family Practice, with over 12 years of experience. Furthermore, he achieved Certified Physician Executive (CPE) certification from the American Association of Physician Leadership and currently serves as the PeeDee/Midlands Chapter President for SHM.\nDr. Sadek is a well-versed hospitalist with a great passion for clinical quality improvement and informatics. His focus is to prevent errors, standardize care, and promote higher quality standards by improving healthcare delivery systems.\nHe worked as a Clinical Quality Manager and Informaticist, as well as now serving as Director of Clinical Informatics. At Wellstar Medical College of Georgia. He successfully led teams to achieve unprecedented quality improvement goals across multiple projects.\nHis passion for clinical informatics is remarkable; he has more than eight years of experience working as a physician informatician and physician builder. Moreover, he received board certification in Clinical Informatics from the American Board of Preventive Medicine. Furthermore, he serves as a board member for Epic Systems Corporation’s Hospitalist Steering Committee and was appointed as the Board Chair. He currently serves as a Board Member for SC HIMSS.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0MDA=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Brian",
@@ -4354,7 +4354,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. Brian Weirich is the Chief Nursing Innovation Officer at Bon Secours Mercy Health, where he leads the integration of emerging technologies and the exploration of innovative models of care delivery. With a diverse leadership background, Brian has held key roles at Banner Health, Indiana University Health, University of Colorado Health, Ohio State Medical Center, and Cleveland Clinic, where he began his career as an ICU nurse.\nBrian holds a Doctorate in Health Administration from the Medical University of South Carolina and a Master's in Healthcare Administration from Ohio University, where he also earned his Bachelor's in Nursing. He is certified in Executive Nursing Practice and holds a specialized certification in Artificial Intelligence from Northwestern University’s Kellogg School of Business. \nKnown for his leadership during the COVID-19 pandemic, Brian gained a reputation as the \"Incognito CNO\" when he chose to return to the bedside, working over 1,000 hours on med-surg COVID units. This experience reinforced his hands-on approach to leadership and commitment to patient care during a critical time.\nBrian was recently recognized by Becker's as a top Innovation Officers to know and is a recipient of Modern Healthcare's Forty under 40, 2025 class. Brian often advocates for the role of technology in healthcare, particularly for the millennial generation. He co-authored The Nurse's Guide to Innovation and is the founder of two health tech startups. Brian is a recipient of the Advancement in Medicine Innovation Grant from the IU School of Medicine and remains active in the healthcare startup community, advising and sitting on the boards of emerging tech companies.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM5NDcwMzQ=",
     "priority": "P3",
-    "persona": "nursing"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Cherodeep",
@@ -4378,7 +4378,7 @@ const SPEAKERS = [
     "aboutMe": "Cherodeep (Chero) Goswami is Chief Information and Digital Officer for Providence, overseeing IS strategy, operations, cybersecurity, AI, and digital platforms. He advances initiatives to reduce clinician burden and extend Providence’s mission to serve vulnerable communities. Previously, he was CIO at UW Health, guiding IT, informatics, and AI strategy, and held leadership roles at BJC Healthcare in St. Louis. His career also includes experience in finance, telecom, and transportation. Chero holds dual master’s degrees from Webster University and is an alumnus of Columbia University in New York.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0MTg=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Chethan",
@@ -4402,7 +4402,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. Chethan Sarabu, a physician and innovator, bridges landscape architecture, pediatrics, and clinical informatics to design healthier environments and systems. He is the inaugural Director of Clinical Innovation at Cornell Tech’s Jacobs Institute and a Clinical Assistant Professor of Pediatrics at Stanford Medicine. He previously led EHR transformation and digital health initiatives at doc.ai and Sharecare, and serves as AI and Informatics Strategist with OpenNotes Lab. Co-founder of CHILL and Vice-Chair of AMIA’s Climate, Health, and Informatics Working Group, he advances climate health informatics and speaks nationally on technology, equity, and system design.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0NzI=",
     "priority": "P3",
-    "persona": "clinical_ops"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Dan",
@@ -4448,7 +4448,7 @@ const SPEAKERS = [
     "aboutMe": "As Chief Nursing Informatics Officer at Henry Ford Health since 2017, Donna Summers leads nursing technology strategy across the organization's hospitals and all ambulatory teams. She enhances patient care by integrating technology with health services, including virtual acute care, artificial intelligence, device integration/interoperability and nursing efficiency. She leads innovation in professional organizations and nursing informatics by actively participating in professional organizations such as MONL, AONL, HIMSS, ANIA, ANA, and the Epic RN Nurse Efficiency Committee. Donna received recognition by Crain’s Detroit Business 2025 as one of the Notable Leaders in Health Care Technology.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQxMTQxMDI=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Esther",
@@ -4471,7 +4471,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. Esther Kim is the Head of Emerging Technologies at Mass General Brigham, a leading academic medical system in the US. She has over 20 years of experience in healthcare innovation, population health, and health education, with a doctoral degree in nutritional epidemiology from the Harvard School of Public Health and clinical expertise as a registered dietitian.\nIn her current role, she leads the strategy and execution of innovative solutions that leverage emerging technologies and accelerates the adoption of cutting-edge healthcare technologies and pilots, including AI-driven solutions, across hospitals and clinical settings. Her work spans AI strategy, governance, and implementation of use cases that aim to improve quality of care, expand patient access, and reduce workforce burden.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ1NzIxMDQ=",
     "priority": "P3",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Glenn",
@@ -4495,7 +4495,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. Goldis is currently the Chief Medical Officer and Chief Medical Information officer at Kern Medical where he has served for over 11 years. He currently oversees Graduate Medical Education and is responsible for oversight of the Medical Staff Office and the Clinical Department Chairs. During his tenure at Kern Medical, he mentors and coaches the A-Team who provide education and support to the Medical Staff.  He is an Internal Medicine Physician who prior to joining Kern Medical, was Monarch HealthCare’s Medical Director for Quality & Performance Improvement, Medical Director of Risk Adjustment, Medical Director of their Accountable Care Organization, and Medical Director of Monarch Health Plan in Orange County. He had formerly served as Ambulatory Medical Director for Monarch HealthCare from 2010-2013 and lends clinical expertise in Program Development, Operations, and Electronic Documentation.  Prior to joining Monarch, Dr. Goldis was the Utilization Medical Director and a Hospitalist for Bakersfield Family Medical Center from 2008 to 2010, and served for 16 years at Kaiser Permanente, Kern County as an Internal Medicine Physician, Chief of Internal Medicine, and Associate Medical Director from 1992-2008.  Dr. Goldis received his Undergraduate Degree from Hobart College in 1980, Medical Degree from Mount Sinai School of Medicine in 1984 and completed his Internal Medicine Residency at Cedars-Sinai in 1987. He has completed his master’s degree in medical management at the University of Southern California.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ4NjMzNzg=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Jeffrey",
@@ -4519,7 +4519,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. Jeffrey Arroyo completed his medical education at Charles R. Drew/UCLA and pursued his Family Medicine residency at the University of California, Irvine. Following his residency, he remained at UC Irvine as a core faculty member, where he served as the Director of Quality and Site Medical Director for the Anaheim Federally Qualified Health Center (FQHC) site. Early in his career, Dr. Arroyo developed a passion for addressing clinical and operational challenges by optimizing the electronic health record system (EHR). He later became board-certified in Clinical Informatics and has served in informatics roles at UC Irvine and AltaMed. Dr. Arroyo is currently Associate Medical Director of Clinical Informatics at AltaMed, the largest FQHC in the nation, to extend his service to underserved patients on a broader scale. He has championed various AI projects from Ambient Clinical Voice (Abridge), Enterprise large language model evaluation, and EHR released AI features (EPIC).",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzMzQ=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Michael",
@@ -4543,7 +4543,7 @@ const SPEAKERS = [
     "aboutMe": "Michael Archuleta is an award-winning Chief Information Officer and nationally recognized technology leader known for architecting advanced digital ecosystems, pioneering AI-driven clinical innovation, and building cybersecurity programs that rival enterprise-level health systems. With more than 18 years of executive experience, he has become one of the most influential voices in healthcare digital transformation, cybersecurity modernization, and the operationalization of artificial intelligence for real clinical impact.\nAs CIO of Mt. San Rafael, Michael has led one of the most comprehensive modernization initiatives in Colorado, transforming the organization into a high performance digital enterprise. Under his direction, the hospital achieved HIMSS Stage 6 designation, earned CHIME Digital Health Most Wired recognition, and was named a Top Critical Access Hospital in the United States, reflecting excellence in quality, safety, and digital maturity.\nMichael is widely known for his ability to turn technology vision into measurable clinical and operational outcomes. He designed and deployed an AI-powered radiology intelligence platform that significantly improved early detection of intracranial hemorrhage, pulmonary embolism, and other time-sensitive pathologies accelerating clinical response, increasing diagnostic accuracy, and saving lives. His AI strategy is frequently cited as a model for practical, value-driven adoption that eliminates hype and delivers results.\nHe also engineered one of the strongest cybersecurity and digital-resilience programs in the region, including a 24/7 Security Operations Center model, advanced threat-hunting, zero-trust alignment, and cloud validated disaster recovery standards typically seen in large health systems and enterprise environments. His work has established Mt. San Rafael as a benchmark for cyber readiness and digital continuity.\nMichael’s leadership extends beyond his organization. As a former Governor-appointed Commissioner on the Colorado eHealth Commission, he influenced statewide policy and co-led the creation of the R7 Sustainability Fund one of the nation’s first recurring, long-term technology and cybersecurity funding models designed to strengthen digital infrastructure and resilience for healthcare organizations.\nA sought after speaker and advisor, Michael serves on multiple national technology boards and innovation councils. He has partnered with emerging technology companies, guided early-stage founders, and supported startups across cybersecurity, digital health, AI, and cloud transformation including serving in a leadership role during a successful IPO.\nHis contributions have earned him recognition on the HITEC 100, honoring the most influential Hispanic technology leaders in the world, as well as multiple national awards for innovation, leadership, and digital transformation. Michael has been featured on the cover of HealthTech Magazine, in Becker’s Healthcare, CHIME publications, and at conferences across the country for his forward-thinking approach to AI, cybersecurity, and human-centered technology design.\nRooted in values of access, equity, and opportunity, Michael also founded the Archuleta Creo En Ti Foundation, which sponsors STEM programs, scholarships, cybersecurity academies, and innovation initiatives to build tomorrow’s workforce and ensure the next generation of leaders has the opportunities he never had.\nToday, he is recognized as a technology visionary, AI strategist, and architecture-level thinker whose work proves that world-class innovation is defined not by geography, but by leadership, clarity of vision, and the courage to execute.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM3NDUwODA=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Michael",
@@ -4566,7 +4566,7 @@ const SPEAKERS = [
     "aboutMe": "Michael Hasselberg, PhD, RN, PMHNP-BC, serves as the chief transformation and digital officer at Nebraska Medicine. In this role, he is responsible for leading efforts to modernize and elevate health care delievry through technology, process improvement and clincial innovation.  He and his team serve as a bridge between clinical operations, IT, administration and the health system's academic and research missions, driving the strategic use of digital tools to enhance patient care, clincian experience, research and institutional performance.  Dr. Hasselberg also holds appointments with the University of Nebraska Medical Center's College of Medicine and the College of Nursing.\nBefore joining Nebraska Medicine, Dr. Hasselberg spent more than 20 years at the University of Rochester (UR) in New York where he held faculty appointments in psychiatry, nursing, and data science.  His last role was serving as UR Medicine's first chief digital health officer and co-director of the UR Health Lab. \nHis expertise expands health and technology as a Robert Wood Johnson Foundation Clinical Scholar Fellow and committee member for the National Academies Standing Committee on Primary Care.  He has also been an advisor on digital transformation to government agencies, industry, private equity and venture, and health systems across the country.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM1MzI5ODI=",
     "priority": "P3",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Nikhil",
@@ -4681,7 +4681,7 @@ const SPEAKERS = [
     "aboutMe": "Honorific\nFHIMSS",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ4NDI3MDI=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Erica",
@@ -4748,7 +4748,7 @@ const SPEAKERS = [
     "aboutMe": "Katherine “Kaylee” Adams is a leader in the field of healthcare analytics and value-based care, and a key member of Orlando Health’s population health team. In her current role as the Manager of Value-Based Care Programs & Analytics, Kaylee partners with payers, employers, governmental agencies, and multiple vendor partners to aggregate large datasets used to effectively identify patient needs, engage patients and caregivers, and manage acute and chronic healthcare needs via advanced analytics and actionable reporting. She is focused on advancing data-driven strategies to improve outcomes and lower the total cost of care across the clinically integrated network, supporting multiple care transformation initiatives in collaboration with various clinical, operational, and analytics teams. Under her leadership, Orlando Health has significantly advanced its enterprise data platform (EDP) efforts which enable greater patient engagement, more standardized reporting, and optimized provider support capabilities. Kaylee received her masters degree in business administration from the Florida Institute of Technology and a bachelors degree in health informatics and information management from the University of Central Florida.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzNTQ=",
     "priority": "P3",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Kevin",
@@ -4772,7 +4772,7 @@ const SPEAKERS = [
     "aboutMe": "As Vice President and Chief Information, Kevin Olson is responsible for managing and successfully implementing the information and computer technology systems of Jupiter Medical Center.\nOlson joined Jupiter Medical Center in 2021, he previously served as Chief Information Officer of OU Medical System, the largest academic hospital system in Oklahoma. He brings more than 20 years of information technology experience to his role. In addition to his IT experience, he has over 23 years serving in the military in both active duty and reserve capacities. His military experience is broad, ranging from active-duty flyer, Cyber Security and Health Care Administration.\nMr. Olson received a Master of Health Administration from the University of Oklahoma Health Sciences Center and a bachelor’s degree from Park University, Missouri. He is an active member in several professional organizations, including the Health Information Management Systems Society and the College of Health Information Management Executives.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0OTc=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Kristen",
@@ -4795,7 +4795,7 @@ const SPEAKERS = [
     "aboutMe": "Kirsten Guillaume is the Vice President of Information Technology at NKC Health, a role she has held since joining the organization in 2018. With more than two decades of experience in information services and healthcare technology, she provides strategic oversight and direction for clinical and administrative IT priorities across the health system, ensuring technology advancements create measurable value and support organizational goals.\nPrior to her work at NKC Health, Guillaume held several leadership roles at Cerner and Netsmart, including serving as Vice President of Client Development at Cerner Corporation. Her extensive background in healthcare technology has shaped her approach to integrating innovative solutions that elevate patient care and streamline operational efficiency.\nGuillaume’s commitment to excellence has earned her recognition within the industry, including being named a Kansas City ORBIE Award finalist in 2025. She holds a bachelor’s degree in business administration from Rockhurst University.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQzMjczNzY=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Mara",
@@ -4818,7 +4818,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. Mara L. Schenker is an orthopaedic trauma surgeon and physician executive with national leadership roles spanning clinical care, informatics, and health system transformation. She is the Chief Medical Information Officer at Grady Health System and a former Chief of Orthopaedics at Grady Memorial Hospital, one of the nation’s busiest Level I trauma centers. She holds an academic appointment at Emory University School of Medicine.Dr. Schenker’s work sits at the intersection of high acuity clinical care and digital transformation. As a practicing surgeon, she brings a frontline perspective to EHR optimization, clinical decision support, quality improvement, and physician adoption of emerging technologies. In her informatics leadership role, she oversees enterprise initiatives in clinical informatics governance, physician builder programs, AI oversight, workflow redesign, documentation efficiency, and regulatory readiness, with a particular focus on safety net health systems and health equity.\nIn addition to her health system leadership, Dr. Schenker serves as Chief Medical Officer of the CWC Alliance, a national nonprofit dedicated to prevention, education, and innovation in addressing the opioid epidemic. In this role, she helps guide clinical strategy, data driven initiatives, and cross sector collaborations aimed at reducing harm and improving patient outcomes.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ0OTU0NzQ=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "MaryJoy",
@@ -4844,7 +4844,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. Mary Joy Garcia-Dia is the Corporate Program Director, Nursing Informatics, Information Technology Department at a major academic center in New York. Prior to this role, Garcia-Dia’s clinical background as a critical care nurse forged her informatics experience in leading clinical systems implementation at major academic medical centers and system integration between ancillary systems, physiologic monitors and mobile devices. She earned her Master’s degree in Nursing Informatics from New York University and holds a Doctorate in Nursing Practice. Recently she completed the Coldiron Senior Nurse Executive Fellowship from Case Western Reserve University. Her research interest is focused on global health particularly the use of mobile technology, resilience and structural empowerment. Dr. Garcia-Dia authored numerous journal articles and contributed chapters on nursing theories and informatics. She published a book on Project Management in Nursing Informatics and contributed chapters on simulation, health equity and resilience. She develops graduate-level courses on nursing informatics and holds adjunct faculty positions at France Payne Bolton School of Nursing Case Western Reserve University and City University of New York School of Professional Studies. She is a member of the Editorial Board of Nursing Management Journal, writing topics on leadership and technology. Currently, she is a member of the Informatics and Technology Expert Panel of AAN and the Artificial Intelligence Task Force.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM0NzY=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Penni",
@@ -4866,7 +4866,7 @@ const SPEAKERS = [
     "aboutMe": "With a robust foundation in digital healthcare initiatives and process improvement, my role at Ballad Health as the Digital Care Strategy Officer leverages a PMP certification to drive innovative solutions. The focus on Electronic Health Records (EHR) and manufacturing process enhancements reflects a commitment to operational excellence and patient care advancement.\nDuring my tenure at Ballad Health, I've played a pivotal role in the integration of strategic initiatives, working closely with executive leadership to translate vision into actionable results. My expertise in program management, particularly in healthcare systems merger and Telemedicine implementations, has contributed to the seamless execution of complex projects within the organization.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDM4OTU2Mzg=",
     "priority": "P3",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Phil",
@@ -4930,7 +4930,7 @@ const SPEAKERS = [
     "aboutMe": "",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ2NTYyMzQ=",
     "priority": "P3",
-    "persona": "other"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Christian",
@@ -4976,7 +4976,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. Guido Giunti is the Chief Data Officer at St. James’s Hospital, Dublin, leading efforts to foster a data-driven culture with a human touch. He holds academic positions as an Adjunct Professor at Trinity College Dublin, the University of Oulu and University of Buenos Aires, contributing to medical education, digital health research, and the integration of emerging technologies into clinical practice. \nWith a background in clinical medicine, digital health, and human-computer interaction, Guido has worked across academic, clinical, and industry settings in Europe. Recognized internationally for his contributions, he has received awards such as the JCI Ten Outstanding Young Persons Award and HIMSS Changemaker in Health. He has led multiple initiatives blending healthcare, technology, and entrepreneurship to drive meaningful change in the digital health landscape.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMzMTk4ODM=",
     "priority": "P3",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Josh",
@@ -4998,7 +4998,7 @@ const SPEAKERS = [
     "aboutMe": "Josh Baker is an accomplished pharmacy leader with more than 15 years of diverse experience across retail, hospital and specialty pharmacy settings. He currently serves as the Director of Pharmacy at St. Mary’s Healthcare in Amsterdam, New York, where he oversees all aspects of pharmacy operations, regulatory compliance and strategic service expansion. Dr. Baker is known for implementing innovative workflows, advancing patient access programs, and leading multidisciplinary collaborations to improve medication safety and care outcomes. He earned his Doctor of Pharmacy degree from Albany College of Pharmacy and Health Sciences and has since built a career focused on bridging clinical excellence with operational efficiency. His expertise spans 340B optimization, pharmacy billing, patient financial assistance, electronic medical records integration and staff development. He has successfully launched specialty pharmacy initiatives, chaired medication safety committees, and supported pharmacy services across emergency departments and outpatient clinics. As a dynamic speaker and healthcare advocate, Dr. Baker brings practical insights and real-world experience to every discussion—focused on sustainable pharmacy models, provider collaboration and enhanced patient care delivery.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1MTE=",
     "priority": "P3",
-    "persona": "other"
+    "persona": "pharmacy"
   },
   {
     "firstName": "Joy",
@@ -5020,7 +5020,7 @@ const SPEAKERS = [
     "aboutMe": "Joy Doll is the Program Director for the Creighton University Health Informatics Program where she designs and implements innovative curriculum to transform healthcare delivery. Joy also owns and operates a side hustle to support organizations to bridge health care and social care, Hello Better Healthcare, LLC. Her clients include startups, healthcare organizations, community care hubs and federal partnerships. She currently serves as the Social Care Advisor for the Iowa Community HUB, Strategic Advisor for Family Room and as a subject matter expert for the CDC’s Diabetes MATCH Initiative and Brain Health efforts. She also serves as a Strategic Partner to Wellbeing in Action where she supports public health and community-based behavioral health centers with health data maturity.\nShe supports multiple organizations in capacity building around health data infrastructure and program evaluation including return on investment. Prior to launching Hello Better Healthcare, Joy was the Vice President of Community Programs for CyncHealth. In this role, she led the first EHR integration of health care and social care in the state of Nebraska. Prior to joining CyncHealth, Joy served as the Inaugural Executive Director for establishing the Center for Interprofessional Education and Research (CIPER) where she was engaged with CHI Health to develop, establish and study an interprofessional clinical learning environment. She was the Vice Chair of the Department of Occupational Therapy in the School of Pharmacy and Health Professions at Creighton University. During her time at the CU, she was also the director of a Post Professional OTD Program where she was responsible for recruitment and retention of students, managing student issues, and maintaining program excellence. She is author of the textbook Grant Writing and Program Development for Occupational Therapy Practitioners: Making the Connection and over 50 book chapters or peer reviewed journal publications.\nShe is a sought after speaker including the 2018 TedX Talk entitled Cultivating Collaboration in Health Care: The Journey of an Accidental Expert. Joy earned her Doctor of Occupational Therapy degree in 2003 from Creighton University. In May 2022, she completed a miniMBA from University of Arizona as a recipient of the CommonSpirit Equity Impact Scholarship.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQxMTYzNTY=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Julie",
@@ -5042,7 +5042,7 @@ const SPEAKERS = [
     "aboutMe": "Julie Demaree serves as the Executive Director of IT Strategy, Innovation & Information Security at St. Mary's Healthcare, leading initiatives that bridge clinical practice and technology to enhance patient safety and operational efficiency. She brings extensive expertise in physician workflow optimization and EMR transformation, ensuring that technology supports clinical needs rather than creating barriers.\nJulie oversees enterprise information system strategy, governance, and security while navigating the unique challenges of a rural health system with limited resources. Her leadership extends to the ambulatory medical records team, guiding EMR implementation and optimization across outpatient settings to improve documentation quality and continuity of care.\nJulie fosters collaboration among providers, nursing, clinical support and IT professionals to streamline processes, reduce variability, and support evidence-based practice. These efforts have strengthened the organization’s ability to remain independent while delivering high-quality, patient-centered care.\nHer passion lies in transforming care delivery through technology, governance, and data-driven decision-making—helping clinicians spend less time on systems and more time with patients.\nDemaree has a Master of Health Administration from the University of Phoenix and is a Certified Professional in Healthcare Information and Management Systems.  She is a fellow of the American Academy of Physician Assistants and is board-certified by the National Commission on Certification of Physician Assistants.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDM1MDk=",
     "priority": "P3",
-    "persona": "digital_ai"
+    "persona": "digital_ai_innovation"
   },
   {
     "firstName": "Kathleen",
@@ -5126,7 +5126,7 @@ const SPEAKERS = [
     "aboutMe": "",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDQ1MTQyMzc=",
     "priority": "P3",
-    "persona": "other"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Greg",
@@ -5167,7 +5167,7 @@ const SPEAKERS = [
     "aboutMe": "Dr. Hannah Galvin is a clinical informatics thought leader and nationally-recognized expert in the segmentation of data to promote patient-driven privacy and sharing preferences in order to advance equitable interoperability. Dr. Galvin serves on the Health IT Advisory Committee, which provides recommendations to the U.S. Department of Health and Human Services Assistant Secretary for Technology Policy (ASTP/ONC) on policies, standards, implementation specifications and certification criteria relating to health information technology that advances the electronic access, exchange and use of health information. She cofounded and is Board Chair for Shift, an independent, nonpartisan industry collaborative advancing data segmentation and consent standards in order to facilitate safe, patient-empowered sharing of health information for all. Dr. Galvin currently serves as Chief Health Information Officer and interim Chief of Pediatrics for Cambridge Health Alliance, an innovative academic public healthcare system dedicated to providing care for all in need throughout the Boston metro north region. She is also on the faculty at Harvard Medical School and Tufts University School of Medicine. An experienced primary care pediatrician and hospitalist with specialization in child abuse medicine, her clinical work focuses on vulnerable populations including at-risk adolescents. Dr. Galvin is dual-board certified in Clinical Informatics and Pediatrics; she trained at Boston Children’s Hospital after graduating from Harvard Medical School and Wellesley College.",
     "profileUrl": "https://app.himssconference.com/event/himss-2026/person/RXZlbnRQZW9wbGVfNDMyMDMzNDM=",
     "priority": "P3",
-    "persona": "informatics"
+    "persona": "tech_informatics"
   },
   {
     "firstName": "Jeff",

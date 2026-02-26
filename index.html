@@ -2593,8 +2593,10 @@ function filterSpeakers() {
       <div class="links">
         ${s.profileUrl ? `<a href="${s.profileUrl}" target="_blank">HIMSS Profile</a>` : ''}
         ${s.linkedIn ? `<a href="${s.linkedIn}" target="_blank">LinkedIn</a>` : ''}
-        ${s.emailDraft ? `<a href="#" onclick="event.preventDefault();navigator.clipboard.writeText(SPEAKERS.find(x=>x.name==='${esc(s.name).replace(/'/g,"\\'")}')?.emailDraft||'');this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Email',1500)">Copy Email</a>` : ''}
+        ${s.emailDraft ? `<a href="#" onclick="event.preventDefault();const el=this.closest('.speaker-card').querySelector('.email-preview');el.style.display=el.style.display==='none'?'block':'none'">View Email</a>` : ''}
+        ${s.emailDraft ? `<a href="#" onclick="event.preventDefault();navigator.clipboard.writeText(SPEAKERS.find(x=>x.name==='${esc(s.name).replace(/'/g,"\\'")}')?.emailDraft||'');this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1500)">Copy</a>` : ''}
       </div>
+      ${s.emailDraft ? `<div class="email-preview" style="display:none;margin-top:12px;padding:14px;background:var(--surface2);border-radius:10px;border:1px solid var(--border);white-space:pre-wrap;font-size:.82rem;line-height:1.6;color:var(--text2);">${esc(s.emailDraft)}</div>` : ''}
       ${s.aboutMe ? `<button class="about-toggle" onclick="toggleAbout(this)">About &#9654;</button><div class="about-content">${esc(s.aboutMe)}</div>` : ''}
       ${outreachLogHTML(s.name)}
       ${progressBarHTML(s.name)}
